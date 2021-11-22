@@ -1,0 +1,11 @@
+{
+  "extends": {
+    "colors": {
+      "primary": {
+        "DEFAULT": "#ffddcc"
+      }
+    },
+    "spacers": {}
+  }
+}
+
