@@ -1,4 +1,14 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:dcli/dcli.dart';
+import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
+
+Map<String, Map<String, dynamic>> baseConfigs = {
+  "colors": {},
+  "spacers": {},
+  "fontSizes": {},
+};
 
 class Utils {
   static void makeDir(path) {
@@ -9,6 +19,41 @@ class Utils {
 
   static void writeFile(file, content) {
     "$file".write(content);
+  }
+
+  /// Merge Default And User config files
+  static Map<String, Map<String, dynamic>> mergedConfigs() {
+    /// Get default config file
+    final configFile = File("tailwind.config.json").readAsStringSync();
+
+    /// Decode / Convert default config to map
+    final dynamic userConfigs = jsonDecode(configFile)['extends'];
+
+    /// Add default config Colors in base config
+    baseConfigs['colors']!.addAll(defaultConfig.colors);
+
+    /// Add default config Spacers in base config
+    baseConfigs['spacers']!.addAll(defaultConfig.spacers);
+
+    /// Add default config FontSizes in base config
+    baseConfigs['fontSizes']!.addAll(defaultConfig.fontSizes);
+
+    /// Check and user overrides to colors
+    if (userConfigs.containsKey('colors')) {
+      baseConfigs['colors']!.addAll(userConfigs['colors']);
+    }
+
+    /// Check and user overrides to spacers
+    if (userConfigs.containsKey('spacers')) {
+      baseConfigs['spacers']!.addAll(userConfigs['spacers']);
+    }
+
+    /// Check and user overrides to font sizes
+    if (userConfigs.containsKey('fontSizes')) {
+      baseConfigs['fontSizes']!.addAll(userConfigs['fontSizes']);
+    }
+
+    return baseConfigs;
   }
 
   /// To publish in Tw Utility ///

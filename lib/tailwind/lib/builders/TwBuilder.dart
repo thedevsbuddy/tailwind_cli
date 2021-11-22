@@ -1,5 +1,5 @@
-const String target = "tailwind/lib/flutter/";
-const String file = "tailwind/lib/flutter/Builder.dart";
+const String target = "tailwind/lib/builders/";
+const String file = "tailwind/lib/builders/TwBuilder.dart";
 
 const String stub = """
 import 'package:flutter/material.dart';

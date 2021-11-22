@@ -1,8 +1,8 @@
 library tailwind;
 
 /// Flutter Widgets
-/// export './src/flutter/Container.dart';
-/// export './src/flutter/Text.dart';
+/// export './builders/Container.dart';
+export './builders/TwTextBuilder.dart';
 
 /// Utilities
 export "./utilities/Tw.dart";

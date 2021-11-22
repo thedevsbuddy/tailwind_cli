@@ -1,24 +1,13 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
 import 'package:tailwind_cli/tailwind/lib/utilities/Tw.dart' as utilityTw;
-
-/// Initialize base config map
-Map<String, Map<String, dynamic>> baseConfigs = {
-  "colors": {},
-  "spacers": {},
-  "fontSizes": {},
-};
 
 Future<void> generate(List<String> args) async {
   /// Get Tw Utility stub Template / File
   var utilityTwFile = utilityTw.stub;
 
   /// Process stub Template / File
-  utilityTwFile = processStub(stub: utilityTwFile, data: mergedConfigs());
+  utilityTwFile = processStub(stub: utilityTwFile, data: Utils.mergedConfigs());
 
   /// Check and create
   Utils.makeDir(utilityTw.target);
@@ -28,40 +17,6 @@ Future<void> generate(List<String> args) async {
 
   /// Show Success message
   print(green("Utilities Generated successfully!"));
-}
-
-Map<String, Map<String, dynamic>> mergedConfigs() {
-  /// Get default config file
-  final configFile = File("tailwind.config.json").readAsStringSync();
-
-  /// Decode / Convert default config to map
-  final dynamic userConfigs = jsonDecode(configFile)['extends'];
-
-  /// Add default config colors in base config
-  baseConfigs['colors']!.addAll(defaultConfig.colors);
-
-  /// Add default config Spacers in base config
-  baseConfigs['spacers']!.addAll(defaultConfig.spacers);
-
-  /// Add default config FontSizes in base config
-  baseConfigs['fontSizes']!.addAll(defaultConfig.fontSizes);
-
-  /// Check and user overrides to colors
-  if (userConfigs.containsKey('colors')) {
-    baseConfigs['colors']!.addAll(userConfigs['colors']);
-  }
-
-  /// Check and user overrides to spacers
-  if (userConfigs.containsKey('spacers')) {
-    baseConfigs['spacers']!.addAll(userConfigs['spacers']);
-  }
-
-  /// Check and user overrides to font sizes
-  if (userConfigs.containsKey('fontSizes')) {
-    baseConfigs['fontSizes']!.addAll(userConfigs['fontSizes']);
-  }
-
-  return baseConfigs;
 }
 
 String processStub({required String stub, dynamic data}) {
