@@ -4,8 +4,8 @@ const String stub = """
 library tailwind;
 
 /// Flutter Widgets
-/// export './builders/Container.dart';
-export './builders/TwTextBuilder.dart';
+/// export './widgets/TwContainer.dart';
+export './widgets/TwText.dart';
 
 /// Utilities
 export "./utilities/Tw.dart";

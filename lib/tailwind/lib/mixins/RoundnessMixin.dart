@@ -5,111 +5,111 @@ const String stub = """
 import 'package:flutter/material.dart';
 
 mixin TwRoundnessMixin<T> {
-  late T _childToRound;
+  late T _child;
 
   @protected
-  double? roundedValue;
+  double? roundness;
 
   @protected
   BorderRadiusGeometry? radiusGeometry;
 
+  @protected
+  void setChildForRoundness(T child) {
+    _child = child;
+  }
+  
   T roundedCustom(BorderRadiusGeometry geometry) {
-    roundedValue = 0.0;
+    roundness = 0.0;
     radiusGeometry = geometry;
-    return _childToRound;
+    return _child;
   }
 
   T roundedTopLeft({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.only(topLeft: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.only(topLeft: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedTopRight({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.only(topRight: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.only(topRight: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedBottomLeft({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.only(bottomLeft: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.only(bottomLeft: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedBottomRight({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.only(bottomRight: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.only(bottomRight: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedLeft({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.horizontal(left: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.horizontal(left: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedRight({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.horizontal(right: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.horizontal(right: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedTop({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.vertical(top: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.vertical(top: Radius.circular(roundness!));
+    return _child;
   }
 
   T roundedBottom({double? value}) {
-    roundedValue = value ?? 4.0;
-    radiusGeometry = BorderRadius.vertical(bottom: Radius.circular(roundedValue!));
-    return _childToRound;
+    roundness = value ?? 4.0;
+    radiusGeometry = BorderRadius.vertical(bottom: Radius.circular(roundness!));
+    return _child;
   }
 
   T get roundedNone {
-    roundedValue = 0.0;
-    return _childToRound;
+    roundness = 0.0;
+    return _child;
   }
 
   T get roundedSm {
-    roundedValue = 2;
-    return _childToRound;
+    roundness = 2;
+    return _child;
   }
 
   T get rounded {
-    roundedValue = 4;
-    return _childToRound;
+    roundness = 4;
+    return _child;
   }
 
   T get roundedMd {
-    roundedValue = 6;
-    return _childToRound;
+    roundness = 6;
+    return _child;
   }
 
   T get roundedLg {
-    roundedValue = 8;
-    return _childToRound;
+    roundness = 8;
+    return _child;
   }
 
   T get roundedXl {
-    roundedValue = 12;
-    return _childToRound;
+    roundness = 12;
+    return _child;
   }
 
   T get roundedXl2 {
-    roundedValue = 16;
-    return _childToRound;
+    roundness = 16;
+    return _child;
   }
 
   T get roundedXl3 {
-    roundedValue = 20;
-    return _childToRound;
-  }
-
-  @protected
-  void setChildToRound(T child) {
-    _childToRound = child;
+    roundness = 20;
+    return _child;
   }
 }
 """;

@@ -1,11 +1,11 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
-import 'package:tailwind_cli/tailwind/lib/builders/TwTextBuilder.dart' as twTextBuilder;
+import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
 
 Future<void> generate(List<String> args) async {
   await generateTwBuilder();
-  await generateTwTextBuilder();
+  await generateTwText();
 }
 
 /// Generate TwBuilder
@@ -20,22 +20,22 @@ Future<void> generateTwBuilder() async {
   print(green("Tailwind builder generated successfully!"));
 }
 
-/// Generate TwTextBuilder
-Future<void> generateTwTextBuilder() async {
+/// Generate TwText
+Future<void> generateTwText() async {
   /// Get Tw Utility stub Template / File
-  var twTextBuilderFileData = twTextBuilder.stub;
+  var twTextFileData = twText.stub;
 
   /// Process stub Template / File
-  twTextBuilderFileData = twTextBuilderFileData.replaceAll("//fontSizes", processFontSizes(Utils.mergedConfigs()['fontSizes']));
+  twTextFileData = twTextFileData.replaceAll("//fontSizes", processFontSizes(Utils.mergedConfigs()['fontSizes']));
 
   /// Check and create
-  Utils.makeDir(twTextBuilder.target);
+  Utils.makeDir(twText.target);
 
   /// Write File
-  Utils.writeFile(twTextBuilder.file, twTextBuilderFileData);
+  Utils.writeFile(twText.file, twTextFileData);
 
   /// Show Success message
-  print(green("Tailwind TextBuilder Generated successfully!"));
+  print(green("TwText Generated successfully!"));
 }
 
 String processFontSizes(Map<String, dynamic>? fontSizes) {
@@ -45,10 +45,10 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   var fontSize = "";
   fontSizes.forEach((key, value) {
     if (key == 'base') {
-      fontSize += """TwTextBuilder get textBase => this.._fontSize = Tw.text${key[0].toUpperCase()}${key.substring(1, key.length)};\n\t""";
+      fontSize += """TwText get textBase => this.._fontSize = Tw.text${key[0].toUpperCase()}${key.substring(1, key.length)};\n\t""";
     } else {
       fontSize +=
-          """TwTextBuilder get text${key[0].toUpperCase()}${key.substring(1, key.length)} => this.._fontSize = Tw.text${key[0].toUpperCase()}${key.substring(1, key.length)};\n\t""";
+          """TwText get text${key[0].toUpperCase()}${key.substring(1, key.length)} => this.._fontSize = Tw.text${key[0].toUpperCase()}${key.substring(1, key.length)};\n\t""";
     }
   });
 
