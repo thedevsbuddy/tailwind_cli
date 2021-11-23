@@ -2,6 +2,7 @@ const Map<String, dynamic> colors = {
   /// Base color
   "black": "#010101",
   "white": "#ffffff",
+  "transparent": "0x00000000",
 
   ///Gray Colors
   "gray": {

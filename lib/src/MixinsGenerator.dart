@@ -222,7 +222,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process All Side Margin
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get p$key {
+      spacer += """T get m$key {
     marginLeft = Tw.spacer$key;
     marginTop = Tw.spacer$key;
     marginRight = Tw.spacer$key;
@@ -237,7 +237,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process Horizontal Margin
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get px$key {
+      spacer += """T get mx$key {
     marginLeft = Tw.spacer$key;
     marginRight = Tw.spacer$key;
     return _child;
@@ -250,7 +250,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process Vertical Margin
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get py$key {
+      spacer += """T get my$key {
     marginTop = Tw.spacer$key;
     marginBottom = Tw.spacer$key;
     return _child;
@@ -263,7 +263,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process Left Margin
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get pl$key {
+      spacer += """T get ml$key {
     marginLeft = Tw.spacer$key;
     return _child;
   }\n\t""";
@@ -275,7 +275,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process Top Margin
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get pt$key {
+      spacer += """T get mt$key {
     marginTop = Tw.spacer$key;
     return _child;
   }\n\t""";
@@ -287,7 +287,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process Right Margin
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get pr$key {
+      spacer += """T get mr$key {
     marginRight = Tw.spacer$key;
     return _child;
   }\n\t""";
@@ -299,7 +299,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   /// Process Bottom Padding
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
-      spacer += """T get pb$key {
+      spacer += """T get mb$key {
     marginBottom = Tw.spacer$key;
     return _child;
   }\n\t""";

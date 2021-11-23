@@ -20,6 +20,10 @@ mixin TwColorMixin<T> {
       twColor = Tw.white;
       return _child;
   }
+	T get transparent {
+      twColor = Tw.transparent;
+      return _child;
+  }
 	T get gray50 {
       twColor = Tw.gray50;
       return _child;

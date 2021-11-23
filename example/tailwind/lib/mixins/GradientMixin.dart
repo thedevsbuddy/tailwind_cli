@@ -87,6 +87,14 @@ mixin TwGradientMixin<T> {
       gradientColors[1] = Tw.white;
       return _child;
   }
+	T get fromTransparent {
+      gradientColors[0] = Tw.transparent;
+      return _child;
+  }
+	T get toTransparent {
+      gradientColors[1] = Tw.transparent;
+      return _child;
+  }
 	T get fromGray50 {
       gradientColors[0] = Tw.gray50;
       return _child;

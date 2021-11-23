@@ -69,6 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text('I am a container').twText.medium.gray100.buttonText(context).render(),
               ).twButton.px6.py3.primary.render(),
+              Container(
+                child: Text("sdfsf").twText.gray600.textLg.render(),
+              ).twContainer.px6.py3.mt5.roundedMd.shadow.white.render(),
             ],
           ),
         ),

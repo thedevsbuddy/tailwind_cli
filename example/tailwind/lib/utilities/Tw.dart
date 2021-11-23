@@ -38,6 +38,7 @@ mixin Tw {
   /// Colors
   static const Color black = Color(0xFF010101);
 	static const Color white = Color(0xFFFFFFFF);
+	static const Color transparent = Color(0xFF000000);
 	static const Color gray50 = Color(0xFFFAFAFA);
 	static const Color gray100 = Color(0xFFF4F4F5);
 	static const Color gray200 = Color(0xFFE4E4E7);
