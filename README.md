@@ -1,14 +1,31 @@
-# tailwind_cli
+# Tailwind CLI
+A simple yet awesome flutter package to generate and use TailwindCSS like
+styling in your flutter projects.
 
-A new Flutter package project.
+#### Highlights
+This will provide basic styling just like Tailwind provides in which
+it is providing you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
+```Roundness```, ```Shadows```, ```Font Sizes```, ```Font styling``` Etc.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Install package
+```bash
+flutter pub add tailwind_cli
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Now publish the ```tailwind.config.json``` file
+```bash
+flutter pub run tailwind_cli:init
+```
+
+Build / Generate tailwind styling
+```bash
+flutter pub run tailwind_cli:build
+```
+
+Add tailwind in your project's ```pubspec.yaml``` file under ```dependencies``` section
+```yaml
+tailwind:
+    path: tailwind
+```
