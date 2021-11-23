@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 import 'TwBuilder.dart';
-import '../mixins/ColorMixin.dart';
 
 /// Flutter Text Builder Widget
 /// to provide utilities in your Text Widget
@@ -16,7 +15,6 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   }
 
   String? _text, _fontFamily;
-
   double? _scaleFactor, _fontSize, _letterSpacing, _lineHeight, _wordSpacing;
   int? _maxLines;
   FontWeight? _fontWeight;

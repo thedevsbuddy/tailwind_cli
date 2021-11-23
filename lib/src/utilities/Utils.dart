@@ -79,8 +79,11 @@ class Utils {
   }
 
   /// Convert String to have first letter in caps
-  static String ucFirst(String text) {
-    return text.trim()[0].toUpperCase() + text.trim().substring(1, text.length).toLowerCase();
+  static String ucFirst(String text, {bool preserveAfter = false}) {
+    if (preserveAfter) {
+      return text.trim()[0].toUpperCase() + text.substring(1);
+    }
+    return text.trim()[0].toUpperCase() + text.substring(1).toLowerCase();
   }
 
   /// Convert String to each word's first letter caps

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Tw.indigo500,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Tailwind UI Styles In Flutter'),
     );
   }
 }
@@ -56,6 +56,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 '$_counter',
                 style: Theme.of(context).textTheme.headline4,
               ).twText.center.medium.textXl5.violet500.render(),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    _counter++;
+                  });
+                },
+                onLongPress: () {
+                  setState(() {
+                    _counter += 10;
+                  });
+                },
+                child: Text('I am a container').twText.medium.gray100.buttonText(context).render(),
+              ).twButton.px6.py3.primary.render(),
             ],
           ),
         ),

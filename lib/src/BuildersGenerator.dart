@@ -1,11 +1,15 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
+import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
+import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart' as twContainer;
 import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
 
 Future<void> generate(List<String> args) async {
   await generateTwBuilder();
   await generateTwText();
+  await generateTwContainer();
+  await generateTwButton();
 }
 
 /// Generate TwBuilder
@@ -53,4 +57,31 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   });
 
   return fontSize;
+}
+
+/// Generate TwContainer
+Future<void> generateTwContainer() async {
+  /// Get Tw Utility stub Template / File
+  var twContainerFileData = twContainer.stub;
+
+  /// Check and create
+  Utils.makeDir(twContainer.target);
+
+  /// Write File
+  Utils.writeFile(twContainer.file, twContainerFileData);
+
+  /// Show Success message
+  print(green("TwContainer Generated successfully!"));
+}
+
+/// Generate TwButton
+Future<void> generateTwButton() async {
+  /// Check and create
+  Utils.makeDir(twButton.target);
+
+  /// Write File
+  Utils.writeFile(twButton.file, twButton.stub);
+
+  /// Show Success message
+  print(green("TwButton generated successfully!"));
 }

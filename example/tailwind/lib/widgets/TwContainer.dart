@@ -1,7 +1,3 @@
-const String target = "tailwind/lib/widgets/";
-const String file = "tailwind/lib/widgets/TwContainer.dart";
-
-const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 import 'TwBuilder.dart';
@@ -156,4 +152,4 @@ extension ContainerWidgetExtension on Widget {
   /// Extension method to directly access material [TwContainer] with any widget without wrapping or with dot operator.
   TwContainer get twContainer => TwContainer(child: this);
 }
-""";
+

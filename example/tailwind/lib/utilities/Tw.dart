@@ -258,7 +258,7 @@ mixin Tw {
 	static const Color rose700 = Color(0xFFBE123C);
 	static const Color rose800 = Color(0xFF9F1239);
 	static const Color rose900 = Color(0xFF881337);
-	static const Color primary = Color(0xFFFFDDCC);
+	static const Color primary = Color(0xFF20446A);
 	
   
   /// Font Sizes

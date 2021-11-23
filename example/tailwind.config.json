@@ -2,10 +2,9 @@
   "extends": {
     "colors": {
       "primary": {
-        "DEFAULT": "#ffddcc"
+        "DEFAULT": "#20446A"
       }
-    },
-    "spacers": {}
+    }
   }
 }
 

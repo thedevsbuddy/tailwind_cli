@@ -6,6 +6,7 @@ import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
 import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart' as twAlignmentMixin;
 import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart' as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart' as twGradientMixin;
 import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart' as twMarginMixin;
 import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart' as twPaddingMixin;
 import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart' as twRoundnessMixin;
@@ -17,6 +18,7 @@ Future<void> generate(List<String> args) async {
   await generateAlignmentMixin();
   await generateRoundnessMixin();
   await generateShadowMixin();
+  await generateGradientMixin();
 }
 
 /// Generate Color Mixin
@@ -90,30 +92,13 @@ String processColors(Map<String, dynamic>? colors) {
 
 /// Generate Padding & Margin Mixin
 Future<void> generateSpacingMixin() async {
-  /// Get default config file
-  final configFile = File("tailwind.config.json").readAsStringSync();
-
-  /// Decode / Convert default config to map
-  final dynamic userConfigs = jsonDecode(configFile)['extends'];
-
-  /// Initialize base config map
-  Map<String, Map<String, dynamic>> configs = {"spacers": {}};
-
-  /// Add default config colors in base config
-  configs['spacers']!.addAll(defaultConfig.spacers);
-
-  /// Check and user overrides to spacers
-  if (userConfigs.containsKey('spacers')) {
-    configs['spacers']!.addAll(userConfigs['spacers']);
-  }
-
   /// Get Tw Utility stub Template / File
   var twPaddingMixinFileData = twPaddingMixin.stub;
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(configs['spacers']));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(configs['spacers']));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -358,4 +343,65 @@ Future<void> generateShadowMixin() async {
 
   /// Show Success message
   print(green("Shadow Mixin generated successfully!"));
+}
+
+/// Generate Gradient Mixin
+Future<void> generateGradientMixin() async {
+  /// Get Tw Utility stub Template / File
+  var twGradientMixinFileData = twGradientMixin.stub;
+
+  /// Process stub Template / File
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.mergedConfigs()['colors']));
+
+  /// Check and create directory
+  Utils.makeDir(twGradientMixin.target);
+
+  /// Write File
+  Utils.writeFile(twGradientMixin.file, twGradientMixinFileData);
+
+  /// Show Success message
+  print(green("Gradient Mixin Generated successfully!"));
+}
+
+/// Processes colors
+String processGradientColors(Map<String, dynamic>? colors) {
+  if (colors == null) {
+    return "";
+  }
+  var color = "";
+  colors.forEach((key, value) {
+    if (value is Map) {
+      value.forEach((k, val) {
+        if (k == "DEFAULT") {
+          color += """T get from${Utils.ucFirst(key, preserveAfter: true)} {
+      gradientColors[0] = Tw.$key;
+      return _child;
+  }\n\t""";
+          color += """T get to${Utils.ucFirst(key, preserveAfter: true)} {
+      gradientColors[1] = Tw.$key;
+      return _child;
+  }\n\t""";
+        } else {
+          color += """T get from${Utils.ucFirst(key, preserveAfter: true)}$k {
+      gradientColors[0] = Tw.$key$k;
+      return _child;
+  }\n\t""";
+          color += """T get to${Utils.ucFirst(key, preserveAfter: true)}$k {
+      gradientColors[1] = Tw.$key$k;
+      return _child;
+  }\n\t""";
+        }
+      });
+    } else {
+      color += """T get from${Utils.ucFirst(key, preserveAfter: true)} {
+      gradientColors[0] = Tw.$key;
+      return _child;
+  }\n\t""";
+      color += """T get to${Utils.ucFirst(key, preserveAfter: true)} {
+      gradientColors[1] = Tw.$key;
+      return _child;
+  }\n\t""";
+    }
+  });
+  return color;
 }
