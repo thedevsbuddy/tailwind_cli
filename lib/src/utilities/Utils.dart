@@ -8,6 +8,7 @@ Map<String, Map<String, dynamic>> baseConfigs = {
   "colors": {},
   "spacers": {},
   "fontSizes": {},
+  "opacity": {},
 };
 
 class Utils {
@@ -38,6 +39,9 @@ class Utils {
     /// Add default config FontSizes in base config
     baseConfigs['fontSizes']!.addAll(defaultConfig.fontSizes);
 
+    /// Add default config Opacity in base config
+    baseConfigs['opacity']!.addAll(defaultConfig.opacity);
+
     /// Check and user overrides to colors
     if (userConfigs.containsKey('colors')) {
       baseConfigs['colors']!.addAll(userConfigs['colors']);
@@ -51,6 +55,11 @@ class Utils {
     /// Check and user overrides to font sizes
     if (userConfigs.containsKey('fontSizes')) {
       baseConfigs['fontSizes']!.addAll(userConfigs['fontSizes']);
+    }
+
+    /// Check and user overrides to opacity
+    if (userConfigs.containsKey('opacity')) {
+      baseConfigs['opacity']!.addAll(userConfigs['opacity']);
     }
 
     return baseConfigs;

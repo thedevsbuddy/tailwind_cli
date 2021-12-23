@@ -380,4 +380,11 @@ extension TextExtensions on Text {
 
   TwText get text => TwText.existing(data!, style);
 }
+
+extension TextStringExtensions on String {
+  /// Extension method to directly access [TwText]
+  /// with [String] itself
+  TwText get text => TwText(this);
+}
+
 """;
