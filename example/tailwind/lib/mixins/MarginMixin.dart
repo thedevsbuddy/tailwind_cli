@@ -255,6 +255,13 @@ mixin TwMarginMixin<T> {
     marginBottom = Tw.spacer64;
     return _child;
   }
+	T get m0.5 {
+    marginLeft = Tw.spacer0.5;
+    marginTop = Tw.spacer0.5;
+    marginRight = Tw.spacer0.5;
+    marginBottom = Tw.spacer0.5;
+    return _child;
+  }
 	/// Horizontal Margin
 	T get mx0 {
     marginLeft = Tw.spacer0;
@@ -389,6 +396,11 @@ mixin TwMarginMixin<T> {
 	T get mx64 {
     marginLeft = Tw.spacer64;
     marginRight = Tw.spacer64;
+    return _child;
+  }
+	T get mx0.5 {
+    marginLeft = Tw.spacer0.5;
+    marginRight = Tw.spacer0.5;
     return _child;
   }
 	/// Vertical Margin
@@ -527,6 +539,11 @@ mixin TwMarginMixin<T> {
     marginBottom = Tw.spacer64;
     return _child;
   }
+	T get my0.5 {
+    marginTop = Tw.spacer0.5;
+    marginBottom = Tw.spacer0.5;
+    return _child;
+  }
 	/// Left Margin
 	T get ml0 {
     marginLeft = Tw.spacer0;
@@ -634,6 +651,10 @@ mixin TwMarginMixin<T> {
   }
 	T get ml64 {
     marginLeft = Tw.spacer64;
+    return _child;
+  }
+	T get ml0.5 {
+    marginLeft = Tw.spacer0.5;
     return _child;
   }
 	/// Right Margin
@@ -745,6 +766,10 @@ mixin TwMarginMixin<T> {
     marginTop = Tw.spacer64;
     return _child;
   }
+	T get mt0.5 {
+    marginTop = Tw.spacer0.5;
+    return _child;
+  }
 	/// Right Margin
 	T get mr0 {
     marginRight = Tw.spacer0;
@@ -854,6 +879,10 @@ mixin TwMarginMixin<T> {
     marginRight = Tw.spacer64;
     return _child;
   }
+	T get mr0.5 {
+    marginRight = Tw.spacer0.5;
+    return _child;
+  }
 	/// Bottom Padding
 	T get mb0 {
     marginBottom = Tw.spacer0;
@@ -961,6 +990,10 @@ mixin TwMarginMixin<T> {
   }
 	T get mb64 {
     marginBottom = Tw.spacer64;
+    return _child;
+  }
+	T get mb0.5 {
+    marginBottom = Tw.spacer0.5;
     return _child;
   }
 	  

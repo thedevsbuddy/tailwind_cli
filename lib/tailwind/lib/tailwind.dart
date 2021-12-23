@@ -3,6 +3,9 @@ const String file = "tailwind/lib/tailwind.dart";
 const String stub = """
 library tailwind;
 
+/// Extensions
+export "./extensions/TwStringExtension.dart";
+
 /// Flutter Widgets
 export './widgets/TwContainer.dart';
 export './widgets/TwText.dart';

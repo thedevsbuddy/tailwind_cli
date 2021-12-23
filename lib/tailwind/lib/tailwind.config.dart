@@ -6,7 +6,8 @@ const String stub = """
   "extends": {
     "colors": {},
     "spacers": {},
-    "fontSizes": {}
+    "fontSizes": {},
+    "opacity": {}
   }
 }
 """;

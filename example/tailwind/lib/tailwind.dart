@@ -1,5 +1,9 @@
 library tailwind;
 
+/// Extensions
+export "./extensions/TwContextExtension.dart";
+export "./extensions/TwStringExtension.dart";
+
 /// Flutter Widgets
 export './widgets/TwContainer.dart';
 export './widgets/TwText.dart';

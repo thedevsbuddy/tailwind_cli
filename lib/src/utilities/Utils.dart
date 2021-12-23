@@ -27,7 +27,7 @@ class Utils {
     final configFile = File("tailwind.config.json").readAsStringSync();
 
     /// Decode / Convert default config to map
-    final dynamic userConfigs = jsonDecode(configFile)['extends'];
+    final dynamic userConfigs = jsonDecode(configFile);
 
     /// Add default config Colors in base config
     baseConfigs['colors']!.addAll(defaultConfig.colors);
@@ -61,7 +61,7 @@ class Utils {
   /// Convert Hex Color To Dart [int] Color
   static String hexToColor(String code) {
     if (code.startsWith("0x")) {
-      return "0xFF" + code.substring(4, 10).toUpperCase();
+      return "0x" + code.substring(2, 10).toUpperCase();
     } else if (code.startsWith("#")) {
       return "0xFF" + code.substring(1, 7).toUpperCase();
     }
@@ -89,5 +89,10 @@ class Utils {
   /// Convert String to each word's first letter caps
   static String ucWords(String text) {
     return text.trim().split(' ').map((e) => ucFirst(e)).join(' ');
+  }
+
+  /// Check if string contains provided character or word
+  static String replaceAll(String text, dynamic needle) {
+    return text.replaceAll('.', needle);
   }
 }
