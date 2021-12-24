@@ -71,6 +71,6 @@ extension TextButtonExtensions on TextButton {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
-  TwButton get twButton => TwButton.existing(child!, style, onPressed, onLongPress);
+  TwButton get button => TwButton.existing(child!, style, onPressed, onLongPress);
 }
 """;

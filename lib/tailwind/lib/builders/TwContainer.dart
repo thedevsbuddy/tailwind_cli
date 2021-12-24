@@ -154,6 +154,6 @@ class TwContainer extends TwWidgetBuilder<Widget>
 
 extension ContainerWidgetExtension on Widget {
   /// Extension method to directly access material [TwContainer] with any widget without wrapping or with dot operator.
-  TwContainer get twContainer => TwContainer(child: this);
+  TwContainer get container => TwContainer(child: this);
 }
 """;

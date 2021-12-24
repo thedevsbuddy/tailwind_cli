@@ -74,6 +74,67 @@ mixin TwGradientMixin<T> {
     end = Alignment.topLeft;
     return _child;
   }
+  
+  // Gradient Colors
+  /// Flutter Theme Colors
+  T fromPrimaryColor(BuildContext context) {
+    gradientColors[0] = Theme.of(context).primaryColor;
+    return _child;
+  }
+  T toPrimaryColor(BuildContext context) {
+    gradientColors[1] = Theme.of(context).primaryColor;
+    return _child;
+  }
+
+  T fromPrimaryColorDark(BuildContext context) {
+    gradientColors[0] = Theme.of(context).primaryColorDark;
+    return _child;
+  }
+
+  T fromAccentColor(BuildContext context) {
+    gradientColors[0] = Theme.of(context).accentColor;
+    return _child;
+  }
+  T toAccentColor(BuildContext context) {
+    gradientColors[1] = Theme.of(context).accentColor;
+    return _child;
+  }
+
+  T fromBackgroundColor(BuildContext context) {
+    gradientColors[0] = Theme.of(context).backgroundColor;
+    return _child;
+  }
+  T toBackgroundColor(BuildContext context) {
+    gradientColors[1] = Theme.of(context).backgroundColor;
+    return _child;
+  }
+
+  T fromScaffoldBackgroundColor(BuildContext context) {
+    gradientColors[0] = Theme.of(context).scaffoldBackgroundColor;
+    return _child;
+  }
+  T toScaffoldBackgroundColor(BuildContext context) {
+    gradientColors[1] = Theme.of(context).scaffoldBackgroundColor;
+    return _child;
+  }
+
+  T fromButtonColor(BuildContext context) {
+    gradientColors[0] = Theme.of(context).buttonColor;
+    return _child;
+  }
+  T toButtonColor(BuildContext context) {
+    gradientColors[1] = Theme.of(context).buttonColor;
+    return _child;
+  }
+
+  T fromCardColor(BuildContext context) {
+    gradientColors[0] = Theme.of(context).cardColor;
+    return _child;
+  }
+  T toCardColor(BuildContext context) {
+    gradientColors[1] = Theme.of(context).cardColor;
+    return _child;
+  }
 
   //gradientColors
 }

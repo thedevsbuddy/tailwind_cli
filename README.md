@@ -1,13 +1,16 @@
 # Tailwind CLI
-A simple yet awesome flutter package to generate and use TailwindCSS like
-styling in your flutter projects.
+
+A simple yet awesome flutter package to generate and use TailwindCSS like styling in your flutter
+projects.
 
 ### Inspiration
+
 * [Tailwind CSS](https://tailwindcss.com/)
 * [VelocityX](https://velocityx.dev)
 
-**Note: Actually ```VelocityX``` has the similar feature and has more feature than just UI but we have something which ```VelocityX``` don't have.**
+#### Some Highlights
 
+<<<<<<< HEAD
 #### How ```Tailwind CLI``` is different than ```VelocityX```
 * Firstly ```Tailwind CLI``` is not a styling itself. Rather it is a tool to generate tailwind styles in your project.
 * Also ```VelocityX``` provides a lot of features including ```Kind of tailwind``` styling but not fully featured.
@@ -21,46 +24,52 @@ styling in your flutter projects.
 #### Highlights
 This will provide basic styling just like Tailwind provides in which
 it is providing you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
+=======
+This will provide basic styling just like Tailwind provides in which it is providing
+you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
+>>>>>>> f38e2656fba0c94261f727a35d47c532a8012c03
 ```Roundness```, ```Shadows```, ```Font Sizes```, ```Font styling``` Etc.
 
 ## Getting Started
 
 Install package
+
 ```bash
 flutter pub add tailwind_cli
 ```
 
 Now publish the ```tailwind.config.json``` file
+
 ```bash
 flutter pub run tailwind_cli:init
 ```
+
 Publishing ```tailwind.config.json``` file will create a config file for Tailwind styles.
 
-
 Build / Generate tailwind styling
+
 ```bash
 flutter pub run tailwind_cli:build
 ```
 
 Add tailwind in your project's ```pubspec.yaml``` file under ```dependencies``` section
+
 ```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-    
   # Tailwind
-+  tailwind:
-+    path: tailwind
+  tailwind:
+    path: tailwind
 ```
 
 Now install generated tailwind styles in your project
+
 ```bash
 flutter pub get
 ```
 
-***Now your project is ready to use Tailwind stylings***
+***Now your project is ready to use Tailwind styling***
 
 ## Features
+<<<<<<< HEAD
 This is mainly focused to provide you an easy way to style your pages and UI in your flutter projects because as everyone knows that it takes developer to write a lot of code to achieve just a small UI. So we are here to rescue you and provides you a lighning speed to build beautiful UI withour writing a lot of code.
 
 ## Here what you can do with the tailwind package
@@ -88,6 +97,14 @@ You can directly use ```TwCotainer``` or ```Container``` with ```twContainer``` 
 
 
 
+=======
+>>>>>>> f38e2656fba0c94261f727a35d47c532a8012c03
 
+This is mainly focused to provide you an easy way to style your pages and UI in your flutter
+projects because as everyone knows that it takes developer to write a lot of code to achieve just a
+small UI. So we are here to rescue you and provides you a lighting speed to build beautiful UI
+without writing a lot of code.
 
+## Detailed documentation
 
+Please refer to [Tailwind CLI documentation](https://docsman.devsbuddy.com/spyder/tailwind-cli/v1)

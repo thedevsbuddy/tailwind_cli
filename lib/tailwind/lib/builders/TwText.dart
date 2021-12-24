@@ -378,6 +378,13 @@ extension TextExtensions on Text {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
-  TwText get twText => TwText.existing(data!, style);
+  TwText get text => TwText.existing(data!, style);
 }
+
+extension TextStringExtensions on String {
+  /// Extension method to directly access [TwText]
+  /// with [String] itself
+  TwText get text => TwText(this);
+}
+
 """;

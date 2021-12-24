@@ -36,9 +36,26 @@ mixin Tw {
 	
   
   /// Colors
+  
+  /// Flutter Theme Colors
+  static Color primaryColor(BuildContext context) =>
+      Theme.of(context).primaryColor;
+  static Color primaryColorDark(BuildContext context) =>
+      Theme.of(context).primaryColorDark;
+  static Color accentColor(BuildContext context) =>
+      Theme.of(context).accentColor;
+  static Color backgroundColor(BuildContext context) =>
+      Theme.of(context).backgroundColor;
+  static Color scaffoldBackgroundColor(BuildContext context) =>
+      Theme.of(context).scaffoldBackgroundColor;
+  static Color buttonColor(BuildContext context) =>
+      Theme.of(context).buttonColor;
+  static Color cardColor(BuildContext context) => Theme.of(context).cardColor;
+  
+  /// Tailwind Colors
   static const Color black = Color(0xFF010101);
 	static const Color white = Color(0xFFFFFFFF);
-	static const Color transparent = Color(0xFF000000);
+	static const Color transparent = Color(0x00000000);
 	static const Color gray50 = Color(0xFFFAFAFA);
 	static const Color gray100 = Color(0xFFF4F4F5);
 	static const Color gray200 = Color(0xFFE4E4E7);

@@ -12,6 +12,23 @@ mixin Tw {
   //spacers
   
   /// Colors
+  
+  /// Flutter Theme Colors
+  static Color primaryColor(BuildContext context) =>
+      Theme.of(context).primaryColor;
+  static Color primaryColorDark(BuildContext context) =>
+      Theme.of(context).primaryColorDark;
+  static Color accentColor(BuildContext context) =>
+      Theme.of(context).accentColor;
+  static Color backgroundColor(BuildContext context) =>
+      Theme.of(context).backgroundColor;
+  static Color scaffoldBackgroundColor(BuildContext context) =>
+      Theme.of(context).scaffoldBackgroundColor;
+  static Color buttonColor(BuildContext context) =>
+      Theme.of(context).buttonColor;
+  static Color cardColor(BuildContext context) => Theme.of(context).cardColor;
+  
+  /// Tailwind Colors
   //colors
   
   /// Font Sizes

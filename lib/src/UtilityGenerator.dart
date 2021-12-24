@@ -35,6 +35,9 @@ String processSpacers(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
       spaces += "static const double spacer = $value;\n\t";
+    } else if (key.contains('.')) {
+      var dot = key.replaceAll('.', '_');
+      spaces += "static const double spacer$dot = spacer * $value;\n\t";
     } else {
       spaces += "static const double spacer$key = spacer * $value;\n\t";
     }
@@ -75,8 +78,13 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   fontSizes.forEach((key, value) {
     if (key == 'base') {
       fontSize += "static const double textBase = $value;\n\t";
+    } else if (key.contains('.')) {
+      var dot = key.replaceAll('.', 'Dot');
+      fontSize +=
+          "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
     } else {
-      fontSize += "static const double text${key[0].toUpperCase()}${key.substring(1, key.length)} = textBase * $value;\n\t";
+      fontSize +=
+          "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
     }
   });
   return fontSize;

@@ -23,7 +23,7 @@ mixin TwMarginMixin<T> {
   }
   
   /// Custom All Side Margin
-  T p(dynamic val){
+  T m(dynamic val){
     marginLeft = val;
     marginTop = val;
     marginRight = val;
@@ -32,39 +32,39 @@ mixin TwMarginMixin<T> {
   } 
   
   /// Custom Horizontal Margin
-  T px(dynamic val){
+  T mx(dynamic val){
     marginLeft = val;
     marginRight = val;
     return _child;
   } 
 
   /// Custom Vertical Margin
-  T py(dynamic val){
+  T my(dynamic val){
     marginTop = val;
     marginBottom = val;
     return _child;
   } 
   
   /// Custom Left Margin
-  T pl(dynamic val){
+  T ml(dynamic val){
     marginLeft = val;
     return _child;
   } 
 
   /// Custom Top Margin
-  T pt(dynamic val){
+  T mt(dynamic val){
     marginTop = val;
     return _child;
   } 
 
   /// Custom Right Margin
-  T pr(dynamic val){
+  T mr(dynamic val){
     marginRight = val;
     return _child;
   } 
 
   /// Custom Bottom Margin
-  T pb(dynamic val){
+  T mb(dynamic val){
     marginBottom = val;
     return _child;
   }
