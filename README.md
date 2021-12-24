@@ -13,7 +13,7 @@ styling in your flutter projects.
 * Also ```VelocityX``` provides a lot of features including ```Kind of tailwind``` styling but not fully featured.
 * In ```Tailwind CLI``` you can use your own configuration to get more custom styling as ```Tailwind``` itself provide you to extend the framework. So by using ```Tailwind CLI``` you can have that freedom. But as i personally used and checked ```VelocityX``` they don't have this feature.
 * Also in ```VelocityX``` you can not provide individual spacing for Horizontal and Vertical Axis. Because it overrides the previously provided spacing.
-* But in ```Tailwind CLI``` you can provide individual spacing Horizontaly and Verticaly or even all side individually.
+* But in ```Tailwind CLI``` you can provide individual spacing Horizontally and Vertically or even all side individually.
 *
 
 
@@ -79,10 +79,7 @@ You can directly use ```TwCotainer``` or ```Container``` with ```twContainer``` 
 
 ```dart
     TwContainer(
-        child: Text("I am a Tailwind styled Container.")
-            .twText /// Will return as TwText Widget to apply tailwind styles
-            .white /// sets font color to white
-            .render(), /// Renders the Text Widget in page
+      child: Text("I am a Tailwind styled Container."),
     ).py8 /// Apply 32px / 2rem (4 * 8 = 32px) padding Vertically
     .px4 /// Apply 16px / 1rem (4 * 4 = 16px)padding Horizontally
     .render(),
