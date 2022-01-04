@@ -1,7 +1,8 @@
 library tailwind_cli;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+/// ============================
+/// Tailwind CLI
+/// ============================
+
+// A better way to write your UI with TailwindCSS like styles
+// Using our handcrafted utility styles.

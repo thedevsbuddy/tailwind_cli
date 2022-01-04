@@ -7,6 +7,7 @@ library tailwind;
 export "./extensions/TwColorExtension.dart";
 export "./extensions/TwWidgetExtension.dart";
 export "./extensions/TwNumbersExtension.dart";
+export "./extensions/TwContextExtension.dart";
 
 /// Flutter Widgets
 export './widgets/TwContainer.dart';
@@ -15,6 +16,7 @@ export './widgets/TwButton.dart';
 export './widgets/TwRow.dart';
 export './widgets/TwColumn.dart';
 export './widgets/TwWrap.dart';
+export './widgets/TwPadding.dart';
 
 /// Utilities
 export "./utilities/Tw.dart";
