@@ -1,6 +1,6 @@
 name: tailwind_cli
-description: A new Flutter package project.
-version: 0.1.0
+description: A simple yet best tailwind style generation cli tool for flutter projects.
+version: 0.1.1
 homepage: https://github.com/thedevsbuddy/tailwind_cli
 
 environment:
