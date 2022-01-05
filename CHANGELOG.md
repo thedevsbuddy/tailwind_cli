@@ -1,3 +1,8 @@
+## 0.1.3
+
+* Fixed bug where it was not generating TwWrap and TwPadding Widget.
+--------------------
+
 ## 0.1.2
 
 * Fixed bug where it was not generating TwWrap and TwPadding Widget.

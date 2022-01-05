@@ -5,6 +5,7 @@ const String stub = """
 {
   "colors": {},
   "spacers": {},
-  "fontSizes": {}
+  "fontSizes": {},
+  "opacity": {}
 }
 """;
