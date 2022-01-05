@@ -4,6 +4,7 @@ import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
 import 'package:tailwind_cli/tailwind/lib/builders/TwColumn.dart' as twColumn;
 import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart' as twContainer;
+import 'package:tailwind_cli/tailwind/lib/builders/TwPadding.dart' as twPadding;
 import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
 import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
 import 'package:tailwind_cli/tailwind/lib/builders/TwWrap.dart' as twWrap;
@@ -15,6 +16,8 @@ Future<void> generate(List<String> args) async {
   await generateTwButton();
   await generateTwRow();
   await generateTwColumn();
+  await generateTwWrap();
+  await generateTwPadding();
 }
 
 /// Generate TwBuilder
@@ -129,4 +132,16 @@ Future<void> generateTwButton() async {
 
   /// Show Success message
   print(green("TwButton generated successfully!"));
+}
+
+/// Generate TwButton
+Future<void> generateTwPadding() async {
+  /// Check and create
+  Utils.makeDir(twPadding.target);
+
+  /// Write File
+  Utils.writeFile(twPadding.file, twPadding.stub);
+
+  /// Show Success message
+  print(green("TwPadding generated successfully!"));
 }
