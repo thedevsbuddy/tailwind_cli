@@ -4,20 +4,14 @@ import 'dart:io';
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
-import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart'
-    as twAlignmentMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart'
-    as twColorMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart'
-    as twGradientMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart'
-    as twMarginMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart'
-    as twPaddingMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart'
-    as twRoundnessMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart'
-    as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart' as twAlignmentMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/BorderMixin.dart' as twBorderMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart' as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart' as twGradientMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart' as twMarginMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart' as twPaddingMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart' as twRoundnessMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart' as twShadowMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -26,6 +20,7 @@ Future<void> generate(List<String> args) async {
   await generateRoundnessMixin();
   await generateShadowMixin();
   await generateGradientMixin();
+  await generateBorderMixin();
 }
 
 /// Generate Color Mixin
@@ -51,8 +46,7 @@ Future<void> generateColorMixin() async {
   var twColorMixinFileData = twColorMixin.stub;
 
   /// Process stub Template / File
-  twColorMixinFileData = twColorMixinFileData.replaceAll(
-      "//colorGetters", processColors(configs['colors']));
+  twColorMixinFileData = twColorMixinFileData.replaceAll("//colorGetters", processColors(configs['colors']));
 
   /// Check and create
   Utils.makeDir(twColorMixin.target);
@@ -105,10 +99,8 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll(
-      "//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll(
-      "//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -361,9 +353,7 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData = twGradientMixinFileData.replaceAll(
-      "//gradientColors",
-      processGradientColors(Utils.mergedConfigs()['colors']));
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.mergedConfigs()['colors']));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -416,4 +406,82 @@ String processGradientColors(Map<String, dynamic>? colors) {
     }
   });
   return color;
+}
+
+/// Generate Border Mixin
+Future<void> generateBorderMixin() async {
+  /// Get Tw Utility stub Template / File
+  var twBorderMixinFileData = twBorderMixin.stub;
+
+  /// Process stub Template / File
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderColors", processBorderColors(Utils.mergedConfigs()['colors']));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderWidths", processBorderWidths(Utils.mergedConfigs()['spacers']));
+
+  /// Check and create
+  Utils.makeDir(twBorderMixin.target);
+
+  /// Write File
+  Utils.writeFile(twBorderMixin.file, twBorderMixinFileData);
+
+  /// Show Success message
+  print(green("Padding Mixin Generated successfully!"));
+}
+
+/// Processes borderColors
+String processBorderColors(Map<String, dynamic>? colors) {
+  if (colors == null) {
+    return "";
+  }
+  var color = "";
+  colors.forEach((key, value) {
+    if (value is Map) {
+      value.forEach((k, val) {
+        if (k == "DEFAULT") {
+          val = Utils.hexToColor("$val");
+          color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
+      twBorderColor = Tw.$key;
+      return _child;
+  }\n\t""";
+        } else {
+          val = Utils.hexToColor("$val");
+          color += """T get border${Utils.ucFirst(key, preserveAfter: true)}$k {
+      twBorderColor = Tw.$key$k;
+      return _child;
+  }\n\t""";
+        }
+      });
+    } else {
+      value = Utils.hexToColor("$value");
+      color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
+      twBorderColor = Tw.$key;
+      return _child;
+  }\n\t""";
+    }
+  });
+  return color;
+}
+
+/// Processes Paddings
+String processBorderWidths(Map<String, dynamic>? spacers) {
+  if (spacers == null) {
+    return "";
+  }
+  var spacer = "";
+
+  /// Process All Side Margin
+  spacers.forEach((key, value) {
+    if (key == 'DEFAULT') {
+      spacer += """T get borderBase {
+    twBorderWidth = Tw.spacer; 
+    return _child;
+  }\n\t""";
+    } else {
+      spacer += """T get border$key {
+    twBorderWidth = Tw.spacer$key; 
+    return _child;
+  }\n\t""";
+    }
+  });
+
+  return spacer;
 }

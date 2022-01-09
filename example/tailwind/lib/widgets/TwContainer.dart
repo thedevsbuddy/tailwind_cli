@@ -10,6 +10,7 @@ class TwContainer extends TwWidgetBuilder<Widget>
         TwColorMixin<TwContainer>,
         TwGradientMixin<TwContainer>,
         TwRoundnessMixin<TwContainer>,
+        TwBorderMixin<TwContainer>,
         TwShadowMixin<TwContainer> {
   TwContainer({this.child}) {
     setChildForAlignment(this);
@@ -19,6 +20,7 @@ class TwContainer extends TwWidgetBuilder<Widget>
     setChildForMargining(this);
     setChildForRoundness(this);
     setChildForShadow(this);
+    setChildForBorder(this);
   }
 
   final Widget? child;
@@ -103,7 +105,7 @@ class TwContainer extends TwWidgetBuilder<Widget>
   }
 
   /// Sets the border of the Box.
-  TwContainer border(Border border) {
+  TwContainer withBorder(Border border) {
     _border = border;
     return this;
   }
@@ -140,7 +142,7 @@ class TwContainer extends TwWidgetBuilder<Widget>
             borderRadius: _isCircleRounded || (roundness == null) ? null : (radiusGeometry ?? BorderRadius.circular(roundness!)),
             shape: _isCircleRounded ? BoxShape.circle : BoxShape.rectangle,
             boxShadow: twShadow ?? _boxShadow ?? [],
-            border: _border,
+            border: _border ?? getBorder(),
             gradient: hasGradient ? LinearGradient(colors: gradientColors, stops: stops, begin: begin, end: end) : _gradient,
             image: _bgImage,
           ),

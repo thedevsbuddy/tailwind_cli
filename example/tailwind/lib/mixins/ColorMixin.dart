@@ -17,6 +17,11 @@ mixin TwColorMixin<T> {
     twColor = Theme.of(context).primaryColor;
     return _child;
   }
+  
+  T primaryColorLight(BuildContext context) {
+    twColor = Theme.of(context).primaryColorLight;
+    return _child;
+  }
 
   T primaryColorDark(BuildContext context) {
     twColor = Theme.of(context).primaryColorDark;

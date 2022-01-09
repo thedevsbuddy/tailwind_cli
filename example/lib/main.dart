@@ -42,22 +42,7 @@ class ExamplePage extends StatelessWidget {
               Text('Item 2 of TwWrap Widget').text.bodyText1(context).render(),
             ]).vertical.alignStart.render(),
             TwRow([
-              TwText('TwContainer with extension')
-                  .bodyText1(context)
-                  .indigo500
-                  .semiBold
-                  .maxLines(1)
-                  .ellipsis
-                  .render()
-                  .container
-                  .white
-                  .shadow
-                  .rounded
-                  .center
-                  .px4
-                  .py3
-                  .render()
-                  .expanded(),
+              TwText('TwContainer with extension').bodyText1(context).indigo500.semiBold.maxLines(1).ellipsis.render().container.white.border.borderDp2.borderIndigo500.shadow.rounded.center.px4.py3.render().expanded(),
               Tw.spacer3.widthBox,
               TwContainer(
                 child: Text('Direct TwContainer').text.bodyText1(context).indigo500.semiBold.render(),

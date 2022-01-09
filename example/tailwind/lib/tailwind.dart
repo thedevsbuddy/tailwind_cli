@@ -26,4 +26,5 @@ export "./mixins/MarginMixin.dart";
 export "./mixins/AlignmentMixin.dart";
 export "./mixins/ShadowMixin.dart";
 export "./mixins/RoundnessMixin.dart";
+export "./mixins/BorderMixin.dart";
 
