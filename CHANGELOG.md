@@ -1,6 +1,8 @@
 ## 0.2.0
 * Added ```borderColor``` method in ```BorderMixin```.
 * Added ```borderWidth``` method in ```BorderMixin```.
+* Added ```o()``` method in ```ColorExtensions```.
+* Added ```opacity()``` method in ```ColorExtensions```.
 * Added all duration property in the ```TwNumberExtension```.
 * Fixed minor bugs.
 
