@@ -11,6 +11,9 @@ extension DoubleExtension on double {
   Widget get heightBox => SizedBox(height: this);
 
   // Duration
+   Duration get days => Duration(days: toInt());
+  Duration get hours => Duration(hours: toInt());
+  Duration get minutes => Duration(minutes: toInt());
   Duration get seconds => Duration(seconds: toInt());
   Duration get milliseconds => Duration(milliseconds: toInt());
   Duration get microseconds => Duration(microseconds: toInt());
@@ -23,6 +26,9 @@ extension IntExtension on int {
   Widget get heightBox => SizedBox(height: toDouble());
 
   // Duration
+  Duration get days => Duration(days: toInt());
+  Duration get hours => Duration(hours: toInt());
+  Duration get minutes => Duration(minutes: toInt());
   Duration get seconds => Duration(seconds: toInt());
   Duration get milliseconds => Duration(milliseconds: toInt());
   Duration get microseconds => Duration(microseconds: toInt());

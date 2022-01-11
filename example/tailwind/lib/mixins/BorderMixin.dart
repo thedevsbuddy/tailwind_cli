@@ -32,6 +32,11 @@ mixin TwBorderMixin<T> {
   }
 
   /// Border Sizes / Widths
+  T borderWidth(dynamic width) {
+    twBorderWidth = width;
+    return _child;
+  }
+  
   T get borderDp {
     twBorderWidth = 1;
     return _child;
@@ -46,7 +51,6 @@ mixin TwBorderMixin<T> {
     twBorderWidth = 3;
     return _child;
   }
-
 
   T get borderBase {
     twBorderWidth = Tw.spacer; 
@@ -171,6 +175,11 @@ mixin TwBorderMixin<T> {
   }
 
   /// Flutter Theme Colors
+  T borderColor(Color color) {
+    twBorderColor = color;
+    return _child;
+  }
+  
   T borderPrimaryColor(BuildContext context) {
     twBorderColor = Theme.of(context).primaryColor;
     return _child;
