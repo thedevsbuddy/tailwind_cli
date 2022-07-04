@@ -36,16 +36,36 @@ class ExamplePage extends StatelessWidget {
       body: SafeArea(
         child: TwPadding(
           child: TwColumn(<Widget>[
-            TwWrap(<Widget>[
-              'This is the demo of TwWrap Widget'.text.textXl.bold.coolGray700.render(),
-              Tw.spacer2.widthBox,
-              Text('Item 2 of TwWrap Widget').text.bodyText1(context).render(),
-            ]).vertical.alignStart.render(),
+            TwWrap(
+              <Widget>[
+                'This is the demo of TwWrap Widget'.text.textXl.bold.coolGray700.render(),
+                Tw.spacer2.widthBox,
+                Text('Item 2 of TwWrap Widget').text.bodyText1.primaryColor.render(),
+              ],
+            ).vertical.alignStart.render(),
             TwRow([
-              TwText('TwContainer with extension').bodyText1(context).indigo500.semiBold.maxLines(1).ellipsis.render().container.white.border.borderDp2.borderIndigo500.shadow.rounded.center.px4.py3.render().expanded(),
+              TwText('TwContainer with extension')
+                  .bodyText1
+                  .indigo500
+                  .semiBold
+                  .maxLines(1)
+                  .ellipsis
+                  .render()
+                  .container
+                  .white
+                  .border
+                  .borderDp2
+                  .borderIndigo500
+                  .shadow
+                  .rounded
+                  .center
+                  .px4
+                  .py3
+                  .render()
+                  .expanded(),
               Tw.spacer3.widthBox,
               TwContainer(
-                child: Text('Direct TwContainer').text.bodyText1(context).indigo500.semiBold.render(),
+                child: Text('Direct TwContainer').text.bodyText1.indigo500.semiBold.render(),
               ).white.shadow.rounded.center.px4.py3.render().expanded(),
             ]).justifyBetween.alignCenter.render().container.mt4.render(),
           ]).alignStart.justifyCenter.max.render(),

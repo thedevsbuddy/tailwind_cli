@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 
@@ -13,43 +14,43 @@ mixin TwColorMixin<T> {
   }
   
   /// Flutter Theme Colors
-  T primaryColor(BuildContext context) {
-    twColor = Theme.of(context).primaryColor;
+  T get primaryColor {
+    twColor = Theme.of(Get.context!).primaryColor;
     return _child;
   }
   
-  T primaryColorLight(BuildContext context) {
-    twColor = Theme.of(context).primaryColorLight;
+  T get primaryColorLight {
+    twColor = Theme.of(Get.context!).primaryColorLight;
     return _child;
   }
 
-  T primaryColorDark(BuildContext context) {
-    twColor = Theme.of(context).primaryColorDark;
+  T get primaryColorDark {
+    twColor = Theme.of(Get.context!).primaryColorDark;
     return _child;
   }
 
-  T accentColor(BuildContext context) {
-    twColor = Theme.of(context).accentColor;
+  T get accentColor {
+    twColor = Theme.of(Get.context!).accentColor;
     return _child;
   }
 
-  T backgroundColor(BuildContext context) {
-    twColor = Theme.of(context).backgroundColor;
+  T get backgroundColor {
+    twColor = Theme.of(Get.context!).backgroundColor;
     return _child;
   }
 
-  T scaffoldBackgroundColor(BuildContext context) {
-    twColor = Theme.of(context).scaffoldBackgroundColor;
+  T get scaffoldBackgroundColor {
+    twColor = Theme.of(Get.context!).scaffoldBackgroundColor;
     return _child;
   }
 
-  T buttonColor(BuildContext context) {
-    twColor = Theme.of(context).buttonColor;
+  T get buttonColor {
+    twColor = Theme.of(Get.context!).buttonColor;
     return _child;
   }
 
-  T cardColor(BuildContext context) {
-    twColor = Theme.of(context).cardColor;
+  T get cardColor {
+    twColor = Theme.of(Get.context!).cardColor;
     return _child;
   }
  
