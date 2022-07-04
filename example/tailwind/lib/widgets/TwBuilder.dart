@@ -12,4 +12,3 @@ abstract class TwWidgetContextBuilder<T extends Widget> {
 abstract class TwTextSpanBuilder<TextSpan> {
   TextSpan render({Key? key});
 }
-

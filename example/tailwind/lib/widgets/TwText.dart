@@ -202,19 +202,18 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
 
   /// ============== FONT SIZES ============== ///
   TwText get textBase => this.._fontSize = Tw.textBase;
-	TwText get textXs => this.._fontSize = Tw.textXs;
-	TwText get textSm => this.._fontSize = Tw.textSm;
-	TwText get textLg => this.._fontSize = Tw.textLg;
-	TwText get textXl => this.._fontSize = Tw.textXl;
-	TwText get textXl2 => this.._fontSize = Tw.textXl2;
-	TwText get textXl3 => this.._fontSize = Tw.textXl3;
-	TwText get textXl4 => this.._fontSize = Tw.textXl4;
-	TwText get textXl5 => this.._fontSize = Tw.textXl5;
-	TwText get textXl6 => this.._fontSize = Tw.textXl6;
-	TwText get textXl7 => this.._fontSize = Tw.textXl7;
-	TwText get textXl8 => this.._fontSize = Tw.textXl8;
-	TwText get textXl9 => this.._fontSize = Tw.textXl9;
-	
+  TwText get textXs => this.._fontSize = Tw.textXs;
+  TwText get textSm => this.._fontSize = Tw.textSm;
+  TwText get textLg => this.._fontSize = Tw.textLg;
+  TwText get textXl => this.._fontSize = Tw.textXl;
+  TwText get textXl2 => this.._fontSize = Tw.textXl2;
+  TwText get textXl3 => this.._fontSize = Tw.textXl3;
+  TwText get textXl4 => this.._fontSize = Tw.textXl4;
+  TwText get textXl5 => this.._fontSize = Tw.textXl5;
+  TwText get textXl6 => this.._fontSize = Tw.textXl6;
+  TwText get textXl7 => this.._fontSize = Tw.textXl7;
+  TwText get textXl8 => this.._fontSize = Tw.textXl8;
+  TwText get textXl9 => this.._fontSize = Tw.textXl9;
 
   /// To set fontSize of the text using [size]
   TwText size(double? size) => this.._fontSize = size;
@@ -231,7 +230,8 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT WEIGHT ============== ///
 
   /// Sets [FontWeight] to [FontWeight.w100]
-  TwText get hairLine => _fontWeightedText(child: this, weight: FontWeight.w100);
+  TwText get hairLine =>
+      _fontWeightedText(child: this, weight: FontWeight.w100);
 
   /// Sets [FontWeight] to [FontWeight.w200]
   TwText get thin => _fontWeightedText(child: this, weight: FontWeight.w200);
@@ -246,18 +246,22 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get medium => _fontWeightedText(child: this, weight: FontWeight.w500);
 
   /// Sets [FontWeight] to [FontWeight.w600]
-  TwText get semiBold => _fontWeightedText(child: this, weight: FontWeight.w600);
+  TwText get semiBold =>
+      _fontWeightedText(child: this, weight: FontWeight.w600);
 
   /// Sets [FontWeight] to [FontWeight.w700]
   TwText get bold => _fontWeightedText(child: this, weight: FontWeight.w700);
 
   /// Sets [FontWeight] to [FontWeight.w800]
-  TwText get extraBold => _fontWeightedText(child: this, weight: FontWeight.w800);
+  TwText get extraBold =>
+      _fontWeightedText(child: this, weight: FontWeight.w800);
 
   /// Sets [FontWeight] to [FontWeight.w900]
-  TwText get extraBlack => _fontWeightedText(child: this, weight: FontWeight.w900);
+  TwText get extraBlack =>
+      _fontWeightedText(child: this, weight: FontWeight.w900);
 
-  TwText _fontWeightedText({required FontWeight weight, required TwText child}) {
+  TwText _fontWeightedText(
+      {required FontWeight weight, required TwText child}) {
     _fontWeight = weight;
     return this;
   }
@@ -396,5 +400,3 @@ extension TextStringExtensions on String {
   /// with [String] itself
   TwText get text => TwText(this);
 }
-
-

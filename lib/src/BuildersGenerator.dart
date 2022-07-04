@@ -3,7 +3,8 @@ import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
 import 'package:tailwind_cli/tailwind/lib/builders/TwColumn.dart' as twColumn;
-import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart' as twContainer;
+import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart'
+    as twContainer;
 import 'package:tailwind_cli/tailwind/lib/builders/TwPadding.dart' as twPadding;
 import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
 import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
@@ -74,7 +75,8 @@ Future<void> generateTwText() async {
   var twTextFileData = twText.stub;
 
   /// Process stub Template / File
-  twTextFileData = twTextFileData.replaceAll("//fontSizes", processFontSizes(Utils.mergedConfigs()['fontSizes']));
+  twTextFileData = twTextFileData.replaceAll(
+      "//fontSizes", processFontSizes(Utils.mergedConfigs()['fontSizes']));
 
   /// Check and create
   Utils.makeDir(twText.target);
@@ -93,7 +95,8 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   var fontSize = "";
   fontSizes.forEach((key, value) {
     if (key == 'base') {
-      fontSize += """TwText get textBase => this.._fontSize = Tw.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
+      fontSize +=
+          """TwText get textBase => this.._fontSize = Tw.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
       fontSize +=

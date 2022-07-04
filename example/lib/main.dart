@@ -38,9 +38,18 @@ class ExamplePage extends StatelessWidget {
           child: TwColumn(<Widget>[
             TwWrap(
               <Widget>[
-                'This is the demo of TwWrap Widget'.text.textXl.bold.coolGray700.render(),
+                'This is the demo of TwWrap Widget'
+                    .text
+                    .textXl
+                    .bold
+                    .coolGray700
+                    .render(),
                 Tw.spacer2.widthBox,
-                Text('Item 2 of TwWrap Widget').text.bodyText1.primaryColor.render(),
+                Text('Item 2 of TwWrap Widget')
+                    .text
+                    .bodyText1
+                    .primaryColor
+                    .render(),
               ],
             ).vertical.alignStart.render(),
             TwRow([
@@ -65,7 +74,12 @@ class ExamplePage extends StatelessWidget {
                   .expanded(),
               Tw.spacer3.widthBox,
               TwContainer(
-                child: Text('Direct TwContainer').text.bodyText1.indigo500.semiBold.render(),
+                child: Text('Direct TwContainer')
+                    .text
+                    .bodyText1
+                    .indigo500
+                    .semiBold
+                    .render(),
               ).white.shadow.rounded.center.px4.py3.render().expanded(),
             ]).justifyBetween.alignCenter.render().container.mt4.render(),
           ]).alignStart.justifyCenter.max.render(),

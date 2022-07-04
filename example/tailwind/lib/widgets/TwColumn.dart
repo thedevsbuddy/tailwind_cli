@@ -83,4 +83,3 @@ extension ColumnExtensions on Column {
         mainAxisSize,
       );
 }
-

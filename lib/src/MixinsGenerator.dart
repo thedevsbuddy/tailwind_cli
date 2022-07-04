@@ -4,14 +4,22 @@ import 'dart:io';
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
-import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart' as twAlignmentMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/BorderMixin.dart' as twBorderMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart' as twColorMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart' as twGradientMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart' as twMarginMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart' as twPaddingMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart' as twRoundnessMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart' as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart'
+    as twAlignmentMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/BorderMixin.dart'
+    as twBorderMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart'
+    as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart'
+    as twGradientMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart'
+    as twMarginMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart'
+    as twPaddingMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart'
+    as twRoundnessMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart'
+    as twShadowMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -46,7 +54,8 @@ Future<void> generateColorMixin() async {
   var twColorMixinFileData = twColorMixin.stub;
 
   /// Process stub Template / File
-  twColorMixinFileData = twColorMixinFileData.replaceAll("//colorGetters", processColors(configs['colors']));
+  twColorMixinFileData = twColorMixinFileData.replaceAll(
+      "//colorGetters", processColors(configs['colors']));
 
   /// Check and create
   Utils.makeDir(twColorMixin.target);
@@ -99,8 +108,10 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll(
+      "//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll(
+      "//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -353,7 +364,9 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData = twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.mergedConfigs()['colors']));
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll(
+      "//gradientColors",
+      processGradientColors(Utils.mergedConfigs()['colors']));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -414,8 +427,10 @@ Future<void> generateBorderMixin() async {
   var twBorderMixinFileData = twBorderMixin.stub;
 
   /// Process stub Template / File
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderColors", processBorderColors(Utils.mergedConfigs()['colors']));
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderWidths", processBorderWidths(Utils.mergedConfigs()['spacers']));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
+      "//borderColors", processBorderColors(Utils.mergedConfigs()['colors']));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
+      "//borderWidths", processBorderWidths(Utils.mergedConfigs()['spacers']));
 
   /// Check and create
   Utils.makeDir(twBorderMixin.target);

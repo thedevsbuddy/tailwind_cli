@@ -3,7 +3,9 @@ import 'package:tailwind/tailwind.dart';
 /// Extension Methods & Widgets for the strings
 extension StringExtension on String {
   ///Returns first letter of the string as Caps eg -> Flutter
-  String firstLetterUpperCase() => length > 1 ? "${this[0].toUpperCase()}${substring(1).toLowerCase()}" : this;
+  String firstLetterUpperCase() => length > 1
+      ? "${this[0].toUpperCase()}${substring(1).toLowerCase()}"
+      : this;
 
   ///Removes first element
   String get removeFirst => length > 1 ? "${substring(1, length)}" : "";
@@ -17,7 +19,9 @@ extension StringExtension on String {
   ///
   /// Uses regex to check if the provided string is a valid email address or not
   ///
-  bool get isEmail => RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(this);
+  bool get isEmail => RegExp(
+          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+      .hasMatch(this);
 
   /// Returns the string if it is not `null`, or the empty string otherwise
   String get orEmpty => this;
@@ -116,7 +120,8 @@ extension StringExtension on String {
   }
 
   bool isSymbol() {
-    const String pattern = "[`~!@#\$%^&*()_\-+=<>?:\"{}|,.//\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘’，。、]";
+    const String pattern =
+        "[`~!@#\$%^&*()_\-+=<>?:\"{}|,.//\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘’，。、]";
     for (int i = 0; i < length; i++) {
       if (pattern.contains(this[i])) {
         return true;
