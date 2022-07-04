@@ -81,4 +81,3 @@ extension RowExtensions on Row {
         mainAxisSize,
       );
 }
-

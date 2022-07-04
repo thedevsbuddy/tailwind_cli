@@ -22,7 +22,9 @@ class TwPadding extends TwWidgetBuilder<Widget> with TwPaddingMixin<TwPadding> {
     return Padding(
       key: key,
       child: child,
-      padding: _padding ?? EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
+      padding: _padding ??
+          EdgeInsets.fromLTRB(
+              paddingLeft, paddingTop, paddingRight, paddingBottom),
     );
   }
 }
@@ -32,5 +34,3 @@ extension PaddingWidgetExtension on Padding {
   /// with any widget without wrapping or with dot operator.
   TwPadding get twPadding => TwPadding.existing(child!, padding);
 }
-
-

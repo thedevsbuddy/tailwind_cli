@@ -55,13 +55,16 @@ class TwContainer extends TwWidgetBuilder<Widget>
     .._height = val;
 
   /// Provide a custom DecoratedBox
-  TwContainer withDecoration(BoxDecoration decoration) => this.._decoration = decoration;
+  TwContainer withDecoration(BoxDecoration decoration) =>
+      this.._decoration = decoration;
 
   /// Provide a custom Foreground DecoratedBox
-  TwContainer withForegroundDecoration(BoxDecoration decoration) => this.._foregroundDecoration = decoration;
+  TwContainer withForegroundDecoration(BoxDecoration decoration) =>
+      this.._foregroundDecoration = decoration;
 
   /// Provide a box constraint
-  TwContainer withConstraints(BoxConstraints constraints) => this.._constraints = constraints;
+  TwContainer withConstraints(BoxConstraints constraints) =>
+      this.._constraints = constraints;
 
   /// Sets the padding property of the box.
   TwContainer padding(EdgeInsetsGeometry val) => this.._padding = val;
@@ -73,7 +76,8 @@ class TwContainer extends TwWidgetBuilder<Widget>
   TwContainer color(Color color) => this..twColor = color;
 
   /// Sets the color property of the box using the hex color value.
-  TwContainer hexColor(String colorHex) => this..twColor = Color(int.parse(Tw.hexToColor(colorHex)));
+  TwContainer hexColor(String colorHex) =>
+      this..twColor = Color(int.parse(Tw.hexToColor(colorHex)));
 
   /// Sets the transform property to the animated box.
   TwContainer transform(Matrix4 val) => this.._transform = val;
@@ -94,7 +98,8 @@ class TwContainer extends TwWidgetBuilder<Widget>
   TwContainer shadowOutline({Color? outlineColor}) {
     _boxShadow = [
       BoxShadow(
-        color: outlineColor?.withOpacity(0.5) ?? const Color.fromRGBO(66, 153, 225, 0.5),
+        color: outlineColor?.withOpacity(0.5) ??
+            const Color.fromRGBO(66, 153, 225, 0.5),
         blurRadius: 0.0,
         spreadRadius: 3.0,
         offset: const Offset(0.0, 0.0),
@@ -111,13 +116,16 @@ class TwContainer extends TwWidgetBuilder<Widget>
   }
 
   /// Sets the linear gradient to the decorated box.
-  TwContainer linearGradient(LinearGradient linearGradient) => this.._gradient = linearGradient;
+  TwContainer linearGradient(LinearGradient linearGradient) =>
+      this.._gradient = linearGradient;
 
   /// Sets the radial gradient to the decorated box.
-  TwContainer radialGradient(RadialGradient radialGradient) => this.._gradient = radialGradient;
+  TwContainer radialGradient(RadialGradient radialGradient) =>
+      this.._gradient = radialGradient;
 
   /// Sets the sweep gradient to the decorated box.
-  TwContainer sweepGradient(SweepGradient sweepGradient) => this.._gradient = sweepGradient;
+  TwContainer sweepGradient(SweepGradient sweepGradient) =>
+      this.._gradient = sweepGradient;
 
   /// Sets the background image to the decorated box.
   TwContainer bgImage(DecorationImage image) => this.._bgImage = image;
@@ -130,8 +138,11 @@ class TwContainer extends TwWidgetBuilder<Widget>
       constraints: _constraints,
       clipBehavior: _clip ?? Clip.none,
       width: _width,
-      padding: _padding ?? EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
-      margin: _margin ?? EdgeInsets.fromLTRB(marginLeft, marginTop, marginRight, marginBottom),
+      padding: _padding ??
+          EdgeInsets.fromLTRB(
+              paddingLeft, paddingTop, paddingRight, paddingBottom),
+      margin: _margin ??
+          EdgeInsets.fromLTRB(marginLeft, marginTop, marginRight, marginBottom),
       alignment: twAlignment,
       transform: _transform,
       child: child,
@@ -139,11 +150,19 @@ class TwContainer extends TwWidgetBuilder<Widget>
       decoration: _decoration ??
           BoxDecoration(
             color: !hasGradient ? twColor : null,
-            borderRadius: _isCircleRounded || (roundness == null) ? null : (radiusGeometry ?? BorderRadius.circular(roundness!)),
+            borderRadius: _isCircleRounded || (roundness == null)
+                ? null
+                : (radiusGeometry ?? BorderRadius.circular(roundness!)),
             shape: _isCircleRounded ? BoxShape.circle : BoxShape.rectangle,
             boxShadow: twShadow ?? _boxShadow ?? [],
             border: _border ?? getBorder(),
-            gradient: hasGradient ? LinearGradient(colors: gradientColors, stops: stops, begin: begin, end: end) : _gradient,
+            gradient: hasGradient
+                ? LinearGradient(
+                    colors: gradientColors,
+                    stops: stops,
+                    begin: begin,
+                    end: end)
+                : _gradient,
             image: _bgImage,
           ),
     );
@@ -154,4 +173,3 @@ extension ContainerWidgetExtension on Widget {
   /// Extension method to directly access material [TwContainer] with any widget without wrapping or with dot operator.
   TwContainer get container => TwContainer(child: this);
 }
-
