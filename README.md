@@ -65,4 +65,4 @@ without writing a lot of code.
 
 ## Detailed documentation
 
-Please refer to [Tailwind CLI Documentation](https://docspace.dev/devsbuddy/tailwind-cli/v1)
+Coming Soon

@@ -1,3 +1,12 @@
+## 0.3.0
+* Fixed Colors extensions to use `context` as without context it wont respond to theme mode change.
+* Separated Utility helpers.
+  * Removed `Tw` mixin utility.
+  * Added `TwColors` Utility.
+  * Added `TwSpacers` Utility.
+  * Added `TwUtils` Utility.
+* Fixed Usage of all utilities.
+
 ## 0.2.5
 * Added `TwStack` widget.
 * Removed deprecated stuffs
@@ -10,7 +19,6 @@
 * Changed `Tw` Mixin:
   * Now it is only a file to hold `const` values.
 * Upgraded flutter version to `v3.x`.
-
 
 ## 0.2.1
 * Changed theme color to getters instead of methods.
