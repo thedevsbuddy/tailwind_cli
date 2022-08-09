@@ -1,3 +1,17 @@
+## 0.2.5
+* Added `TwStack` widget.
+* Removed deprecated stuffs
+  * Removed `accentColor`.
+  * Removed `buttonColor`.
+* Added new color
+  * Added `colorScheme.secondary`.
+* Fixed `textTheme` styles to work without `context`.
+* Fixed `themeColors` to work without `context`.
+* Changed `Tw` Mixin:
+  * Now it is only a file to hold `const` values.
+* Upgraded flutter version to `v3.x`.
+
+
 ## 0.2.1
 * Changed theme color to getters instead of methods.
 * Now theme colors can work without `context`.

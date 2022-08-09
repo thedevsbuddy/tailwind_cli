@@ -33,8 +33,8 @@ mixin TwColorMixin<T> {
     return _child;
   }
 
-  T get accentColor {
-    twColor = Theme.of(Get.context!).accentColor;
+  T get secondaryColor {
+    twColor = Theme.of(Get.context!).colorScheme.secondary;
     return _child;
   }
 
@@ -45,11 +45,6 @@ mixin TwColorMixin<T> {
 
   T get scaffoldBackgroundColor {
     twColor = Theme.of(Get.context!).scaffoldBackgroundColor;
-    return _child;
-  }
-
-  T get buttonColor {
-    twColor = Theme.of(Get.context!).buttonColor;
     return _child;
   }
 

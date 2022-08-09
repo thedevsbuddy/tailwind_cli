@@ -66,10 +66,10 @@ extension StringExtension on String {
   }
 
   /// Capitalize First letter of the string
-  String ucFirst() => Tw.ucFirst(this);
+  String ucFirst() => twUcFirst(this);
 
   ///Capitalize all words inside a string
-  String ucWords() => Tw.ucWords(this);
+  String ucWords() => twUcWords(this);
 
   /// Returns the concatenation of [other] and [this].
   ///

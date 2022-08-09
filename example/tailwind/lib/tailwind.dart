@@ -13,6 +13,7 @@ export './widgets/TwButton.dart';
 export './widgets/TwRow.dart';
 export './widgets/TwColumn.dart';
 export './widgets/TwWrap.dart';
+export './widgets/TwStack.dart';
 export './widgets/TwPadding.dart';
 
 /// Utilities
@@ -27,3 +28,4 @@ export "./mixins/AlignmentMixin.dart";
 export "./mixins/ShadowMixin.dart";
 export "./mixins/RoundnessMixin.dart";
 export "./mixins/BorderMixin.dart";
+

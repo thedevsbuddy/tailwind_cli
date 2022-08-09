@@ -7,6 +7,7 @@ extension WidgetExtension on Widget {
   // Expanded Widget
   Widget expanded({int flex = 1}) => Expanded(child: this, flex: flex);
   // Flexible Widget
-  Widget flexible({int flex = 1, FlexFit fit = FlexFit.loose}) =>
-      Flexible(child: this, flex: flex, fit: fit);
+  Widget flexible({int flex = 1, FlexFit fit = FlexFit.loose}) => Flexible(child: this, flex: flex, fit: fit);
 }
+
+

@@ -7,11 +7,7 @@ import 'TwBuilder.dart';
 /// to provide utilities in your Text Widget
 @protected
 class TwButton extends TwWidgetBuilder<Widget>
-    with
-        TwColorMixin<TwButton>,
-        TwPaddingMixin<TwButton>,
-        TwAlignmentMixin<TwButton>,
-        TwRoundnessMixin<TwButton> {
+    with TwColorMixin<TwButton>, TwPaddingMixin<TwButton>, TwAlignmentMixin<TwButton>, TwRoundnessMixin<TwButton> {
   TwButton(this._child) {
     setChildForColoring(this);
     setChildForPadding(this);
@@ -19,8 +15,7 @@ class TwButton extends TwWidgetBuilder<Widget>
     setChildForRoundness(this);
   }
 
-  TwButton.existing(
-      this._child, this._style, this._onPressed, this._onLongPress) {
+  TwButton.existing(this._child, this._style, this._onPressed, this._onLongPress) {
     setChildForColoring(this);
     setChildForPadding(this);
     setChildForAlignment(this);
@@ -50,9 +45,7 @@ class TwButton extends TwWidgetBuilder<Widget>
   @override
   Widget render({Key? key}) {
     final bs = TextButton.styleFrom(
-      padding: _padding ??
-          EdgeInsets.fromLTRB(
-              paddingLeft, paddingTop, paddingRight, paddingBottom),
+      padding: _padding ?? EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
       alignment: twAlignment,
       backgroundColor: twColor,
       textStyle: _textStyle,
@@ -74,6 +67,6 @@ extension TextButtonExtensions on TextButton {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
-  TwButton get button =>
-      TwButton.existing(child!, style, onPressed, onLongPress);
+  TwButton get button => TwButton.existing(child!, style, onPressed, onLongPress);
 }
+

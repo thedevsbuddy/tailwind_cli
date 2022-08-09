@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'TwBuilder.dart';
 
-/// Flutter Text Builder Widget
-/// to provide utilities in your Text Widget
+/// Flutter Wrap Builder Widget
+/// to provide utilities in your Wrap Widget
 @protected
 class TwWrap extends TwWidgetBuilder<Widget> {
   TwWrap(List<Widget> this._children);
