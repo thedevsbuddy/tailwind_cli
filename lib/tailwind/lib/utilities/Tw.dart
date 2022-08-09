@@ -3,30 +3,27 @@ const String file = "tailwind/lib/utilities/Tw.dart";
 
 const String stub = """
 import "package:flutter/material.dart";
+import 'package:get/get.dart';
 
 /// Mixin [Tw] provides config variables
 /// For all utilities
-
-mixin Tw {
   /// Spacers
   //spacers
   
   /// Colors
   
   /// Flutter Theme Colors
-  static Color primaryColor(BuildContext context) =>
-      Theme.of(context).primaryColor;
-  static Color primaryColorDark(BuildContext context) =>
-      Theme.of(context).primaryColorDark;
-  static Color accentColor(BuildContext context) =>
-      Theme.of(context).accentColor;
-  static Color backgroundColor(BuildContext context) =>
-      Theme.of(context).backgroundColor;
-  static Color scaffoldBackgroundColor(BuildContext context) =>
-      Theme.of(context).scaffoldBackgroundColor;
-  static Color buttonColor(BuildContext context) =>
-      Theme.of(context).buttonColor;
-  static Color cardColor(BuildContext context) => Theme.of(context).cardColor;
+  Color get twPrimaryColor =>
+      Theme.of(Get.context!).primaryColor;
+  Color get twPrimaryColorDark =>
+      Theme.of(Get.context!).primaryColorDark;
+  Color get twSecondaryColor =>
+      Theme.of(Get.context!).colorScheme.secondary;
+  Color get twBackgroundColor =>
+      Theme.of(Get.context!).backgroundColor;
+  Color get twScaffoldBackgroundColor =>
+      Theme.of(Get.context!).scaffoldBackgroundColor;
+  Color get twCardColor => Theme.of(Get.context!).cardColor;
   
   /// Tailwind Colors
   //colors
@@ -35,7 +32,7 @@ mixin Tw {
   //fontSizes
   
   /// Convert Hex Color To Dart [int] Color
-  static String hexToColor(String code) {
+  String hexToColor(String code) {
     if (code.startsWith("0x")) {
       return "0xFF" + code.substring(4, 10).toUpperCase();
     } else if (code.startsWith("#")) {
@@ -45,7 +42,7 @@ mixin Tw {
   }
 
   /// Get Color in [int]
-  static int getColorFromHex(String hexColor) {
+  int getColorFromHex(String hexColor) {
     hexColor = hexColor.toUpperCase().replaceAll("#", "");
     hexColor = hexColor.replaceAll('0X', '');
     if (hexColor.length == 6) {
@@ -55,14 +52,13 @@ mixin Tw {
   }
 
   /// Convert String to have first letter in caps
-  static String ucFirst(String text) {
+  String twUcFirst(String text) {
     return text.trim()[0].toUpperCase() + text.trim().substring(1, text.length).toLowerCase();
   }
 
   /// Convert String to each word's first letter caps
-  static String ucWords(String text) {
-    return text.trim().split(' ').map((e) => ucFirst(e)).join(' ');
+  String twUcWords(String text) {
+    return text.trim().split(' ').map((e) => twUcFirst(e)).join(' ');
   }
-}
 
 """;

@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Tw.yellow500,
+        primaryColor: twYellow500,
         appBarTheme: AppBarTheme(
-          backgroundColor: Tw.blueGray800,
+          backgroundColor: twBlueGray800,
           elevation: 0,
           centerTitle: true,
         ),
@@ -44,7 +44,7 @@ class ExamplePage extends StatelessWidget {
                     .bold
                     .coolGray700
                     .render(),
-                Tw.spacer2.widthBox,
+                spacer2.widthBox,
                 Text('Item 2 of TwWrap Widget')
                     .text
                     .bodyText1
@@ -72,7 +72,7 @@ class ExamplePage extends StatelessWidget {
                   .py3
                   .render()
                   .expanded(),
-              Tw.spacer3.widthBox,
+              spacer3.widthBox,
               TwContainer(
                 child: Text('Direct TwContainer')
                     .text

@@ -124,96 +124,97 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT THEME ============== ///
   /// Sets [TextTheme] headline 1
   TwText get headline1 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline1;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline1;
     return this;
   }
 
   /// Sets [TextTheme] headline 2
   TwText get headline2 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline2;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline2;
     return this;
   }
 
   /// Sets [TextTheme] headline 3
   TwText get headline3 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline3;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline3;
     return this;
   }
 
   /// Sets [TextTheme] headline 4
   TwText get headline4 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline4;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline4;
     return this;
   }
 
   /// Sets [TextTheme] headline 5
   TwText get headline5 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline5;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline5;
     return this;
   }
 
   /// Sets [TextTheme] headline 6
   TwText get headline6 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline6;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline6;
     return this;
   }
 
   /// Sets [TextTheme] bodyText1
   TwText get bodyText1 {
-    _themedStyle = Theme.of(Get.context).textTheme.bodyText1;
+    _themedStyle = Theme.of(Get.context!).textTheme.bodyText1;
     return this;
   }
 
   /// Sets [TextTheme] bodyText2
   TwText get bodyText2 {
-    _themedStyle = Theme.of(Get.context).textTheme.bodyText2;
+    _themedStyle = Theme.of(Get.context!).textTheme.bodyText2;
     return this;
   }
 
   /// Sets [TextTheme] caption
   TwText get caption {
-    _themedStyle = Theme.of(Get.context).textTheme.caption;
+    _themedStyle = Theme.of(Get.context!).textTheme.caption;
     return this;
   }
 
   /// Sets [TextTheme] subtitle1
   TwText get subtitle1 {
-    _themedStyle = Theme.of(Get.context).textTheme.subtitle1;
+    _themedStyle = Theme.of(Get.context!).textTheme.subtitle1;
     return this;
   }
 
   /// Sets [TextTheme] subtitle2
   TwText get subtitle2 {
-    _themedStyle = Theme.of(Get.context).textTheme.subtitle2;
+    _themedStyle = Theme.of(Get.context!).textTheme.subtitle2;
     return this;
   }
 
   /// Sets [TextTheme] overline
   TwText get overlineText {
-    _themedStyle = Theme.of(Get.context).textTheme.overline;
+    _themedStyle = Theme.of(Get.context!).textTheme.overline;
     return this;
   }
 
   /// Sets [TextTheme] button
   TwText get buttonText {
-    _themedStyle = Theme.of(Get.context).textTheme.button;
+    _themedStyle = Theme.of(Get.context!).textTheme.button;
     return this;
   }
 
   /// ============== FONT SIZES ============== ///
-  TwText get textBase => this.._fontSize = Tw.textBase;
-  TwText get textXs => this.._fontSize = Tw.textXs;
-  TwText get textSm => this.._fontSize = Tw.textSm;
-  TwText get textLg => this.._fontSize = Tw.textLg;
-  TwText get textXl => this.._fontSize = Tw.textXl;
-  TwText get textXl2 => this.._fontSize = Tw.textXl2;
-  TwText get textXl3 => this.._fontSize = Tw.textXl3;
-  TwText get textXl4 => this.._fontSize = Tw.textXl4;
-  TwText get textXl5 => this.._fontSize = Tw.textXl5;
-  TwText get textXl6 => this.._fontSize = Tw.textXl6;
-  TwText get textXl7 => this.._fontSize = Tw.textXl7;
-  TwText get textXl8 => this.._fontSize = Tw.textXl8;
-  TwText get textXl9 => this.._fontSize = Tw.textXl9;
+  TwText get textBase => this.._fontSize = textBase as double?;
+	TwText get textXs => this.._fontSize = textXs as double?;
+	TwText get textSm => this.._fontSize = textSm as double?;
+	TwText get textLg => this.._fontSize = textLg as double?;
+	TwText get textXl => this.._fontSize = textXl as double?;
+	TwText get textXl2 => this.._fontSize = textXl2 as double?;
+	TwText get textXl3 => this.._fontSize = textXl3 as double?;
+	TwText get textXl4 => this.._fontSize = textXl4 as double?;
+	TwText get textXl5 => this.._fontSize = textXl5 as double?;
+	TwText get textXl6 => this.._fontSize = textXl6 as double?;
+	TwText get textXl7 => this.._fontSize = textXl7 as double?;
+	TwText get textXl8 => this.._fontSize = textXl8 as double?;
+	TwText get textXl9 => this.._fontSize = textXl9 as double?;
+	
 
   /// To set fontSize of the text using [size]
   TwText size(double? size) => this.._fontSize = size;
@@ -230,8 +231,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT WEIGHT ============== ///
 
   /// Sets [FontWeight] to [FontWeight.w100]
-  TwText get hairLine =>
-      _fontWeightedText(child: this, weight: FontWeight.w100);
+  TwText get hairLine => _fontWeightedText(child: this, weight: FontWeight.w100);
 
   /// Sets [FontWeight] to [FontWeight.w200]
   TwText get thin => _fontWeightedText(child: this, weight: FontWeight.w200);
@@ -246,22 +246,18 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get medium => _fontWeightedText(child: this, weight: FontWeight.w500);
 
   /// Sets [FontWeight] to [FontWeight.w600]
-  TwText get semiBold =>
-      _fontWeightedText(child: this, weight: FontWeight.w600);
+  TwText get semiBold => _fontWeightedText(child: this, weight: FontWeight.w600);
 
   /// Sets [FontWeight] to [FontWeight.w700]
   TwText get bold => _fontWeightedText(child: this, weight: FontWeight.w700);
 
   /// Sets [FontWeight] to [FontWeight.w800]
-  TwText get extraBold =>
-      _fontWeightedText(child: this, weight: FontWeight.w800);
+  TwText get extraBold => _fontWeightedText(child: this, weight: FontWeight.w800);
 
   /// Sets [FontWeight] to [FontWeight.w900]
-  TwText get extraBlack =>
-      _fontWeightedText(child: this, weight: FontWeight.w900);
+  TwText get extraBlack => _fontWeightedText(child: this, weight: FontWeight.w900);
 
-  TwText _fontWeightedText(
-      {required FontWeight weight, required TwText child}) {
+  TwText _fontWeightedText({required FontWeight weight, required TwText child}) {
     _fontWeight = weight;
     return this;
   }
@@ -310,7 +306,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get lowercase => this.._text = _text!.toLowerCase();
 
   /// Converts the text to first letter of very word as uppercase.
-  TwText get capitalize => this.._text = Tw.ucWords('${this.._text}');
+  TwText get capitalize => this.._text = twUcWords('${this.._text}');
 
   /// ============== LEADING ============== ///
   /// Sets [lineHeight] to 0.75
@@ -400,3 +396,5 @@ extension TextStringExtensions on String {
   /// with [String] itself
   TwText get text => TwText(this);
 }
+
+

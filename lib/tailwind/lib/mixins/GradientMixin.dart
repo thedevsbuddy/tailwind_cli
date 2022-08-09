@@ -4,6 +4,7 @@ const String file = "tailwind/lib/mixins/GradientMixin.dart";
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
+import 'package:get/get.dart';
 
 mixin TwGradientMixin<T> {
   late T _child;
@@ -77,62 +78,54 @@ mixin TwGradientMixin<T> {
   
   // Gradient Colors
   /// Flutter Theme Colors
-  T fromPrimaryColor(BuildContext context) {
-    gradientColors[0] = Theme.of(context).primaryColor;
+  T get fromPrimaryColor {
+    gradientColors[0] = Theme.of(Get.context!).primaryColor;
     return _child;
   }
-  T toPrimaryColor(BuildContext context) {
-    gradientColors[1] = Theme.of(context).primaryColor;
-    return _child;
-  }
-
-  T fromPrimaryColorDark(BuildContext context) {
-    gradientColors[0] = Theme.of(context).primaryColorDark;
+  T get toPrimaryColor {
+    gradientColors[1] = Theme.of(Get.context!).primaryColor;
     return _child;
   }
 
-  T fromAccentColor(BuildContext context) {
-    gradientColors[0] = Theme.of(context).accentColor;
-    return _child;
-  }
-  T toAccentColor(BuildContext context) {
-    gradientColors[1] = Theme.of(context).accentColor;
+  T get fromPrimaryColorDark {
+    gradientColors[0] = Theme.of(Get.context!).primaryColorDark;
     return _child;
   }
 
-  T fromBackgroundColor(BuildContext context) {
-    gradientColors[0] = Theme.of(context).backgroundColor;
+  T get fromSecondaryColor {
+    gradientColors[0] = Theme.of(Get.context!).colorScheme.secondary;
     return _child;
   }
-  T toBackgroundColor(BuildContext context) {
-    gradientColors[1] = Theme.of(context).backgroundColor;
-    return _child;
-  }
-
-  T fromScaffoldBackgroundColor(BuildContext context) {
-    gradientColors[0] = Theme.of(context).scaffoldBackgroundColor;
-    return _child;
-  }
-  T toScaffoldBackgroundColor(BuildContext context) {
-    gradientColors[1] = Theme.of(context).scaffoldBackgroundColor;
+  T get toSecondaryColor {
+    gradientColors[1] = Theme.of(Get.context!).colorScheme.secondary;
     return _child;
   }
 
-  T fromButtonColor(BuildContext context) {
-    gradientColors[0] = Theme.of(context).buttonColor;
+  T get fromBackgroundColor {
+    gradientColors[0] = Theme.of(Get.context!).backgroundColor;
     return _child;
   }
-  T toButtonColor(BuildContext context) {
-    gradientColors[1] = Theme.of(context).buttonColor;
+  T get toBackgroundColor {
+    gradientColors[1] = Theme.of(Get.context!).backgroundColor;
     return _child;
   }
 
-  T fromCardColor(BuildContext context) {
-    gradientColors[0] = Theme.of(context).cardColor;
+  T get fromScaffoldBackgroundColor {
+    gradientColors[0] = Theme.of(Get.context!).scaffoldBackgroundColor;
     return _child;
   }
-  T toCardColor(BuildContext context) {
-    gradientColors[1] = Theme.of(context).cardColor;
+  T get toScaffoldBackgroundColor {
+    gradientColors[1] = Theme.of(Get.context!).scaffoldBackgroundColor;
+    return _child;
+  }
+
+
+  T get fromCardColor {
+    gradientColors[0] = Theme.of(Get.context!).cardColor;
+    return _child;
+  }
+  T get toCardColor {
+    gradientColors[1] = Theme.of(Get.context!).cardColor;
     return _child;
   }
 

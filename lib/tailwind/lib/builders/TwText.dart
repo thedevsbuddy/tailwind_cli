@@ -128,79 +128,79 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT THEME ============== ///
   /// Sets [TextTheme] headline 1
   TwText get headline1 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline1;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline1;
     return this;
   }
 
   /// Sets [TextTheme] headline 2
   TwText get headline2 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline2;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline2;
     return this;
   }
 
   /// Sets [TextTheme] headline 3
   TwText get headline3 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline3;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline3;
     return this;
   }
 
   /// Sets [TextTheme] headline 4
   TwText get headline4 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline4;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline4;
     return this;
   }
 
   /// Sets [TextTheme] headline 5
   TwText get headline5 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline5;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline5;
     return this;
   }
 
   /// Sets [TextTheme] headline 6
   TwText get headline6 {
-    _themedStyle = Theme.of(Get.context).textTheme.headline6;
+    _themedStyle = Theme.of(Get.context!).textTheme.headline6;
     return this;
   }
 
   /// Sets [TextTheme] bodyText1
   TwText get bodyText1 {
-    _themedStyle = Theme.of(Get.context).textTheme.bodyText1;
+    _themedStyle = Theme.of(Get.context!).textTheme.bodyText1;
     return this;
   }
 
   /// Sets [TextTheme] bodyText2
   TwText get bodyText2 {
-    _themedStyle = Theme.of(Get.context).textTheme.bodyText2;
+    _themedStyle = Theme.of(Get.context!).textTheme.bodyText2;
     return this;
   }
 
   /// Sets [TextTheme] caption
   TwText get caption {
-    _themedStyle = Theme.of(Get.context).textTheme.caption;
+    _themedStyle = Theme.of(Get.context!).textTheme.caption;
     return this;
   }
 
   /// Sets [TextTheme] subtitle1
   TwText get subtitle1 {
-    _themedStyle = Theme.of(Get.context).textTheme.subtitle1;
+    _themedStyle = Theme.of(Get.context!).textTheme.subtitle1;
     return this;
   }
 
   /// Sets [TextTheme] subtitle2
   TwText get subtitle2 {
-    _themedStyle = Theme.of(Get.context).textTheme.subtitle2;
+    _themedStyle = Theme.of(Get.context!).textTheme.subtitle2;
     return this;
   }
 
   /// Sets [TextTheme] overline
   TwText get overlineText {
-    _themedStyle = Theme.of(Get.context).textTheme.overline;
+    _themedStyle = Theme.of(Get.context!).textTheme.overline;
     return this;
   }
 
   /// Sets [TextTheme] button
   TwText get buttonText {
-    _themedStyle = Theme.of(Get.context).textTheme.button;
+    _themedStyle = Theme.of(Get.context!).textTheme.button;
     return this;
   }
 
@@ -297,7 +297,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get lowercase => this.._text = _text!.toLowerCase();
 
   /// Converts the text to first letter of very word as uppercase.
-  TwText get capitalize => this.._text = Tw.ucWords('\${this.._text}');
+  TwText get capitalize => this.._text = twUcWords('\${this.._text}');
 
   /// ============== LEADING ============== ///
   /// Sets [lineHeight] to 0.75

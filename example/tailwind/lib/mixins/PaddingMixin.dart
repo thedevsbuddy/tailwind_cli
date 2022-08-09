@@ -17,1138 +17,952 @@ mixin TwPaddingMixin<T> {
   void setChildForPadding(T child) {
     _child = child;
   }
-
+    
   /// Custom All Side Padding
-  T p(dynamic val) {
+  T p(dynamic val){
     paddingLeft = val;
     paddingTop = val;
     paddingRight = val;
     paddingBottom = val;
     return _child;
-  }
-
+  } 
+  
   /// Custom Horizontal Padding
-  T px(dynamic val) {
+  T px(dynamic val){
     paddingLeft = val;
     paddingRight = val;
     return _child;
-  }
+  } 
 
   /// Custom Vertical Padding
-  T py(dynamic val) {
+  T py(dynamic val){
     paddingTop = val;
     paddingBottom = val;
     return _child;
-  }
-
+  } 
+  
   /// Custom Left Padding
-  T pl(dynamic val) {
+  T pl(dynamic val){
     paddingLeft = val;
     return _child;
-  }
+  } 
 
   /// Custom Top Padding
-  T pt(dynamic val) {
+  T pt(dynamic val){
     paddingTop = val;
     return _child;
-  }
+  } 
 
   /// Custom Right Padding
-  T pr(dynamic val) {
+  T pr(dynamic val){
     paddingRight = val;
     return _child;
-  }
+  } 
 
   /// Custom Bottom Padding
-  T pb(dynamic val) {
+  T pb(dynamic val){
     paddingBottom = val;
     return _child;
   }
-
+  
   /// All Side Padding
-  T get p0 {
-    paddingLeft = Tw.spacer0;
-    paddingTop = Tw.spacer0;
-    paddingRight = Tw.spacer0;
-    paddingBottom = Tw.spacer0;
-    return _child;
-  }
-
-  T get p1 {
-    paddingLeft = Tw.spacer1;
-    paddingTop = Tw.spacer1;
-    paddingRight = Tw.spacer1;
-    paddingBottom = Tw.spacer1;
-    return _child;
-  }
-
-  T get p2 {
-    paddingLeft = Tw.spacer2;
-    paddingTop = Tw.spacer2;
-    paddingRight = Tw.spacer2;
-    paddingBottom = Tw.spacer2;
-    return _child;
-  }
-
-  T get p3 {
-    paddingLeft = Tw.spacer3;
-    paddingTop = Tw.spacer3;
-    paddingRight = Tw.spacer3;
-    paddingBottom = Tw.spacer3;
-    return _child;
-  }
-
-  T get p4 {
-    paddingLeft = Tw.spacer4;
-    paddingTop = Tw.spacer4;
-    paddingRight = Tw.spacer4;
-    paddingBottom = Tw.spacer4;
-    return _child;
-  }
-
-  T get p5 {
-    paddingLeft = Tw.spacer5;
-    paddingTop = Tw.spacer5;
-    paddingRight = Tw.spacer5;
-    paddingBottom = Tw.spacer5;
-    return _child;
-  }
-
-  T get p6 {
-    paddingLeft = Tw.spacer6;
-    paddingTop = Tw.spacer6;
-    paddingRight = Tw.spacer6;
-    paddingBottom = Tw.spacer6;
-    return _child;
-  }
-
-  T get p7 {
-    paddingLeft = Tw.spacer7;
-    paddingTop = Tw.spacer7;
-    paddingRight = Tw.spacer7;
-    paddingBottom = Tw.spacer7;
-    return _child;
-  }
-
-  T get p8 {
-    paddingLeft = Tw.spacer8;
-    paddingTop = Tw.spacer8;
-    paddingRight = Tw.spacer8;
-    paddingBottom = Tw.spacer8;
-    return _child;
-  }
-
-  T get p9 {
-    paddingLeft = Tw.spacer9;
-    paddingTop = Tw.spacer9;
-    paddingRight = Tw.spacer9;
-    paddingBottom = Tw.spacer9;
-    return _child;
-  }
-
-  T get p10 {
-    paddingLeft = Tw.spacer10;
-    paddingTop = Tw.spacer10;
-    paddingRight = Tw.spacer10;
-    paddingBottom = Tw.spacer10;
-    return _child;
-  }
-
-  T get p11 {
-    paddingLeft = Tw.spacer11;
-    paddingTop = Tw.spacer11;
-    paddingRight = Tw.spacer11;
-    paddingBottom = Tw.spacer11;
-    return _child;
-  }
-
-  T get p12 {
-    paddingLeft = Tw.spacer12;
-    paddingTop = Tw.spacer12;
-    paddingRight = Tw.spacer12;
-    paddingBottom = Tw.spacer12;
+	T get p0 {
+    paddingLeft = spacer0;
+    paddingTop = spacer0;
+    paddingRight = spacer0;
+    paddingBottom = spacer0;
     return _child;
   }
-
-  T get p14 {
-    paddingLeft = Tw.spacer14;
-    paddingTop = Tw.spacer14;
-    paddingRight = Tw.spacer14;
-    paddingBottom = Tw.spacer14;
+	T get p1 {
+    paddingLeft = spacer1;
+    paddingTop = spacer1;
+    paddingRight = spacer1;
+    paddingBottom = spacer1;
     return _child;
   }
-
-  T get p16 {
-    paddingLeft = Tw.spacer16;
-    paddingTop = Tw.spacer16;
-    paddingRight = Tw.spacer16;
-    paddingBottom = Tw.spacer16;
+	T get p2 {
+    paddingLeft = spacer2;
+    paddingTop = spacer2;
+    paddingRight = spacer2;
+    paddingBottom = spacer2;
     return _child;
   }
-
-  T get p20 {
-    paddingLeft = Tw.spacer20;
-    paddingTop = Tw.spacer20;
-    paddingRight = Tw.spacer20;
-    paddingBottom = Tw.spacer20;
+	T get p3 {
+    paddingLeft = spacer3;
+    paddingTop = spacer3;
+    paddingRight = spacer3;
+    paddingBottom = spacer3;
     return _child;
   }
-
-  T get p24 {
-    paddingLeft = Tw.spacer24;
-    paddingTop = Tw.spacer24;
-    paddingRight = Tw.spacer24;
-    paddingBottom = Tw.spacer24;
+	T get p4 {
+    paddingLeft = spacer4;
+    paddingTop = spacer4;
+    paddingRight = spacer4;
+    paddingBottom = spacer4;
     return _child;
   }
-
-  T get p28 {
-    paddingLeft = Tw.spacer28;
-    paddingTop = Tw.spacer28;
-    paddingRight = Tw.spacer28;
-    paddingBottom = Tw.spacer28;
+	T get p5 {
+    paddingLeft = spacer5;
+    paddingTop = spacer5;
+    paddingRight = spacer5;
+    paddingBottom = spacer5;
     return _child;
   }
-
-  T get p32 {
-    paddingLeft = Tw.spacer32;
-    paddingTop = Tw.spacer32;
-    paddingRight = Tw.spacer32;
-    paddingBottom = Tw.spacer32;
+	T get p6 {
+    paddingLeft = spacer6;
+    paddingTop = spacer6;
+    paddingRight = spacer6;
+    paddingBottom = spacer6;
     return _child;
   }
-
-  T get p36 {
-    paddingLeft = Tw.spacer36;
-    paddingTop = Tw.spacer36;
-    paddingRight = Tw.spacer36;
-    paddingBottom = Tw.spacer36;
+	T get p7 {
+    paddingLeft = spacer7;
+    paddingTop = spacer7;
+    paddingRight = spacer7;
+    paddingBottom = spacer7;
     return _child;
   }
-
-  T get p40 {
-    paddingLeft = Tw.spacer40;
-    paddingTop = Tw.spacer40;
-    paddingRight = Tw.spacer40;
-    paddingBottom = Tw.spacer40;
+	T get p8 {
+    paddingLeft = spacer8;
+    paddingTop = spacer8;
+    paddingRight = spacer8;
+    paddingBottom = spacer8;
     return _child;
   }
-
-  T get p44 {
-    paddingLeft = Tw.spacer44;
-    paddingTop = Tw.spacer44;
-    paddingRight = Tw.spacer44;
-    paddingBottom = Tw.spacer44;
+	T get p9 {
+    paddingLeft = spacer9;
+    paddingTop = spacer9;
+    paddingRight = spacer9;
+    paddingBottom = spacer9;
     return _child;
   }
-
-  T get p48 {
-    paddingLeft = Tw.spacer48;
-    paddingTop = Tw.spacer48;
-    paddingRight = Tw.spacer48;
-    paddingBottom = Tw.spacer48;
+	T get p10 {
+    paddingLeft = spacer10;
+    paddingTop = spacer10;
+    paddingRight = spacer10;
+    paddingBottom = spacer10;
     return _child;
   }
-
-  T get p52 {
-    paddingLeft = Tw.spacer52;
-    paddingTop = Tw.spacer52;
-    paddingRight = Tw.spacer52;
-    paddingBottom = Tw.spacer52;
+	T get p11 {
+    paddingLeft = spacer11;
+    paddingTop = spacer11;
+    paddingRight = spacer11;
+    paddingBottom = spacer11;
     return _child;
   }
-
-  T get p56 {
-    paddingLeft = Tw.spacer56;
-    paddingTop = Tw.spacer56;
-    paddingRight = Tw.spacer56;
-    paddingBottom = Tw.spacer56;
+	T get p12 {
+    paddingLeft = spacer12;
+    paddingTop = spacer12;
+    paddingRight = spacer12;
+    paddingBottom = spacer12;
     return _child;
   }
-
-  T get p60 {
-    paddingLeft = Tw.spacer60;
-    paddingTop = Tw.spacer60;
-    paddingRight = Tw.spacer60;
-    paddingBottom = Tw.spacer60;
+	T get p14 {
+    paddingLeft = spacer14;
+    paddingTop = spacer14;
+    paddingRight = spacer14;
+    paddingBottom = spacer14;
     return _child;
   }
-
-  T get p64 {
-    paddingLeft = Tw.spacer64;
-    paddingTop = Tw.spacer64;
-    paddingRight = Tw.spacer64;
-    paddingBottom = Tw.spacer64;
+	T get p16 {
+    paddingLeft = spacer16;
+    paddingTop = spacer16;
+    paddingRight = spacer16;
+    paddingBottom = spacer16;
     return _child;
   }
-
-  /// Horizontal Padding
-  T get px0 {
-    paddingLeft = Tw.spacer0;
-    paddingRight = Tw.spacer0;
+	T get p20 {
+    paddingLeft = spacer20;
+    paddingTop = spacer20;
+    paddingRight = spacer20;
+    paddingBottom = spacer20;
     return _child;
   }
-
-  T get px1 {
-    paddingLeft = Tw.spacer1;
-    paddingRight = Tw.spacer1;
+	T get p24 {
+    paddingLeft = spacer24;
+    paddingTop = spacer24;
+    paddingRight = spacer24;
+    paddingBottom = spacer24;
     return _child;
   }
-
-  T get px2 {
-    paddingLeft = Tw.spacer2;
-    paddingRight = Tw.spacer2;
+	T get p28 {
+    paddingLeft = spacer28;
+    paddingTop = spacer28;
+    paddingRight = spacer28;
+    paddingBottom = spacer28;
     return _child;
   }
-
-  T get px3 {
-    paddingLeft = Tw.spacer3;
-    paddingRight = Tw.spacer3;
+	T get p32 {
+    paddingLeft = spacer32;
+    paddingTop = spacer32;
+    paddingRight = spacer32;
+    paddingBottom = spacer32;
     return _child;
   }
-
-  T get px4 {
-    paddingLeft = Tw.spacer4;
-    paddingRight = Tw.spacer4;
+	T get p36 {
+    paddingLeft = spacer36;
+    paddingTop = spacer36;
+    paddingRight = spacer36;
+    paddingBottom = spacer36;
     return _child;
   }
-
-  T get px5 {
-    paddingLeft = Tw.spacer5;
-    paddingRight = Tw.spacer5;
+	T get p40 {
+    paddingLeft = spacer40;
+    paddingTop = spacer40;
+    paddingRight = spacer40;
+    paddingBottom = spacer40;
     return _child;
   }
-
-  T get px6 {
-    paddingLeft = Tw.spacer6;
-    paddingRight = Tw.spacer6;
+	T get p44 {
+    paddingLeft = spacer44;
+    paddingTop = spacer44;
+    paddingRight = spacer44;
+    paddingBottom = spacer44;
     return _child;
   }
-
-  T get px7 {
-    paddingLeft = Tw.spacer7;
-    paddingRight = Tw.spacer7;
+	T get p48 {
+    paddingLeft = spacer48;
+    paddingTop = spacer48;
+    paddingRight = spacer48;
+    paddingBottom = spacer48;
     return _child;
   }
-
-  T get px8 {
-    paddingLeft = Tw.spacer8;
-    paddingRight = Tw.spacer8;
+	T get p52 {
+    paddingLeft = spacer52;
+    paddingTop = spacer52;
+    paddingRight = spacer52;
+    paddingBottom = spacer52;
     return _child;
   }
-
-  T get px9 {
-    paddingLeft = Tw.spacer9;
-    paddingRight = Tw.spacer9;
+	T get p56 {
+    paddingLeft = spacer56;
+    paddingTop = spacer56;
+    paddingRight = spacer56;
+    paddingBottom = spacer56;
     return _child;
   }
-
-  T get px10 {
-    paddingLeft = Tw.spacer10;
-    paddingRight = Tw.spacer10;
+	T get p60 {
+    paddingLeft = spacer60;
+    paddingTop = spacer60;
+    paddingRight = spacer60;
+    paddingBottom = spacer60;
     return _child;
   }
-
-  T get px11 {
-    paddingLeft = Tw.spacer11;
-    paddingRight = Tw.spacer11;
+	T get p64 {
+    paddingLeft = spacer64;
+    paddingTop = spacer64;
+    paddingRight = spacer64;
+    paddingBottom = spacer64;
     return _child;
   }
-
-  T get px12 {
-    paddingLeft = Tw.spacer12;
-    paddingRight = Tw.spacer12;
+	/// Horizontal Padding
+	T get px0 {
+    paddingLeft = spacer0;
+    paddingRight = spacer0;
     return _child;
   }
-
-  T get px14 {
-    paddingLeft = Tw.spacer14;
-    paddingRight = Tw.spacer14;
+	T get px1 {
+    paddingLeft = spacer1;
+    paddingRight = spacer1;
     return _child;
   }
-
-  T get px16 {
-    paddingLeft = Tw.spacer16;
-    paddingRight = Tw.spacer16;
+	T get px2 {
+    paddingLeft = spacer2;
+    paddingRight = spacer2;
     return _child;
   }
-
-  T get px20 {
-    paddingLeft = Tw.spacer20;
-    paddingRight = Tw.spacer20;
+	T get px3 {
+    paddingLeft = spacer3;
+    paddingRight = spacer3;
     return _child;
   }
-
-  T get px24 {
-    paddingLeft = Tw.spacer24;
-    paddingRight = Tw.spacer24;
+	T get px4 {
+    paddingLeft = spacer4;
+    paddingRight = spacer4;
     return _child;
   }
-
-  T get px28 {
-    paddingLeft = Tw.spacer28;
-    paddingRight = Tw.spacer28;
+	T get px5 {
+    paddingLeft = spacer5;
+    paddingRight = spacer5;
     return _child;
   }
-
-  T get px32 {
-    paddingLeft = Tw.spacer32;
-    paddingRight = Tw.spacer32;
+	T get px6 {
+    paddingLeft = spacer6;
+    paddingRight = spacer6;
     return _child;
   }
-
-  T get px36 {
-    paddingLeft = Tw.spacer36;
-    paddingRight = Tw.spacer36;
+	T get px7 {
+    paddingLeft = spacer7;
+    paddingRight = spacer7;
     return _child;
   }
-
-  T get px40 {
-    paddingLeft = Tw.spacer40;
-    paddingRight = Tw.spacer40;
+	T get px8 {
+    paddingLeft = spacer8;
+    paddingRight = spacer8;
     return _child;
   }
-
-  T get px44 {
-    paddingLeft = Tw.spacer44;
-    paddingRight = Tw.spacer44;
+	T get px9 {
+    paddingLeft = spacer9;
+    paddingRight = spacer9;
     return _child;
   }
-
-  T get px48 {
-    paddingLeft = Tw.spacer48;
-    paddingRight = Tw.spacer48;
+	T get px10 {
+    paddingLeft = spacer10;
+    paddingRight = spacer10;
     return _child;
   }
-
-  T get px52 {
-    paddingLeft = Tw.spacer52;
-    paddingRight = Tw.spacer52;
+	T get px11 {
+    paddingLeft = spacer11;
+    paddingRight = spacer11;
     return _child;
   }
-
-  T get px56 {
-    paddingLeft = Tw.spacer56;
-    paddingRight = Tw.spacer56;
+	T get px12 {
+    paddingLeft = spacer12;
+    paddingRight = spacer12;
     return _child;
   }
-
-  T get px60 {
-    paddingLeft = Tw.spacer60;
-    paddingRight = Tw.spacer60;
+	T get px14 {
+    paddingLeft = spacer14;
+    paddingRight = spacer14;
     return _child;
   }
-
-  T get px64 {
-    paddingLeft = Tw.spacer64;
-    paddingRight = Tw.spacer64;
+	T get px16 {
+    paddingLeft = spacer16;
+    paddingRight = spacer16;
     return _child;
   }
-
-  /// Vertical Padding
-  T get py0 {
-    paddingTop = Tw.spacer0;
-    paddingBottom = Tw.spacer0;
+	T get px20 {
+    paddingLeft = spacer20;
+    paddingRight = spacer20;
     return _child;
   }
-
-  T get py1 {
-    paddingTop = Tw.spacer1;
-    paddingBottom = Tw.spacer1;
+	T get px24 {
+    paddingLeft = spacer24;
+    paddingRight = spacer24;
     return _child;
   }
-
-  T get py2 {
-    paddingTop = Tw.spacer2;
-    paddingBottom = Tw.spacer2;
+	T get px28 {
+    paddingLeft = spacer28;
+    paddingRight = spacer28;
     return _child;
   }
-
-  T get py3 {
-    paddingTop = Tw.spacer3;
-    paddingBottom = Tw.spacer3;
+	T get px32 {
+    paddingLeft = spacer32;
+    paddingRight = spacer32;
     return _child;
   }
-
-  T get py4 {
-    paddingTop = Tw.spacer4;
-    paddingBottom = Tw.spacer4;
+	T get px36 {
+    paddingLeft = spacer36;
+    paddingRight = spacer36;
     return _child;
   }
-
-  T get py5 {
-    paddingTop = Tw.spacer5;
-    paddingBottom = Tw.spacer5;
+	T get px40 {
+    paddingLeft = spacer40;
+    paddingRight = spacer40;
     return _child;
   }
-
-  T get py6 {
-    paddingTop = Tw.spacer6;
-    paddingBottom = Tw.spacer6;
+	T get px44 {
+    paddingLeft = spacer44;
+    paddingRight = spacer44;
     return _child;
   }
-
-  T get py7 {
-    paddingTop = Tw.spacer7;
-    paddingBottom = Tw.spacer7;
+	T get px48 {
+    paddingLeft = spacer48;
+    paddingRight = spacer48;
     return _child;
   }
-
-  T get py8 {
-    paddingTop = Tw.spacer8;
-    paddingBottom = Tw.spacer8;
+	T get px52 {
+    paddingLeft = spacer52;
+    paddingRight = spacer52;
     return _child;
   }
-
-  T get py9 {
-    paddingTop = Tw.spacer9;
-    paddingBottom = Tw.spacer9;
+	T get px56 {
+    paddingLeft = spacer56;
+    paddingRight = spacer56;
     return _child;
   }
-
-  T get py10 {
-    paddingTop = Tw.spacer10;
-    paddingBottom = Tw.spacer10;
+	T get px60 {
+    paddingLeft = spacer60;
+    paddingRight = spacer60;
     return _child;
   }
-
-  T get py11 {
-    paddingTop = Tw.spacer11;
-    paddingBottom = Tw.spacer11;
+	T get px64 {
+    paddingLeft = spacer64;
+    paddingRight = spacer64;
     return _child;
   }
-
-  T get py12 {
-    paddingTop = Tw.spacer12;
-    paddingBottom = Tw.spacer12;
+	/// Vertical Padding
+	T get py0 {
+    paddingTop = spacer0;
+    paddingBottom = spacer0;
     return _child;
   }
-
-  T get py14 {
-    paddingTop = Tw.spacer14;
-    paddingBottom = Tw.spacer14;
+	T get py1 {
+    paddingTop = spacer1;
+    paddingBottom = spacer1;
     return _child;
   }
-
-  T get py16 {
-    paddingTop = Tw.spacer16;
-    paddingBottom = Tw.spacer16;
+	T get py2 {
+    paddingTop = spacer2;
+    paddingBottom = spacer2;
     return _child;
   }
-
-  T get py20 {
-    paddingTop = Tw.spacer20;
-    paddingBottom = Tw.spacer20;
+	T get py3 {
+    paddingTop = spacer3;
+    paddingBottom = spacer3;
     return _child;
   }
-
-  T get py24 {
-    paddingTop = Tw.spacer24;
-    paddingBottom = Tw.spacer24;
+	T get py4 {
+    paddingTop = spacer4;
+    paddingBottom = spacer4;
     return _child;
   }
-
-  T get py28 {
-    paddingTop = Tw.spacer28;
-    paddingBottom = Tw.spacer28;
+	T get py5 {
+    paddingTop = spacer5;
+    paddingBottom = spacer5;
     return _child;
   }
-
-  T get py32 {
-    paddingTop = Tw.spacer32;
-    paddingBottom = Tw.spacer32;
+	T get py6 {
+    paddingTop = spacer6;
+    paddingBottom = spacer6;
     return _child;
   }
-
-  T get py36 {
-    paddingTop = Tw.spacer36;
-    paddingBottom = Tw.spacer36;
+	T get py7 {
+    paddingTop = spacer7;
+    paddingBottom = spacer7;
     return _child;
   }
-
-  T get py40 {
-    paddingTop = Tw.spacer40;
-    paddingBottom = Tw.spacer40;
+	T get py8 {
+    paddingTop = spacer8;
+    paddingBottom = spacer8;
     return _child;
   }
-
-  T get py44 {
-    paddingTop = Tw.spacer44;
-    paddingBottom = Tw.spacer44;
+	T get py9 {
+    paddingTop = spacer9;
+    paddingBottom = spacer9;
     return _child;
   }
-
-  T get py48 {
-    paddingTop = Tw.spacer48;
-    paddingBottom = Tw.spacer48;
+	T get py10 {
+    paddingTop = spacer10;
+    paddingBottom = spacer10;
     return _child;
   }
-
-  T get py52 {
-    paddingTop = Tw.spacer52;
-    paddingBottom = Tw.spacer52;
+	T get py11 {
+    paddingTop = spacer11;
+    paddingBottom = spacer11;
     return _child;
   }
-
-  T get py56 {
-    paddingTop = Tw.spacer56;
-    paddingBottom = Tw.spacer56;
+	T get py12 {
+    paddingTop = spacer12;
+    paddingBottom = spacer12;
     return _child;
   }
-
-  T get py60 {
-    paddingTop = Tw.spacer60;
-    paddingBottom = Tw.spacer60;
+	T get py14 {
+    paddingTop = spacer14;
+    paddingBottom = spacer14;
     return _child;
   }
-
-  T get py64 {
-    paddingTop = Tw.spacer64;
-    paddingBottom = Tw.spacer64;
+	T get py16 {
+    paddingTop = spacer16;
+    paddingBottom = spacer16;
     return _child;
   }
-
-  /// Left Padding
-  T get pl0 {
-    paddingLeft = Tw.spacer0;
+	T get py20 {
+    paddingTop = spacer20;
+    paddingBottom = spacer20;
     return _child;
   }
-
-  T get pl1 {
-    paddingLeft = Tw.spacer1;
+	T get py24 {
+    paddingTop = spacer24;
+    paddingBottom = spacer24;
     return _child;
   }
-
-  T get pl2 {
-    paddingLeft = Tw.spacer2;
+	T get py28 {
+    paddingTop = spacer28;
+    paddingBottom = spacer28;
     return _child;
   }
-
-  T get pl3 {
-    paddingLeft = Tw.spacer3;
+	T get py32 {
+    paddingTop = spacer32;
+    paddingBottom = spacer32;
     return _child;
   }
-
-  T get pl4 {
-    paddingLeft = Tw.spacer4;
+	T get py36 {
+    paddingTop = spacer36;
+    paddingBottom = spacer36;
     return _child;
   }
-
-  T get pl5 {
-    paddingLeft = Tw.spacer5;
+	T get py40 {
+    paddingTop = spacer40;
+    paddingBottom = spacer40;
     return _child;
   }
-
-  T get pl6 {
-    paddingLeft = Tw.spacer6;
+	T get py44 {
+    paddingTop = spacer44;
+    paddingBottom = spacer44;
     return _child;
   }
-
-  T get pl7 {
-    paddingLeft = Tw.spacer7;
+	T get py48 {
+    paddingTop = spacer48;
+    paddingBottom = spacer48;
     return _child;
   }
-
-  T get pl8 {
-    paddingLeft = Tw.spacer8;
+	T get py52 {
+    paddingTop = spacer52;
+    paddingBottom = spacer52;
     return _child;
   }
-
-  T get pl9 {
-    paddingLeft = Tw.spacer9;
+	T get py56 {
+    paddingTop = spacer56;
+    paddingBottom = spacer56;
     return _child;
   }
-
-  T get pl10 {
-    paddingLeft = Tw.spacer10;
+	T get py60 {
+    paddingTop = spacer60;
+    paddingBottom = spacer60;
     return _child;
   }
-
-  T get pl11 {
-    paddingLeft = Tw.spacer11;
+	T get py64 {
+    paddingTop = spacer64;
+    paddingBottom = spacer64;
     return _child;
   }
-
-  T get pl12 {
-    paddingLeft = Tw.spacer12;
+	/// Left Padding
+	T get pl0 {
+    paddingLeft = spacer0;
     return _child;
   }
-
-  T get pl14 {
-    paddingLeft = Tw.spacer14;
+	T get pl1 {
+    paddingLeft = spacer1;
     return _child;
   }
-
-  T get pl16 {
-    paddingLeft = Tw.spacer16;
+	T get pl2 {
+    paddingLeft = spacer2;
     return _child;
   }
-
-  T get pl20 {
-    paddingLeft = Tw.spacer20;
+	T get pl3 {
+    paddingLeft = spacer3;
     return _child;
   }
-
-  T get pl24 {
-    paddingLeft = Tw.spacer24;
+	T get pl4 {
+    paddingLeft = spacer4;
     return _child;
   }
-
-  T get pl28 {
-    paddingLeft = Tw.spacer28;
+	T get pl5 {
+    paddingLeft = spacer5;
     return _child;
   }
-
-  T get pl32 {
-    paddingLeft = Tw.spacer32;
+	T get pl6 {
+    paddingLeft = spacer6;
     return _child;
   }
-
-  T get pl36 {
-    paddingLeft = Tw.spacer36;
+	T get pl7 {
+    paddingLeft = spacer7;
     return _child;
   }
-
-  T get pl40 {
-    paddingLeft = Tw.spacer40;
+	T get pl8 {
+    paddingLeft = spacer8;
     return _child;
   }
-
-  T get pl44 {
-    paddingLeft = Tw.spacer44;
+	T get pl9 {
+    paddingLeft = spacer9;
     return _child;
   }
-
-  T get pl48 {
-    paddingLeft = Tw.spacer48;
+	T get pl10 {
+    paddingLeft = spacer10;
     return _child;
   }
-
-  T get pl52 {
-    paddingLeft = Tw.spacer52;
+	T get pl11 {
+    paddingLeft = spacer11;
     return _child;
   }
-
-  T get pl56 {
-    paddingLeft = Tw.spacer56;
+	T get pl12 {
+    paddingLeft = spacer12;
     return _child;
   }
-
-  T get pl60 {
-    paddingLeft = Tw.spacer60;
+	T get pl14 {
+    paddingLeft = spacer14;
     return _child;
   }
-
-  T get pl64 {
-    paddingLeft = Tw.spacer64;
+	T get pl16 {
+    paddingLeft = spacer16;
     return _child;
   }
-
-  /// Right Padding
-  T get pt0 {
-    paddingTop = Tw.spacer0;
+	T get pl20 {
+    paddingLeft = spacer20;
     return _child;
   }
-
-  T get pt1 {
-    paddingTop = Tw.spacer1;
+	T get pl24 {
+    paddingLeft = spacer24;
     return _child;
   }
-
-  T get pt2 {
-    paddingTop = Tw.spacer2;
+	T get pl28 {
+    paddingLeft = spacer28;
     return _child;
   }
-
-  T get pt3 {
-    paddingTop = Tw.spacer3;
+	T get pl32 {
+    paddingLeft = spacer32;
     return _child;
   }
-
-  T get pt4 {
-    paddingTop = Tw.spacer4;
+	T get pl36 {
+    paddingLeft = spacer36;
     return _child;
   }
-
-  T get pt5 {
-    paddingTop = Tw.spacer5;
+	T get pl40 {
+    paddingLeft = spacer40;
     return _child;
   }
-
-  T get pt6 {
-    paddingTop = Tw.spacer6;
+	T get pl44 {
+    paddingLeft = spacer44;
     return _child;
   }
-
-  T get pt7 {
-    paddingTop = Tw.spacer7;
+	T get pl48 {
+    paddingLeft = spacer48;
     return _child;
   }
-
-  T get pt8 {
-    paddingTop = Tw.spacer8;
+	T get pl52 {
+    paddingLeft = spacer52;
     return _child;
   }
-
-  T get pt9 {
-    paddingTop = Tw.spacer9;
+	T get pl56 {
+    paddingLeft = spacer56;
     return _child;
   }
-
-  T get pt10 {
-    paddingTop = Tw.spacer10;
+	T get pl60 {
+    paddingLeft = spacer60;
     return _child;
   }
-
-  T get pt11 {
-    paddingTop = Tw.spacer11;
+	T get pl64 {
+    paddingLeft = spacer64;
     return _child;
   }
-
-  T get pt12 {
-    paddingTop = Tw.spacer12;
+	/// Right Padding
+	T get pt0 {
+    paddingTop = spacer0;
     return _child;
   }
-
-  T get pt14 {
-    paddingTop = Tw.spacer14;
+	T get pt1 {
+    paddingTop = spacer1;
     return _child;
   }
-
-  T get pt16 {
-    paddingTop = Tw.spacer16;
+	T get pt2 {
+    paddingTop = spacer2;
     return _child;
   }
-
-  T get pt20 {
-    paddingTop = Tw.spacer20;
+	T get pt3 {
+    paddingTop = spacer3;
     return _child;
   }
-
-  T get pt24 {
-    paddingTop = Tw.spacer24;
+	T get pt4 {
+    paddingTop = spacer4;
     return _child;
   }
-
-  T get pt28 {
-    paddingTop = Tw.spacer28;
+	T get pt5 {
+    paddingTop = spacer5;
     return _child;
   }
-
-  T get pt32 {
-    paddingTop = Tw.spacer32;
+	T get pt6 {
+    paddingTop = spacer6;
     return _child;
   }
-
-  T get pt36 {
-    paddingTop = Tw.spacer36;
+	T get pt7 {
+    paddingTop = spacer7;
     return _child;
   }
-
-  T get pt40 {
-    paddingTop = Tw.spacer40;
+	T get pt8 {
+    paddingTop = spacer8;
     return _child;
   }
-
-  T get pt44 {
-    paddingTop = Tw.spacer44;
+	T get pt9 {
+    paddingTop = spacer9;
     return _child;
   }
-
-  T get pt48 {
-    paddingTop = Tw.spacer48;
+	T get pt10 {
+    paddingTop = spacer10;
     return _child;
   }
-
-  T get pt52 {
-    paddingTop = Tw.spacer52;
+	T get pt11 {
+    paddingTop = spacer11;
     return _child;
   }
-
-  T get pt56 {
-    paddingTop = Tw.spacer56;
+	T get pt12 {
+    paddingTop = spacer12;
     return _child;
   }
-
-  T get pt60 {
-    paddingTop = Tw.spacer60;
+	T get pt14 {
+    paddingTop = spacer14;
     return _child;
   }
-
-  T get pt64 {
-    paddingTop = Tw.spacer64;
+	T get pt16 {
+    paddingTop = spacer16;
     return _child;
   }
-
-  /// Right Padding
-  T get pr0 {
-    paddingRight = Tw.spacer0;
+	T get pt20 {
+    paddingTop = spacer20;
     return _child;
   }
-
-  T get pr1 {
-    paddingRight = Tw.spacer1;
+	T get pt24 {
+    paddingTop = spacer24;
     return _child;
   }
-
-  T get pr2 {
-    paddingRight = Tw.spacer2;
+	T get pt28 {
+    paddingTop = spacer28;
     return _child;
   }
-
-  T get pr3 {
-    paddingRight = Tw.spacer3;
+	T get pt32 {
+    paddingTop = spacer32;
     return _child;
   }
-
-  T get pr4 {
-    paddingRight = Tw.spacer4;
+	T get pt36 {
+    paddingTop = spacer36;
     return _child;
   }
-
-  T get pr5 {
-    paddingRight = Tw.spacer5;
+	T get pt40 {
+    paddingTop = spacer40;
     return _child;
   }
-
-  T get pr6 {
-    paddingRight = Tw.spacer6;
+	T get pt44 {
+    paddingTop = spacer44;
     return _child;
   }
-
-  T get pr7 {
-    paddingRight = Tw.spacer7;
+	T get pt48 {
+    paddingTop = spacer48;
     return _child;
   }
-
-  T get pr8 {
-    paddingRight = Tw.spacer8;
+	T get pt52 {
+    paddingTop = spacer52;
     return _child;
   }
-
-  T get pr9 {
-    paddingRight = Tw.spacer9;
+	T get pt56 {
+    paddingTop = spacer56;
     return _child;
   }
-
-  T get pr10 {
-    paddingRight = Tw.spacer10;
+	T get pt60 {
+    paddingTop = spacer60;
     return _child;
   }
-
-  T get pr11 {
-    paddingRight = Tw.spacer11;
+	T get pt64 {
+    paddingTop = spacer64;
     return _child;
   }
-
-  T get pr12 {
-    paddingRight = Tw.spacer12;
+	/// Right Padding
+	T get pr0 {
+    paddingRight = spacer0;
     return _child;
   }
-
-  T get pr14 {
-    paddingRight = Tw.spacer14;
+	T get pr1 {
+    paddingRight = spacer1;
     return _child;
   }
-
-  T get pr16 {
-    paddingRight = Tw.spacer16;
+	T get pr2 {
+    paddingRight = spacer2;
     return _child;
   }
-
-  T get pr20 {
-    paddingRight = Tw.spacer20;
+	T get pr3 {
+    paddingRight = spacer3;
     return _child;
   }
-
-  T get pr24 {
-    paddingRight = Tw.spacer24;
+	T get pr4 {
+    paddingRight = spacer4;
     return _child;
   }
-
-  T get pr28 {
-    paddingRight = Tw.spacer28;
+	T get pr5 {
+    paddingRight = spacer5;
     return _child;
   }
-
-  T get pr32 {
-    paddingRight = Tw.spacer32;
+	T get pr6 {
+    paddingRight = spacer6;
     return _child;
   }
-
-  T get pr36 {
-    paddingRight = Tw.spacer36;
+	T get pr7 {
+    paddingRight = spacer7;
     return _child;
   }
-
-  T get pr40 {
-    paddingRight = Tw.spacer40;
+	T get pr8 {
+    paddingRight = spacer8;
     return _child;
   }
-
-  T get pr44 {
-    paddingRight = Tw.spacer44;
+	T get pr9 {
+    paddingRight = spacer9;
     return _child;
   }
-
-  T get pr48 {
-    paddingRight = Tw.spacer48;
+	T get pr10 {
+    paddingRight = spacer10;
     return _child;
   }
-
-  T get pr52 {
-    paddingRight = Tw.spacer52;
+	T get pr11 {
+    paddingRight = spacer11;
     return _child;
   }
-
-  T get pr56 {
-    paddingRight = Tw.spacer56;
+	T get pr12 {
+    paddingRight = spacer12;
     return _child;
   }
-
-  T get pr60 {
-    paddingRight = Tw.spacer60;
+	T get pr14 {
+    paddingRight = spacer14;
     return _child;
   }
-
-  T get pr64 {
-    paddingRight = Tw.spacer64;
+	T get pr16 {
+    paddingRight = spacer16;
     return _child;
   }
-
-  /// Bottom Padding
-  T get pb0 {
-    paddingBottom = Tw.spacer0;
+	T get pr20 {
+    paddingRight = spacer20;
     return _child;
   }
-
-  T get pb1 {
-    paddingBottom = Tw.spacer1;
+	T get pr24 {
+    paddingRight = spacer24;
     return _child;
   }
-
-  T get pb2 {
-    paddingBottom = Tw.spacer2;
+	T get pr28 {
+    paddingRight = spacer28;
     return _child;
   }
-
-  T get pb3 {
-    paddingBottom = Tw.spacer3;
+	T get pr32 {
+    paddingRight = spacer32;
     return _child;
   }
-
-  T get pb4 {
-    paddingBottom = Tw.spacer4;
+	T get pr36 {
+    paddingRight = spacer36;
     return _child;
   }
-
-  T get pb5 {
-    paddingBottom = Tw.spacer5;
+	T get pr40 {
+    paddingRight = spacer40;
     return _child;
   }
-
-  T get pb6 {
-    paddingBottom = Tw.spacer6;
+	T get pr44 {
+    paddingRight = spacer44;
     return _child;
   }
-
-  T get pb7 {
-    paddingBottom = Tw.spacer7;
+	T get pr48 {
+    paddingRight = spacer48;
     return _child;
   }
-
-  T get pb8 {
-    paddingBottom = Tw.spacer8;
+	T get pr52 {
+    paddingRight = spacer52;
     return _child;
   }
-
-  T get pb9 {
-    paddingBottom = Tw.spacer9;
+	T get pr56 {
+    paddingRight = spacer56;
     return _child;
   }
-
-  T get pb10 {
-    paddingBottom = Tw.spacer10;
+	T get pr60 {
+    paddingRight = spacer60;
     return _child;
   }
-
-  T get pb11 {
-    paddingBottom = Tw.spacer11;
+	T get pr64 {
+    paddingRight = spacer64;
     return _child;
   }
-
-  T get pb12 {
-    paddingBottom = Tw.spacer12;
+	/// Bottom Padding
+	T get pb0 {
+    paddingBottom = spacer0;
     return _child;
   }
-
-  T get pb14 {
-    paddingBottom = Tw.spacer14;
+	T get pb1 {
+    paddingBottom = spacer1;
     return _child;
   }
-
-  T get pb16 {
-    paddingBottom = Tw.spacer16;
+	T get pb2 {
+    paddingBottom = spacer2;
     return _child;
   }
-
-  T get pb20 {
-    paddingBottom = Tw.spacer20;
+	T get pb3 {
+    paddingBottom = spacer3;
     return _child;
   }
-
-  T get pb24 {
-    paddingBottom = Tw.spacer24;
+	T get pb4 {
+    paddingBottom = spacer4;
     return _child;
   }
-
-  T get pb28 {
-    paddingBottom = Tw.spacer28;
+	T get pb5 {
+    paddingBottom = spacer5;
     return _child;
   }
-
-  T get pb32 {
-    paddingBottom = Tw.spacer32;
+	T get pb6 {
+    paddingBottom = spacer6;
     return _child;
   }
-
-  T get pb36 {
-    paddingBottom = Tw.spacer36;
+	T get pb7 {
+    paddingBottom = spacer7;
     return _child;
   }
-
-  T get pb40 {
-    paddingBottom = Tw.spacer40;
+	T get pb8 {
+    paddingBottom = spacer8;
     return _child;
   }
-
-  T get pb44 {
-    paddingBottom = Tw.spacer44;
+	T get pb9 {
+    paddingBottom = spacer9;
     return _child;
   }
-
-  T get pb48 {
-    paddingBottom = Tw.spacer48;
+	T get pb10 {
+    paddingBottom = spacer10;
     return _child;
   }
-
-  T get pb52 {
-    paddingBottom = Tw.spacer52;
+	T get pb11 {
+    paddingBottom = spacer11;
     return _child;
   }
-
-  T get pb56 {
-    paddingBottom = Tw.spacer56;
+	T get pb12 {
+    paddingBottom = spacer12;
     return _child;
   }
-
-  T get pb60 {
-    paddingBottom = Tw.spacer60;
+	T get pb14 {
+    paddingBottom = spacer14;
     return _child;
   }
-
-  T get pb64 {
-    paddingBottom = Tw.spacer64;
+	T get pb16 {
+    paddingBottom = spacer16;
     return _child;
   }
+	T get pb20 {
+    paddingBottom = spacer20;
+    return _child;
+  }
+	T get pb24 {
+    paddingBottom = spacer24;
+    return _child;
+  }
+	T get pb28 {
+    paddingBottom = spacer28;
+    return _child;
+  }
+	T get pb32 {
+    paddingBottom = spacer32;
+    return _child;
+  }
+	T get pb36 {
+    paddingBottom = spacer36;
+    return _child;
+  }
+	T get pb40 {
+    paddingBottom = spacer40;
+    return _child;
+  }
+	T get pb44 {
+    paddingBottom = spacer44;
+    return _child;
+  }
+	T get pb48 {
+    paddingBottom = spacer48;
+    return _child;
+  }
+	T get pb52 {
+    paddingBottom = spacer52;
+    return _child;
+  }
+	T get pb56 {
+    paddingBottom = spacer56;
+    return _child;
+  }
+	T get pb60 {
+    paddingBottom = spacer60;
+    return _child;
+  }
+	T get pb64 {
+    paddingBottom = spacer64;
+    return _child;
+  }
+	
 }
+

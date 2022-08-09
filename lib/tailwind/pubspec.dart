@@ -7,7 +7,7 @@ version: 0.1.0
 homepage: https://docspace.dev/devsbuddy/tailwind-cli/v0.2
 
 environment:
-  sdk: ">=2.16.2 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

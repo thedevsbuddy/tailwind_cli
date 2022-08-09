@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'TwBuilder.dart';
 
-/// Flutter Text Builder Widget
-/// to provide utilities in your Text Widget
+/// Flutter Row Builder Widget
+/// to provide utilities in your Row Widget
 @protected
 class TwRow extends TwWidgetBuilder<Widget> {
   TwRow(List<Widget> this._children);

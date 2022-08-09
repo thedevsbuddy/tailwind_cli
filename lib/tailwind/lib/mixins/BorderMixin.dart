@@ -4,6 +4,7 @@ const String file = "tailwind/lib/mixins/BorderMixin.dart";
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
+import 'package:get/get.dart';
 
 mixin TwBorderMixin<T> {
   late T _child;
@@ -72,38 +73,33 @@ mixin TwBorderMixin<T> {
     return _child;
   }
   
-  T borderPrimaryColor(BuildContext context) {
-    twBorderColor = Theme.of(context).primaryColor;
+  T get borderPrimaryColor {
+    twBorderColor = Theme.of(Get.context!).primaryColor;
     return _child;
   }
 
-  T borderPrimaryDarkColor(BuildContext context) {
-    twBorderColor = Theme.of(context).primaryColorDark;
+  T get borderPrimaryDarkColor {
+    twBorderColor = Theme.of(Get.context!).primaryColorDark;
     return _child;
   }
 
-  T borderAccentColor(BuildContext context) {
-    twBorderColor = Theme.of(context).accentColor;
+  T get borderAccentColor {
+    twBorderColor = Theme.of(Get.context!).colorScheme.secondary;
     return _child;
   }
 
-  T borderBackgroundColor(BuildContext context) {
-    twBorderColor = Theme.of(context).backgroundColor;
+  T get borderBackgroundColor {
+    twBorderColor = Theme.of(Get.context!).backgroundColor;
     return _child;
   }
 
-  T borderScaffoldBackgroundColor(BuildContext context) {
-    twBorderColor = Theme.of(context).scaffoldBackgroundColor;
+  T get borderScaffoldBackgroundColor {
+    twBorderColor = Theme.of(Get.context!).scaffoldBackgroundColor;
     return _child;
   }
 
-  T borderButtonColor(BuildContext context) {
-    twBorderColor = Theme.of(context).buttonColor;
-    return _child;
-  }
-
-  T borderCardColor(BuildContext context) {
-    twBorderColor = Theme.of(context).cardColor;
+  T get borderCardColor {
+    twBorderColor = Theme.of(Get.context!).cardColor;
     return _child;
   }
 

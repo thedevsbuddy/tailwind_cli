@@ -34,12 +34,12 @@ String processSpacers(Map<String, dynamic>? spacers) {
   var spaces = "";
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
-      spaces += "static const double spacer = $value;\n\t";
+      spaces += "const double spacer = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', '_');
-      spaces += "static const double spacer$dot = spacer * $value;\n\t";
+      spaces += "const double spacer$dot = spacer * $value;\n\t";
     } else {
-      spaces += "static const double spacer$key = spacer * $value;\n\t";
+      spaces += "const double spacer$key = spacer * $value;\n\t";
     }
   });
 
@@ -56,15 +56,15 @@ String processColors(Map<String, dynamic>? colors) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
-          color += "static const Color $key = Color($val);\n\t";
+          color += "const Color tw${Utils.ucFirst(key, preserveAfter: true)} = Color($val);\n\t";
         } else {
           val = Utils.hexToColor("$val");
-          color += "static const Color $key$k = Color($val);\n\t";
+          color += "const Color tw${Utils.ucFirst(key, preserveAfter: true)}$k = Color($val);\n\t";
         }
       });
     } else {
       value = Utils.hexToColor("$value");
-      color += "static const Color $key = Color($value);\n\t";
+      color += "const Color tw${Utils.ucFirst(key, preserveAfter: true)} = Color($value);\n\t";
     }
   });
   return color;
@@ -77,14 +77,12 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   var fontSize = "";
   fontSizes.forEach((key, value) {
     if (key == 'base') {
-      fontSize += "static const double textBase = $value;\n\t";
+      fontSize += "const double textBase = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
-      fontSize +=
-          "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
+      fontSize += "const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
     } else {
-      fontSize +=
-          "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
+      fontSize += "const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
     }
   });
   return fontSize;
