@@ -79,53 +79,53 @@ mixin TwGradientMixin<T> {
   // Gradient Colors
   /// Flutter Theme Colors
   T get fromPrimaryColor {
-    gradientColors[0] = Theme.of(Get.context!).primaryColor;
+    gradientColors[0] = TwColors.primaryColor(Get.context!);
     return _child;
   }
   T get toPrimaryColor {
-    gradientColors[1] = Theme.of(Get.context!).primaryColor;
+    gradientColors[1] = TwColors.primaryColor(Get.context!);
     return _child;
   }
 
   T get fromPrimaryColorDark {
-    gradientColors[0] = Theme.of(Get.context!).primaryColorDark;
+    gradientColors[0] = TwColors.primaryColorDark(Get.context!);
     return _child;
   }
 
   T get fromSecondaryColor {
-    gradientColors[0] = Theme.of(Get.context!).colorScheme.secondary;
+    gradientColors[0] = TwColors.secondary(Get.context!);
     return _child;
   }
   T get toSecondaryColor {
-    gradientColors[1] = Theme.of(Get.context!).colorScheme.secondary;
+    gradientColors[1] = TwColors.secondary(Get.context!);
     return _child;
   }
 
   T get fromBackgroundColor {
-    gradientColors[0] = Theme.of(Get.context!).backgroundColor;
+    gradientColors[0] = TwColors.backgroundColor(Get.context!);
     return _child;
   }
   T get toBackgroundColor {
-    gradientColors[1] = Theme.of(Get.context!).backgroundColor;
+    gradientColors[1] = TwColors.backgroundColor(Get.context!);
     return _child;
   }
 
   T get fromScaffoldBackgroundColor {
-    gradientColors[0] = Theme.of(Get.context!).scaffoldBackgroundColor;
+    gradientColors[0] = TwColors.scaffoldBackgroundColor(Get.context!);
     return _child;
   }
   T get toScaffoldBackgroundColor {
-    gradientColors[1] = Theme.of(Get.context!).scaffoldBackgroundColor;
+    gradientColors[1] = TwColors.scaffoldBackgroundColor(Get.context!);
     return _child;
   }
 
 
   T get fromCardColor {
-    gradientColors[0] = Theme.of(Get.context!).cardColor;
+    gradientColors[0] = TwColors.cardColor(Get.context!);
     return _child;
   }
   T get toCardColor {
-    gradientColors[1] = Theme.of(Get.context!).cardColor;
+    gradientColors[1] = TwColors.cardColor(Get.context!);
     return _child;
   }
 

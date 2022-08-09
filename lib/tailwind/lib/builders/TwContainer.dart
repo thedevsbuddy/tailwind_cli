@@ -77,7 +77,7 @@ class TwContainer extends TwWidgetBuilder<Widget>
   TwContainer color(Color color) => this..twColor = color;
 
   /// Sets the color property of the box using the hex color value.
-  TwContainer hexColor(String colorHex) => this..twColor = Color(int.parse(hexToColor(colorHex)));
+  TwContainer hexColor(String colorHex) => this..twColor = Color(int.parse(TwUtils.hexToColor(colorHex)));
 
   /// Sets the transform property to the animated box.
   TwContainer transform(Matrix4 val) => this.._transform = val;

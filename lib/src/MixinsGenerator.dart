@@ -4,22 +4,14 @@ import 'dart:io';
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
-import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart'
-    as twAlignmentMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/BorderMixin.dart'
-    as twBorderMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart'
-    as twColorMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart'
-    as twGradientMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart'
-    as twMarginMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart'
-    as twPaddingMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart'
-    as twRoundnessMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart'
-    as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart' as twAlignmentMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/BorderMixin.dart' as twBorderMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart' as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart' as twGradientMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart' as twMarginMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart' as twPaddingMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart' as twRoundnessMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart' as twShadowMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -54,8 +46,7 @@ Future<void> generateColorMixin() async {
   var twColorMixinFileData = twColorMixin.stub;
 
   /// Process stub Template / File
-  twColorMixinFileData = twColorMixinFileData.replaceAll(
-      "//colorGetters", processColors(configs['colors']));
+  twColorMixinFileData = twColorMixinFileData.replaceAll("//colorGetters", processColors(configs['colors']));
 
   /// Check and create
   Utils.makeDir(twColorMixin.target);
@@ -79,13 +70,13 @@ String processColors(Map<String, dynamic>? colors) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
           color += """T get $key {
-      twColor = tw${Utils.ucFirst(key, preserveAfter: true)};
+      twColor = TwColors.$key;
       return _child;
   }\n\t""";
         } else {
           val = Utils.hexToColor("$val");
           color += """T get $key$k {
-      twColor = tw${Utils.ucFirst(key, preserveAfter: true)}$k;
+      twColor = TwColors.$key$k;
       return _child;
   }\n\t""";
         }
@@ -93,7 +84,7 @@ String processColors(Map<String, dynamic>? colors) {
     } else {
       value = Utils.hexToColor("$value");
       color += """T get $key {
-      twColor = tw${Utils.ucFirst(key, preserveAfter: true)};
+      twColor = TwColors.$key;
       return _child;
   }\n\t""";
     }
@@ -108,10 +99,9 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll(
-      "//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll(
-      "//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
+  twPaddingMixinFileData =
+      twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -138,10 +128,10 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get p$key {
-    paddingLeft = spacer$key;
-    paddingTop = spacer$key;
-    paddingRight = spacer$key;
-    paddingBottom = spacer$key;
+    paddingLeft = TwSpacers.sp$key;
+    paddingTop = TwSpacers.sp$key;
+    paddingRight = TwSpacers.sp$key;
+    paddingBottom = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -153,8 +143,8 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get px$key {
-    paddingLeft = spacer$key;
-    paddingRight = spacer$key;
+    paddingLeft = TwSpacers.sp$key;
+    paddingRight = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -166,8 +156,8 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get py$key {
-    paddingTop = spacer$key;
-    paddingBottom = spacer$key;
+    paddingTop = TwSpacers.sp$key;
+    paddingBottom = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -179,7 +169,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pl$key {
-    paddingLeft = spacer$key;
+    paddingLeft = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -191,7 +181,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pt$key {
-    paddingTop = spacer$key;
+    paddingTop = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -203,7 +193,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pr$key {
-    paddingRight = spacer$key;
+    paddingRight = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -215,7 +205,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pb$key {
-    paddingBottom = spacer$key;
+    paddingBottom = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -224,7 +214,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   return spacer;
 }
 
-/// Processes Paddings
+/// Processes Margins
 String processMargins(Map<String, dynamic>? spacers) {
   if (spacers == null) {
     return "";
@@ -236,10 +226,10 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get m$key {
-    marginLeft = spacer$key;
-    marginTop = spacer$key;
-    marginRight = spacer$key;
-    marginBottom = spacer$key;
+    marginLeft = TwSpacers.sp$key;
+    marginTop = TwSpacers.sp$key;
+    marginRight = TwSpacers.sp$key;
+    marginBottom = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -251,8 +241,8 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mx$key {
-    marginLeft = spacer$key;
-    marginRight = spacer$key;
+    marginLeft = TwSpacers.sp$key;
+    marginRight = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -264,8 +254,8 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get my$key {
-    marginTop = spacer$key;
-    marginBottom = spacer$key;
+    marginTop = TwSpacers.sp$key;
+    marginBottom = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -277,7 +267,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get ml$key {
-    marginLeft = spacer$key;
+    marginLeft = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -289,7 +279,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mt$key {
-    marginTop = spacer$key;
+    marginTop = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -301,7 +291,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mr$key {
-    marginRight = spacer$key;
+    marginRight = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -313,7 +303,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mb$key {
-    marginBottom = spacer$key;
+    marginBottom = TwSpacers.sp$key;
     return _child;
   }\n\t""";
     }
@@ -364,9 +354,8 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData = twGradientMixinFileData.replaceAll(
-      "//gradientColors",
-      processGradientColors(Utils.mergedConfigs()['colors']));
+  twGradientMixinFileData =
+      twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.mergedConfigs()['colors']));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -389,31 +378,31 @@ String processGradientColors(Map<String, dynamic>? colors) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           color += """T get from${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[0] = tw${Utils.ucFirst(key, preserveAfter: true)};
+      gradientColors[0] = TwColors.$key;
       return _child;
   }\n\t""";
           color += """T get to${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[1] = tw${Utils.ucFirst(key, preserveAfter: true)};
+      gradientColors[1] = TwColors.$key;
       return _child;
   }\n\t""";
         } else {
           color += """T get from${Utils.ucFirst(key, preserveAfter: true)}$k {
-      gradientColors[0] = tw${Utils.ucFirst(key, preserveAfter: true)}$k;
+      gradientColors[0] = TwColors.$key$k;
       return _child;
   }\n\t""";
           color += """T get to${Utils.ucFirst(key, preserveAfter: true)}$k {
-      gradientColors[1] = tw${Utils.ucFirst(key, preserveAfter: true)}$k;
+      gradientColors[1] = TwColors.$key$k;
       return _child;
   }\n\t""";
         }
       });
     } else {
       color += """T get from${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[0] = tw${Utils.ucFirst(key, preserveAfter: true)};
+      gradientColors[0] = TwColors.$key;
       return _child;
   }\n\t""";
       color += """T get to${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[1] = tw${Utils.ucFirst(key, preserveAfter: true)};
+      gradientColors[1] = TwColors.$key;
       return _child;
   }\n\t""";
     }
@@ -427,10 +416,10 @@ Future<void> generateBorderMixin() async {
   var twBorderMixinFileData = twBorderMixin.stub;
 
   /// Process stub Template / File
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
-      "//borderColors", processBorderColors(Utils.mergedConfigs()['colors']));
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
-      "//borderWidths", processBorderWidths(Utils.mergedConfigs()['spacers']));
+  twBorderMixinFileData =
+      twBorderMixinFileData.replaceAll("//borderColors", processBorderColors(Utils.mergedConfigs()['colors']));
+  twBorderMixinFileData =
+      twBorderMixinFileData.replaceAll("//borderWidths", processBorderWidths(Utils.mergedConfigs()['spacers']));
 
   /// Check and create
   Utils.makeDir(twBorderMixin.target);
@@ -454,13 +443,13 @@ String processBorderColors(Map<String, dynamic>? colors) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
           color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
-      twBorderColor = tw${Utils.ucFirst(key, preserveAfter: true)};
+      twBorderColor = TwColors.$key;
       return _child;
   }\n\t""";
         } else {
           val = Utils.hexToColor("$val");
           color += """T get border${Utils.ucFirst(key, preserveAfter: true)}$k {
-      twBorderColor = tw${Utils.ucFirst(key, preserveAfter: true)}$k;
+      twBorderColor = TwColors.$key$k;
       return _child;
   }\n\t""";
         }
@@ -468,7 +457,7 @@ String processBorderColors(Map<String, dynamic>? colors) {
     } else {
       value = Utils.hexToColor("$value");
       color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
-      twBorderColor = tw${Utils.ucFirst(key, preserveAfter: true)};
+      twBorderColor = TwColors.$key;
       return _child;
   }\n\t""";
     }
@@ -487,12 +476,12 @@ String processBorderWidths(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
       spacer += """T get borderBase {
-    twBorderWidth = spacer; 
+    twBorderWidth = TwSpacers.base; 
     return _child;
   }\n\t""";
     } else {
       spacer += """T get border$key {
-    twBorderWidth = spacer$key; 
+    twBorderWidth = TwSpacers.sp$key; 
     return _child;
   }\n\t""";
     }

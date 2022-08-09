@@ -1,19 +1,61 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/utilities/Tw.dart' as utilityTw;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwColors.dart' as utilityTwColors;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwSpacers.dart' as utilityTwSpacers;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwUtils.dart' as utilityTwUtils;
 
 Future<void> generate(List<String> args) async {
+  await generateTwColorsUtility();
+  await generateTwUtilsUtility();
+  await generateTwSpacersUtility();
+}
+
+Future<void> generateTwUtilsUtility() async {
   /// Get Tw Utility stub Template / File
-  var utilityTwFile = utilityTw.stub;
+  var utilityTwFile = utilityTwUtils.stub;
 
   /// Process stub Template / File
   utilityTwFile = processStub(stub: utilityTwFile, data: Utils.mergedConfigs());
 
   /// Check and create
-  Utils.makeDir(utilityTw.target);
+  Utils.makeDir(utilityTwUtils.target);
 
   /// Write File
-  Utils.writeFile(utilityTw.file, utilityTwFile);
+  Utils.writeFile(utilityTwUtils.file, utilityTwFile);
+
+  /// Show Success message
+  print(green("Utilities Generated successfully!"));
+}
+
+Future<void> generateTwColorsUtility() async {
+  /// Get Tw Utility stub Template / File
+  var colorsUtilityTwFile = utilityTwColors.stub;
+
+  /// Process stub Template / File
+  colorsUtilityTwFile = processStub(stub: colorsUtilityTwFile, data: Utils.mergedConfigs());
+
+  /// Check and create
+  Utils.makeDir(utilityTwColors.target);
+
+  /// Write File
+  Utils.writeFile(utilityTwColors.file, colorsUtilityTwFile);
+
+  /// Show Success message
+  print(green("Utilities Generated successfully!"));
+}
+
+Future<void> generateTwSpacersUtility() async {
+  /// Get Tw Utility stub Template / File
+  var spacerUtilityTwFile = utilityTwSpacers.stub;
+
+  /// Process stub Template / File
+  spacerUtilityTwFile = processStub(stub: spacerUtilityTwFile, data: Utils.mergedConfigs());
+
+  /// Check and create
+  Utils.makeDir(utilityTwSpacers.target);
+
+  /// Write File
+  Utils.writeFile(utilityTwSpacers.file, spacerUtilityTwFile);
 
   /// Show Success message
   print(green("Utilities Generated successfully!"));
@@ -34,12 +76,12 @@ String processSpacers(Map<String, dynamic>? spacers) {
   var spaces = "";
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
-      spaces += "const double spacer = $value;\n\t";
+      spaces += "static const double base = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', '_');
-      spaces += "const double spacer$dot = spacer * $value;\n\t";
+      spaces += "static const double sp$dot = base * $value;\n\t";
     } else {
-      spaces += "const double spacer$key = spacer * $value;\n\t";
+      spaces += "static const double sp$key = base * $value;\n\t";
     }
   });
 
@@ -56,15 +98,15 @@ String processColors(Map<String, dynamic>? colors) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
-          color += "const Color tw${Utils.ucFirst(key, preserveAfter: true)} = Color($val);\n\t";
+          color += "static const Color $key = Color($val);\n\t";
         } else {
           val = Utils.hexToColor("$val");
-          color += "const Color tw${Utils.ucFirst(key, preserveAfter: true)}$k = Color($val);\n\t";
+          color += "static const Color $key$k = Color($val);\n\t";
         }
       });
     } else {
       value = Utils.hexToColor("$value");
-      color += "const Color tw${Utils.ucFirst(key, preserveAfter: true)} = Color($value);\n\t";
+      color += "static const Color $key = Color($value);\n\t";
     }
   });
   return color;

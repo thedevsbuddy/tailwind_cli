@@ -306,7 +306,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get lowercase => this.._text = _text!.toLowerCase();
 
   /// Converts the text to first letter of very word as uppercase.
-  TwText get capitalize => this.._text = twUcWords('${this.._text}');
+  TwText get capitalize => this.._text = TwUtils.ucWords('${this.._text}');
 
   /// ============== LEADING ============== ///
   /// Sets [lineHeight] to 0.75

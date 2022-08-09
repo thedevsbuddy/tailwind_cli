@@ -74,32 +74,32 @@ mixin TwBorderMixin<T> {
   }
   
   T get borderPrimaryColor {
-    twBorderColor = Theme.of(Get.context!).primaryColor;
+    twBorderColor = TwColors.primaryColor(Get.context!);
     return _child;
   }
 
   T get borderPrimaryDarkColor {
-    twBorderColor = Theme.of(Get.context!).primaryColorDark;
+    twBorderColor = TwColors.primaryColorDark(Get.context!);
     return _child;
   }
 
   T get borderAccentColor {
-    twBorderColor = Theme.of(Get.context!).colorScheme.secondary;
+    twBorderColor = TwColors.secondary(Get.context!);
     return _child;
   }
 
   T get borderBackgroundColor {
-    twBorderColor = Theme.of(Get.context!).backgroundColor;
+    twBorderColor = TwColors.backgroundColor(Get.context!);
     return _child;
   }
 
   T get borderScaffoldBackgroundColor {
-    twBorderColor = Theme.of(Get.context!).scaffoldBackgroundColor;
+    twBorderColor = TwColors.scaffoldBackgroundColor(Get.context!);
     return _child;
   }
 
   T get borderCardColor {
-    twBorderColor = Theme.of(Get.context!).cardColor;
+    twBorderColor = TwColors.cardColor(Get.context!);
     return _child;
   }
 

@@ -54,115 +54,115 @@ mixin TwBorderMixin<T> {
   }
 
   T get borderBase {
-    twBorderWidth = spacer; 
+    twBorderWidth = TwSpacers.base; 
     return _child;
   }
 	T get border0 {
-    twBorderWidth = spacer0; 
+    twBorderWidth = TwSpacers.sp0; 
     return _child;
   }
 	T get border1 {
-    twBorderWidth = spacer1; 
+    twBorderWidth = TwSpacers.sp1; 
     return _child;
   }
 	T get border2 {
-    twBorderWidth = spacer2; 
+    twBorderWidth = TwSpacers.sp2; 
     return _child;
   }
 	T get border3 {
-    twBorderWidth = spacer3; 
+    twBorderWidth = TwSpacers.sp3; 
     return _child;
   }
 	T get border4 {
-    twBorderWidth = spacer4; 
+    twBorderWidth = TwSpacers.sp4; 
     return _child;
   }
 	T get border5 {
-    twBorderWidth = spacer5; 
+    twBorderWidth = TwSpacers.sp5; 
     return _child;
   }
 	T get border6 {
-    twBorderWidth = spacer6; 
+    twBorderWidth = TwSpacers.sp6; 
     return _child;
   }
 	T get border7 {
-    twBorderWidth = spacer7; 
+    twBorderWidth = TwSpacers.sp7; 
     return _child;
   }
 	T get border8 {
-    twBorderWidth = spacer8; 
+    twBorderWidth = TwSpacers.sp8; 
     return _child;
   }
 	T get border9 {
-    twBorderWidth = spacer9; 
+    twBorderWidth = TwSpacers.sp9; 
     return _child;
   }
 	T get border10 {
-    twBorderWidth = spacer10; 
+    twBorderWidth = TwSpacers.sp10; 
     return _child;
   }
 	T get border11 {
-    twBorderWidth = spacer11; 
+    twBorderWidth = TwSpacers.sp11; 
     return _child;
   }
 	T get border12 {
-    twBorderWidth = spacer12; 
+    twBorderWidth = TwSpacers.sp12; 
     return _child;
   }
 	T get border14 {
-    twBorderWidth = spacer14; 
+    twBorderWidth = TwSpacers.sp14; 
     return _child;
   }
 	T get border16 {
-    twBorderWidth = spacer16; 
+    twBorderWidth = TwSpacers.sp16; 
     return _child;
   }
 	T get border20 {
-    twBorderWidth = spacer20; 
+    twBorderWidth = TwSpacers.sp20; 
     return _child;
   }
 	T get border24 {
-    twBorderWidth = spacer24; 
+    twBorderWidth = TwSpacers.sp24; 
     return _child;
   }
 	T get border28 {
-    twBorderWidth = spacer28; 
+    twBorderWidth = TwSpacers.sp28; 
     return _child;
   }
 	T get border32 {
-    twBorderWidth = spacer32; 
+    twBorderWidth = TwSpacers.sp32; 
     return _child;
   }
 	T get border36 {
-    twBorderWidth = spacer36; 
+    twBorderWidth = TwSpacers.sp36; 
     return _child;
   }
 	T get border40 {
-    twBorderWidth = spacer40; 
+    twBorderWidth = TwSpacers.sp40; 
     return _child;
   }
 	T get border44 {
-    twBorderWidth = spacer44; 
+    twBorderWidth = TwSpacers.sp44; 
     return _child;
   }
 	T get border48 {
-    twBorderWidth = spacer48; 
+    twBorderWidth = TwSpacers.sp48; 
     return _child;
   }
 	T get border52 {
-    twBorderWidth = spacer52; 
+    twBorderWidth = TwSpacers.sp52; 
     return _child;
   }
 	T get border56 {
-    twBorderWidth = spacer56; 
+    twBorderWidth = TwSpacers.sp56; 
     return _child;
   }
 	T get border60 {
-    twBorderWidth = spacer60; 
+    twBorderWidth = TwSpacers.sp60; 
     return _child;
   }
 	T get border64 {
-    twBorderWidth = spacer64; 
+    twBorderWidth = TwSpacers.sp64; 
     return _child;
   }
 	
@@ -182,929 +182,929 @@ mixin TwBorderMixin<T> {
   }
   
   T get borderPrimaryColor {
-    twBorderColor = Theme.of(Get.context!).primaryColor;
+    twBorderColor = TwColors.primaryColor(Get.context!);
     return _child;
   }
 
   T get borderPrimaryDarkColor {
-    twBorderColor = Theme.of(Get.context!).primaryColorDark;
+    twBorderColor = TwColors.primaryColorDark(Get.context!);
     return _child;
   }
 
   T get borderAccentColor {
-    twBorderColor = Theme.of(Get.context!).colorScheme.secondary;
+    twBorderColor = TwColors.secondary(Get.context!);
     return _child;
   }
 
   T get borderBackgroundColor {
-    twBorderColor = Theme.of(Get.context!).backgroundColor;
+    twBorderColor = TwColors.backgroundColor(Get.context!);
     return _child;
   }
 
   T get borderScaffoldBackgroundColor {
-    twBorderColor = Theme.of(Get.context!).scaffoldBackgroundColor;
+    twBorderColor = TwColors.scaffoldBackgroundColor(Get.context!);
     return _child;
   }
 
   T get borderCardColor {
-    twBorderColor = Theme.of(Get.context!).cardColor;
+    twBorderColor = TwColors.cardColor(Get.context!);
     return _child;
   }
 
   T get borderBlack {
-      twBorderColor = twBlack;
+      twBorderColor = TwColors.black;
       return _child;
   }
 	T get borderWhite {
-      twBorderColor = twWhite;
+      twBorderColor = TwColors.white;
       return _child;
   }
 	T get borderTransparent {
-      twBorderColor = twTransparent;
+      twBorderColor = TwColors.transparent;
       return _child;
   }
 	T get borderGray50 {
-      twBorderColor = twGray50;
+      twBorderColor = TwColors.gray50;
       return _child;
   }
 	T get borderGray100 {
-      twBorderColor = twGray100;
+      twBorderColor = TwColors.gray100;
       return _child;
   }
 	T get borderGray200 {
-      twBorderColor = twGray200;
+      twBorderColor = TwColors.gray200;
       return _child;
   }
 	T get borderGray300 {
-      twBorderColor = twGray300;
+      twBorderColor = TwColors.gray300;
       return _child;
   }
 	T get borderGray400 {
-      twBorderColor = twGray400;
+      twBorderColor = TwColors.gray400;
       return _child;
   }
 	T get borderGray500 {
-      twBorderColor = twGray500;
+      twBorderColor = TwColors.gray500;
       return _child;
   }
 	T get borderGray600 {
-      twBorderColor = twGray600;
+      twBorderColor = TwColors.gray600;
       return _child;
   }
 	T get borderGray700 {
-      twBorderColor = twGray700;
+      twBorderColor = TwColors.gray700;
       return _child;
   }
 	T get borderGray800 {
-      twBorderColor = twGray800;
+      twBorderColor = TwColors.gray800;
       return _child;
   }
 	T get borderGray900 {
-      twBorderColor = twGray900;
+      twBorderColor = TwColors.gray900;
       return _child;
   }
 	T get borderBlueGray50 {
-      twBorderColor = twBlueGray50;
+      twBorderColor = TwColors.blueGray50;
       return _child;
   }
 	T get borderBlueGray100 {
-      twBorderColor = twBlueGray100;
+      twBorderColor = TwColors.blueGray100;
       return _child;
   }
 	T get borderBlueGray200 {
-      twBorderColor = twBlueGray200;
+      twBorderColor = TwColors.blueGray200;
       return _child;
   }
 	T get borderBlueGray300 {
-      twBorderColor = twBlueGray300;
+      twBorderColor = TwColors.blueGray300;
       return _child;
   }
 	T get borderBlueGray400 {
-      twBorderColor = twBlueGray400;
+      twBorderColor = TwColors.blueGray400;
       return _child;
   }
 	T get borderBlueGray500 {
-      twBorderColor = twBlueGray500;
+      twBorderColor = TwColors.blueGray500;
       return _child;
   }
 	T get borderBlueGray600 {
-      twBorderColor = twBlueGray600;
+      twBorderColor = TwColors.blueGray600;
       return _child;
   }
 	T get borderBlueGray700 {
-      twBorderColor = twBlueGray700;
+      twBorderColor = TwColors.blueGray700;
       return _child;
   }
 	T get borderBlueGray800 {
-      twBorderColor = twBlueGray800;
+      twBorderColor = TwColors.blueGray800;
       return _child;
   }
 	T get borderBlueGray900 {
-      twBorderColor = twBlueGray900;
+      twBorderColor = TwColors.blueGray900;
       return _child;
   }
 	T get borderCoolGray50 {
-      twBorderColor = twCoolGray50;
+      twBorderColor = TwColors.coolGray50;
       return _child;
   }
 	T get borderCoolGray100 {
-      twBorderColor = twCoolGray100;
+      twBorderColor = TwColors.coolGray100;
       return _child;
   }
 	T get borderCoolGray200 {
-      twBorderColor = twCoolGray200;
+      twBorderColor = TwColors.coolGray200;
       return _child;
   }
 	T get borderCoolGray300 {
-      twBorderColor = twCoolGray300;
+      twBorderColor = TwColors.coolGray300;
       return _child;
   }
 	T get borderCoolGray400 {
-      twBorderColor = twCoolGray400;
+      twBorderColor = TwColors.coolGray400;
       return _child;
   }
 	T get borderCoolGray500 {
-      twBorderColor = twCoolGray500;
+      twBorderColor = TwColors.coolGray500;
       return _child;
   }
 	T get borderCoolGray600 {
-      twBorderColor = twCoolGray600;
+      twBorderColor = TwColors.coolGray600;
       return _child;
   }
 	T get borderCoolGray700 {
-      twBorderColor = twCoolGray700;
+      twBorderColor = TwColors.coolGray700;
       return _child;
   }
 	T get borderCoolGray800 {
-      twBorderColor = twCoolGray800;
+      twBorderColor = TwColors.coolGray800;
       return _child;
   }
 	T get borderCoolGray900 {
-      twBorderColor = twCoolGray900;
+      twBorderColor = TwColors.coolGray900;
       return _child;
   }
 	T get borderTrueGray50 {
-      twBorderColor = twTrueGray50;
+      twBorderColor = TwColors.trueGray50;
       return _child;
   }
 	T get borderTrueGray100 {
-      twBorderColor = twTrueGray100;
+      twBorderColor = TwColors.trueGray100;
       return _child;
   }
 	T get borderTrueGray200 {
-      twBorderColor = twTrueGray200;
+      twBorderColor = TwColors.trueGray200;
       return _child;
   }
 	T get borderTrueGray300 {
-      twBorderColor = twTrueGray300;
+      twBorderColor = TwColors.trueGray300;
       return _child;
   }
 	T get borderTrueGray400 {
-      twBorderColor = twTrueGray400;
+      twBorderColor = TwColors.trueGray400;
       return _child;
   }
 	T get borderTrueGray500 {
-      twBorderColor = twTrueGray500;
+      twBorderColor = TwColors.trueGray500;
       return _child;
   }
 	T get borderTrueGray600 {
-      twBorderColor = twTrueGray600;
+      twBorderColor = TwColors.trueGray600;
       return _child;
   }
 	T get borderTrueGray700 {
-      twBorderColor = twTrueGray700;
+      twBorderColor = TwColors.trueGray700;
       return _child;
   }
 	T get borderTrueGray800 {
-      twBorderColor = twTrueGray800;
+      twBorderColor = TwColors.trueGray800;
       return _child;
   }
 	T get borderTrueGray900 {
-      twBorderColor = twTrueGray900;
+      twBorderColor = TwColors.trueGray900;
       return _child;
   }
 	T get borderWarmGray50 {
-      twBorderColor = twWarmGray50;
+      twBorderColor = TwColors.warmGray50;
       return _child;
   }
 	T get borderWarmGray100 {
-      twBorderColor = twWarmGray100;
+      twBorderColor = TwColors.warmGray100;
       return _child;
   }
 	T get borderWarmGray200 {
-      twBorderColor = twWarmGray200;
+      twBorderColor = TwColors.warmGray200;
       return _child;
   }
 	T get borderWarmGray300 {
-      twBorderColor = twWarmGray300;
+      twBorderColor = TwColors.warmGray300;
       return _child;
   }
 	T get borderWarmGray400 {
-      twBorderColor = twWarmGray400;
+      twBorderColor = TwColors.warmGray400;
       return _child;
   }
 	T get borderWarmGray500 {
-      twBorderColor = twWarmGray500;
+      twBorderColor = TwColors.warmGray500;
       return _child;
   }
 	T get borderWarmGray600 {
-      twBorderColor = twWarmGray600;
+      twBorderColor = TwColors.warmGray600;
       return _child;
   }
 	T get borderWarmGray700 {
-      twBorderColor = twWarmGray700;
+      twBorderColor = TwColors.warmGray700;
       return _child;
   }
 	T get borderWarmGray800 {
-      twBorderColor = twWarmGray800;
+      twBorderColor = TwColors.warmGray800;
       return _child;
   }
 	T get borderWarmGray900 {
-      twBorderColor = twWarmGray900;
+      twBorderColor = TwColors.warmGray900;
       return _child;
   }
 	T get borderRed50 {
-      twBorderColor = twRed50;
+      twBorderColor = TwColors.red50;
       return _child;
   }
 	T get borderRed100 {
-      twBorderColor = twRed100;
+      twBorderColor = TwColors.red100;
       return _child;
   }
 	T get borderRed200 {
-      twBorderColor = twRed200;
+      twBorderColor = TwColors.red200;
       return _child;
   }
 	T get borderRed300 {
-      twBorderColor = twRed300;
+      twBorderColor = TwColors.red300;
       return _child;
   }
 	T get borderRed400 {
-      twBorderColor = twRed400;
+      twBorderColor = TwColors.red400;
       return _child;
   }
 	T get borderRed500 {
-      twBorderColor = twRed500;
+      twBorderColor = TwColors.red500;
       return _child;
   }
 	T get borderRed600 {
-      twBorderColor = twRed600;
+      twBorderColor = TwColors.red600;
       return _child;
   }
 	T get borderRed700 {
-      twBorderColor = twRed700;
+      twBorderColor = TwColors.red700;
       return _child;
   }
 	T get borderRed800 {
-      twBorderColor = twRed800;
+      twBorderColor = TwColors.red800;
       return _child;
   }
 	T get borderRed900 {
-      twBorderColor = twRed900;
+      twBorderColor = TwColors.red900;
       return _child;
   }
 	T get borderOrange50 {
-      twBorderColor = twOrange50;
+      twBorderColor = TwColors.orange50;
       return _child;
   }
 	T get borderOrange100 {
-      twBorderColor = twOrange100;
+      twBorderColor = TwColors.orange100;
       return _child;
   }
 	T get borderOrange200 {
-      twBorderColor = twOrange200;
+      twBorderColor = TwColors.orange200;
       return _child;
   }
 	T get borderOrange300 {
-      twBorderColor = twOrange300;
+      twBorderColor = TwColors.orange300;
       return _child;
   }
 	T get borderOrange400 {
-      twBorderColor = twOrange400;
+      twBorderColor = TwColors.orange400;
       return _child;
   }
 	T get borderOrange500 {
-      twBorderColor = twOrange500;
+      twBorderColor = TwColors.orange500;
       return _child;
   }
 	T get borderOrange600 {
-      twBorderColor = twOrange600;
+      twBorderColor = TwColors.orange600;
       return _child;
   }
 	T get borderOrange700 {
-      twBorderColor = twOrange700;
+      twBorderColor = TwColors.orange700;
       return _child;
   }
 	T get borderOrange800 {
-      twBorderColor = twOrange800;
+      twBorderColor = TwColors.orange800;
       return _child;
   }
 	T get borderOrange900 {
-      twBorderColor = twOrange900;
+      twBorderColor = TwColors.orange900;
       return _child;
   }
 	T get borderAmber50 {
-      twBorderColor = twAmber50;
+      twBorderColor = TwColors.amber50;
       return _child;
   }
 	T get borderAmber100 {
-      twBorderColor = twAmber100;
+      twBorderColor = TwColors.amber100;
       return _child;
   }
 	T get borderAmber200 {
-      twBorderColor = twAmber200;
+      twBorderColor = TwColors.amber200;
       return _child;
   }
 	T get borderAmber300 {
-      twBorderColor = twAmber300;
+      twBorderColor = TwColors.amber300;
       return _child;
   }
 	T get borderAmber400 {
-      twBorderColor = twAmber400;
+      twBorderColor = TwColors.amber400;
       return _child;
   }
 	T get borderAmber500 {
-      twBorderColor = twAmber500;
+      twBorderColor = TwColors.amber500;
       return _child;
   }
 	T get borderAmber600 {
-      twBorderColor = twAmber600;
+      twBorderColor = TwColors.amber600;
       return _child;
   }
 	T get borderAmber700 {
-      twBorderColor = twAmber700;
+      twBorderColor = TwColors.amber700;
       return _child;
   }
 	T get borderAmber800 {
-      twBorderColor = twAmber800;
+      twBorderColor = TwColors.amber800;
       return _child;
   }
 	T get borderAmber900 {
-      twBorderColor = twAmber900;
+      twBorderColor = TwColors.amber900;
       return _child;
   }
 	T get borderYellow50 {
-      twBorderColor = twYellow50;
+      twBorderColor = TwColors.yellow50;
       return _child;
   }
 	T get borderYellow100 {
-      twBorderColor = twYellow100;
+      twBorderColor = TwColors.yellow100;
       return _child;
   }
 	T get borderYellow200 {
-      twBorderColor = twYellow200;
+      twBorderColor = TwColors.yellow200;
       return _child;
   }
 	T get borderYellow300 {
-      twBorderColor = twYellow300;
+      twBorderColor = TwColors.yellow300;
       return _child;
   }
 	T get borderYellow400 {
-      twBorderColor = twYellow400;
+      twBorderColor = TwColors.yellow400;
       return _child;
   }
 	T get borderYellow500 {
-      twBorderColor = twYellow500;
+      twBorderColor = TwColors.yellow500;
       return _child;
   }
 	T get borderYellow600 {
-      twBorderColor = twYellow600;
+      twBorderColor = TwColors.yellow600;
       return _child;
   }
 	T get borderYellow700 {
-      twBorderColor = twYellow700;
+      twBorderColor = TwColors.yellow700;
       return _child;
   }
 	T get borderYellow800 {
-      twBorderColor = twYellow800;
+      twBorderColor = TwColors.yellow800;
       return _child;
   }
 	T get borderYellow900 {
-      twBorderColor = twYellow900;
+      twBorderColor = TwColors.yellow900;
       return _child;
   }
 	T get borderLime50 {
-      twBorderColor = twLime50;
+      twBorderColor = TwColors.lime50;
       return _child;
   }
 	T get borderLime100 {
-      twBorderColor = twLime100;
+      twBorderColor = TwColors.lime100;
       return _child;
   }
 	T get borderLime200 {
-      twBorderColor = twLime200;
+      twBorderColor = TwColors.lime200;
       return _child;
   }
 	T get borderLime300 {
-      twBorderColor = twLime300;
+      twBorderColor = TwColors.lime300;
       return _child;
   }
 	T get borderLime400 {
-      twBorderColor = twLime400;
+      twBorderColor = TwColors.lime400;
       return _child;
   }
 	T get borderLime500 {
-      twBorderColor = twLime500;
+      twBorderColor = TwColors.lime500;
       return _child;
   }
 	T get borderLime600 {
-      twBorderColor = twLime600;
+      twBorderColor = TwColors.lime600;
       return _child;
   }
 	T get borderLime700 {
-      twBorderColor = twLime700;
+      twBorderColor = TwColors.lime700;
       return _child;
   }
 	T get borderLime800 {
-      twBorderColor = twLime800;
+      twBorderColor = TwColors.lime800;
       return _child;
   }
 	T get borderLime900 {
-      twBorderColor = twLime900;
+      twBorderColor = TwColors.lime900;
       return _child;
   }
 	T get borderGreen50 {
-      twBorderColor = twGreen50;
+      twBorderColor = TwColors.green50;
       return _child;
   }
 	T get borderGreen100 {
-      twBorderColor = twGreen100;
+      twBorderColor = TwColors.green100;
       return _child;
   }
 	T get borderGreen200 {
-      twBorderColor = twGreen200;
+      twBorderColor = TwColors.green200;
       return _child;
   }
 	T get borderGreen300 {
-      twBorderColor = twGreen300;
+      twBorderColor = TwColors.green300;
       return _child;
   }
 	T get borderGreen400 {
-      twBorderColor = twGreen400;
+      twBorderColor = TwColors.green400;
       return _child;
   }
 	T get borderGreen500 {
-      twBorderColor = twGreen500;
+      twBorderColor = TwColors.green500;
       return _child;
   }
 	T get borderGreen600 {
-      twBorderColor = twGreen600;
+      twBorderColor = TwColors.green600;
       return _child;
   }
 	T get borderGreen700 {
-      twBorderColor = twGreen700;
+      twBorderColor = TwColors.green700;
       return _child;
   }
 	T get borderGreen800 {
-      twBorderColor = twGreen800;
+      twBorderColor = TwColors.green800;
       return _child;
   }
 	T get borderGreen900 {
-      twBorderColor = twGreen900;
+      twBorderColor = TwColors.green900;
       return _child;
   }
 	T get borderEmerald50 {
-      twBorderColor = twEmerald50;
+      twBorderColor = TwColors.emerald50;
       return _child;
   }
 	T get borderEmerald100 {
-      twBorderColor = twEmerald100;
+      twBorderColor = TwColors.emerald100;
       return _child;
   }
 	T get borderEmerald200 {
-      twBorderColor = twEmerald200;
+      twBorderColor = TwColors.emerald200;
       return _child;
   }
 	T get borderEmerald300 {
-      twBorderColor = twEmerald300;
+      twBorderColor = TwColors.emerald300;
       return _child;
   }
 	T get borderEmerald400 {
-      twBorderColor = twEmerald400;
+      twBorderColor = TwColors.emerald400;
       return _child;
   }
 	T get borderEmerald500 {
-      twBorderColor = twEmerald500;
+      twBorderColor = TwColors.emerald500;
       return _child;
   }
 	T get borderEmerald600 {
-      twBorderColor = twEmerald600;
+      twBorderColor = TwColors.emerald600;
       return _child;
   }
 	T get borderEmerald700 {
-      twBorderColor = twEmerald700;
+      twBorderColor = TwColors.emerald700;
       return _child;
   }
 	T get borderEmerald800 {
-      twBorderColor = twEmerald800;
+      twBorderColor = TwColors.emerald800;
       return _child;
   }
 	T get borderEmerald900 {
-      twBorderColor = twEmerald900;
+      twBorderColor = TwColors.emerald900;
       return _child;
   }
 	T get borderTeal50 {
-      twBorderColor = twTeal50;
+      twBorderColor = TwColors.teal50;
       return _child;
   }
 	T get borderTeal100 {
-      twBorderColor = twTeal100;
+      twBorderColor = TwColors.teal100;
       return _child;
   }
 	T get borderTeal200 {
-      twBorderColor = twTeal200;
+      twBorderColor = TwColors.teal200;
       return _child;
   }
 	T get borderTeal300 {
-      twBorderColor = twTeal300;
+      twBorderColor = TwColors.teal300;
       return _child;
   }
 	T get borderTeal400 {
-      twBorderColor = twTeal400;
+      twBorderColor = TwColors.teal400;
       return _child;
   }
 	T get borderTeal500 {
-      twBorderColor = twTeal500;
+      twBorderColor = TwColors.teal500;
       return _child;
   }
 	T get borderTeal600 {
-      twBorderColor = twTeal600;
+      twBorderColor = TwColors.teal600;
       return _child;
   }
 	T get borderTeal700 {
-      twBorderColor = twTeal700;
+      twBorderColor = TwColors.teal700;
       return _child;
   }
 	T get borderTeal800 {
-      twBorderColor = twTeal800;
+      twBorderColor = TwColors.teal800;
       return _child;
   }
 	T get borderTeal900 {
-      twBorderColor = twTeal900;
+      twBorderColor = TwColors.teal900;
       return _child;
   }
 	T get borderCyan50 {
-      twBorderColor = twCyan50;
+      twBorderColor = TwColors.cyan50;
       return _child;
   }
 	T get borderCyan100 {
-      twBorderColor = twCyan100;
+      twBorderColor = TwColors.cyan100;
       return _child;
   }
 	T get borderCyan200 {
-      twBorderColor = twCyan200;
+      twBorderColor = TwColors.cyan200;
       return _child;
   }
 	T get borderCyan300 {
-      twBorderColor = twCyan300;
+      twBorderColor = TwColors.cyan300;
       return _child;
   }
 	T get borderCyan400 {
-      twBorderColor = twCyan400;
+      twBorderColor = TwColors.cyan400;
       return _child;
   }
 	T get borderCyan500 {
-      twBorderColor = twCyan500;
+      twBorderColor = TwColors.cyan500;
       return _child;
   }
 	T get borderCyan600 {
-      twBorderColor = twCyan600;
+      twBorderColor = TwColors.cyan600;
       return _child;
   }
 	T get borderCyan700 {
-      twBorderColor = twCyan700;
+      twBorderColor = TwColors.cyan700;
       return _child;
   }
 	T get borderCyan800 {
-      twBorderColor = twCyan800;
+      twBorderColor = TwColors.cyan800;
       return _child;
   }
 	T get borderCyan900 {
-      twBorderColor = twCyan900;
+      twBorderColor = TwColors.cyan900;
       return _child;
   }
 	T get borderLightBlue50 {
-      twBorderColor = twLightBlue50;
+      twBorderColor = TwColors.lightBlue50;
       return _child;
   }
 	T get borderLightBlue100 {
-      twBorderColor = twLightBlue100;
+      twBorderColor = TwColors.lightBlue100;
       return _child;
   }
 	T get borderLightBlue200 {
-      twBorderColor = twLightBlue200;
+      twBorderColor = TwColors.lightBlue200;
       return _child;
   }
 	T get borderLightBlue300 {
-      twBorderColor = twLightBlue300;
+      twBorderColor = TwColors.lightBlue300;
       return _child;
   }
 	T get borderLightBlue400 {
-      twBorderColor = twLightBlue400;
+      twBorderColor = TwColors.lightBlue400;
       return _child;
   }
 	T get borderLightBlue500 {
-      twBorderColor = twLightBlue500;
+      twBorderColor = TwColors.lightBlue500;
       return _child;
   }
 	T get borderLightBlue600 {
-      twBorderColor = twLightBlue600;
+      twBorderColor = TwColors.lightBlue600;
       return _child;
   }
 	T get borderLightBlue700 {
-      twBorderColor = twLightBlue700;
+      twBorderColor = TwColors.lightBlue700;
       return _child;
   }
 	T get borderLightBlue800 {
-      twBorderColor = twLightBlue800;
+      twBorderColor = TwColors.lightBlue800;
       return _child;
   }
 	T get borderLightBlue900 {
-      twBorderColor = twLightBlue900;
+      twBorderColor = TwColors.lightBlue900;
       return _child;
   }
 	T get borderBlue50 {
-      twBorderColor = twBlue50;
+      twBorderColor = TwColors.blue50;
       return _child;
   }
 	T get borderBlue100 {
-      twBorderColor = twBlue100;
+      twBorderColor = TwColors.blue100;
       return _child;
   }
 	T get borderBlue200 {
-      twBorderColor = twBlue200;
+      twBorderColor = TwColors.blue200;
       return _child;
   }
 	T get borderBlue300 {
-      twBorderColor = twBlue300;
+      twBorderColor = TwColors.blue300;
       return _child;
   }
 	T get borderBlue400 {
-      twBorderColor = twBlue400;
+      twBorderColor = TwColors.blue400;
       return _child;
   }
 	T get borderBlue500 {
-      twBorderColor = twBlue500;
+      twBorderColor = TwColors.blue500;
       return _child;
   }
 	T get borderBlue600 {
-      twBorderColor = twBlue600;
+      twBorderColor = TwColors.blue600;
       return _child;
   }
 	T get borderBlue700 {
-      twBorderColor = twBlue700;
+      twBorderColor = TwColors.blue700;
       return _child;
   }
 	T get borderBlue800 {
-      twBorderColor = twBlue800;
+      twBorderColor = TwColors.blue800;
       return _child;
   }
 	T get borderBlue900 {
-      twBorderColor = twBlue900;
+      twBorderColor = TwColors.blue900;
       return _child;
   }
 	T get borderIndigo50 {
-      twBorderColor = twIndigo50;
+      twBorderColor = TwColors.indigo50;
       return _child;
   }
 	T get borderIndigo100 {
-      twBorderColor = twIndigo100;
+      twBorderColor = TwColors.indigo100;
       return _child;
   }
 	T get borderIndigo200 {
-      twBorderColor = twIndigo200;
+      twBorderColor = TwColors.indigo200;
       return _child;
   }
 	T get borderIndigo300 {
-      twBorderColor = twIndigo300;
+      twBorderColor = TwColors.indigo300;
       return _child;
   }
 	T get borderIndigo400 {
-      twBorderColor = twIndigo400;
+      twBorderColor = TwColors.indigo400;
       return _child;
   }
 	T get borderIndigo500 {
-      twBorderColor = twIndigo500;
+      twBorderColor = TwColors.indigo500;
       return _child;
   }
 	T get borderIndigo600 {
-      twBorderColor = twIndigo600;
+      twBorderColor = TwColors.indigo600;
       return _child;
   }
 	T get borderIndigo700 {
-      twBorderColor = twIndigo700;
+      twBorderColor = TwColors.indigo700;
       return _child;
   }
 	T get borderIndigo800 {
-      twBorderColor = twIndigo800;
+      twBorderColor = TwColors.indigo800;
       return _child;
   }
 	T get borderIndigo900 {
-      twBorderColor = twIndigo900;
+      twBorderColor = TwColors.indigo900;
       return _child;
   }
 	T get borderViolet50 {
-      twBorderColor = twViolet50;
+      twBorderColor = TwColors.violet50;
       return _child;
   }
 	T get borderViolet100 {
-      twBorderColor = twViolet100;
+      twBorderColor = TwColors.violet100;
       return _child;
   }
 	T get borderViolet200 {
-      twBorderColor = twViolet200;
+      twBorderColor = TwColors.violet200;
       return _child;
   }
 	T get borderViolet300 {
-      twBorderColor = twViolet300;
+      twBorderColor = TwColors.violet300;
       return _child;
   }
 	T get borderViolet400 {
-      twBorderColor = twViolet400;
+      twBorderColor = TwColors.violet400;
       return _child;
   }
 	T get borderViolet500 {
-      twBorderColor = twViolet500;
+      twBorderColor = TwColors.violet500;
       return _child;
   }
 	T get borderViolet600 {
-      twBorderColor = twViolet600;
+      twBorderColor = TwColors.violet600;
       return _child;
   }
 	T get borderViolet700 {
-      twBorderColor = twViolet700;
+      twBorderColor = TwColors.violet700;
       return _child;
   }
 	T get borderViolet800 {
-      twBorderColor = twViolet800;
+      twBorderColor = TwColors.violet800;
       return _child;
   }
 	T get borderViolet900 {
-      twBorderColor = twViolet900;
+      twBorderColor = TwColors.violet900;
       return _child;
   }
 	T get borderPurple50 {
-      twBorderColor = twPurple50;
+      twBorderColor = TwColors.purple50;
       return _child;
   }
 	T get borderPurple100 {
-      twBorderColor = twPurple100;
+      twBorderColor = TwColors.purple100;
       return _child;
   }
 	T get borderPurple200 {
-      twBorderColor = twPurple200;
+      twBorderColor = TwColors.purple200;
       return _child;
   }
 	T get borderPurple300 {
-      twBorderColor = twPurple300;
+      twBorderColor = TwColors.purple300;
       return _child;
   }
 	T get borderPurple400 {
-      twBorderColor = twPurple400;
+      twBorderColor = TwColors.purple400;
       return _child;
   }
 	T get borderPurple500 {
-      twBorderColor = twPurple500;
+      twBorderColor = TwColors.purple500;
       return _child;
   }
 	T get borderPurple600 {
-      twBorderColor = twPurple600;
+      twBorderColor = TwColors.purple600;
       return _child;
   }
 	T get borderPurple700 {
-      twBorderColor = twPurple700;
+      twBorderColor = TwColors.purple700;
       return _child;
   }
 	T get borderPurple800 {
-      twBorderColor = twPurple800;
+      twBorderColor = TwColors.purple800;
       return _child;
   }
 	T get borderPurple900 {
-      twBorderColor = twPurple900;
+      twBorderColor = TwColors.purple900;
       return _child;
   }
 	T get borderFuchsia50 {
-      twBorderColor = twFuchsia50;
+      twBorderColor = TwColors.fuchsia50;
       return _child;
   }
 	T get borderFuchsia100 {
-      twBorderColor = twFuchsia100;
+      twBorderColor = TwColors.fuchsia100;
       return _child;
   }
 	T get borderFuchsia200 {
-      twBorderColor = twFuchsia200;
+      twBorderColor = TwColors.fuchsia200;
       return _child;
   }
 	T get borderFuchsia300 {
-      twBorderColor = twFuchsia300;
+      twBorderColor = TwColors.fuchsia300;
       return _child;
   }
 	T get borderFuchsia400 {
-      twBorderColor = twFuchsia400;
+      twBorderColor = TwColors.fuchsia400;
       return _child;
   }
 	T get borderFuchsia500 {
-      twBorderColor = twFuchsia500;
+      twBorderColor = TwColors.fuchsia500;
       return _child;
   }
 	T get borderFuchsia600 {
-      twBorderColor = twFuchsia600;
+      twBorderColor = TwColors.fuchsia600;
       return _child;
   }
 	T get borderFuchsia700 {
-      twBorderColor = twFuchsia700;
+      twBorderColor = TwColors.fuchsia700;
       return _child;
   }
 	T get borderFuchsia800 {
-      twBorderColor = twFuchsia800;
+      twBorderColor = TwColors.fuchsia800;
       return _child;
   }
 	T get borderFuchsia900 {
-      twBorderColor = twFuchsia900;
+      twBorderColor = TwColors.fuchsia900;
       return _child;
   }
 	T get borderPink50 {
-      twBorderColor = twPink50;
+      twBorderColor = TwColors.pink50;
       return _child;
   }
 	T get borderPink100 {
-      twBorderColor = twPink100;
+      twBorderColor = TwColors.pink100;
       return _child;
   }
 	T get borderPink200 {
-      twBorderColor = twPink200;
+      twBorderColor = TwColors.pink200;
       return _child;
   }
 	T get borderPink300 {
-      twBorderColor = twPink300;
+      twBorderColor = TwColors.pink300;
       return _child;
   }
 	T get borderPink400 {
-      twBorderColor = twPink400;
+      twBorderColor = TwColors.pink400;
       return _child;
   }
 	T get borderPink500 {
-      twBorderColor = twPink500;
+      twBorderColor = TwColors.pink500;
       return _child;
   }
 	T get borderPink600 {
-      twBorderColor = twPink600;
+      twBorderColor = TwColors.pink600;
       return _child;
   }
 	T get borderPink700 {
-      twBorderColor = twPink700;
+      twBorderColor = TwColors.pink700;
       return _child;
   }
 	T get borderPink800 {
-      twBorderColor = twPink800;
+      twBorderColor = TwColors.pink800;
       return _child;
   }
 	T get borderPink900 {
-      twBorderColor = twPink900;
+      twBorderColor = TwColors.pink900;
       return _child;
   }
 	T get borderRose50 {
-      twBorderColor = twRose50;
+      twBorderColor = TwColors.rose50;
       return _child;
   }
 	T get borderRose100 {
-      twBorderColor = twRose100;
+      twBorderColor = TwColors.rose100;
       return _child;
   }
 	T get borderRose200 {
-      twBorderColor = twRose200;
+      twBorderColor = TwColors.rose200;
       return _child;
   }
 	T get borderRose300 {
-      twBorderColor = twRose300;
+      twBorderColor = TwColors.rose300;
       return _child;
   }
 	T get borderRose400 {
-      twBorderColor = twRose400;
+      twBorderColor = TwColors.rose400;
       return _child;
   }
 	T get borderRose500 {
-      twBorderColor = twRose500;
+      twBorderColor = TwColors.rose500;
       return _child;
   }
 	T get borderRose600 {
-      twBorderColor = twRose600;
+      twBorderColor = TwColors.rose600;
       return _child;
   }
 	T get borderRose700 {
-      twBorderColor = twRose700;
+      twBorderColor = TwColors.rose700;
       return _child;
   }
 	T get borderRose800 {
-      twBorderColor = twRose800;
+      twBorderColor = TwColors.rose800;
       return _child;
   }
 	T get borderRose900 {
-      twBorderColor = twRose900;
+      twBorderColor = TwColors.rose900;
       return _child;
   }
 	T get borderPrimary {
-      twBorderColor = twPrimary;
+      twBorderColor = TwColors.primary;
       return _child;
   }
 	

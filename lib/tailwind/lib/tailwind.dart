@@ -20,7 +20,9 @@ export './widgets/TwStack.dart';
 export './widgets/TwPadding.dart';
 
 /// Utilities
-export "./utilities/Tw.dart";
+export "./utilities/TwColors.dart";
+export "./utilities/TwUtils.dart";
+export "./utilities/TwSpacers.dart";
 
 /// Mixins
 export "./mixins/ColorMixin.dart";
