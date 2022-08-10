@@ -14,6 +14,19 @@ This will provide basic styling just like Tailwind provides in which it is provi
 you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
 ```Roundness```, ```Shadows```, ```Font Sizes```, ```Font styling``` Etc.
 
+## Future Plans
+
+| Feature  | Status  | Addition/Changes  | From Version  |
+|----------|:---------:|:-----------:|:---------------:|
+| Position Widget  | ⏳  | ➕  | ----  |
+| WidthBox -> spaceX  | ⏳  | 🖊️  | ----  |
+| spaceX method  | ⏳  | ➕  | ----  |
+| HeightBox -> spaceY  | ⏳  | 🖊️  | ----  |
+| spaceY method  | ⏳  | ➕  | ----  |
+| TwSpacers -> TwSizes  | ⏳  | 🖊️  | ----  |
+| TwSpacers.sp<n> -> TwSizes.spacer<n>  | ⏳  | 🖊️  | ----  |
+| TwSpacers.sp<n> -> TwSizes.spacer<n>  | ⏳  | 🖊️  | ----  |
+
 ## Getting Started
 Install package
 ```bash
