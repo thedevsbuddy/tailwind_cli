@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: TwColors.yellow500,
+        primaryColor: TwColors.gray,
         appBarTheme: AppBarTheme(
-          backgroundColor: TwColors.blueGray800,
+          backgroundColor: TwColors.blueGray.shade800,
           elevation: 0,
           centerTitle: true,
         ),

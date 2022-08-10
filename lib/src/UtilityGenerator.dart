@@ -1,7 +1,7 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/utilities/TwColors.dart' as utilityTwColors;
-import 'package:tailwind_cli/tailwind/lib/utilities/TwSpacers.dart' as utilityTwSpacers;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwSizes.dart' as utilityTwSizes;
 import 'package:tailwind_cli/tailwind/lib/utilities/TwUtils.dart' as utilityTwUtils;
 
 Future<void> generate(List<String> args) async {
@@ -46,16 +46,16 @@ Future<void> generateTwColorsUtility() async {
 
 Future<void> generateTwSpacersUtility() async {
   /// Get Tw Utility stub Template / File
-  var spacerUtilityTwFile = utilityTwSpacers.stub;
+  var spacerUtilityTwFile = utilityTwSizes.stub;
 
   /// Process stub Template / File
   spacerUtilityTwFile = processStub(stub: spacerUtilityTwFile, data: Utils.mergedConfigs());
 
   /// Check and create
-  Utils.makeDir(utilityTwSpacers.target);
+  Utils.makeDir(utilityTwSizes.target);
 
   /// Write File
-  Utils.writeFile(utilityTwSpacers.file, spacerUtilityTwFile);
+  Utils.writeFile(utilityTwSizes.file, spacerUtilityTwFile);
 
   /// Show Success message
   print(green("Utilities Generated successfully!"));
@@ -76,12 +76,12 @@ String processSpacers(Map<String, dynamic>? spacers) {
   var spaces = "";
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
-      spaces += "static const double base = $value;\n\t";
+      spaces += "static const double spacer = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', '_');
-      spaces += "static const double sp$dot = base * $value;\n\t";
+      spaces += "static const double spacer$dot = spacer * $value;\n\t";
     } else {
-      spaces += "static const double sp$key = base * $value;\n\t";
+      spaces += "static const double spacer$key = spacer * $value;\n\t";
     }
   });
 
@@ -95,15 +95,17 @@ String processColors(Map<String, dynamic>? colors) {
   var color = "";
   colors.forEach((key, value) {
     if (value is Map) {
+      color += "static const MaterialColor $key = MaterialColor(";
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
-          color += "static const Color $key = Color($val);\n\t";
+          color += "$val, <int, Color>{\n\t\t";
         } else {
           val = Utils.hexToColor("$val");
-          color += "static const Color $key$k = Color($val);\n\t";
+          color += "$k: Color($val),\n\t\t";
         }
       });
+      color += "});\n\n";
     } else {
       value = Utils.hexToColor("$value");
       color += "static const Color $key = Color($value);\n\t";

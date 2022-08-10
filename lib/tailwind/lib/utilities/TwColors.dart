@@ -4,8 +4,10 @@ const String file = "tailwind/lib/utilities/TwColors.dart";
 const String stub = """
 import "package:flutter/material.dart";
 
-/// Utility helper for [Tailwind] Colors
+/// [TwColors] Utility helper for [Tailwind] Colors
 class TwColors {
+  TwColors._();
+  
   /// Theme Colors
   static Color primaryColor(BuildContext context) => Theme.of(context).primaryColor;
   static Color primaryColorDark(BuildContext context) => Theme.of(context).primaryColorDark;

@@ -22,7 +22,7 @@ export './widgets/TwPadding.dart';
 /// Utilities
 export "./utilities/TwColors.dart";
 export "./utilities/TwUtils.dart";
-export "./utilities/TwSpacers.dart";
+export "./utilities/TwSizes.dart";
 
 /// Mixins
 export "./mixins/ColorMixin.dart";

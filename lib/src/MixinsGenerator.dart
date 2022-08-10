@@ -76,7 +76,7 @@ String processColors(Map<String, dynamic>? colors) {
         } else {
           val = Utils.hexToColor("$val");
           color += """T get $key$k {
-      twColor = TwColors.$key$k;
+      twColor = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
         }
@@ -128,10 +128,10 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get p$key {
-    paddingLeft = TwSpacers.sp$key;
-    paddingTop = TwSpacers.sp$key;
-    paddingRight = TwSpacers.sp$key;
-    paddingBottom = TwSpacers.sp$key;
+    paddingLeft = TwSizes.spacer$key;
+    paddingTop = TwSizes.spacer$key;
+    paddingRight = TwSizes.spacer$key;
+    paddingBottom = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -143,8 +143,8 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get px$key {
-    paddingLeft = TwSpacers.sp$key;
-    paddingRight = TwSpacers.sp$key;
+    paddingLeft = TwSizes.spacer$key;
+    paddingRight = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -156,8 +156,8 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get py$key {
-    paddingTop = TwSpacers.sp$key;
-    paddingBottom = TwSpacers.sp$key;
+    paddingTop = TwSizes.spacer$key;
+    paddingBottom = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -169,7 +169,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pl$key {
-    paddingLeft = TwSpacers.sp$key;
+    paddingLeft = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -181,7 +181,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pt$key {
-    paddingTop = TwSpacers.sp$key;
+    paddingTop = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -193,7 +193,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pr$key {
-    paddingRight = TwSpacers.sp$key;
+    paddingRight = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -205,7 +205,7 @@ String processPaddings(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get pb$key {
-    paddingBottom = TwSpacers.sp$key;
+    paddingBottom = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -226,10 +226,10 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get m$key {
-    marginLeft = TwSpacers.sp$key;
-    marginTop = TwSpacers.sp$key;
-    marginRight = TwSpacers.sp$key;
-    marginBottom = TwSpacers.sp$key;
+    marginLeft = TwSizes.spacer$key;
+    marginTop = TwSizes.spacer$key;
+    marginRight = TwSizes.spacer$key;
+    marginBottom = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -241,8 +241,8 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mx$key {
-    marginLeft = TwSpacers.sp$key;
-    marginRight = TwSpacers.sp$key;
+    marginLeft = TwSizes.spacer$key;
+    marginRight = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -254,8 +254,8 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get my$key {
-    marginTop = TwSpacers.sp$key;
-    marginBottom = TwSpacers.sp$key;
+    marginTop = TwSizes.spacer$key;
+    marginBottom = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -267,7 +267,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get ml$key {
-    marginLeft = TwSpacers.sp$key;
+    marginLeft = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -279,7 +279,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mt$key {
-    marginTop = TwSpacers.sp$key;
+    marginTop = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -291,7 +291,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mr$key {
-    marginRight = TwSpacers.sp$key;
+    marginRight = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -303,7 +303,7 @@ String processMargins(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key != 'DEFAULT') {
       spacer += """T get mb$key {
-    marginBottom = TwSpacers.sp$key;
+    marginBottom = TwSizes.spacer$key;
     return _child;
   }\n\t""";
     }
@@ -387,11 +387,11 @@ String processGradientColors(Map<String, dynamic>? colors) {
   }\n\t""";
         } else {
           color += """T get from${Utils.ucFirst(key, preserveAfter: true)}$k {
-      gradientColors[0] = TwColors.$key$k;
+      gradientColors[0] = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
           color += """T get to${Utils.ucFirst(key, preserveAfter: true)}$k {
-      gradientColors[1] = TwColors.$key$k;
+      gradientColors[1] = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
         }
@@ -449,7 +449,7 @@ String processBorderColors(Map<String, dynamic>? colors) {
         } else {
           val = Utils.hexToColor("$val");
           color += """T get border${Utils.ucFirst(key, preserveAfter: true)}$k {
-      twBorderColor = TwColors.$key$k;
+      twBorderColor = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
         }
@@ -476,12 +476,12 @@ String processBorderWidths(Map<String, dynamic>? spacers) {
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
       spacer += """T get borderBase {
-    twBorderWidth = TwSpacers.base; 
+    twBorderWidth = TwSizes.spacer; 
     return _child;
   }\n\t""";
     } else {
       spacer += """T get border$key {
-    twBorderWidth = TwSpacers.sp$key; 
+    twBorderWidth = TwSizes.spacer$key; 
     return _child;
   }\n\t""";
     }

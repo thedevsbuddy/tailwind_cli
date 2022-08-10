@@ -6,6 +6,7 @@ const Map<String, dynamic> colors = {
 
   ///Gray Colors
   "gray": {
+    "DEFAULT": "0xFF71717A",
     "50": "0xFFFAFAFA",
     "100": "0xFFF4F4F5",
     "200": "0xFFE4E4E7",
@@ -21,6 +22,7 @@ const Map<String, dynamic> colors = {
   ///BlueGray Colors
 
   "blueGray": {
+    "DEFAULT": "0xFF64748B",
     "50": "0xFFF8FAFC",
     "100": "0xFFF1F5F9",
     "200": "0xFFE2E8F0",
@@ -35,6 +37,7 @@ const Map<String, dynamic> colors = {
 
   /// Cool Gray Colors
   "coolGray": {
+    "DEFAULT": "0xFF4B5563",
     "50": "0xFFF9FAFB",
     "100": "0xFFF3F4F6",
     "200": "0xFFE5E7EB",
@@ -49,6 +52,7 @@ const Map<String, dynamic> colors = {
 
   ///  True Gray Colors
   "trueGray": {
+    "DEFAULT": "0xFF737373",
     "50": "0xFFFAFAFA",
     "100": "0xFFF5F5F5",
     "200": "0xFFE5E5E5",
@@ -63,6 +67,7 @@ const Map<String, dynamic> colors = {
 
   ///  Warm Gray Colors
   "warmGray": {
+    "DEFAULT": "0xFF78716C",
     "50": "0xFFFAFAF9",
     "100": "0xFFF5F5F4",
     "200": "0xFFE7E5E4",
@@ -77,6 +82,7 @@ const Map<String, dynamic> colors = {
 
   ///Red Colors
   "red": {
+    "DEFAULT": "0xFFEF4444",
     "50": "0xFFFEF2F2",
     "100": "0xFFFEE2E2",
     "200": "0xFFFECACA",
@@ -91,6 +97,7 @@ const Map<String, dynamic> colors = {
 
   ///Orange Colors
   "orange": {
+    "DEFAULT": "0xFFF97316",
     "50": "0xFFFFF7ED",
     "100": "0xFFFFEDD5",
     "200": "0xFFFED7AA",
@@ -105,6 +112,7 @@ const Map<String, dynamic> colors = {
 
   ///Amber Colors
   "amber": {
+    "DEFAULT": "0xFFF59E0B",
     "50": "0xFFFFFBEB",
     "100": "0xFFFEF3C7",
     "200": "0xFFFDE68A",
@@ -119,6 +127,7 @@ const Map<String, dynamic> colors = {
 
   ///Yellow Colors
   "yellow": {
+    "DEFAULT": "0xFFEAB308",
     "50": "0xFFFEFCE8",
     "100": "0xFFFEF9C3",
     "200": "0xFFFEF08A",
@@ -133,6 +142,7 @@ const Map<String, dynamic> colors = {
 
   ///Lime Colors
   "lime": {
+    "DEFAULT": "0xFF84CC16",
     "50": "0xFFF7FEE7",
     "100": "0xFFECFCCB",
     "200": "0xFFD9F99D",
@@ -147,6 +157,7 @@ const Map<String, dynamic> colors = {
 
   ///Green Colors
   "green": {
+    "DEFAULT": "0xFF22C55E",
     "50": "0xFFF0FDF4",
     "100": "0xFFDCFCE7",
     "200": "0xFFBBF7D0",
@@ -161,6 +172,7 @@ const Map<String, dynamic> colors = {
 
   ///Emerald Colors
   "emerald": {
+    "DEFAULT": "0xFF10B981",
     "50": "0xFFECFDF5",
     "100": "0xFFD1FAE5",
     "200": "0xFFA7F3D0",
@@ -175,6 +187,7 @@ const Map<String, dynamic> colors = {
 
   ///Teal Colors
   "teal": {
+    "DEFAULT": "0xFF14B8A6",
     "50": "0xFFF0FDFA",
     "100": "0xFFCCFBF1",
     "200": "0xFF99F6E4",
@@ -189,6 +202,7 @@ const Map<String, dynamic> colors = {
 
   ///Cyan Colors
   "cyan": {
+    "DEFAULT": "0xFF06B6D4",
     "50": "0xFFECFEFF",
     "100": "0xFFCFFAFE",
     "200": "0xFFA5F3FC",
@@ -203,6 +217,7 @@ const Map<String, dynamic> colors = {
 
   ///Light Blue Colors
   "lightBlue": {
+    "DEFAULT": "0xFF0EA5E9",
     "50": "0xFFF0F9FF",
     "100": "0xFFE0F2FE",
     "200": "0xFFBAE6FD",
@@ -217,6 +232,7 @@ const Map<String, dynamic> colors = {
 
   ///Blue Colors
   "blue": {
+    "DEFAULT": "0xFF3B82F6",
     "50": "0xFFEFF6FF",
     "100": "0xFFDBEAFE",
     "200": "0xFFBFDBFE",
@@ -231,6 +247,7 @@ const Map<String, dynamic> colors = {
 
   ///Indigo Colors
   "indigo": {
+    "DEFAULT": "0xFF6366F1",
     "50": "0xFFEEF2FF",
     "100": "0xFFE0E7FF",
     "200": "0xFFC7D2FE",
@@ -245,6 +262,7 @@ const Map<String, dynamic> colors = {
 
   ///Violet Colors
   "violet": {
+    "DEFAULT": "0xFF8B5CF6",
     "50": "0xFFF5F3FF",
     "100": "0xFFEDE9FE",
     "200": "0xFFDDD6FE",
@@ -259,6 +277,7 @@ const Map<String, dynamic> colors = {
 
   ///Purple Colors
   "purple": {
+    "DEFAULT": "0xFFA855F7",
     "50": "0xFFFAF5FF",
     "100": "0xFFF3E8FF",
     "200": "0xFFE9D5FF",
@@ -273,6 +292,7 @@ const Map<String, dynamic> colors = {
 
   ///Fuchsia Colors
   "fuchsia": {
+    "DEFAULT": "0xFFD946EF",
     "50": "0xFFFDF4FF",
     "100": "0xFFFAE8FF",
     "200": "0xFFF5D0FE",
@@ -287,6 +307,7 @@ const Map<String, dynamic> colors = {
 
   ///Pink Colors
   "pink": {
+    "DEFAULT": "0xFFEC4899",
     "50": "0xFFFDF2F8",
     "100": "0xFFFCE7F3",
     "200": "0xFFFBCFE8",
@@ -301,6 +322,7 @@ const Map<String, dynamic> colors = {
 
   ///Rose Colors
   "rose": {
+    "DEFAULT": "0xFFF43F5E",
     "50": "0xFFFFF1F2",
     "100": "0xFFFFE4E6",
     "200": "0xFFFECDD3",

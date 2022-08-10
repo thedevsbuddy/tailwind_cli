@@ -1,3 +1,12 @@
+## 0.3.1
+* Refactored `TwColors`.
+  * Made it use `MaterialColor` and its shades.
+* Renamed `TwSpacers` to `TwSizes`.
+  * Renamed `TwSpacers.sp<n>` to `TwSizes.spacer<n>`.
+* Renamed `widthBox` to `spaceX`.
+* Renamed `heightBox` to `spaceY`.
+* Removed `opacity` method from `TwColorExtensions` because it was conflicting with flutter core.
+
 ## 0.3.0
 * Fixed Colors extensions to use `context` as without context it wont respond to theme mode change.
 * Separated Utility helpers.

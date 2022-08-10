@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 /// Extension Methods for colors
-extension StringExtension on Color {
+extension TwColorExtension on Color {
   /// Opacity
   Color o(dynamic value) => this.withOpacity(value);
-  Color opacity(dynamic value) => this.withOpacity(value);
   Color get o10 => this.withOpacity(0.1);
 	Color get o15 => this.withOpacity(0.15);
 	Color get o20 => this.withOpacity(0.2);

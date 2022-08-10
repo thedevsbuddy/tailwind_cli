@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 /// Extension Methods for double
 extension DoubleExtension on double {
   // SizedBox Widget
-  Widget get widthBox => SizedBox(width: this);
-  Widget get heightBox => SizedBox(height: this);
+  Widget get spaceX => SizedBox(width: this);
+  Widget get spaceY => SizedBox(height: this);
 
   // Duration
    Duration get days => Duration(days: toInt());
@@ -22,8 +22,8 @@ extension DoubleExtension on double {
 /// Extension Methods for int
 extension IntExtension on int {
   // SizedBox Widget
-  Widget get widthBox => SizedBox(width: toDouble());
-  Widget get heightBox => SizedBox(height: toDouble());
+  Widget get spaceX => SizedBox(width: toDouble());
+  Widget get spaceY => SizedBox(height: toDouble());
 
   // Duration
   Duration get days => Duration(days: toInt());
