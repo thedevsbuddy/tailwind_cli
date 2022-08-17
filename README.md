@@ -18,6 +18,8 @@ you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
 
 | Feature  | Status  | Addition/Changes  | From Version  |
 |----------|:---------:|:-----------:|:---------------:|
+| TwGrid Widget  | ⏳  | ➕  | ----  |
+| TwImage Widget  | ⏳  | ➕  | ----  |
 | SpaceX Widget  | ⏳  | ➕  | ----  |
 | SpaceY Widget  | ⏳  | ➕  | ----  |
 | Position Widget  | ⏳  | ➕  | ----  |
