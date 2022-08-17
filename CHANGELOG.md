@@ -1,3 +1,6 @@
+## 0.3.3
+* Fixed `ColorMixin` error as now it is method not getter.
+
 ## 0.3.2
 * Refactored `ColorMixin`.
   * Changed theme color helpers to use `context` as it won't work without it.
