@@ -18,38 +18,38 @@ mixin TwColorMixin<T> {
   }
   
   /// Flutter Theme Colors
-  T get primaryColor {
-    twColor = TwColors.primaryColor(Get.context!);
+  T get primaryColor(BuildContext context) {
+    twColor = TwColors.primaryColor(context);
     return _child;
   }
   
-  T get primaryColorLight {
-    twColor = TwColors.primaryColorLight(Get.context!);
+  T get primaryColorLight(BuildContext context) {
+    twColor = TwColors.primaryColorLight(context);
     return _child;
   }
 
-  T get primaryColorDark {
-    twColor = TwColors.primaryColorDark(Get.context!);
+  T get primaryColorDark(BuildContext context) {
+    twColor = TwColors.primaryColorDark(context);
     return _child;
   }
 
-  T get secondaryColor {
-    twColor = TwColors.secondary(Get.context!);
+  T get secondaryColor(BuildContext context) {
+    twColor = TwColors.secondary(context);
     return _child;
   }
 
-  T get backgroundColor {
-    twColor = TwColors.backgroundColor(Get.context!);
+  T get backgroundColor(BuildContext context) {
+    twColor = TwColors.backgroundColor(context);
     return _child;
   }
 
-  T get scaffoldBackgroundColor {
-    twColor = TwColors.scaffoldBackgroundColor(Get.context!);
+  T get scaffoldBackgroundColor(BuildContext context) {
+    twColor = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
 
-  T get cardColor {
-    twColor = TwColors.cardColor(Get.context!);
+  T get cardColor(BuildContext context) {
+    twColor = TwColors.cardColor(context);
     return _child;
   }
  

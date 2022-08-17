@@ -18,11 +18,6 @@ you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
 
 | Feature  | Status  | Addition/Changes  | From Version  |
 |----------|:---------:|:-----------:|:---------------:|
-| TwColors -> Use Material Color shades  | ✔️  | 🖊️  | 0.3.1  |
-| TwSpacers -> TwSizes  | ✔️  | 🖊️  | 0.3.1  |
-| TwSpacers.sp<n> -> TwSizes.spacer<n>  | ✔️  | 🖊️  | 0.3.1  |
-| WidthBox -> spaceX  | ✔️  | 🖊️  | 0.3.1  |
-| HeightBox -> spaceY  | ✔️  | 🖊️  | 0.3.1  |
 | SpaceX Widget  | ⏳  | ➕  | ----  |
 | SpaceY Widget  | ⏳  | ➕  | ----  |
 | Position Widget  | ⏳  | ➕  | ----  |

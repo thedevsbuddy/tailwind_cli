@@ -1,3 +1,7 @@
+## 0.3.2
+* Refactored `ColorMixin`.
+  * Changed theme color helpers to use `context` as it won't work without it.
+
 ## 0.3.1
 * Refactored `TwColors`.
   * Made it use `MaterialColor` and its shades.
