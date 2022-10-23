@@ -1,3 +1,7 @@
+## 0.4.0
+* Fixed `fontSizes` in `TwText` Widget.
+* Added `fontSizes` in the TwSizes Utility.
+
 ## 0.3.3
 * Fixed `ColorMixin` error as now it is method not getter.
 

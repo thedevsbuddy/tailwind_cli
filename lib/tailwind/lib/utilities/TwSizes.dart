@@ -4,7 +4,8 @@ const String file = "tailwind/lib/utilities/TwSizes.dart";
 const String stub = """
 /// [TwSizes] Utility helper for [Tailwind] Spacers
 class TwSizes {
-  //spacers  
+  //spacers
+  //fontSizes
 }
 
 

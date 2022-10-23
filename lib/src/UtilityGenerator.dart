@@ -121,13 +121,40 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   var fontSize = "";
   fontSizes.forEach((key, value) {
     if (key == 'base') {
-      fontSize += "const double textBase = $value;\n\t";
+      fontSize += "static const double textBase = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
-      fontSize += "const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
+      fontSize += "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
     } else {
-      fontSize += "const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
+      fontSize += "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
     }
   });
+  return fontSize;
+}
+
+String processFontSizeUtilities(Map<String, dynamic>? fontSizes) {
+  if (fontSizes == null) {
+    return "";
+  }
+  var fontSize = "";
+  fontSizes.forEach((key, value) {
+    if (key == 'base') {
+      fontSize += "static const double textBase = $value;\n\t";
+    } else if (key.contains('.')) {
+      var dot = key.replaceAll('.', 'Dot');
+      fontSize += "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
+    } else {
+      fontSize += "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
+    }
+    // if (key == 'DEFAULT') {
+    //   spaces += "static const double spacer = $value;\n\t";
+    // } else if (key.contains('.')) {
+    //   var dot = key.replaceAll('.', '_');
+    //   spaces += "static const double spacer$dot = spacer * $value;\n\t";
+    // } else {
+    //   spaces += "static const double spacer$key = spacer * $value;\n\t";
+    // }
+  });
+
   return fontSize;
 }

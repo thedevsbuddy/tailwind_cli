@@ -201,19 +201,19 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   }
 
   /// ============== FONT SIZES ============== ///
-  TwText get textBase => this.._fontSize = textBase as double?;
-	TwText get textXs => this.._fontSize = textXs as double?;
-	TwText get textSm => this.._fontSize = textSm as double?;
-	TwText get textLg => this.._fontSize = textLg as double?;
-	TwText get textXl => this.._fontSize = textXl as double?;
-	TwText get textXl2 => this.._fontSize = textXl2 as double?;
-	TwText get textXl3 => this.._fontSize = textXl3 as double?;
-	TwText get textXl4 => this.._fontSize = textXl4 as double?;
-	TwText get textXl5 => this.._fontSize = textXl5 as double?;
-	TwText get textXl6 => this.._fontSize = textXl6 as double?;
-	TwText get textXl7 => this.._fontSize = textXl7 as double?;
-	TwText get textXl8 => this.._fontSize = textXl8 as double?;
-	TwText get textXl9 => this.._fontSize = textXl9 as double?;
+  TwText get textBase => this.._fontSize = TwSizes.textBase;
+	TwText get textXs => this.._fontSize = TwSizes.textXs;
+	TwText get textSm => this.._fontSize = TwSizes.textSm;
+	TwText get textLg => this.._fontSize = TwSizes.textLg;
+	TwText get textXl => this.._fontSize = TwSizes.textXl;
+	TwText get textXl2 => this.._fontSize = TwSizes.textXl2;
+	TwText get textXl3 => this.._fontSize = TwSizes.textXl3;
+	TwText get textXl4 => this.._fontSize = TwSizes.textXl4;
+	TwText get textXl5 => this.._fontSize = TwSizes.textXl5;
+	TwText get textXl6 => this.._fontSize = TwSizes.textXl6;
+	TwText get textXl7 => this.._fontSize = TwSizes.textXl7;
+	TwText get textXl8 => this.._fontSize = TwSizes.textXl8;
+	TwText get textXl9 => this.._fontSize = TwSizes.textXl9;
 	
 
   /// To set fontSize of the text using [size]

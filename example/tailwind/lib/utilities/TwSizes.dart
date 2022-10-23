@@ -28,7 +28,21 @@ class TwSizes {
 	static const double spacer56 = spacer * 14;
 	static const double spacer60 = spacer * 15;
 	static const double spacer64 = spacer * 16;
-	  
+	
+  static const double textBase = 16.0;
+	static const double textXs = textBase * 0.75;
+	static const double textSm = textBase * 0.875;
+	static const double textLg = textBase * 1.125;
+	static const double textXl = textBase * 1.25;
+	static const double textXl2 = textBase * 1.5;
+	static const double textXl3 = textBase * 1.875;
+	static const double textXl4 = textBase * 2.25;
+	static const double textXl5 = textBase * 3;
+	static const double textXl6 = textBase * 3.75;
+	static const double textXl7 = textBase * 4.5;
+	static const double textXl8 = textBase * 6;
+	static const double textXl9 = textBase * 8;
+	
 }
 
 
