@@ -3,6 +3,8 @@
 A simple yet awesome flutter package to generate and use TailwindCSS like styling in your flutter
 projects.
 
+![TailwindCLI](./screenshots/TailwindCLI.svg)
+
 ### Inspiration
 
 * [Tailwind CSS](https://tailwindcss.com/)
