@@ -1,3 +1,6 @@
+## 0.4.1
+* Fixed `export "./extensions/TwContextExtension.dart";` Issue.
+
 ## 0.4.0
 * Fixed `fontSizes` in `TwText` Widget.
 * Added `fontSizes` in the TwSizes Utility.

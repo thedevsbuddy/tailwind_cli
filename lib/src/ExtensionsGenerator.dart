@@ -1,11 +1,9 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/extensions/TwColorExtension.dart'
-    as twColorExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwNumbersExtension.dart'
-    as twNumbersExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwWidgetExtension.dart'
-    as twWidgetExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwColorExtension.dart' as twColorExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwContextExtension.dart' as twContextExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwNumbersExtension.dart' as twNumbersExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwWidgetExtension.dart' as twWidgetExtension;
 
 Future<void> generate(List<String> args) async {
   await generateTwColorExtension();
@@ -19,8 +17,7 @@ Future<void> generateTwColorExtension() async {
   var twColorExtensionData = twColorExtension.stub;
 
   /// Process stub Template / File
-  twColorExtensionData = twColorExtensionData.replaceAll(
-      "//opacity", processOpacity(Utils.mergedConfigs()['opacity']));
+  twColorExtensionData = twColorExtensionData.replaceAll("//opacity", processOpacity(Utils.mergedConfigs()['opacity']));
 
   /// Check and create
   Utils.makeDir(twColorExtension.target);
@@ -67,4 +64,16 @@ Future<void> generateTwNumbersExtension() async {
 
   /// Show Success message
   print(green("Tailwind Widget Extension generated successfully!"));
+}
+
+/// Generate TwNumbersExtension
+Future<void> generateTwContextExtension() async {
+  /// Check and create
+  Utils.makeDir(twContextExtension.target);
+
+  /// Write File
+  Utils.writeFile(twContextExtension.file, twContextExtension.stub);
+
+  /// Show Success message
+  print(green("Tailwind Context Extension generated successfully!"));
 }
