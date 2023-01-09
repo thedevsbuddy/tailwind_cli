@@ -18,16 +18,13 @@ you ```Colors```, ```Gradient Colors```, Sizing ```(Padding, Margins)```,
 
 ## Future Plans
 
-| Feature                      | Status  | Addition/Changes  | From Version  |
-|------------------------------|:---------:|:-----------:|:---------------:|
-| TwGrid Widget                | ⏳  | ➕  | ----  |
-| TwImage Widget               | ⏳  | ➕  | ----  |
-| SpaceX Widget                | ⏳  | ➕  | ----  |
-| SpaceY Widget                | ⏳  | ➕  | ----  |
-| Position Widget              | ⏳  | ➕  | ----  |
-| Responsiveness               | ⏳  | ➕  | ----  |
-| Dark theme color check       | ⏳  | ➕  | ----  |
-| Themes option (Experimental) | ⏳  | ➕  | ----  |
+| Feature                      | Status  | Addition/Changes  | From Version  | Comments |
+|------------------------------|:---------:|:-----------:|:---------------:|:--:|
+| TwGrid Widget                | ⏳  | ➕  | ----  |  |
+| TwImage Widget               | ⏳  | ➕  | ----  |  |
+| Colors extension with dark mode check       | ⏳  | ➕  | ----  |  |
+| Themes option (Experimental) | ⏳  | ➕  | ----  |  |
+| Responsiveness (Experimental) | ⏳  | ➕  | ----  |  |
 
 ## Getting Started
 Install package
