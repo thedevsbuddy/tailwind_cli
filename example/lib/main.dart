@@ -39,8 +39,8 @@ class ExamplePage extends StatelessWidget {
             TwWrap(
               <Widget>[
                 'This is the demo of TwWrap Widget'.text.textXl.bold.coolGray700.render(),
-                TwSpacers.sp2.widthBox,
-                Text('Item 2 of TwWrap Widget').text.bodyText1.primaryColor.render(),
+                TwSizes.spacer2.spaceX,
+                Text('Item 2 of TwWrap Widget').text.bodyText1.primaryColor(context).render(),
               ],
             ).vertical.alignStart.render(),
             TwRow([
@@ -63,7 +63,7 @@ class ExamplePage extends StatelessWidget {
                   .py3
                   .render()
                   .expanded(),
-              TwSpacers.sp3.widthBox,
+              TwSizes.spacer3.spaceX,
               TwContainer(
                 child: Text('Direct TwContainer').text.bodyText1.indigo500.semiBold.render(),
               ).white.shadow.rounded.center.px4.py3.render().expanded(),
