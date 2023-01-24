@@ -82,8 +82,8 @@ As every flutter developer knows that each flutter application requires a lot of
 | -------------------------------- | -------------------------------------------- |
 | It focuses on mutiple solutions. | Mainly focus on UI Styling                   |
 | Can not customize anything.      | Customization is available for every feature |
-| Can not use muldiple margins.    | You can add margins on individual sides      |
-| Can not use muldiple paddings.   | You can add padding on individual sides      |
+| Can not use multiple margins.    | You can add margins on individual sides      |
+| Can not use multiple paddings.   | You can add padding on individual sides      |
 
 #### VelocityX Pros
 
