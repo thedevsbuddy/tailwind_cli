@@ -116,7 +116,7 @@ So I thought why I can't make this feature with mainly focusing on the UI in our
   - `TwColumn` a wrapper around a column widget.
   - `TwContainer` Flutter container widget with goodness of tailwind styles.
   - `TwPadding` Now adding padding is so simple.
-  - `TwRow` Create rows woth ease.
+  - `TwRow` Create rows with ease.
   - `TwStack` Manage stack widget with extension methods.
   - `TwText` now working with text widget is so simple with `TailwindCLI`.
   - [See more](https://devsbuddy.gitbook.io/tailwind-cli/widgets/)
