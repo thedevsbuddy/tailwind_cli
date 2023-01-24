@@ -74,7 +74,28 @@ flutter pub run tailwind_cli:build
 
 ## Features
 
-As every flutter developer knows that each flutter application requires a lot of code to be written to achieve the best UI. I saw this issue and searching for the way which can help us reduce the number of lines of code but get the same result as expected. I was aware of the UI libraries for the web development. In which one of the best is `tailwindcss` but it is only available for the `html` and `css` which is really awesome and provides a great way to write clean and effective code for your application's UI. And i searched for the same which can be used in flutter but found nothing similar to `tailwindcss` i know there is one package called `VelocityX` which does same thing but there are some issues with that package.
+As every flutter developer knows that each flutter application requires a lot of code to be written to achieve the best UI. I saw this issue and searching for the way which can help us reduce the number of lines of code but get the same result as expected. I was aware of the UI libraries for the web development. In which one of the best is `tailwindcss` but it is only available for the `html` and `css` which is really awesome and provides a great way to write clean and effective code for your application's UI. I searched for the same which can be used in flutter but found nothing which is similar to `tailwindcss`. I know there is one package called `VelocityX` which does same thing but there are some issues with that package. As i already mentioned my inspiration above in which I included `VelocityX`.
+
+#### Comparison Between `VelocityX` and `TailwindCLI`
+
+| VelocityX                        | TailwindCLI                                  |
+| -------------------------------- | -------------------------------------------- |
+| It focuses on mutiple solutions. | Mainly focus on UI Styling                   |
+| Can not customize anything.      | Customization is available for every feature |
+|                                  |                                              |
+|                                  |                                              |
+
+#### VelocityX Pros
+
+- It is a great package for mutiple solutions.
+- Can be used to build awesome applications.
+- Can be used to manage states in your applications.
+
+#### VelocityX Cons
+
+- It focuses on mutiple solutions.
+- Can not customize styles.
+- Can not add your custom styles.
 
 So I thought why I can't make this feature with mainly focusing on the UI in our flutter projects? For this I created this project and thankfully it worked.
 
@@ -84,12 +105,21 @@ So I thought why I can't make this feature with mainly focusing on the UI in our
 | ---------------- | ---------------------------------------------------- |
 | 100% performance | 2x your code writing speed as it reduces code length |
 | No heavy library | Write less produce more                              |
-| Lightwieght      |                                                      |
+| Lightweight      | Increase your productivity by 200%                   |
 
 ### Widgets
 
 - This project generates some widgets that can be used with the tailwind like stylies.
 - You can also use other native widgets which can be converted to Tailwind Widget and inherit the tailwind styles.
+- Few example widgets:
+  - `TwButton` to create a button.
+  - `TwColumn` a wrapper around a column widget.
+  - `TwContainer` Flutter container widget with goodness of tailwind styles.
+  - `TwPadding` Now adding padding is so simple.
+  - `TwRow` Create rows woth ease.
+  - `TwStack` Manage stack widget with extension methods.
+  - `TwText` now working with text widget is so simple with `TailwindCLI`.
+  - [See more](https://devsbuddy.gitbook.io/tailwind-cli/widgets/)
 
 ### Methods
 
@@ -108,9 +138,7 @@ There are several methods which can be used to build the tailwind like styles fo
 
 ## Detailed documentation
 
-You can check the official documentation by visiting this url:
-
-[Visit Official Documentation](https://devsbuddy.gitbook.io/tailwind-cli/)
+You can check the official documentation by visiting this url: [Visit Official Documentation](https://devsbuddy.gitbook.io/tailwind-cli/)
 
 **_Note: This documentation is on the initial stage which will be fully available soon._**
 
