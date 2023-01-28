@@ -5,12 +5,12 @@ projects.
 
 ![TailwindCLI](./screenshots/TailwindCLI.svg)
 
-### Inspiration
+## Inspiration
 
 - [Tailwind CSS](https://tailwindcss.com/)
 - [VelocityX](https://velocityx.dev)
 
-#### Some Highlights
+## Some Highlights
 
 This will provide basic styling just like Tailwind provides in which it is providing
 you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
