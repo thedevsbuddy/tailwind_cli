@@ -161,4 +161,32 @@ extension InkwellExtensions on InkWell {
         canRequestFocus,
         statesController,
       );
+
+  TwInkWell get withInkWell => TwInkWell.existing(
+        child!,
+        onTap,
+        onDoubleTap,
+        onLongPress,
+        onTapDown,
+        onTapUp,
+        onFocusChange,
+        onHighlightChanged,
+        onTapCancel,
+        onHover,
+        autofocus,
+        borderRadius,
+        mouseCursor,
+        focusColor,
+        hoverColor,
+        highlightColor,
+        overlayColor,
+        splashColor,
+        radius,
+        customBorder,
+        enableFeedback,
+        excludeFromSemantics,
+        focusNode,
+        canRequestFocus,
+        statesController,
+      );
 }
