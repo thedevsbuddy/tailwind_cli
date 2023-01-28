@@ -20,8 +20,13 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 
 | Feature                               | Status | Addition/Changes | From Version |
 | ------------------------------------- | :----: | :--------------: | :----------: |
-| TwGrid Widget                         |   ⏳   |        ➕        | In Progress  |
-| TwImage Widget                        |   ⏳   |        ➕        | In Progress  |
+| `TwGrid` Widget                       |   ⏳   |        ➕        | In Progress  |
+| `TwImage` Widget                      |   ⏳   |        ➕        | In Progress  |
+| `TWGesture` Widget                    |   ⏳   |        ➕        | In Progress  |
+| `TWInkwell` Widget                    |   ⏳   |        ➕        | In Progress  |
+| `onTap(Function)` Extenstion          |   ⏳   |        ➕        | In Progress  |
+| `onDoubleTap(Function)` Extenstion    |   ⏳   |        ➕        | In Progress  |
+| `onLongPress(Function)` Extenstion    |   ⏳   |        ➕        | In Progress  |
 | Colors extension with dark mode check |   ⏳   |        ➕        |     ----     |
 | Themes option (Experimental)          |   ⏳   |        ➕        |     ----     |
 | Responsiveness (Experimental)         |   ⏳   |        ➕        |     ----     |
@@ -30,13 +35,13 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 
 Install package
 
-```bash
+```powershell
 flutter pub add -d tailwind_cli
 ```
 
 Now publish the `tailwind.config.json` file
 
-```bash
+```powershell
 flutter pub run tailwind_cli:init
 ```
 
@@ -44,7 +49,7 @@ Publishing `tailwind.config.json` file will create a config file for Tailwind st
 
 Build / Generate tailwind styling
 
-```bash
+```powershell
 flutter pub run tailwind_cli:build
 ```
 
@@ -58,7 +63,7 @@ tailwind:
 
 Now install generated tailwind styles in your project
 
-```bash
+```powershell
 flutter pub get
 ```
 
@@ -68,7 +73,7 @@ flutter pub get
 
 **_Please re-build `tailwind` styles every time you make changes in `tailwind.config.json` file_**
 
-```bash
+```powershell
 flutter pub run tailwind_cli:build
 ```
 
