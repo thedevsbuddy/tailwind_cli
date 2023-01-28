@@ -6,34 +6,7 @@ import 'TwBuilder.dart';
 /// to provide utilities in your Wrap Widget
 @protected
 class TwInkWell extends TwWidgetBuilder<Widget> {
-  TwInkWell(Widget this._child);
-  TwInkWell.existing(
-    Widget this._child,
-    Function()? _onTap,
-    Function()? _onDoubleTap,
-    Function()? _onLongPress,
-    Function(TapDownDetails)? _onTapDown,
-    Function(TapUpDetails)? _onTapUp,
-    Function(bool)? _onFocusChange,
-    Function(bool)? _onHighlightChanged,
-    Function()? _onTapCancel,
-    Function(bool)? _onHover,
-    bool _autofocus,
-    BorderRadius? _borderRadius,
-    MouseCursor? _mouseCursor,
-    Color? _focusColor,
-    Color? _hoverColor,
-    Color? _highlightColor,
-    MaterialStateProperty<Color?>? _overlayColor,
-    Color? _splashColor,
-    double? _radius,
-    ShapeBorder? _customBorder,
-    bool? _enableFeedback,
-    bool _excludeFromSemantics,
-    FocusNode? _focusNode,
-    bool _canRequestFocus,
-    MaterialStatesController? _statesController,
-  );
+  TwInkWell(this._child);
 
   Widget? _child;
   InteractiveInkFeatureFactory? _splashFactory;
@@ -130,63 +103,13 @@ class TwInkWell extends TwWidgetBuilder<Widget> {
   }
 }
 
-extension InkwellExtensions on InkWell {
+extension InkwellExtensions on Widget {
   /// Extension method to directly access [TwInkWell]
   /// with any widget without wrapping or with dot operator.
 
-  TwInkWell get inkWell => TwInkWell.existing(
-        child!,
-        onTap,
-        onDoubleTap,
-        onLongPress,
-        onTapDown,
-        onTapUp,
-        onFocusChange,
-        onHighlightChanged,
-        onTapCancel,
-        onHover,
-        autofocus,
-        borderRadius,
-        mouseCursor,
-        focusColor,
-        hoverColor,
-        highlightColor,
-        overlayColor,
-        splashColor,
-        radius,
-        customBorder,
-        enableFeedback,
-        excludeFromSemantics,
-        focusNode,
-        canRequestFocus,
-        statesController,
-      );
+  TwInkWell get inkWell => TwInkWell(this);
 
-  TwInkWell get withInkWell => TwInkWell.existing(
-        child!,
-        onTap,
-        onDoubleTap,
-        onLongPress,
-        onTapDown,
-        onTapUp,
-        onFocusChange,
-        onHighlightChanged,
-        onTapCancel,
-        onHover,
-        autofocus,
-        borderRadius,
-        mouseCursor,
-        focusColor,
-        hoverColor,
-        highlightColor,
-        overlayColor,
-        splashColor,
-        radius,
-        customBorder,
-        enableFeedback,
-        excludeFromSemantics,
-        focusNode,
-        canRequestFocus,
-        statesController,
-      );
+  TwInkWell get withInkWell => TwInkWell(this);
 }
+
+

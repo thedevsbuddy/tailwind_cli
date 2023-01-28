@@ -127,80 +127,80 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
 
   /// ============== FONT THEME ============== ///
   /// Sets [TextTheme] headline 1
-  TwText get headline1 {
-    _themedStyle = Theme.of(Get.context!).textTheme.headline1;
+  TwText headline1(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headline1;
     return this;
   }
 
   /// Sets [TextTheme] headline 2
-  TwText get headline2 {
-    _themedStyle = Theme.of(Get.context!).textTheme.headline2;
+  TwText headline2(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headline2;
     return this;
   }
 
   /// Sets [TextTheme] headline 3
-  TwText get headline3 {
-    _themedStyle = Theme.of(Get.context!).textTheme.headline3;
+  TwText headline3(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headline3;
     return this;
   }
 
   /// Sets [TextTheme] headline 4
-  TwText get headline4 {
-    _themedStyle = Theme.of(Get.context!).textTheme.headline4;
+  TwText headline4(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headline4;
     return this;
   }
 
   /// Sets [TextTheme] headline 5
-  TwText get headline5 {
-    _themedStyle = Theme.of(Get.context!).textTheme.headline5;
+  TwText headline5(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headline5;
     return this;
   }
 
   /// Sets [TextTheme] headline 6
-  TwText get headline6 {
-    _themedStyle = Theme.of(Get.context!).textTheme.headline6;
+  TwText headline6(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headline6;
     return this;
   }
 
   /// Sets [TextTheme] bodyText1
-  TwText get bodyText1 {
-    _themedStyle = Theme.of(Get.context!).textTheme.bodyText1;
+  TwText bodyText1(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.bodyText1;
     return this;
   }
 
   /// Sets [TextTheme] bodyText2
-  TwText get bodyText2 {
-    _themedStyle = Theme.of(Get.context!).textTheme.bodyText2;
+  TwText bodyText2(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.bodyText2;
     return this;
   }
 
   /// Sets [TextTheme] caption
-  TwText get caption {
-    _themedStyle = Theme.of(Get.context!).textTheme.caption;
+  TwText caption(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.caption;
     return this;
   }
 
   /// Sets [TextTheme] subtitle1
-  TwText get subtitle1 {
-    _themedStyle = Theme.of(Get.context!).textTheme.subtitle1;
+  TwText subtitle1(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.subtitle1;
     return this;
   }
 
   /// Sets [TextTheme] subtitle2
-  TwText get subtitle2 {
-    _themedStyle = Theme.of(Get.context!).textTheme.subtitle2;
+  TwText subtitle2(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.subtitle2;
     return this;
   }
 
   /// Sets [TextTheme] overline
-  TwText get overlineText {
-    _themedStyle = Theme.of(Get.context!).textTheme.overline;
+  TwText overlineText(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.overline;
     return this;
   }
 
   /// Sets [TextTheme] button
-  TwText get buttonText {
-    _themedStyle = Theme.of(Get.context!).textTheme.button;
+  TwText buttonText(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.button;
     return this;
   }
 

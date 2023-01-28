@@ -40,12 +40,12 @@ class ExamplePage extends StatelessWidget {
               <Widget>[
                 'This is the demo of TwWrap Widget'.text.textXl.bold.coolGray700.render(),
                 TwSizes.spacer2.spaceX,
-                Text('Item 2 of TwWrap Widget').text.bodyText1.primaryColor(context).render(),
+                Text('Item 2 of TwWrap Widget').text.bodyText1(context).primaryColor(context).render(),
               ],
             ).vertical.alignStart.render(),
             TwRow([
               TwText('TwContainer with extension')
-                  .bodyText1
+                  .bodyText1(context)
                   .indigo500
                   .semiBold
                   .maxLines(1)
@@ -65,7 +65,7 @@ class ExamplePage extends StatelessWidget {
                   .expanded(),
               TwSizes.spacer3.spaceX,
               TwContainer(
-                child: Text('Direct TwContainer').text.bodyText1.indigo500.semiBold.render(),
+                child: Text('Direct TwContainer').text.bodyText1(context).indigo500.semiBold.render(),
               ).white.shadow.rounded.center.px4.py3.render().expanded(),
             ]).justifyBetween.alignCenter.render().container.mt4.render(),
           ]).alignStart.justifyCenter.max.render(),
