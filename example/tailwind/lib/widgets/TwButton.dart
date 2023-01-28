@@ -6,7 +6,8 @@ import 'TwBuilder.dart';
 /// Flutter Button Builder Widget
 /// to provide utilities in your Text Widget
 @protected
-class TwButton extends TwWidgetBuilder<Widget> with TwColorMixin<TwButton>, TwPaddingMixin<TwButton>, TwAlignmentMixin<TwButton>, TwRoundnessMixin<TwButton> {
+class TwButton extends TwWidgetBuilder<Widget>
+    with TwColorMixin<TwButton>, TwPaddingMixin<TwButton>, TwAlignmentMixin<TwButton>, TwRoundnessMixin<TwButton> {
   TwButton(this._child) {
     setChildForColoring(this);
     setChildForPadding(this);
@@ -68,3 +69,4 @@ extension TextButtonExtensions on TextButton {
 
   TwButton get button => TwButton.existing(child!, style, onPressed, onLongPress);
 }
+

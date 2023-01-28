@@ -15,6 +15,7 @@ export './widgets/TwColumn.dart';
 export './widgets/TwWrap.dart';
 export './widgets/TwStack.dart';
 export './widgets/TwPadding.dart';
+export './widgets/TwInkWell.dart';
 
 /// Utilities
 export "./utilities/TwColors.dart";

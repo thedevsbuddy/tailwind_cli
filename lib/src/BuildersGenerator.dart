@@ -9,6 +9,7 @@ import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
 import 'package:tailwind_cli/tailwind/lib/builders/TwStack.dart' as twStack;
 import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
 import 'package:tailwind_cli/tailwind/lib/builders/TwWrap.dart' as twWrap;
+import 'package:tailwind_cli/tailwind/lib/builders/TwInkWell.dart' as twInkWell;
 
 Future<void> generate(List<String> args) async {
   await generateTwBuilder();
@@ -20,6 +21,7 @@ Future<void> generate(List<String> args) async {
   await generateTwWrap();
   await generateTwPadding();
   await generateTwStack();
+  await generateTwInkWell();
 }
 
 /// Generate TwBuilder
@@ -153,6 +155,18 @@ Future<void> generateTwStack() async {
 
   /// Write File
   Utils.writeFile(twStack.file, twStack.stub);
+
+  /// Show Success message
+  print(green("TwStack generated successfully!"));
+}
+
+/// Generate TwInkWell
+Future<void> generateTwInkWell() async {
+  /// Check and create
+  Utils.makeDir(twInkWell.target);
+
+  /// Write File
+  Utils.writeFile(twInkWell.file, twInkWell.stub);
 
   /// Show Success message
   print(green("TwStack generated successfully!"));

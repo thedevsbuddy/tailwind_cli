@@ -36,7 +36,20 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op += "Color get o$key => this.withOpacity($value);\n\t";
+      op += """/// Make provided color $key% opac
+  ///
+  /// Example Usage:
+  /// ```dart
+  /// Text(
+  ///   'Flutter is awesome',
+  ///   style: TextStyle(
+  ///     color: Colors.white.o$key, // Provide $key% opacity to this text
+  ///   ),
+  /// ),
+  /// ```
+  /// \n\t\t\t
+""";
+      op += "Color get o$key => this.withOpacity($value);\n\n\t";
     }
   });
   return op;
