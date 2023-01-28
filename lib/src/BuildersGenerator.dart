@@ -1,5 +1,6 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
+import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart' as twAppBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
 import 'package:tailwind_cli/tailwind/lib/builders/TwColumn.dart' as twColumn;
@@ -13,6 +14,7 @@ import 'package:tailwind_cli/tailwind/lib/builders/TwInkWell.dart' as twInkWell;
 
 Future<void> generate(List<String> args) async {
   await generateTwBuilder();
+  await generateTwAppBuilder();
   await generateTwText();
   await generateTwContainer();
   await generateTwButton();
@@ -24,7 +26,7 @@ Future<void> generate(List<String> args) async {
   await generateTwInkWell();
 }
 
-/// Generate TwBuilder
+/// Generate [TwBuilder]
 Future<void> generateTwBuilder() async {
   /// Check and create
   Utils.makeDir(twBuilder.target);
@@ -36,7 +38,19 @@ Future<void> generateTwBuilder() async {
   print(green("Tailwind builder generated successfully!"));
 }
 
-/// Generate TwRow
+/// Generate [TwAppBuilder]
+Future<void> generateTwAppBuilder() async {
+  /// Check and create
+  Utils.makeDir(twAppBuilder.target);
+
+  /// Write File
+  Utils.writeFile(twAppBuilder.file, twAppBuilder.stub);
+
+  /// Show Success message
+  print(green("TwAppBuilder generated successfully!"));
+}
+
+/// Generate [TwRow]
 Future<void> generateTwRow() async {
   /// Check and create
   Utils.makeDir(twRow.target);
@@ -48,7 +62,7 @@ Future<void> generateTwRow() async {
   print(green("Tailwind Row generated successfully!"));
 }
 
-/// Generate TwRow
+/// Generate [TwColumn]
 Future<void> generateTwColumn() async {
   /// Check and create
   Utils.makeDir(twColumn.target);
@@ -60,7 +74,7 @@ Future<void> generateTwColumn() async {
   print(green("Tailwind Column generated successfully!"));
 }
 
-/// Generate TwWrap
+/// Generate [TwWrap]
 Future<void> generateTwWrap() async {
   /// Check and create
   Utils.makeDir(twWrap.target);
@@ -72,13 +86,13 @@ Future<void> generateTwWrap() async {
   print(green("Tailwind Wrap generated successfully!"));
 }
 
-/// Generate TwText
+/// Generate [TwText]
 Future<void> generateTwText() async {
   /// Get Tw Utility stub Template / File
   var twTextFileData = twText.stub;
 
   /// Process stub Template / File
-  twTextFileData = twTextFileData.replaceAll("//fontSizes", processFontSizes(Utils.mergedConfigs()['fontSizes']));
+  twTextFileData = twTextFileData.replaceAll("//fontSizes", processFontSizes(Utils.configs.fontSizes));
 
   /// Check and create
   Utils.makeDir(twText.target);
@@ -109,7 +123,7 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   return fontSize;
 }
 
-/// Generate TwContainer
+/// Generate [TwContainer]
 Future<void> generateTwContainer() async {
   /// Get Tw Utility stub Template / File
   var twContainerFileData = twContainer.stub;
@@ -124,7 +138,7 @@ Future<void> generateTwContainer() async {
   print(green("TwContainer Generated successfully!"));
 }
 
-/// Generate TwButton
+/// Generate [TwButton]
 Future<void> generateTwButton() async {
   /// Check and create
   Utils.makeDir(twButton.target);
@@ -136,7 +150,7 @@ Future<void> generateTwButton() async {
   print(green("TwButton generated successfully!"));
 }
 
-/// Generate TwPadding
+/// Generate [TwPadding]
 Future<void> generateTwPadding() async {
   /// Check and create
   Utils.makeDir(twPadding.target);
@@ -148,7 +162,7 @@ Future<void> generateTwPadding() async {
   print(green("TwPadding generated successfully!"));
 }
 
-/// Generate TwStack
+/// Generate [TwStack]
 Future<void> generateTwStack() async {
   /// Check and create
   Utils.makeDir(twStack.target);
@@ -160,7 +174,7 @@ Future<void> generateTwStack() async {
   print(green("TwStack generated successfully!"));
 }
 
-/// Generate TwInkWell
+/// Generate [TwInkWell]
 Future<void> generateTwInkWell() async {
   /// Check and create
   Utils.makeDir(twInkWell.target);
@@ -169,5 +183,5 @@ Future<void> generateTwInkWell() async {
   Utils.writeFile(twInkWell.file, twInkWell.stub);
 
   /// Show Success message
-  print(green("TwStack generated successfully!"));
+  print(green("TwInkWell generated successfully!"));
 }

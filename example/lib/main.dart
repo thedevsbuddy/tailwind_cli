@@ -8,18 +8,22 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primaryColor: TwColors.gray,
-        appBarTheme: AppBarTheme(
-          backgroundColor: TwColors.blueGray.shade800,
-          elevation: 0,
-          centerTitle: true,
-        ),
-      ),
-      home: ExamplePage(),
+    return TwAppBuilder(
+      builder: (BuildContext context) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primaryColor: TwColors.gray,
+            appBarTheme: AppBarTheme(
+              backgroundColor: TwColors.blueGray.shade800,
+              elevation: 0,
+              centerTitle: true,
+            ),
+          ),
+          home: ExamplePage(),
+        );
+      },
     );
   }
 }
@@ -33,6 +37,7 @@ class ExamplePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Tailwind UI style for flutter'),
       ),
+      backgroundColor: TwColors.scaffoldBackgroundColor(context),
       body: SafeArea(
         child: TwPadding(
           child: TwColumn(<Widget>[
@@ -40,7 +45,7 @@ class ExamplePage extends StatelessWidget {
               <Widget>[
                 'This is the demo of TwWrap Widget'.text.textXl.bold.coolGray700.render(),
                 TwSizes.spacer2.spaceX,
-                Text('Item 2 of TwWrap Widget').text.bodyText1(context).primaryColor(context).render(),
+                Text('Item 2 of TwWrap Widget').text.bodyText1(context).black.render(),
               ],
             ).vertical.alignStart.render(),
             TwRow([

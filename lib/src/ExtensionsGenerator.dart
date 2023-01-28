@@ -11,13 +11,13 @@ Future<void> generate(List<String> args) async {
   await generateTwWidgetExtension();
 }
 
-/// Generate TwStringExtension
+/// Generate [TwStringExtension]
 Future<void> generateTwColorExtension() async {
   /// Get Tw Utility stub Template / File
   var twColorExtensionData = twColorExtension.stub;
 
   /// Process stub Template / File
-  twColorExtensionData = twColorExtensionData.replaceAll("//opacity", processOpacity(Utils.mergedConfigs()['opacity']));
+  twColorExtensionData = twColorExtensionData.replaceAll("//opacity", processOpacity(Utils.configs.opacity));
 
   /// Check and create
   Utils.makeDir(twColorExtension.target);
@@ -36,26 +36,13 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op += """/// Make provided color $key% opac
-  ///
-  /// Example Usage:
-  /// ```dart
-  /// Text(
-  ///   'Flutter is awesome',
-  ///   style: TextStyle(
-  ///     color: Colors.white.o$key, // Provide $key% opacity to this text
-  ///   ),
-  /// ),
-  /// ```
-  /// \n\t\t\t
-""";
-      op += "Color get o$key => this.withOpacity($value);\n\n\t";
+      op += "Color get o$key => this.withOpacity($value);\n\t";
     }
   });
   return op;
 }
 
-/// Generate TwWidgetExtension
+/// Generate [TwWidgetExtension]
 Future<void> generateTwWidgetExtension() async {
   /// Check and create
   Utils.makeDir(twWidgetExtension.target);
@@ -67,7 +54,7 @@ Future<void> generateTwWidgetExtension() async {
   print(green("Tailwind Widget Extension generated successfully!"));
 }
 
-/// Generate TwNumbersExtension
+/// Generate [TwNumbersExtension]
 Future<void> generateTwNumbersExtension() async {
   /// Check and create
   Utils.makeDir(twNumbersExtension.target);
@@ -79,7 +66,7 @@ Future<void> generateTwNumbersExtension() async {
   print(green("Tailwind Widget Extension generated successfully!"));
 }
 
-/// Generate TwNumbersExtension
+/// Generate [TwNumbersExtension]
 Future<void> generateTwContextExtension() async {
   /// Check and create
   Utils.makeDir(twContextExtension.target);

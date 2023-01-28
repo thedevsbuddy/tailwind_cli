@@ -8,6 +8,16 @@ import 'package:tailwind/tailwind.dart';
 
 mixin TwColorMixin<T> {
   late T _child;
+  
+  /// Checkes if app is in dark mode
+  /// And also checkes if [Widget] has [onDark<Color>] applied
+  @protected
+  bool _hasDarkColor = false;
+
+  /// Checkes if app is in dark mode
+  /// And also checkes if [Widget] has [onDark<Color>] applied
+  @protected
+  Brightness _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance.window).platformBrightness;
 
   @protected
   Color? twColor;

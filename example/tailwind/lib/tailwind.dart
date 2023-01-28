@@ -7,6 +7,7 @@ export "./extensions/TwNumbersExtension.dart";
 export "./extensions/TwContextExtension.dart";
 
 /// Flutter Widgets
+export './widgets/TwAppBuilder.dart';
 export './widgets/TwContainer.dart';
 export './widgets/TwText.dart';
 export './widgets/TwButton.dart';

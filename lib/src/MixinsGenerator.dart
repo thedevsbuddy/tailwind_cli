@@ -81,12 +81,14 @@ String processColors(Map<String, dynamic>? colors) {
   }\n\t""";
         }
       });
-    } else {
+    } else if (value is String) {
       value = Utils.hexToColor("$value");
       color += """T get $key {
       twColor = TwColors.$key;
       return _child;
   }\n\t""";
+    } else {
+      throw new Exception('Invalid value for colors["$key"] in "tailwind.config.json" file');
     }
   });
   return color;
@@ -99,9 +101,8 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData =
-      twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.mergedConfigs()['spacers']));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.mergedConfigs()['spacers']));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.configs.spacers));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -354,8 +355,7 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData =
-      twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.mergedConfigs()['colors']));
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.configs.colors));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -416,10 +416,8 @@ Future<void> generateBorderMixin() async {
   var twBorderMixinFileData = twBorderMixin.stub;
 
   /// Process stub Template / File
-  twBorderMixinFileData =
-      twBorderMixinFileData.replaceAll("//borderColors", processBorderColors(Utils.mergedConfigs()['colors']));
-  twBorderMixinFileData =
-      twBorderMixinFileData.replaceAll("//borderWidths", processBorderWidths(Utils.mergedConfigs()['spacers']));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderColors", processBorderColors(Utils.configs.colors));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderWidths", processBorderWidths(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twBorderMixin.target);

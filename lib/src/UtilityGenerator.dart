@@ -15,7 +15,7 @@ Future<void> generateTwUtilsUtility() async {
   var utilityTwFile = utilityTwUtils.stub;
 
   /// Process stub Template / File
-  utilityTwFile = processStub(stub: utilityTwFile, data: Utils.mergedConfigs());
+  utilityTwFile = processStub(stub: utilityTwFile, data: Utils.configs);
 
   /// Check and create
   Utils.makeDir(utilityTwUtils.target);
@@ -32,7 +32,7 @@ Future<void> generateTwColorsUtility() async {
   var colorsUtilityTwFile = utilityTwColors.stub;
 
   /// Process stub Template / File
-  colorsUtilityTwFile = processStub(stub: colorsUtilityTwFile, data: Utils.mergedConfigs());
+  colorsUtilityTwFile = processStub(stub: colorsUtilityTwFile, data: Utils.configs);
 
   /// Check and create
   Utils.makeDir(utilityTwColors.target);
@@ -49,7 +49,7 @@ Future<void> generateTwSpacersUtility() async {
   var spacerUtilityTwFile = utilityTwSizes.stub;
 
   /// Process stub Template / File
-  spacerUtilityTwFile = processStub(stub: spacerUtilityTwFile, data: Utils.mergedConfigs());
+  spacerUtilityTwFile = processStub(stub: spacerUtilityTwFile, data: Utils.configs);
 
   /// Check and create
   Utils.makeDir(utilityTwSizes.target);
@@ -62,9 +62,9 @@ Future<void> generateTwSpacersUtility() async {
 }
 
 String processStub({required String stub, dynamic data}) {
-  stub = stub.replaceAll("//spacers", processSpacers(data['spacers']));
-  stub = stub.replaceAll("//colors", processColors(data['colors']));
-  stub = stub.replaceAll("//fontSizes", processFontSizes(data['fontSizes']));
+  stub = stub.replaceAll("//spacers", processSpacers(data.spacers));
+  stub = stub.replaceAll("//colors", processColors(data.colors));
+  stub = stub.replaceAll("//fontSizes", processFontSizes(data.fontSizes));
 
   return stub;
 }

@@ -2,7 +2,6 @@ const String target = "tailwind/lib/widgets/";
 const String file = "tailwind/lib/widgets/TwText.dart";
 
 const String stub = """
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 import 'TwBuilder.dart';
