@@ -18,18 +18,20 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 
 ## Future Plans
 
-| Feature                               | Status | Addition/Changes | From Version |
-| ------------------------------------- | :----: | :--------------: | :----------: |
-| `TwGrid` Widget                       |   ⏳   |        ➕        | In Progress  |
-| `TwImage` Widget                      |   ⏳   |        ➕        | In Progress  |
-| `TwGesture` Widget                    |   ⏳   |        ➕        | In Progress  |
-| `TwInkwell` Widget                    |   ⏳   |        ➕        | In Progress  |
-| `onTap(Function)` Extenstion          |   ⏳   |        ➕        | In Progress  |
-| `onDoubleTap(Function)` Extenstion    |   ⏳   |        ➕        | In Progress  |
-| `onLongPress(Function)` Extenstion    |   ⏳   |        ➕        | In Progress  |
-| Colors extension with dark mode check |   ⏳   |        ➕        |     ----     |
-| Themes option (Experimental)          |   ⏳   |        ➕        |     ----     |
-| Responsiveness (Experimental)         |   ⏳   |        ➕        |     ----     |
+| Feature                                                  | Status | Addition/Changes | From Version |
+| -------------------------------------------------------- | :----: | :--------------: | :----------: |
+| `TwGrid` Widget                                          |   ⏳   |        ➕        | In Progress  |
+| `TwImage` Widget                                         |   ⏳   |        ➕        | In Progress  |
+| `TwGestureDetector` Widget                               |   ⏳   |        ➕        | In Progress  |
+| `gestureDetector` or `withGesture` Extension for Widgets |   ⏳   |        ➕        | In Progress  |
+| `TwInkwell` Widget                                       |   ⏳   |        ➕        | In Progress  |
+| `inkwell` or `withInkwell` Extension for Widgets         |   ⏳   |        ➕        | In Progress  |
+| `onTap(Function)` Extenstion                             |   ⏳   |        ➕        | In Progress  |
+| `onDoubleTap(Function)` Extenstion                       |   ⏳   |        ➕        | In Progress  |
+| `onLongPress(Function)` Extenstion                       |   ⏳   |        ➕        | In Progress  |
+| Colors extension with dark mode check                    |   ⏳   |        ➕        |     ----     |
+| Themes option (Experimental)                             |   ⏳   |        ➕        |     ----     |
+| Responsiveness (Experimental)                            |   ⏳   |        ➕        |     ----     |
 
 ## Getting Started
 
