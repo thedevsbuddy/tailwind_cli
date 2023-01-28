@@ -22,8 +22,8 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 | ------------------------------------- | :----: | :--------------: | :----------: |
 | `TwGrid` Widget                       |   ⏳   |        ➕        | In Progress  |
 | `TwImage` Widget                      |   ⏳   |        ➕        | In Progress  |
-| `TWGesture` Widget                    |   ⏳   |        ➕        | In Progress  |
-| `TWInkwell` Widget                    |   ⏳   |        ➕        | In Progress  |
+| `TwGesture` Widget                    |   ⏳   |        ➕        | In Progress  |
+| `TwInkwell` Widget                    |   ⏳   |        ➕        | In Progress  |
 | `onTap(Function)` Extenstion          |   ⏳   |        ➕        | In Progress  |
 | `onDoubleTap(Function)` Extenstion    |   ⏳   |        ➕        | In Progress  |
 | `onLongPress(Function)` Extenstion    |   ⏳   |        ➕        | In Progress  |
