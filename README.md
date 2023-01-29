@@ -16,6 +16,11 @@ This will provide basic styling just like Tailwind provides in which it is provi
 you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 `Roundness`, `Shadows`, `Font Sizes`, `Font styling` Etc.
 
+## Want to dive in?
+
+Know more about the package by visiting this
+[Official Documentation](https://thedevsbuddy.github.io/tailwind_cli/)
+
 ## Future Plans
 
 | Feature                                          | Status | Addition/Changes | From Version  |
@@ -29,7 +34,7 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 | `onLongPress(Function)` Extenstion               |   ✔️   |        ➕        |    `0.5.0`    |
 | --- Similar gesture related Extenstion           |   ✔️   |        ➕        |    `0.5.0`    |
 | Colors extension with `DarkTheme` check          |   ✔️   |        ➕        |    `0.5.0`    |
-| No use of `context` if using `TwAppBuilder`      |   ⏳   |        ➕        | **_`0.5.1`_** |
+| No use of `context` if using `TwAppBuilder`      |   ⏳   |        ➕        | **_`0.5.2`_** |
 | Themes option (Experimental)                     |   ⏳   |        ➕        |     ----      |
 | Responsiveness (Experimental)                    |   ⏳   |        ➕        |     ----      |
 
@@ -138,7 +143,7 @@ So I thought why I can't make this feature with mainly focusing on the UI in our
   - `TwRow` Create rows with ease.
   - `TwStack` Manage stack widget with extension methods.
   - `TwText` now working with text widget is so simple with `TailwindCLI`.
-  - [See more](https://devsbuddy.gitbook.io/tailwind-cli/widgets/)
+  - [See more](https://thedevsbuddy.github.io/tailwind_cli/widgets/)
 
 ### Methods
 
@@ -153,11 +158,11 @@ There are several methods which can be used to build the tailwind like styles fo
 - **background Colors**: Same color pallete can be used for background color for any widget with few characters of code.
   - For example `Container(height: 500, width: 500).container.red500.render()`.
   - See that we only need to call the color name to set the background color for the container widget.
-- [See more](https://devsbuddy.gitbook.io/tailwind-cli/)
+- [See more](https://thedevsbuddy.github.io/tailwind_cli/)
 
 ## Detailed documentation
 
-You can check the official documentation by visiting this url: [Visit Official Documentation](https://devsbuddy.gitbook.io/tailwind-cli/)
+You can check the official documentation by visiting this url: [Visit Official Documentation](https://thedevsbuddy.github.io/tailwind_cli/)
 
 **_Note: This documentation is on the initial stage which will be fully available soon._**
 

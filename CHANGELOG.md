@@ -1,3 +1,7 @@
+## 0.5.1
+
+- Added Documentations.
+
 ## 0.5.0
 
 - Added support for `DarkTheme`.
