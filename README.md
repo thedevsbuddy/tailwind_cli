@@ -18,19 +18,32 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 
 ## Future Plans
 
-| Feature                                          | Status | Addition/Changes | From Version |
-| ------------------------------------------------ | :----: | :--------------: | :----------: |
-| `TwGrid` Widget                                  |   ⏳   |        ➕        | In Progress  |
-| `TwImage` Widget                                 |   ⏳   |        ➕        | In Progress  |
-| `TwInkwell` Widget                               |   ✔️   |        ➕        | In Progress  |
-| `inkwell` or `withInkwell` Extension for Widgets |   ✔️   |        ➕        | In Progress  |
-| `onTap(Function)` Extenstion                     |   ✔️   |        ➕        | In Progress  |
-| `onDoubleTap(Function)` Extenstion               |   ✔️   |        ➕        | In Progress  |
-| `onLongPress(Function)` Extenstion               |   ✔️   |        ➕        | In Progress  |
-| --- Similar gesture related Extenstion           |   ✔️   |        ➕        | In Progress  |
-| Colors extension with dark mode check            |   ⏳   |        ➕        |     ----     |
-| Themes option (Experimental)                     |   ⏳   |        ➕        |     ----     |
-| Responsiveness (Experimental)                    |   ⏳   |        ➕        |     ----     |
+| Feature                                          | Status | Addition/Changes | From Version  |
+| ------------------------------------------------ | :----: | :--------------: | :-----------: |
+| `TwGrid` Widget                                  |   ⏳   |        ➕        |  In Progress  |
+| `TwImage` Widget                                 |   ⏳   |        ➕        |  In Progress  |
+| `TwInkwell` Widget                               |   ✔️   |        ➕        |    `0.5.0`    |
+| `inkwell` or `withInkwell` Extension for Widgets |   ✔️   |        ➕        |    `0.5.0`    |
+| `onTap(Function)` Extenstion                     |   ✔️   |        ➕        |    `0.5.0`    |
+| `onDoubleTap(Function)` Extenstion               |   ✔️   |        ➕        |    `0.5.0`    |
+| `onLongPress(Function)` Extenstion               |   ✔️   |        ➕        |    `0.5.0`    |
+| --- Similar gesture related Extenstion           |   ✔️   |        ➕        |    `0.5.0`    |
+| Colors extension with `DarkTheme` check          |   ✔️   |        ➕        |    `0.5.0`    |
+| No use of `context` if using `TwAppBuilder`      |   ⏳   |        ➕        | **_`0.5.1`_** |
+| Themes option (Experimental)                     |   ⏳   |        ➕        |     ----      |
+| Responsiveness (Experimental)                    |   ⏳   |        ➕        |     ----      |
+
+---
+
+## Support me
+
+If you found this package helpful you can show support by clicking on the following button below and donating some amount to help me work on these projects frequently.
+
+<a href="https://www.buymeacoffee.com/iamspydey" target="_blank">
+    <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg" style="height: 45px; border-radius: 12px"/>
+</a>
+
+---
 
 ## Getting Started
 

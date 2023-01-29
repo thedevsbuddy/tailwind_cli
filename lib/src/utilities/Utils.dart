@@ -2,13 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dcli/dcli.dart';
+import 'package:tailwind_cli/src/utilities/ConfigModel.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
 
-Map<String, Map<String, dynamic>> baseConfigs = {
-  "colors": {},
-  "spacers": {},
-  "fontSizes": {},
-  "opacity": {},
+Map<String, dynamic>? baseConfigs = {
+  "darkMode": false,
+  "colors": null,
+  "spacers": null,
+  "fontSizes": null,
+  "opacity": null,
 };
 
 class Utils {
@@ -18,51 +20,55 @@ class Utils {
     }
   }
 
+  static ConfigModel configs = ConfigModel();
+
   static void writeFile(file, content) {
     "$file".write(content);
   }
 
   /// Merge Default And User config files
-  static Map<String, Map<String, dynamic>> mergedConfigs() {
+  static createConfig() {
+    ConfigModel _config = ConfigModel.fromJson(baseConfigs!);
+
     /// Get default config file
     final configFile = File("tailwind.config.json").readAsStringSync();
 
     /// Decode / Convert default config to map
-    final dynamic userConfigs = jsonDecode(configFile);
+    final ConfigModel userConfigs = ConfigModel.fromJson(jsonDecode(configFile));
 
     /// Add default config Colors in base config
-    baseConfigs['colors']!.addAll(defaultConfig.colors);
+    if (_config.colors == null) _config.colors = {};
+    _config.colors!.addAll(defaultConfig.colors);
 
     /// Add default config Spacers in base config
-    baseConfigs['spacers']!.addAll(defaultConfig.spacers);
+    if (_config.spacers == null) _config.spacers = {};
+    _config.spacers!.addAll(defaultConfig.spacers);
 
     /// Add default config FontSizes in base config
-    baseConfigs['fontSizes']!.addAll(defaultConfig.fontSizes);
+    if (_config.fontSizes == null) _config.fontSizes = {};
+    _config.fontSizes!.addAll(defaultConfig.fontSizes);
 
     /// Add default config Opacity in base config
-    baseConfigs['opacity']!.addAll(defaultConfig.opacity);
+    if (_config.opacity == null) _config.opacity = {};
+    _config.opacity!.addAll(defaultConfig.opacity);
 
     /// Check and user overrides to colors
-    if (userConfigs.containsKey('colors')) {
-      baseConfigs['colors']!.addAll(userConfigs['colors']);
-    }
+    if (userConfigs.colors != null) _config.colors!.addAll(userConfigs.colors!);
 
     /// Check and user overrides to spacers
-    if (userConfigs.containsKey('spacers')) {
-      baseConfigs['spacers']!.addAll(userConfigs['spacers']);
-    }
+    if (userConfigs.spacers != null) _config.spacers!.addAll(userConfigs.spacers!);
 
     /// Check and user overrides to font sizes
-    if (userConfigs.containsKey('fontSizes')) {
-      baseConfigs['fontSizes']!.addAll(userConfigs['fontSizes']);
-    }
+    if (userConfigs.fontSizes != null) _config.fontSizes!.addAll(userConfigs.fontSizes!);
 
     /// Check and user overrides to opacity
-    if (userConfigs.containsKey('opacity')) {
-      baseConfigs['opacity']!.addAll(userConfigs['opacity']);
-    }
+    if (userConfigs.opacity != null) _config.opacity!.addAll(userConfigs.opacity!);
 
-    return baseConfigs;
+    /// Check if user overrides dark mode
+    _config.darkMode = userConfigs.darkMode;
+
+    /// Assign the config to the the exposed config variable
+    configs = _config;
   }
 
   /// To publish in Tw Utility ///

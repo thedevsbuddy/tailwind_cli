@@ -2,7 +2,6 @@ const String target = "tailwind/lib/widgets/";
 const String file = "tailwind/lib/widgets/TwText.dart";
 
 const String stub = """
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 import 'TwBuilder.dart';
@@ -121,6 +120,11 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
 
   /// To overlow text as [ellipsis]
   TwText get ellipsis => this.._overflow = TextOverflow.ellipsis;
+
+  /// Truncates the text and add trailing [...]
+  ///
+  /// Sets overlow text as [ellipsis]
+  TwText get truncate => this.._overflow = TextOverflow.ellipsis;
 
   /// To overlow text as [visible]
   TwText get visible => this.._overflow = TextOverflow.visible;
@@ -379,13 +383,19 @@ extension TextExtensions on Text {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
+  @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
   TwText get text => TwText.existing(data!, style);
+  
+  TwText get isText => TwText.existing(data!, style);
 }
 
 extension TextStringExtensions on String {
   /// Extension method to directly access [TwText]
   /// with [String] itself
+  @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
   TwText get text => TwText(this);
+
+  TwText get isText => TwText(this);
 }
 
 """;

@@ -67,13 +67,10 @@ extension StackExtensions on Stack {
   /// Extension method to directly access [TwStack]
   /// with any widget without wrapping or with dot operator.
 
-  TwStack get stack => TwStack.existing(
-        children,
-        alignment,
-        clipBehavior,
-        textDirection!,
-        fit,
-      );
+  @Deprecated('This method is deprecated and will be removed in the future please use [isStack] instead.')
+  TwStack get stack => TwStack.existing(children, alignment, clipBehavior, textDirection!, fit);
+
+  TwStack get isStack => TwStack.existing(children, alignment, clipBehavior, textDirection!, fit);
 }
 
 

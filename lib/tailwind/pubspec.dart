@@ -14,7 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.17.0
-  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

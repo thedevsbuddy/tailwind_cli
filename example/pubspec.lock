@@ -172,13 +172,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  get:
-    dependency: transitive
-    description:
-      name: get
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.6.5"
   glob:
     dependency: transitive
     description:
@@ -227,7 +220,7 @@ packages:
       name: js
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.3"
+    version: "0.6.4"
   json_annotation:
     dependency: transitive
     description:
@@ -400,7 +393,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.4.2"
+    version: "0.5.0"
   term_glyph:
     dependency: transitive
     description:
