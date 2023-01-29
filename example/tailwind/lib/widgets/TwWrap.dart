@@ -61,13 +61,10 @@ extension WrapExtensions on Wrap {
   /// Extension method to directly access [TwWrap]
   /// with any widget without wrapping or with dot operator.
 
-  TwWrap get wrap => TwWrap.existing(
-        children,
-        direction,
-        alignment,
-        crossAxisAlignment,
-        clipBehavior,
-      );
+  @Deprecated('This method is deprecated and will be removed in the future please use [isWrap] instead.')
+  TwWrap get wrap => TwWrap.existing(children, direction, alignment, crossAxisAlignment, clipBehavior);
+
+  TwWrap get isWrap => TwWrap.existing(children, direction, alignment, crossAxisAlignment, clipBehavior);
 }
 
 

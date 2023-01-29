@@ -76,12 +76,33 @@ String processSpacers(Map<String, dynamic>? spacers) {
   var spaces = "";
   spacers.forEach((key, value) {
     if (key == 'DEFAULT') {
-      spaces += "static const double spacer = $value;\n\t";
+      spaces += """/// Returns [spacer] where spacer is base size
+  ///
+  /// ```dart
+  /// double spacer = $value;
+  /// returns spacer;
+  /// ```
+  ///\n\t""";
+      spaces += "static const double spacer = $value;\n\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', '_');
-      spaces += "static const double spacer$dot = spacer * $value;\n\t";
+      spaces += """/// Returns [spacer * $value] where spacer is base size
+  ///
+  /// ```dart
+  /// double spacer = ${spacers['DEFAULT']};
+  /// returns 16 * $value = ${16 * num.parse(value)};
+  /// ```
+  ///\n\t""";
+      spaces += "static const double spacer$dot = spacer * $value;\n\n\t";
     } else {
-      spaces += "static const double spacer$key = spacer * $value;\n\t";
+      spaces += """/// Returns [spacer * $value] where spacer is base size
+  ///
+  /// ```dart
+  /// double spacer = ${spacers['DEFAULT']};
+  /// returns 16 * $value = ${16 * num.parse(value)};
+  /// ```
+  ///\n\t""";
+      spaces += "static const double spacer$key = spacer * $value;\n\n\t";
     }
   });
 

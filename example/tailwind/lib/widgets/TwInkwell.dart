@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:tailwind/tailwind.dart';
 
 import 'TwBuilder.dart';
 
 /// Flutter Wrap Builder Widget
 /// to provide utilities in your Wrap Widget
 @protected
-class TwInkWell extends TwWidgetBuilder<Widget> {
-  TwInkWell(this._child);
+class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
+  TwInkWell({this.child}) {
+    setChildForGetureDetection(this);
+  }
 
-  Widget? _child;
+  Widget? child;
   InteractiveInkFeatureFactory? _splashFactory;
-  Function()? _onTap;
-  Function()? _onDoubleTap;
-  Function()? _onLongPress;
-  Function(TapDownDetails)? _onTapDown;
-  Function(TapUpDetails)? _onTapUp;
-  Function(bool)? _onFocusChange;
-  Function(bool)? _onHighlightChanged;
-  Function()? _onTapCancel;
-  Function(bool)? _onHover;
   bool _autofocus = false;
   BorderRadius? _borderRadius;
   MouseCursor? _mouseCursor;
@@ -37,17 +31,6 @@ class TwInkWell extends TwWidgetBuilder<Widget> {
 
   /// Provided splash factory to [InkWell]
   TwInkWell get noSplash => this.._splashFactory = NoSplash.splashFactory;
-
-  /// Handle Methods
-  TwInkWell onTap(Function()? onTap) => this.._onTap = onTap;
-  TwInkWell onDoubleTap(Function()? onDoubleTap) => this.._onDoubleTap = onDoubleTap;
-  TwInkWell onLongPress(Function()? onLongPress) => this.._onLongPress = onLongPress;
-  TwInkWell onTapDown(Function(TapDownDetails)? onTapDown) => this.._onTapDown = onTapDown;
-  TwInkWell onTapUp(Function(TapUpDetails)? onTapUp) => this.._onTapUp = onTapUp;
-  TwInkWell onTapCancel(Function()? onTapCancel) => this.._onTapCancel = onTapCancel;
-  TwInkWell onHighlightChanged(Function(bool)? onHighlightChanged) => this.._onHighlightChanged = onHighlightChanged;
-  TwInkWell onHover(Function(bool)? onHover) => this.._onHover = onHover;
-  TwInkWell onFocusChange(Function(bool)? onFocusChange) => this.._onFocusChange = onFocusChange;
 
   /// Handle Booleans
   TwInkWell autoFocus(bool autoFocus) => this.._autofocus = autoFocus;
@@ -73,17 +56,17 @@ class TwInkWell extends TwWidgetBuilder<Widget> {
   @override
   Widget render({Key? key}) {
     return InkWell(
-      child: _child!,
+      child: child!,
       splashFactory: _splashFactory,
-      onTap: _onTap,
-      onDoubleTap: _onDoubleTap,
-      onLongPress: _onLongPress,
-      onTapDown: _onTapDown,
-      onTapUp: _onTapUp,
-      onFocusChange: _onFocusChange,
-      onHighlightChanged: _onHighlightChanged,
-      onTapCancel: _onTapCancel,
-      onHover: _onHover,
+      onTap: twOnTap,
+      onDoubleTap: twOnDoubleTap,
+      onLongPress: twOnLongPress,
+      onTapDown: twOnTapDown,
+      onTapUp: twOnTapUp,
+      onFocusChange: twOnFocusChange,
+      onHighlightChanged: twOnHighlightChanged,
+      onTapCancel: twOnTapCancel,
+      onHover: twOnHover,
       autofocus: _autofocus,
       borderRadius: _borderRadius,
       mouseCursor: _mouseCursor,
@@ -107,9 +90,12 @@ extension InkwellExtensions on Widget {
   /// Extension method to directly access [TwInkWell]
   /// with any widget without wrapping or with dot operator.
 
-  TwInkWell get inkWell => TwInkWell(this);
+  TwInkWell get inkWell => TwInkWell(child: this);
 
-  TwInkWell get withInkWell => TwInkWell(this);
+  TwInkWell get withInkWell => TwInkWell(child: this);
+  
+  TwInkWell get isInkWell => TwInkWell(child: this);
 }
+
 
 

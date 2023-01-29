@@ -24,12 +24,13 @@ export "./utilities/TwUtils.dart";
 export "./utilities/TwSizes.dart";
 
 /// Mixins
-export "./mixins/ColorMixin.dart";
-export "./mixins/GradientMixin.dart";
-export "./mixins/PaddingMixin.dart";
-export "./mixins/MarginMixin.dart";
-export "./mixins/AlignmentMixin.dart";
-export "./mixins/ShadowMixin.dart";
-export "./mixins/RoundnessMixin.dart";
-export "./mixins/BorderMixin.dart";
+export "./mixins/TwColorMixin.dart";
+export "./mixins/TwGradientMixin.dart";
+export "./mixins/TwPaddingMixin.dart";
+export "./mixins/TwMarginMixin.dart";
+export "./mixins/TwAlignmentMixin.dart";
+export "./mixins/TwShadowMixin.dart";
+export "./mixins/TwRoundnessMixin.dart";
+export "./mixins/TwBorderMixin.dart";
+export "./mixins/TwGestureMixin.dart";
 

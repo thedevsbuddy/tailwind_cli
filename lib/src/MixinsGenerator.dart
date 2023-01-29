@@ -4,14 +4,15 @@ import 'dart:io';
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
-import 'package:tailwind_cli/tailwind/lib/mixins/AlignmentMixin.dart' as twAlignmentMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/BorderMixin.dart' as twBorderMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ColorMixin.dart' as twColorMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/GradientMixin.dart' as twGradientMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/MarginMixin.dart' as twMarginMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/PaddingMixin.dart' as twPaddingMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/RoundnessMixin.dart' as twRoundnessMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/ShadowMixin.dart' as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwAlignmentMixin.dart' as twAlignmentMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwBorderMixin.dart' as twBorderMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwColorMixin.dart' as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwGradientMixin.dart' as twGradientMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwMarginMixin.dart' as twMarginMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwPaddingMixin.dart' as twPaddingMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwRoundnessMixin.dart' as twRoundnessMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwShadowMixin.dart' as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwGestureMixin.dart' as twGestureMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -21,6 +22,7 @@ Future<void> generate(List<String> args) async {
   await generateShadowMixin();
   await generateGradientMixin();
   await generateBorderMixin();
+  await generateGestureMixin();
 }
 
 /// Generate Color Mixin
@@ -70,23 +72,58 @@ String processColors(Map<String, dynamic>? colors) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
           color += """T get $key {
-      twColor = TwColors.$key;
+      if(!_needsDarkVariant) twColor = TwColors.$key;
       return _child;
   }\n\t""";
         } else {
           val = Utils.hexToColor("$val");
           color += """T get $key$k {
-      twColor = TwColors.$key.shade$k;
+      if(!_needsDarkVariant) twColor = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
         }
       });
+
+      /// Generates DArk Variants
+      if (Utils.configs.darkMode!) {
+        value.forEach((k, val) {
+          if (k == "DEFAULT") {
+            val = Utils.hexToColor("$val");
+            color += """T get onDark${Utils.ucFirst(key, preserveAfter: true)} {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+         twColor = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+          } else {
+            val = Utils.hexToColor("$val");
+            color += """T get onDark${Utils.ucFirst(key, preserveAfter: true)}$k {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+        twColor = TwColors.$key.shade$k;
+      }
+      return _child;
+  }\n\t""";
+          }
+        });
+      }
     } else if (value is String) {
       value = Utils.hexToColor("$value");
       color += """T get $key {
-      twColor = TwColors.$key;
+      if(!_needsDarkVariant) twColor = TwColors.$key;
       return _child;
   }\n\t""";
+
+      if (Utils.configs.darkMode!) {
+        color += """T get onDark${Utils.ucFirst(key, preserveAfter: true)} {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+        twColor = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+      }
     } else {
       throw new Exception('Invalid value for colors["$key"] in "tailwind.config.json" file');
     }
@@ -378,33 +415,86 @@ String processGradientColors(Map<String, dynamic>? colors) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           color += """T get from${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[0] = TwColors.$key;
+      if (!_needsDarkVariant) gradientColors[0] = TwColors.$key;
       return _child;
   }\n\t""";
           color += """T get to${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[1] = TwColors.$key;
+      if (!_needsDarkVariant) gradientColors[1] = TwColors.$key;
       return _child;
   }\n\t""";
         } else {
           color += """T get from${Utils.ucFirst(key, preserveAfter: true)}$k {
-      gradientColors[0] = TwColors.$key.shade$k;
+      if (!_needsDarkVariant) gradientColors[0] = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
           color += """T get to${Utils.ucFirst(key, preserveAfter: true)}$k {
-      gradientColors[1] = TwColors.$key.shade$k;
+      if (!_needsDarkVariant) gradientColors[1] = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
         }
       });
+
+      if (Utils.configs.darkMode!) {
+        value.forEach((k, val) {
+          if (k == "DEFAULT") {
+            color += """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)} {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        gradientColors[0] = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+            color += """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)} {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        gradientColors[1] = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+          } else {
+            color += """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)}$k {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        gradientColors[0] = TwColors.$key.shade$k;
+      }
+      return _child;
+  }\n\t""";
+            color += """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)}$k {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        gradientColors[1] = TwColors.$key.shade$k;
+      }
+      return _child;
+  }\n\t""";
+          }
+        });
+      }
     } else {
       color += """T get from${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[0] = TwColors.$key;
+      if (!_needsDarkVariant) gradientColors[0] = TwColors.$key;
       return _child;
   }\n\t""";
       color += """T get to${Utils.ucFirst(key, preserveAfter: true)} {
-      gradientColors[1] = TwColors.$key;
+      if (!_needsDarkVariant) gradientColors[1] = TwColors.$key;
       return _child;
   }\n\t""";
+
+      if (Utils.configs.darkMode!) {
+        color += """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)} {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        gradientColors[0] = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+        color += """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)} {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        gradientColors[1] = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+      }
     }
   });
   return color;
@@ -441,23 +531,62 @@ String processBorderColors(Map<String, dynamic>? colors) {
         if (k == "DEFAULT") {
           val = Utils.hexToColor("$val");
           color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
-      twBorderColor = TwColors.$key;
+      if(!_needsDarkVariant) twBorderColor = TwColors.$key;
       return _child;
   }\n\t""";
         } else {
           val = Utils.hexToColor("$val");
           color += """T get border${Utils.ucFirst(key, preserveAfter: true)}$k {
-      twBorderColor = TwColors.$key.shade$k;
+      if(!_needsDarkVariant) twBorderColor = TwColors.$key.shade$k;
       return _child;
   }\n\t""";
         }
       });
-    } else {
-      value = Utils.hexToColor("$value");
-      color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
-      twBorderColor = TwColors.$key;
+
+      /// Dark Variants
+      if (Utils.configs.darkMode!) {
+        value.forEach((k, val) {
+          if (k == "DEFAULT") {
+            val = Utils.hexToColor("$val");
+            color += """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)} {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        twBorderColor = TwColors.$key;
+      }
       return _child;
   }\n\t""";
+          } else {
+            val = Utils.hexToColor("$val");
+            color += """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)}$k {
+       if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        twBorderColor = TwColors.$key.shade$k;
+      }
+      return _child;
+  }\n\t""";
+          }
+        });
+      }
+    } else if (value is String) {
+      value = Utils.hexToColor("$value");
+      color += """T get border${Utils.ucFirst(key, preserveAfter: true)} {
+      if(!_needsDarkVariant) twBorderColor = TwColors.$key;
+      return _child;
+  }\n\t""";
+
+      /// Dark variants
+      if (Utils.configs.darkMode!) {
+        value = Utils.hexToColor("$value");
+        color += """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)} {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        twBorderColor = TwColors.$key;
+      }
+      return _child;
+  }\n\t""";
+      }
+    } else {
+      throw new Exception('Invalid value for colors["$key"]');
     }
   });
   return color;
@@ -486,4 +615,16 @@ String processBorderWidths(Map<String, dynamic>? spacers) {
   });
 
   return spacer;
+}
+
+/// Generate [TwGestureMixin] Mixin
+Future<void> generateGestureMixin() async {
+  /// Check and create
+  Utils.makeDir(twGestureMixin.target);
+
+  /// Write File
+  Utils.writeFile(twGestureMixin.file, twGestureMixin.stub);
+
+  /// Show Success message
+  print(green("TwGesture Mixin generated successfully!"));
 }

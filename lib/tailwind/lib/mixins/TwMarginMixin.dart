@@ -1,5 +1,5 @@
 const String target = "tailwind/lib/mixins/";
-const String file = "tailwind/lib/mixins/MarginMixin.dart";
+const String file = "tailwind/lib/mixins/TwMarginMixin.dart";
 
 const String stub = """
 import 'package:flutter/material.dart';

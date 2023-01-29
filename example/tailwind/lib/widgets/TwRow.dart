@@ -74,11 +74,9 @@ extension RowExtensions on Row {
   /// Extension method to directly access [TwRow]
   /// with any widget without wrapping or with dot operator.
 
-  TwRow get row => TwRow.existing(
-        children,
-        mainAxisAlignment,
-        crossAxisAlignment,
-        mainAxisSize,
-      );
+  @Deprecated('This method is deprecated and will be removed in the future please use [isRow] instead.')
+  TwRow get row => TwRow.existing(children, mainAxisAlignment, crossAxisAlignment, mainAxisSize);
+
+  TwRow get isRow => TwRow.existing(children, mainAxisAlignment, crossAxisAlignment, mainAxisSize);
 }
 

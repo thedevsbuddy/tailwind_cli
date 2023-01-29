@@ -30,7 +30,11 @@ class TwPadding extends TwWidgetBuilder<Widget> with TwPaddingMixin<TwPadding> {
 extension PaddingWidgetExtension on Padding {
   /// Extension method to directly access material [Padding]
   /// with any widget without wrapping or with dot operator.
+  @Deprecated('This method is deprecated and will be removed in the future please use [isPadding] instead.')
   TwPadding get twPadding => TwPadding.existing(child!, padding);
+
+
+  TwPadding get isPadding => TwPadding.existing(child!, padding);
 }
 
 

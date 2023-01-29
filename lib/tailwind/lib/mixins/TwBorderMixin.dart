@@ -1,13 +1,22 @@
 const String target = "tailwind/lib/mixins/";
-const String file = "tailwind/lib/mixins/BorderMixin.dart";
+const String file = "tailwind/lib/mixins/TwBorderMixin.dart";
 
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
-import 'package:get/get.dart';
 
 mixin TwBorderMixin<T> {
   late T _child;
+
+  /// Checkes if app is in dark mode
+  /// And also checkes if [Widget] has [onDark<Color>] applied
+  @protected
+  bool _needsDarkVariant = false;
+
+  /// Checkes if app is in dark mode
+  /// And also checkes if [Widget] has [onDark<Color>] applied
+  @protected
+  Brightness _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance.window).platformBrightness;
 
   @protected
   bool hasBorder = false;
@@ -73,33 +82,33 @@ mixin TwBorderMixin<T> {
     return _child;
   }
   
-  T get borderPrimaryColor {
-    twBorderColor = TwColors.primaryColor(Get.context!);
+  T borderPrimaryColor(BuildContext context) {
+    twBorderColor = TwColors.primaryColor(context);
     return _child;
   }
 
-  T get borderPrimaryDarkColor {
-    twBorderColor = TwColors.primaryColorDark(Get.context!);
+  T borderPrimaryDarkColor(BuildContext context) {
+    twBorderColor = TwColors.primaryColorDark(context);
     return _child;
   }
 
-  T get borderAccentColor {
-    twBorderColor = TwColors.secondary(Get.context!);
+  T borderAccentColor(BuildContext context) {
+    twBorderColor = TwColors.secondary(context);
     return _child;
   }
 
-  T get borderBackgroundColor {
-    twBorderColor = TwColors.backgroundColor(Get.context!);
+  T borderBackgroundColor(BuildContext context) {
+    twBorderColor = TwColors.backgroundColor(context);
     return _child;
   }
 
-  T get borderScaffoldBackgroundColor {
-    twBorderColor = TwColors.scaffoldBackgroundColor(Get.context!);
+  T borderScaffoldBackgroundColor(BuildContext context) {
+    twBorderColor = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
 
-  T get borderCardColor {
-    twBorderColor = TwColors.cardColor(Get.context!);
+  T borderCardColor(BuildContext context) {
+    twBorderColor = TwColors.cardColor(context);
     return _child;
   }
 

@@ -8,16 +8,6 @@ import "package:flutter/material.dart";
 class TwColors {
   TwColors._();
 
-  /// Checkes if app is in dark mode
-  /// And also checkes if [Widget] has [onDark<Color>] applied
-  @protected
-  static bool _hasDarkColor = false;
-
-  /// Checkes if app is in dark mode
-  /// And also checkes if [Widget] has [onDark<Color>] applied
-  @protected
-  static Brightness _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance.window).platformBrightness;
-
   /// Theme Colors
   static Color primaryColor(BuildContext context) => Theme.of(context).primaryColor;
   static Color primaryColorDark(BuildContext context) => Theme.of(context).primaryColorDark;

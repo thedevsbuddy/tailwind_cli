@@ -10,16 +10,15 @@ import 'TwBuilder.dart';
 /// Flutter Button Builder Widget
 /// to provide utilities in your Text Widget
 @protected
-class TwButton extends TwWidgetBuilder<Widget>
-    with TwColorMixin<TwButton>, TwPaddingMixin<TwButton>, TwAlignmentMixin<TwButton>, TwRoundnessMixin<TwButton> {
-  TwButton(this._child) {
+class TwButton extends TwWidgetBuilder<Widget> with TwColorMixin<TwButton>, TwPaddingMixin<TwButton>, TwAlignmentMixin<TwButton>, TwRoundnessMixin<TwButton> {
+  TwButton({required this.child}) {
     setChildForColoring(this);
     setChildForPadding(this);
     setChildForAlignment(this);
     setChildForRoundness(this);
   }
 
-  TwButton.existing(this._child, this._style, this._onPressed, this._onLongPress) {
+  TwButton.existing(this.child, this._style, this._onPressed, this._onLongPress) {
     setChildForColoring(this);
     setChildForPadding(this);
     setChildForAlignment(this);
@@ -34,7 +33,7 @@ class TwButton extends TwWidgetBuilder<Widget>
   FocusNode? _focusNode;
   bool _autofocus = false;
   Clip _clipBehavior = Clip.none;
-  Widget _child;
+  final Widget child;
 
   /// Sets the padding property.
   TwButton padding(EdgeInsetsGeometry val) => this.._padding = val;
@@ -62,15 +61,28 @@ class TwButton extends TwWidgetBuilder<Widget>
       autofocus: _autofocus,
       focusNode: _focusNode,
       clipBehavior: _clipBehavior,
-      child: _child,
+      child: child,
     );
   }
+}
+
+extension TextButtonWidgetExtensions on Widget {
+  /// Extension method to directly access [TwText]
+  /// with any widget without wrapping or with dot operator.
+
+  @Deprecated('This method is deprecated and will be removed in the future please use [isButton] instead.')
+  TwButton get button => TwButton(child: this);
+
+  TwButton get isButton => TwButton(child: this);
 }
 
 extension TextButtonExtensions on TextButton {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
+  @Deprecated('This method is deprecated and will be removed in the future please use [isButton] instead.')
   TwButton get button => TwButton.existing(child!, style, onPressed, onLongPress);
+
+  TwButton get isButton => TwButton.existing(child!, style, onPressed, onLongPress);
 }
 """;

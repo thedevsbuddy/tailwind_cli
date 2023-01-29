@@ -1,3 +1,17 @@
+## 0.5.0
+
+- Added support for `DarkTheme`.
+- Added new Builder `TwAppBuilder`.
+  - It is used to manage the dark theme for each color.
+- Added `TwInkwell` Widget.
+- Added `gestures` methods in `TwWidgetExtenstion`.
+- Updated `Tw<Widget>` extensions added `is` prefix
+  - Example: `isButton`, `isContainer`, `isRow`, `isColumn` etc.
+  - Example Usage:
+    - `"I Will Become a Text widget".isText.render()`.
+- Optimized generator which generates tailwind styles.
+- Renamed Mixins Classes added `Tw` prefix.
+
 ## 0.4.2
 
 - Fixed `https://github.com/thedevsbuddy/tailwind_cli/issues/6` Issue.
