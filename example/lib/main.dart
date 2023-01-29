@@ -88,6 +88,15 @@ class ExamplePage extends StatelessWidget {
               child: "I am a tw button".isText.indigo100.semiBold.textSm.render(),
               onPressed: () {},
             ).isButton.indigo400.onDarkIndigo900.px5.rounded.render(),
+            TwSizes.spacer12.spaceY,
+            TwContainer(child: "I am a container with dark theme color".isText.bodyText1(context).indigo500.onDarkIndigo100.render())
+                .square(100)
+                .rounded
+                .shadow
+                .p3
+                .white // Will apply by default
+                .onDarkCoolGray800 // Will take control while app is in dark theme mode
+                .render(),
           ]).alignStart.justifyCenter.max.render(),
         ).px3.render(),
       ),
