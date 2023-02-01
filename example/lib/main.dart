@@ -84,11 +84,6 @@ class ExamplePage extends StatelessWidget {
               ).onDarkBlack.white.shadow.rounded.center.px4.py3.render().expanded(),
             ]).justifyBetween.alignCenter.render().isContainer.mt4.render(),
             TwSizes.spacer12.spaceY,
-            TextButton(
-              child: "I am a tw button".isText.indigo100.semiBold.textSm.render(),
-              onPressed: () {},
-            ).isButton.indigo400.onDarkIndigo900.px5.rounded.render(),
-            TwSizes.spacer12.spaceY,
             TwContainer(child: "I am a container with dark theme color".isText.bodyText1(context).indigo500.onDarkIndigo100.render())
                 .square(100)
                 .rounded
@@ -97,6 +92,10 @@ class ExamplePage extends StatelessWidget {
                 .white // Will apply by default
                 .onDarkCoolGray800 // Will take control while app is in dark theme mode
                 .render(),
+            TwSizes.spacer8.spaceY,
+            TwButton(
+              child: "This is a btn".isText.textSm.semiBold.coolGray500.onDarkWhite.render(),
+            ).onTap(() => print('working')).px5.py2.gradientToBottom.fromWhite.toCoolGray200.onDarkFromCoolGray700.onDarkToCoolGray900.shadow.rounded.render(),
           ]).alignStart.justifyCenter.max.render(),
         ).px3.render(),
       ),
