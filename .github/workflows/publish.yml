@@ -1,0 +1,42 @@
+name: Publish TailwindCLI Package
+on:
+  pull_request:
+    types: [closed]
+  # push:
+  #   branches:
+  #     - main
+
+env:
+  FLUTTER_ROOT: "${HOME}/flutter"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+          install: true
+
+      - name: Publishing Package
+        uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+          pub-args: "publish"
+          working-directory: "/"
+
+      - name: Set git user information
+        run: |
+          git config --global user.email "devsbuddy404@gmail"
+          git config --global user.name "thedevsbuddy"
+
+      - name: Push to GitHub
+        run: |
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
