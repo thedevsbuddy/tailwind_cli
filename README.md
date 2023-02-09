@@ -34,7 +34,7 @@ Know more about the package by visiting this
 | `onLongPress(Function)` Extenstion               |   ✔️   |        ➕        |    `0.5.0`    |
 | --- Similar gesture related Extenstion           |   ✔️   |        ➕        |    `0.5.0`    |
 | Colors extension with `DarkTheme` check          |   ✔️   |        ➕        |    `0.5.0`    |
-| No use of `context` if using `TwAppBuilder`      |   ⏳   |        ➕        | **_`0.5.2`_** |
+| No use of `context` if using `TwAppBuilder`      |   ⏳   |        ➕        | **_`0.5.5`_** |
 | Themes option (Experimental)                     |   ⏳   |        ➕        |     ----      |
 | Responsiveness (Experimental)                    |   ⏳   |        ➕        |     ----      |
 
