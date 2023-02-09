@@ -1,6 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `TwWidgetExtension` class
 const String target = "tailwind/lib/extensions/";
+
+/// Get the full file path for the `TwWidgetExtension` Class
+///
+/// [file] This gives a boilerplate for the `TwWidgetExtension` class
 const String file = "tailwind/lib/extensions/TwWidgetExtension.dart";
 
+/// Get the stub content for the `TwWidgetExtension` Class
+///
+/// [stub] This gives a boilerplate for the `TwWidgetExtension` class
 const String stub = """
 import 'package:flutter/material.dart';
 

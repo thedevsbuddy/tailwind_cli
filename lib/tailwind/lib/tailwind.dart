@@ -1,5 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `tailwind.dart` Library File
 const String target = "tailwind/lib";
+
+/// Get the full file path for the `tailwind.dart` Library File
+///
+/// [file] This gives a boilerplate for the `tailwind.dart` Library File
 const String file = "tailwind/lib/tailwind.dart";
+
+/// Get the stub content for the `tailwind.dart` Library File
+///
+/// [stub] This gives a boilerplate for the `tailwind.dart` Library File
 const String stub = """
 library tailwind;
 

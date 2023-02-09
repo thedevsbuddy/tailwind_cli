@@ -1,6 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `TwAlignmentMixin` class
 const String target = "tailwind/lib/mixins/";
+
+/// Get the full file path for the `TwAlignmentMixin` Class
+///
+/// [file] This gives a boilerplate for the `TwAlignmentMixin` class
 const String file = "tailwind/lib/mixins/TwAlignmentMixin.dart";
 
+/// Get the stub content for the `TwAlignmentMixin` Class
+///
+/// [stub] This gives a boilerplate for the `TwAlignmentMixin` class
 const String stub = """
 import 'package:flutter/material.dart';
 

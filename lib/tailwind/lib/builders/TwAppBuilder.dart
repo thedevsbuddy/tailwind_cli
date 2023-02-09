@@ -1,6 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `TwAppBuilder` class
 const String target = "tailwind/lib/widgets/";
+
+/// Get the full file path for the `TwAppBuilder` Class
+///
+/// [file] This gives a boilerplate for the `TwAppBuilder` class
 const String file = "tailwind/lib/widgets/TwAppBuilder.dart";
 
+/// Get the stub content for the `TwAppBuilder` Class
+///
+/// [stub] This gives a boilerplate for the `TwAppBuilder` class
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';

@@ -1,6 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `TwBorderMixin` class
 const String target = "tailwind/lib/mixins/";
+
+/// Get the full file path for the `TwBorderMixin` Class
+///
+/// [file] This gives a boilerplate for the `TwBorderMixin` class
 const String file = "tailwind/lib/mixins/TwBorderMixin.dart";
 
+/// Get the stub content for the `TwBorderMixin` Class
+///
+/// [stub] This gives a boilerplate for the `TwBorderMixin` class
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';

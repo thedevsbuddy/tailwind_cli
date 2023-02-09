@@ -1,6 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `TwUtils` class
 const String target = "tailwind/lib/utilities/";
+
+/// Get the full file path for the `TwUtils` Class
+///
+/// [file] This gives a boilerplate for the `TwUtils` class
 const String file = "tailwind/lib/utilities/TwUtils.dart";
 
+/// Get the stub content for the `TwUtils` Class
+///
+/// [stub] This gives a boilerplate for the `TwUtils` class
 const String stub = """
 class TwUtils {
   static RegExp _regex = new RegExp(r"[\\s|\\-_+:;]");

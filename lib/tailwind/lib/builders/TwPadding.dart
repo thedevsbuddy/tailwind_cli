@@ -1,6 +1,16 @@
+/// Get the targetes directory
+///
+/// [target] Provides the target directory for the `TwPadding` class
 const String target = "tailwind/lib/widgets/";
+
+/// Get the full file path for the `TwPadding` Class
+///
+/// [file] This gives a boilerplate for the `TwPadding` class
 const String file = "tailwind/lib/widgets/TwPadding.dart";
 
+/// Get the stub content for the `TwPadding` Class
+///
+/// [stub] This gives a boilerplate for the `TwPadding` class
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
