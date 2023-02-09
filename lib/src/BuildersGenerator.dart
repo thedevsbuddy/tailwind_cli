@@ -10,7 +10,7 @@ import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
 import 'package:tailwind_cli/tailwind/lib/builders/TwStack.dart' as twStack;
 import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
 import 'package:tailwind_cli/tailwind/lib/builders/TwWrap.dart' as twWrap;
-import 'package:tailwind_cli/tailwind/lib/builders/TwInkWell.dart' as twInkWell;
+import 'package:tailwind_cli/tailwind/lib/builders/TwInkwell.dart' as twInkWell;
 
 Future<void> generate(List<String> args) async {
   await generateTwBuilder();

@@ -6,7 +6,7 @@ const String target = "tailwind/lib/widgets/";
 /// Get the full file path for the `TwInkWell` Class
 ///
 /// [file] This gives a boilerplate for the `TwInkWell` class
-const String file = "tailwind/lib/widgets/TwInkWell.dart";
+const String file = "tailwind/lib/widgets/TwInkwell.dart";
 
 /// Get the stub content for the `TwInkWell` Class
 ///
