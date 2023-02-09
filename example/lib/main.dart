@@ -52,14 +52,6 @@ class ExamplePage extends StatelessWidget {
             child: TwColumn(<Widget>[
               /// TwButton Example
               TwButtonExample(),
-              TwImage("https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-                  .loadingWidget(
-                    "Loading...".isText.render(),
-                  )
-                  .errorWidget(
-                    "There was an error...".isText.red.render(),
-                  )
-                  .render()
             ]).alignStart.justifyCenter.min.render(),
           ).p3.render(),
         ),

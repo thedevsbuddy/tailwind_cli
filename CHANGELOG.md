@@ -1,5 +1,9 @@
 ## 0.5.2
 
+- Fixed example issue with dark mode and `TwImageWidget`.
+
+## 0.5.2
+
 - Fixed issue where it was throwing error for null value.
 - Fixed issue where it wasn't generating `TwContextExtension` file.
 
