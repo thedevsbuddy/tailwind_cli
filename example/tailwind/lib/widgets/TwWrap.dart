@@ -30,7 +30,8 @@ class TwWrap extends TwWidgetBuilder<Widget> {
   TwWrap get justifyEvenly => this.._alignment = WrapAlignment.spaceEvenly;
 
   /// WrapCrossAlignment getter
-  TwWrap get alignCenter => this.._crossAxisAlignment = WrapCrossAlignment.center;
+  TwWrap get alignCenter =>
+      this.._crossAxisAlignment = WrapCrossAlignment.center;
   TwWrap get alignStart => this.._crossAxisAlignment = WrapCrossAlignment.start;
   TwWrap get alignEnd => this.._crossAxisAlignment = WrapCrossAlignment.end;
 
@@ -42,7 +43,8 @@ class TwWrap extends TwWidgetBuilder<Widget> {
   TwWrap get clipNone => this.._clipBehavior = Clip.none;
   TwWrap get clipAntiAlias => this.._clipBehavior = Clip.antiAlias;
   TwWrap get clipHardEdge => this.._clipBehavior = Clip.hardEdge;
-  TwWrap get clipAntiAliasWithSaveLayer => this.._clipBehavior = Clip.antiAliasWithSaveLayer;
+  TwWrap get clipAntiAliasWithSaveLayer =>
+      this.._clipBehavior = Clip.antiAliasWithSaveLayer;
 
   /// ============== RENDER WRAP WIDGET ============== ///
   @override
@@ -61,10 +63,11 @@ extension WrapExtensions on Wrap {
   /// Extension method to directly access [TwWrap]
   /// with any widget without wrapping or with dot operator.
 
-  @Deprecated('This method is deprecated and will be removed in the future please use [isWrap] instead.')
-  TwWrap get wrap => TwWrap.existing(children, direction, alignment, crossAxisAlignment, clipBehavior);
+  @Deprecated(
+      'This method is deprecated and will be removed in the future please use [isWrap] instead.')
+  TwWrap get wrap => TwWrap.existing(
+      children, direction, alignment, crossAxisAlignment, clipBehavior);
 
-  TwWrap get isWrap => TwWrap.existing(children, direction, alignment, crossAxisAlignment, clipBehavior);
+  TwWrap get isWrap => TwWrap.existing(
+      children, direction, alignment, crossAxisAlignment, clipBehavior);
 }
-
-

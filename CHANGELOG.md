@@ -1,3 +1,7 @@
+## 0.5.4
+
+- Fixed `pub.dev` found formatting issues
+
 ## 0.5.3
 
 - Fixed error `TwInkWell.dart` not exists.

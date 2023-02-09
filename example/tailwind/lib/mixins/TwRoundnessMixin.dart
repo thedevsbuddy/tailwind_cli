@@ -13,7 +13,7 @@ mixin TwRoundnessMixin<T> {
   void setChildForRoundness(T child) {
     _child = child;
   }
-  
+
   T roundedCustom(BorderRadiusGeometry geometry) {
     roundness = 0.0;
     radiusGeometry = geometry;
@@ -40,7 +40,8 @@ mixin TwRoundnessMixin<T> {
 
   T roundedBottomRight({double? value}) {
     roundness = value ?? 4.0;
-    radiusGeometry = BorderRadius.only(bottomRight: Radius.circular(roundness!));
+    radiusGeometry =
+        BorderRadius.only(bottomRight: Radius.circular(roundness!));
     return _child;
   }
 
@@ -52,7 +53,8 @@ mixin TwRoundnessMixin<T> {
 
   T roundedRight({double? value}) {
     roundness = value ?? 4.0;
-    radiusGeometry = BorderRadius.horizontal(right: Radius.circular(roundness!));
+    radiusGeometry =
+        BorderRadius.horizontal(right: Radius.circular(roundness!));
     return _child;
   }
 
@@ -108,4 +110,3 @@ mixin TwRoundnessMixin<T> {
     return _child;
   }
 }
-

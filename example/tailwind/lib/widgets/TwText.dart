@@ -206,19 +206,18 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
 
   /// ============== FONT SIZES ============== ///
   TwText get textBase => this.._fontSize = TwSizes.textBase;
-	TwText get textXs => this.._fontSize = TwSizes.textXs;
-	TwText get textSm => this.._fontSize = TwSizes.textSm;
-	TwText get textLg => this.._fontSize = TwSizes.textLg;
-	TwText get textXl => this.._fontSize = TwSizes.textXl;
-	TwText get textXl2 => this.._fontSize = TwSizes.textXl2;
-	TwText get textXl3 => this.._fontSize = TwSizes.textXl3;
-	TwText get textXl4 => this.._fontSize = TwSizes.textXl4;
-	TwText get textXl5 => this.._fontSize = TwSizes.textXl5;
-	TwText get textXl6 => this.._fontSize = TwSizes.textXl6;
-	TwText get textXl7 => this.._fontSize = TwSizes.textXl7;
-	TwText get textXl8 => this.._fontSize = TwSizes.textXl8;
-	TwText get textXl9 => this.._fontSize = TwSizes.textXl9;
-	
+  TwText get textXs => this.._fontSize = TwSizes.textXs;
+  TwText get textSm => this.._fontSize = TwSizes.textSm;
+  TwText get textLg => this.._fontSize = TwSizes.textLg;
+  TwText get textXl => this.._fontSize = TwSizes.textXl;
+  TwText get textXl2 => this.._fontSize = TwSizes.textXl2;
+  TwText get textXl3 => this.._fontSize = TwSizes.textXl3;
+  TwText get textXl4 => this.._fontSize = TwSizes.textXl4;
+  TwText get textXl5 => this.._fontSize = TwSizes.textXl5;
+  TwText get textXl6 => this.._fontSize = TwSizes.textXl6;
+  TwText get textXl7 => this.._fontSize = TwSizes.textXl7;
+  TwText get textXl8 => this.._fontSize = TwSizes.textXl8;
+  TwText get textXl9 => this.._fontSize = TwSizes.textXl9;
 
   /// To set fontSize of the text using [size]
   TwText size(double? size) => this.._fontSize = size;
@@ -235,7 +234,8 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT WEIGHT ============== ///
 
   /// Sets [FontWeight] to [FontWeight.w100]
-  TwText get hairLine => _fontWeightedText(child: this, weight: FontWeight.w100);
+  TwText get hairLine =>
+      _fontWeightedText(child: this, weight: FontWeight.w100);
 
   /// Sets [FontWeight] to [FontWeight.w200]
   TwText get thin => _fontWeightedText(child: this, weight: FontWeight.w200);
@@ -250,18 +250,22 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get medium => _fontWeightedText(child: this, weight: FontWeight.w500);
 
   /// Sets [FontWeight] to [FontWeight.w600]
-  TwText get semiBold => _fontWeightedText(child: this, weight: FontWeight.w600);
+  TwText get semiBold =>
+      _fontWeightedText(child: this, weight: FontWeight.w600);
 
   /// Sets [FontWeight] to [FontWeight.w700]
   TwText get bold => _fontWeightedText(child: this, weight: FontWeight.w700);
 
   /// Sets [FontWeight] to [FontWeight.w800]
-  TwText get extraBold => _fontWeightedText(child: this, weight: FontWeight.w800);
+  TwText get extraBold =>
+      _fontWeightedText(child: this, weight: FontWeight.w800);
 
   /// Sets [FontWeight] to [FontWeight.w900]
-  TwText get extraBlack => _fontWeightedText(child: this, weight: FontWeight.w900);
+  TwText get extraBlack =>
+      _fontWeightedText(child: this, weight: FontWeight.w900);
 
-  TwText _fontWeightedText({required FontWeight weight, required TwText child}) {
+  TwText _fontWeightedText(
+      {required FontWeight weight, required TwText child}) {
     _fontWeight = weight;
     return this;
   }
@@ -392,19 +396,19 @@ extension TextExtensions on Text {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
-  @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
+  @Deprecated(
+      'This method is deprecated and will be removed in the future please use [isText] instead.')
   TwText get text => TwText.existing(data!, style);
-  
+
   TwText get isText => TwText.existing(data!, style);
 }
 
 extension TextStringExtensions on String {
   /// Extension method to directly access [TwText]
   /// with [String] itself
-  @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
+  @Deprecated(
+      'This method is deprecated and will be removed in the future please use [isText] instead.')
   TwText get text => TwText(this);
 
   TwText get isText => TwText(this);
 }
-
-

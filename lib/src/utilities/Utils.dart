@@ -34,7 +34,8 @@ class Utils {
     final configFile = File("tailwind.config.json").readAsStringSync();
 
     /// Decode / Convert default config to map
-    final ConfigModel userConfigs = ConfigModel.fromJson(jsonDecode(configFile));
+    final ConfigModel userConfigs =
+        ConfigModel.fromJson(jsonDecode(configFile));
 
     /// Add default config Colors in base config
     if (_config.colors == null) _config.colors = {};
@@ -56,13 +57,16 @@ class Utils {
     if (userConfigs.colors != null) _config.colors!.addAll(userConfigs.colors!);
 
     /// Check and user overrides to spacers
-    if (userConfigs.spacers != null) _config.spacers!.addAll(userConfigs.spacers!);
+    if (userConfigs.spacers != null)
+      _config.spacers!.addAll(userConfigs.spacers!);
 
     /// Check and user overrides to font sizes
-    if (userConfigs.fontSizes != null) _config.fontSizes!.addAll(userConfigs.fontSizes!);
+    if (userConfigs.fontSizes != null)
+      _config.fontSizes!.addAll(userConfigs.fontSizes!);
 
     /// Check and user overrides to opacity
-    if (userConfigs.opacity != null) _config.opacity!.addAll(userConfigs.opacity!);
+    if (userConfigs.opacity != null)
+      _config.opacity!.addAll(userConfigs.opacity!);
 
     /// Check if user overrides dark mode
     _config.darkMode = userConfigs.darkMode;

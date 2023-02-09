@@ -3,7 +3,8 @@ class TwUtils {
 
   /// Convert String to have first letter in caps
   static String ucFirst(String text) {
-    return text.trim()[0].toUpperCase() + text.trim().substring(1, text.length).toLowerCase();
+    return text.trim()[0].toUpperCase() +
+        text.trim().substring(1, text.length).toLowerCase();
   }
 
   /// Convert String to each word's first letter caps
@@ -46,6 +47,3 @@ class TwUtils {
     return int.parse(hexColor, radix: 16);
   }
 }
-
-
-
