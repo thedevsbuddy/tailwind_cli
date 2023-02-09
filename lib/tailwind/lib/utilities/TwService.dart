@@ -1,3 +1,7 @@
+const String target = "tailwind/lib/utilities/";
+const String file = "tailwind/lib/utilities/TwSizes.dart";
+
+const String stub = """
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tailwind/tailwind.dart';
@@ -10,3 +14,4 @@ class TwService {
 
   static Future<void> init() async => await GetStorage.init();
 }
+""";

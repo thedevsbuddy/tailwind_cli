@@ -16,7 +16,7 @@ mixin TwColorMixin<T> {
   /// Checkes if app is in dark mode
   /// And also checkes if [Widget] has [onDark<Color>] applied
   @protected
-  Brightness _brightness = MediaQueryData.fromWindow(WidgetsBinding.instance.window).platformBrightness;
+  Brightness _brightness = Theme.of(TwService.appKey.currentContext!).brightness;
 
   @protected
   Color? twColor;

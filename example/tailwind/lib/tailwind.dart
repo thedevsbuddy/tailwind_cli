@@ -22,6 +22,7 @@ export './widgets/TwInkWell.dart';
 export "./utilities/TwColors.dart";
 export "./utilities/TwUtils.dart";
 export "./utilities/TwSizes.dart";
+export "./utilities/TwService.dart";
 
 /// Mixins
 export "./mixins/TwColorMixin.dart";

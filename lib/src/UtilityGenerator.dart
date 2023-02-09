@@ -3,11 +3,27 @@ import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/utilities/TwColors.dart' as utilityTwColors;
 import 'package:tailwind_cli/tailwind/lib/utilities/TwSizes.dart' as utilityTwSizes;
 import 'package:tailwind_cli/tailwind/lib/utilities/TwUtils.dart' as utilityTwUtils;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwService.dart' as utilityTwService;
 
 Future<void> generate(List<String> args) async {
+  await generateTwServiceUtility();
   await generateTwColorsUtility();
   await generateTwUtilsUtility();
   await generateTwSpacersUtility();
+}
+
+Future<void> generateTwServiceUtility() async {
+  /// Get Tw Utility stub Template / File
+  var utilityTwFile = utilityTwService.stub;
+
+  /// Check and create
+  Utils.makeDir(utilityTwService.target);
+
+  /// Write File
+  Utils.writeFile(utilityTwService.file, utilityTwFile);
+
+  /// Show Success message
+  print(green("TwService Generated successfully!"));
 }
 
 Future<void> generateTwUtilsUtility() async {

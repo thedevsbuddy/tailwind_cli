@@ -74,3 +74,10 @@ build/
 !**/ios/**/default.mode2v3
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
+
+# Other Temp stuffs
+*/**/*.copy.*
+*/**/*.temp.*
+*/**/*.backup.*
+*/**/*.bkp.*
+*/**/*.dev.*

@@ -41,7 +41,6 @@ class TwButton extends TwWidgetBuilder<Widget>
   DecorationImage? _bgImage;
   BoxDecoration? _decoration, _foregroundDecoration;
   BoxConstraints? _constraints;
-  bool _isOutlined = false;
 
   /// Sets the height property of the box.
   TwButton height(double val) => this.._height = val;
@@ -193,3 +192,5 @@ extension TwButtonWidgetExtension on Widget {
 
   TwButton get isButton => TwButton(child: this);
 }
+
+

@@ -8,7 +8,7 @@ class ConfigModel {
   });
 
   factory ConfigModel.fromJson(Map<String, dynamic> json) => ConfigModel(
-        darkMode: json['darkMode'] == null ? null : json['darkMode'],
+        darkMode: json['darkMode'] == null ? false : json['darkMode'],
         colors: json['colors'] == null ? null : json['colors'],
         spacers: json['spacers'] == null ? null : json['spacers'],
         fontSizes: json['fontSizes'] == null ? null : json['fontSizes'],

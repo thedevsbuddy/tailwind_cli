@@ -80,6 +80,9 @@ class TwContainer extends TwWidgetBuilder<Widget>
 
   /// Sets the clip behavior of the box.
   TwContainer clip(Clip clip) => this.._clip = clip;
+  TwContainer get clipAntialias => this.._clip = Clip.antiAlias;
+  TwContainer get clipAliasWithSaveLayer => this.._clip = Clip.antiAliasWithSaveLayer;
+  TwContainer get clipHardEdge => this.._clip = Clip.hardEdge;
 
   /// Sets the decorated box as circular.
   TwContainer get roundedFull => this.._isCircleRounded = true;

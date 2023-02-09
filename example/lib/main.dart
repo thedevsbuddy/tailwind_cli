@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 
-void main() {
+import 'Widgets/TwButtonExample.dart';
+
+void main() async {
+  await TwService.init();
   runApp(MyApp());
 }
 
@@ -9,10 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TwAppBuilder(
-      builder: (BuildContext context) {
+      builder: (BuildContext context, ThemeMode _themeMode) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
+          themeMode: _themeMode,
+          navigatorKey: TwService.appKey,
           theme: ThemeData(
             primaryColor: TwColors.gray,
             appBarTheme: AppBarTheme(
@@ -20,6 +25,9 @@ class MyApp extends StatelessWidget {
               elevation: 0,
               centerTitle: true,
             ),
+          ),
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
           ),
           home: ExamplePage(),
         );
@@ -39,65 +47,22 @@ class ExamplePage extends StatelessWidget {
       ),
       backgroundColor: TwColors.scaffoldBackgroundColor(context),
       body: SafeArea(
-        child: TwPadding(
-          child: TwColumn(<Widget>[
-            TwWrap(
-              <Widget>[
-                'This is the demo of TwWrap Widget'.isText.textXl.bold.coolGray700.render(),
-                TwSizes.spacer2.spaceX,
-                Text('Item 2 of TwWrap Widget').isText.bodyText1(context).black.render(),
-              ],
-            ).vertical.alignStart.render(),
-            TwRow([
-              TwText('TwContainer with extension')
-                  .bodyText1(context)
-                  .indigo500
-                  .onDarkIndigo200
-                  .semiBold
-                  .maxLines(1)
-                  .truncate
+        child: SingleChildScrollView(
+          child: TwPadding(
+            child: TwColumn(<Widget>[
+              /// TwButton Example
+              TwButtonExample(),
+              TwImage("https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+                  .loadingWidget(
+                    "Loading...".isText.render(),
+                  )
+                  .errorWidget(
+                    "There was an error...".isText.red.render(),
+                  )
                   .render()
-                  .isContainer
-                  .gradientToBottom
-                  .fromWhite
-                  .toCoolGray200
-                  .onDarkFromCoolGray500
-                  .onDarkToCoolGray900
-                  // .border
-                  // .borderDp2
-                  // .borderIndigo500
-                  // .onDarkBorderIndigo900
-                  .shadowSm
-                  .rounded
-                  .center
-                  .px4
-                  .py3
-                  .render()
-                  .withInkWell
-                  .onTap(() => print('taped'))
-                  .onDoubleTap(() => print('double taped'))
-                  .render()
-                  .expanded(),
-              TwSizes.spacer3.spaceX,
-              TwContainer(
-                child: Text('Direct TwContainer').isText.bodyText1(context).indigo500.onDarkIndigo200.semiBold.render(),
-              ).onDarkBlack.white.shadow.rounded.center.px4.py3.render().expanded(),
-            ]).justifyBetween.alignCenter.render().isContainer.mt4.render(),
-            TwSizes.spacer12.spaceY,
-            TwContainer(child: "I am a container with dark theme color".isText.bodyText1(context).indigo500.onDarkIndigo100.render())
-                .square(100)
-                .rounded
-                .shadow
-                .p3
-                .white // Will apply by default
-                .onDarkCoolGray800 // Will take control while app is in dark theme mode
-                .render(),
-            TwSizes.spacer8.spaceY,
-            TwButton(
-              child: "This is a btn".isText.textSm.semiBold.coolGray500.onDarkWhite.render(),
-            ).onTap(() => print('working')).px5.py2.gradientToBottom.fromWhite.toCoolGray200.onDarkFromCoolGray700.onDarkToCoolGray900.shadow.rounded.render(),
-          ]).alignStart.justifyCenter.max.render(),
-        ).px3.render(),
+            ]).alignStart.justifyCenter.min.render(),
+          ).p3.render(),
+        ),
       ),
     );
   }

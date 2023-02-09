@@ -3,9 +3,10 @@ const String file = "tailwind/lib/widgets/TwAppBuilder.dart";
 
 const String stub = """
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
 class TwAppBuilder extends StatefulWidget {
-  final Widget Function(BuildContext context) builder;
+  final Widget Function(BuildContext context, ThemeMode themeMode) builder;
   TwAppBuilder({required this.builder});
 
   @override
@@ -17,6 +18,9 @@ class TwAppBuilder extends StatefulWidget {
 }
 
 class _TwAppBuilderState extends State<TwAppBuilder> {
+  ThemeMode _themeMode = ThemeMode.system;
+  final GetStorage _storage = GetStorage();
+
   @override
   void initState() {
     super.initState();
@@ -27,15 +31,40 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
 
     /// Rebuild UI as soos as this [Widget] is in tree
     if (mounted) rebuild();
+    _loadTheme();
   }
 
   @override
   Widget build(BuildContext context) {
-    return widget.builder(context);
+    return widget.builder(context, _themeMode);
+  }
+
+  void _loadTheme() async {
+    String? _theme = _storage.read('theme');
+    _themeMode = _theme == 'dark'
+        ? ThemeMode.dark
+        : _theme == 'light'
+            ? ThemeMode.light
+            : ThemeMode.system;
+    rebuild();
+  }
+
+  void setThemeMode(String mode) async {
+    _storage.write('theme', mode);
+
+    _loadTheme();
+  }
+
+  Future<ThemeMode> getThemeMode() async {
+    String? _theme = _storage.read('theme');
+    return _theme == 'dark'
+        ? ThemeMode.dark
+        : _theme == 'light'
+            ? ThemeMode.light
+            : ThemeMode.system;
   }
 
   /// Rebuilds the UI
   void rebuild() => setState(() {});
 }
-
 """;

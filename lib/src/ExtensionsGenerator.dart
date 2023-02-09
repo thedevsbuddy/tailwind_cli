@@ -9,6 +9,7 @@ Future<void> generate(List<String> args) async {
   await generateTwColorExtension();
   await generateTwNumbersExtension();
   await generateTwWidgetExtension();
+  await generateTwContextExtension();
 }
 
 /// Generate [TwStringExtension]

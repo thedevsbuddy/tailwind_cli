@@ -1,3 +1,8 @@
+## 0.5.2
+
+- Fixed issue where it was throwing error for null value.
+- Fixed issue where it wasn't generating `TwContextExtension` file.
+
 ## 0.5.1
 
 - Added Documentations.
