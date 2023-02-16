@@ -14,11 +14,11 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.17.0
+  get_storage: ^2.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  get_storage: ^2.0.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

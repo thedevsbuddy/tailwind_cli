@@ -43,7 +43,7 @@ class ExamplePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tailwind UI style for flutter'),
+        title: "Tailwind UI style for flutter".isText.render(),
       ),
       backgroundColor: TwColors.scaffoldBackgroundColor(context),
       body: SafeArea(
