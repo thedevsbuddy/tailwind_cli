@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
           cache: npm
-      - run: npm install --frozen-lockfile
+      - run: cd docs && npm install --frozen-lockfile
 
       - name: Build
         run: cd docs && npm docs:build
