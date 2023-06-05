@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/introduction
+      link: /introduction
     - theme: alt
       text: View on GitHub
       link: https://github.com/thedevsbuddy/tailwind_cli
@@ -26,7 +26,7 @@ features:
     details: Now by using Tailwind CLI tool you can build and ship your apps 200% faster.
 ---
 
-<img class="hidden" src="./assets/faster.png" />
+<img class="hidden" src="/assets/faster.png" />
 
 <style>
   .hidden{

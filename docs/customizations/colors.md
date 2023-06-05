@@ -92,5 +92,5 @@ flutter pub run tailwind_cli:build
 :::
 
 <script setup>
-import ColorsTable from '../../../components/ColorsTable.vue'
+import ColorsTable from '../components/ColorsTable.vue'
 </script>

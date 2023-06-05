@@ -1,7 +1,7 @@
 export default {
   title: "TailwindCLI",
   description: "Just playing around.",
-  base: "/tailwind_cli/",
+  base: "/tailwind-cli/",
   cleanUrls: true,
   markdown: {
     lineNumbers: true,
@@ -25,7 +25,7 @@ export default {
       },
       {
         text: "Docs",
-        link: "/docs/introduction",
+        link: "/introduction",
       },
       {
         text: "Blog",
@@ -44,24 +44,24 @@ export default {
     sidebar: [
       {
         text: "Introduction",
-        link: "/docs/introduction",
+        link: "/introduction",
       },
       {
         text: "Installation",
-        link: "/docs/installation",
+        link: "/installation",
       },
       {
         text: "Core Concepts",
         items: [
-          { text: "UI Centric", link: "/docs/core-concepts/ui-centric" },
+          { text: "UI Centric", link: "/core-concepts/ui-centric" },
           {
             text: "Reusable Styles",
-            link: "/docs/core-concepts/reusable-styles",
+            link: "/core-concepts/reusable-styles",
           },
-          { text: "Dark Mode", link: "/docs/core-concepts/dark-mode" },
+          { text: "Dark Mode", link: "/core-concepts/dark-mode" },
           {
             text: "Adding Custom Styles",
-            link: "/docs/core-concepts/adding-custom-styles",
+            link: "/core-concepts/adding-custom-styles",
           },
         ],
       },
@@ -70,11 +70,11 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          { text: "Configuration", link: "/docs/customizations/configuration" },
-          { text: "Colors", link: "/docs/customizations/colors" },
-          { text: "Spacing", link: "/docs/customizations/spacing" },
-          { text: "Opacity", link: "/docs/customizations/opacity" },
-          { text: "Font Sizes", link: "/docs/customizations/font-sizes" },
+          { text: "Configuration", link: "/customizations/configuration" },
+          { text: "Colors", link: "/customizations/colors" },
+          { text: "Spacing", link: "/customizations/spacing" },
+          { text: "Opacity", link: "/customizations/opacity" },
+          { text: "Font Sizes", link: "/customizations/font-sizes" },
         ],
       },
       {
@@ -82,15 +82,15 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          { text: "TwButton", link: "/docs/widgets/tw-button" },
-          { text: "TwColumn", link: "/docs/widgets/tw-column" },
-          { text: "TwContainer", link: "/docs/widgets/tw-container" },
-          { text: "TwPadding", link: "/docs/widgets/tw-padding" },
-          { text: "TwRow", link: "/docs/widgets/tw-row" },
-          { text: "TwStack", link: "/docs/widgets/tw-stack" },
-          { text: "TwText", link: "/docs/widgets/tw-text" },
-          { text: "TwWrap", link: "/docs/widgets/tw-wrap" },
-          { text: "TwInkWell", link: "/docs/widgets/tw-inkwell" },
+          { text: "TwButton", link: "/widgets/tw-button" },
+          { text: "TwColumn", link: "/widgets/tw-column" },
+          { text: "TwContainer", link: "/widgets/tw-container" },
+          { text: "TwPadding", link: "/widgets/tw-padding" },
+          { text: "TwRow", link: "/widgets/tw-row" },
+          { text: "TwStack", link: "/widgets/tw-stack" },
+          { text: "TwText", link: "/widgets/tw-text" },
+          { text: "TwWrap", link: "/widgets/tw-wrap" },
+          { text: "TwInkWell", link: "/widgets/tw-inkwell" },
         ],
       },
       {
@@ -98,11 +98,11 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          { text: "Background Color", link: "/docs/colors/background-color" },
-          { text: "Text Color", link: "/docs/colors/text-color" },
-          { text: "Border Color", link: "/docs/colors/border-color" },
-          { text: "Gradient Color", link: "/docs/colors/gradient-color" },
-          { text: "Dark Theme", link: "/docs/colors/dark-theme" },
+          { text: "Background Color", link: "/colors/background-color" },
+          { text: "Text Color", link: "/colors/text-color" },
+          { text: "Border Color", link: "/colors/border-color" },
+          { text: "Gradient Color", link: "/colors/gradient-color" },
+          { text: "Dark Theme", link: "/colors/dark-theme" },
         ],
       },
       {
@@ -110,8 +110,8 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          { text: "Methods", link: "/docs/extensions/methods" },
-          { text: "Getters", link: "/docs/extensions/getters" },
+          { text: "Methods", link: "/extensions/methods" },
+          { text: "Getters", link: "/extensions/getters" },
         ],
       },
       {
@@ -119,8 +119,8 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          { text: "Box Shadow", link: "/docs/effects/box-shadow" },
-          { text: "Opacity", link: "/docs/effects/opacity" },
+          { text: "Box Shadow", link: "/effects/box-shadow" },
+          { text: "Opacity", link: "/effects/opacity" },
         ],
       },
       {
