@@ -36,7 +36,7 @@ class TwButton extends TwWidgetBuilder<Widget>
     setChildForRoundness(this);
     setChildForShadow(this);
     setChildForBorder(this);
-    setChildForGetureDetection(this);
+    setChildForGestureDetection(this);
   }
 
   final Widget child;

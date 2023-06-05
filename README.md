@@ -19,7 +19,7 @@ you `Colors`, `Gradient Colors`, Sizing `(Padding, Margins)`,
 ## Want to dive in?
 
 Know more about the package by visiting this
-[Official Documentation](https://thedevsbuddy.github.io/tailwind_cli/)
+[Official Documentation](https://docs.devsbuddy.com/tailwind-cli/)
 
 ## Future Plans
 

@@ -8,7 +8,7 @@ import 'TwBuilder.dart';
 @protected
 class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   TwInkWell({this.child}) {
-    setChildForGetureDetection(this);
+    setChildForGestureDetection(this);
   }
 
   Widget? child;
@@ -27,39 +27,28 @@ class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   bool _excludeFromSemantics = false;
   FocusNode? _focusNode;
   bool _canRequestFocus = true;
-  MaterialStatesController? _statesController;
 
   /// Provided splash factory to [InkWell]
   TwInkWell get noSplash => this.._splashFactory = NoSplash.splashFactory;
 
   /// Handle Booleans
   TwInkWell autoFocus(bool autoFocus) => this.._autofocus = autoFocus;
-  TwInkWell enableFeedback(bool enableFeedback) =>
-      this.._enableFeedback = enableFeedback;
-  TwInkWell excludeFromSemantics(bool excludeFromSemantics) =>
-      this.._excludeFromSemantics = excludeFromSemantics;
-  TwInkWell canRequestFocus(bool canRequestFocus) =>
-      this.._canRequestFocus = canRequestFocus;
+  TwInkWell enableFeedback(bool enableFeedback) => this.._enableFeedback = enableFeedback;
+  TwInkWell excludeFromSemantics(bool excludeFromSemantics) => this.._excludeFromSemantics = excludeFromSemantics;
+  TwInkWell canRequestFocus(bool canRequestFocus) => this.._canRequestFocus = canRequestFocus;
 
   /// Handle Colors
   TwInkWell focusColor(Color focusColor) => this.._focusColor = focusColor;
   TwInkWell hoverColor(Color hoverColor) => this.._hoverColor = hoverColor;
-  TwInkWell highlightColor(Color highlightColor) =>
-      this.._highlightColor = highlightColor;
-  TwInkWell overlayColor(MaterialStateProperty<Color?> overlayColor) =>
-      this.._overlayColor = overlayColor;
+  TwInkWell highlightColor(Color highlightColor) => this.._highlightColor = highlightColor;
+  TwInkWell overlayColor(MaterialStateProperty<Color?> overlayColor) => this.._overlayColor = overlayColor;
   TwInkWell splashColor(Color splashColor) => this.._splashColor = splashColor;
 
   /// Handle Misc Options
-  TwInkWell borderRadius(BorderRadius borderRadius) =>
-      this.._borderRadius = borderRadius;
-  TwInkWell mouseCursor(MouseCursor mouseCursor) =>
-      this.._mouseCursor = mouseCursor;
-  TwInkWell customBorder(ShapeBorder customBorder) =>
-      this.._customBorder = customBorder;
+  TwInkWell borderRadius(BorderRadius borderRadius) => this.._borderRadius = borderRadius;
+  TwInkWell mouseCursor(MouseCursor mouseCursor) => this.._mouseCursor = mouseCursor;
+  TwInkWell customBorder(ShapeBorder customBorder) => this.._customBorder = customBorder;
   TwInkWell focusNode(FocusNode focusNode) => this.._focusNode = focusNode;
-  TwInkWell statesController(MaterialStatesController statesController) =>
-      this.._statesController = statesController;
 
   /// ============== RENDER INKWELL WIDGET ============== ///
   @override
@@ -90,7 +79,6 @@ class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
       excludeFromSemantics: _excludeFromSemantics,
       focusNode: _focusNode,
       canRequestFocus: _canRequestFocus,
-      statesController: _statesController,
     );
   }
 }
@@ -102,6 +90,9 @@ extension InkwellExtensions on Widget {
   TwInkWell get inkWell => TwInkWell(child: this);
 
   TwInkWell get withInkWell => TwInkWell(child: this);
-
+  
   TwInkWell get isInkWell => TwInkWell(child: this);
 }
+
+
+

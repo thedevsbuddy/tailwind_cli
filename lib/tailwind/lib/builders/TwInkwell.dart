@@ -22,7 +22,7 @@ import 'TwBuilder.dart';
 @protected
 class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   TwInkWell({this.child}) {
-    setChildForGetureDetection(this);
+    setChildForGestureDetection(this);
   }
 
   Widget? child;
@@ -41,7 +41,6 @@ class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   bool _excludeFromSemantics = false;
   FocusNode? _focusNode;
   bool _canRequestFocus = true;
-  MaterialStatesController? _statesController;
 
   /// Provided splash factory to [InkWell]
   TwInkWell get noSplash => this.._splashFactory = NoSplash.splashFactory;
@@ -64,7 +63,6 @@ class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   TwInkWell mouseCursor(MouseCursor mouseCursor) => this.._mouseCursor = mouseCursor;
   TwInkWell customBorder(ShapeBorder customBorder) => this.._customBorder = customBorder;
   TwInkWell focusNode(FocusNode focusNode) => this.._focusNode = focusNode;
-  TwInkWell statesController(MaterialStatesController statesController) => this.._statesController = statesController;
 
   /// ============== RENDER INKWELL WIDGET ============== ///
   @override
@@ -95,7 +93,6 @@ class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
       excludeFromSemantics: _excludeFromSemantics,
       focusNode: _focusNode,
       canRequestFocus: _canRequestFocus,
-      statesController: _statesController,
     );
   }
 }

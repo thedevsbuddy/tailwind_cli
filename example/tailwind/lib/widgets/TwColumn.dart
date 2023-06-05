@@ -76,11 +76,9 @@ extension ColumnExtensions on Column {
   /// Extension method to directly access [TwColumn]
   /// with any widget without wrapping or with dot operator.
 
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isColumn] instead.')
-  TwColumn get column => TwColumn.existing(
-      children, mainAxisAlignment, crossAxisAlignment, mainAxisSize);
+  @Deprecated('This method is deprecated and will be removed in the future please use [isColumn] instead.')
+  TwColumn get column => TwColumn.existing(children, mainAxisAlignment, crossAxisAlignment, mainAxisSize);
 
-  TwColumn get isColumn => TwColumn.existing(
-      children, mainAxisAlignment, crossAxisAlignment, mainAxisSize);
+  TwColumn get isColumn => TwColumn.existing(children, mainAxisAlignment, crossAxisAlignment, mainAxisSize);
 }
+

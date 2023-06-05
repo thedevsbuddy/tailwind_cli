@@ -4,7 +4,7 @@ mixin TwGestureMixin<T> {
   late T _child;
 
   @protected
-  void setChildForGetureDetection(T child) {
+  void setChildForGestureDetection(T child) {
     _child = child;
   }
 
@@ -81,3 +81,5 @@ mixin TwGestureMixin<T> {
     return _child;
   }
 }
+
+

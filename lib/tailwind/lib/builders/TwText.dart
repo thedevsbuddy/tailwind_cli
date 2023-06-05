@@ -20,15 +20,16 @@ import 'TwBuilder.dart';
 /// to provide utilities in your Text Widget
 @protected
 class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
-  TwText(String this._text) {
+  TwText(this._text) {
     setChildForColoring(this);
   }
 
-  TwText.existing(String this._text, this._textStyle) {
+  TwText.existing(this._text, this._textStyle) {
     setChildForColoring(this);
   }
 
-  String? _text, _fontFamily;
+  String _text;
+  String? _fontFamily;
   double? _scaleFactor, _fontSize, _letterSpacing, _lineHeight, _wordSpacing;
   int? _maxLines;
   FontWeight? _fontWeight;
@@ -305,10 +306,10 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get lineThrough => this.._decoration = TextDecoration.lineThrough;
 
   /// Converts the text to fully uppercase.
-  TwText get uppercase => this.._text = _text!.toUpperCase();
+  TwText get uppercase => this.._text = _text.toUpperCase();
 
   /// Converts the text to fully lowercase.
-  TwText get lowercase => this.._text = _text!.toLowerCase();
+  TwText get lowercase => this.._text = _text.toLowerCase();
 
   /// Converts the text to first letter of very word as uppercase.
   TwText get capitalize => this.._text = TwUtils.ucWords('\${this.._text}');
@@ -376,7 +377,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
     );
 
     return Text(
-      _text!,
+      _text,
       key: key,
       textAlign: _textAlign,
       maxLines: _maxLines,
@@ -394,9 +395,9 @@ extension TextExtensions on Text {
   /// with any widget without wrapping or with dot operator.
 
   @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
-  TwText get text => TwText.existing(data!, style);
+  TwText get text => TwText.existing(data, style);
   
-  TwText get isText => TwText.existing(data!, style);
+  TwText get isText => TwText.existing(data, style);
 }
 
 extension TextStringExtensions on String {

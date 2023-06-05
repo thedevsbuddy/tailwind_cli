@@ -6,15 +6,16 @@ import 'TwBuilder.dart';
 /// to provide utilities in your Text Widget
 @protected
 class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
-  TwText(String this._text) {
+  TwText(this._text) {
     setChildForColoring(this);
   }
 
-  TwText.existing(String this._text, this._textStyle) {
+  TwText.existing(this._text, this._textStyle) {
     setChildForColoring(this);
   }
 
-  String? _text, _fontFamily;
+  String _text;
+  String? _fontFamily;
   double? _scaleFactor, _fontSize, _letterSpacing, _lineHeight, _wordSpacing;
   int? _maxLines;
   FontWeight? _fontWeight;
@@ -234,8 +235,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT WEIGHT ============== ///
 
   /// Sets [FontWeight] to [FontWeight.w100]
-  TwText get hairLine =>
-      _fontWeightedText(child: this, weight: FontWeight.w100);
+  TwText get hairLine => _fontWeightedText(child: this, weight: FontWeight.w100);
 
   /// Sets [FontWeight] to [FontWeight.w200]
   TwText get thin => _fontWeightedText(child: this, weight: FontWeight.w200);
@@ -250,22 +250,18 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get medium => _fontWeightedText(child: this, weight: FontWeight.w500);
 
   /// Sets [FontWeight] to [FontWeight.w600]
-  TwText get semiBold =>
-      _fontWeightedText(child: this, weight: FontWeight.w600);
+  TwText get semiBold => _fontWeightedText(child: this, weight: FontWeight.w600);
 
   /// Sets [FontWeight] to [FontWeight.w700]
   TwText get bold => _fontWeightedText(child: this, weight: FontWeight.w700);
 
   /// Sets [FontWeight] to [FontWeight.w800]
-  TwText get extraBold =>
-      _fontWeightedText(child: this, weight: FontWeight.w800);
+  TwText get extraBold => _fontWeightedText(child: this, weight: FontWeight.w800);
 
   /// Sets [FontWeight] to [FontWeight.w900]
-  TwText get extraBlack =>
-      _fontWeightedText(child: this, weight: FontWeight.w900);
+  TwText get extraBlack => _fontWeightedText(child: this, weight: FontWeight.w900);
 
-  TwText _fontWeightedText(
-      {required FontWeight weight, required TwText child}) {
+  TwText _fontWeightedText({required FontWeight weight, required TwText child}) {
     _fontWeight = weight;
     return this;
   }
@@ -308,10 +304,10 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get lineThrough => this.._decoration = TextDecoration.lineThrough;
 
   /// Converts the text to fully uppercase.
-  TwText get uppercase => this.._text = _text!.toUpperCase();
+  TwText get uppercase => this.._text = _text.toUpperCase();
 
   /// Converts the text to fully lowercase.
-  TwText get lowercase => this.._text = _text!.toLowerCase();
+  TwText get lowercase => this.._text = _text.toLowerCase();
 
   /// Converts the text to first letter of very word as uppercase.
   TwText get capitalize => this.._text = TwUtils.ucWords('${this.._text}');
@@ -379,7 +375,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
     );
 
     return Text(
-      _text!,
+      _text,
       key: key,
       textAlign: _textAlign,
       maxLines: _maxLines,
@@ -396,8 +392,7 @@ extension TextExtensions on Text {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isText] instead.')
+  @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
   TwText get text => TwText.existing(data!, style);
 
   TwText get isText => TwText.existing(data!, style);
@@ -406,8 +401,7 @@ extension TextExtensions on Text {
 extension TextStringExtensions on String {
   /// Extension method to directly access [TwText]
   /// with [String] itself
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isText] instead.')
+  @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
   TwText get text => TwText(this);
 
   TwText get isText => TwText(this);

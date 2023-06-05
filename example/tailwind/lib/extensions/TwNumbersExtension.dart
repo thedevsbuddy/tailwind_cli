@@ -7,7 +7,7 @@ extension DoubleExtension on double {
   Widget get spaceY => SizedBox(height: this);
 
   // Duration
-  Duration get days => Duration(days: toInt());
+   Duration get days => Duration(days: toInt());
   Duration get hours => Duration(hours: toInt());
   Duration get minutes => Duration(minutes: toInt());
   Duration get seconds => Duration(seconds: toInt());
@@ -29,3 +29,4 @@ extension IntExtension on int {
   Duration get milliseconds => Duration(milliseconds: toInt());
   Duration get microseconds => Duration(microseconds: toInt());
 }
+

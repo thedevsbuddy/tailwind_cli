@@ -24,27 +24,21 @@ class TwStack extends TwWidgetBuilder<Widget> {
   /// AlignmentDirectional getter
   TwStack get alignTopStart => this.._alignment = AlignmentDirectional.topStart;
 
-  TwStack get alignTopCenter =>
-      this.._alignment = AlignmentDirectional.topCenter;
+  TwStack get alignTopCenter => this.._alignment = AlignmentDirectional.topCenter;
 
   TwStack get alignTopEnd => this.._alignment = AlignmentDirectional.topEnd;
 
-  TwStack get alignCenterStart =>
-      this.._alignment = AlignmentDirectional.centerStart;
+  TwStack get alignCenterStart => this.._alignment = AlignmentDirectional.centerStart;
 
   TwStack get alignCenter => this.._alignment = AlignmentDirectional.center;
 
-  TwStack get alignCenterEnd =>
-      this.._alignment = AlignmentDirectional.centerEnd;
+  TwStack get alignCenterEnd => this.._alignment = AlignmentDirectional.centerEnd;
 
-  TwStack get alignBottomStart =>
-      this.._alignment = AlignmentDirectional.bottomStart;
+  TwStack get alignBottomStart => this.._alignment = AlignmentDirectional.bottomStart;
 
-  TwStack get alignBottomCenter =>
-      this.._alignment = AlignmentDirectional.bottomCenter;
+  TwStack get alignBottomCenter => this.._alignment = AlignmentDirectional.bottomCenter;
 
-  TwStack get alignBottomEnd =>
-      this.._alignment = AlignmentDirectional.bottomEnd;
+  TwStack get alignBottomEnd => this.._alignment = AlignmentDirectional.bottomEnd;
 
   /// Clip Behavior
   TwStack get clipNone => this.._clipBehavior = Clip.none;
@@ -53,8 +47,7 @@ class TwStack extends TwWidgetBuilder<Widget> {
 
   TwStack get clipHardEdge => this.._clipBehavior = Clip.hardEdge;
 
-  TwStack get clipAntiAliasWithSaveLayer =>
-      this.._clipBehavior = Clip.antiAliasWithSaveLayer;
+  TwStack get clipAntiAliasWithSaveLayer => this.._clipBehavior = Clip.antiAliasWithSaveLayer;
 
   /// ============== RENDER STACK WIDGET ============== ///
   @override
@@ -74,11 +67,10 @@ extension StackExtensions on Stack {
   /// Extension method to directly access [TwStack]
   /// with any widget without wrapping or with dot operator.
 
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isStack] instead.')
-  TwStack get stack =>
-      TwStack.existing(children, alignment, clipBehavior, textDirection!, fit);
+  @Deprecated('This method is deprecated and will be removed in the future please use [isStack] instead.')
+  TwStack get stack => TwStack.existing(children, alignment, clipBehavior, textDirection!, fit);
 
-  TwStack get isStack =>
-      TwStack.existing(children, alignment, clipBehavior, textDirection!, fit);
+  TwStack get isStack => TwStack.existing(children, alignment, clipBehavior, textDirection!, fit);
 }
+
+

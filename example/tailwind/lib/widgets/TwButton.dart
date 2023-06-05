@@ -22,12 +22,11 @@ class TwButton extends TwWidgetBuilder<Widget>
     setChildForRoundness(this);
     setChildForShadow(this);
     setChildForBorder(this);
-    setChildForGetureDetection(this);
+    setChildForGestureDetection(this);
   }
 
   final Widget child;
-  Widget? _loadingWidget =
-      SizedBox(height: 16, child: CircularProgressIndicator());
+  Widget? _loadingWidget = SizedBox(height: 16, child: CircularProgressIndicator());
 
   bool _isCircleRounded = false;
   bool _isBusy = false;
@@ -60,16 +59,13 @@ class TwButton extends TwWidgetBuilder<Widget>
     .._height = val;
 
   /// Provide a custom DecoratedBox
-  TwButton withDecoration(BoxDecoration decoration) =>
-      this.._decoration = decoration;
+  TwButton withDecoration(BoxDecoration decoration) => this.._decoration = decoration;
 
   /// Provide a custom Foreground DecoratedBox
-  TwButton withForegroundDecoration(BoxDecoration decoration) =>
-      this.._foregroundDecoration = decoration;
+  TwButton withForegroundDecoration(BoxDecoration decoration) => this.._foregroundDecoration = decoration;
 
   /// Provide a box constraint
-  TwButton withConstraints(BoxConstraints constraints) =>
-      this.._constraints = constraints;
+  TwButton withConstraints(BoxConstraints constraints) => this.._constraints = constraints;
 
   /// Sets the padding property of the box.
   TwButton padding(EdgeInsetsGeometry val) => this.._padding = val;
@@ -81,8 +77,7 @@ class TwButton extends TwWidgetBuilder<Widget>
   TwButton color(Color color) => this..twColor = color;
 
   /// Sets the color property of the box using the hex color value.
-  TwButton hexColor(String colorHex) =>
-      this..twColor = Color(int.parse(TwUtils.hexToColor(colorHex)));
+  TwButton hexColor(String colorHex) => this..twColor = Color(int.parse(TwUtils.hexToColor(colorHex)));
 
   /// Sets the transform property to the animated box.
   TwButton transform(Matrix4 val) => this.._transform = val;
@@ -115,8 +110,7 @@ class TwButton extends TwWidgetBuilder<Widget>
   TwButton shadowOutline({Color? outlineColor}) {
     _boxShadow = [
       BoxShadow(
-        color: outlineColor?.withOpacity(0.5) ??
-            const Color.fromRGBO(66, 153, 225, 0.5),
+        color: outlineColor?.withOpacity(0.5) ?? const Color.fromRGBO(66, 153, 225, 0.5),
         blurRadius: 0.0,
         spreadRadius: 3.0,
         offset: const Offset(0.0, 0.0),
@@ -133,16 +127,13 @@ class TwButton extends TwWidgetBuilder<Widget>
   }
 
   /// Sets the linear gradient to the decorated box.
-  TwButton linearGradient(LinearGradient linearGradient) =>
-      this.._gradient = linearGradient;
+  TwButton linearGradient(LinearGradient linearGradient) => this.._gradient = linearGradient;
 
   /// Sets the radial gradient to the decorated box.
-  TwButton radialGradient(RadialGradient radialGradient) =>
-      this.._gradient = radialGradient;
+  TwButton radialGradient(RadialGradient radialGradient) => this.._gradient = radialGradient;
 
   /// Sets the sweep gradient to the decorated box.
-  TwButton sweepGradient(SweepGradient sweepGradient) =>
-      this.._gradient = sweepGradient;
+  TwButton sweepGradient(SweepGradient sweepGradient) => this.._gradient = sweepGradient;
 
   /// Sets the background image to the decorated box.
   TwButton bgImage(DecorationImage image) => this.._bgImage = image;
@@ -171,12 +162,8 @@ class TwButton extends TwWidgetBuilder<Widget>
             constraints: _constraints,
             clipBehavior: _clip ?? Clip.none,
             width: _width,
-            padding: _padding ??
-                EdgeInsets.fromLTRB(
-                    paddingLeft, paddingTop, paddingRight, paddingBottom),
-            margin: _margin ??
-                EdgeInsets.fromLTRB(
-                    marginLeft, marginTop, marginRight, marginBottom),
+            padding: _padding ?? EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
+            margin: _margin ?? EdgeInsets.fromLTRB(marginLeft, marginTop, marginRight, marginBottom),
             alignment: twAlignment,
             transform: _transform,
             child: _isBusy ? _loadingWidget : child,
@@ -184,20 +171,11 @@ class TwButton extends TwWidgetBuilder<Widget>
             decoration: _decoration ??
                 BoxDecoration(
                   color: !hasGradient ? twColor : null,
-                  borderRadius: _isCircleRounded || (roundness == null)
-                      ? null
-                      : (radiusGeometry ?? BorderRadius.circular(roundness!)),
-                  shape:
-                      _isCircleRounded ? BoxShape.circle : BoxShape.rectangle,
+                  borderRadius: _isCircleRounded || (roundness == null) ? null : (radiusGeometry ?? BorderRadius.circular(roundness!)),
+                  shape: _isCircleRounded ? BoxShape.circle : BoxShape.rectangle,
                   boxShadow: twShadow ?? _boxShadow ?? [],
                   border: _border ?? getBorder(),
-                  gradient: hasGradient
-                      ? LinearGradient(
-                          colors: gradientColors,
-                          stops: stops,
-                          begin: begin,
-                          end: end)
-                      : _gradient,
+                  gradient: hasGradient ? LinearGradient(colors: gradientColors, stops: stops, begin: begin, end: end) : _gradient,
                   image: _bgImage,
                 ),
           ),
@@ -209,9 +187,10 @@ class TwButton extends TwWidgetBuilder<Widget>
 
 extension TwButtonWidgetExtension on Widget {
   /// Extension method to directly access material [TwButton] with any widget without wrapping or with dot operator.
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isContainer] instead.')
+  @Deprecated('This method is deprecated and will be removed in the future please use [isContainer] instead.')
   TwButton get button => TwButton(child: this);
 
   TwButton get isButton => TwButton(child: this);
 }
+
+
