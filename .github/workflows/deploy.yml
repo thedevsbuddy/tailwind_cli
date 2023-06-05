@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - docs
+      - main
 
 jobs:
   deploy:
@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: 16
           cache: yarn
-      - run: yarn install --frozen-lockfile
+      - run: cd docs && yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn docs:build
+        run: cd docs && yarn docs:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
