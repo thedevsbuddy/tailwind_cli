@@ -1,5 +1,10 @@
 ## 0.5.4
 
+- Fixed `TwText` Widget null value issue
+- Upgraded some deps
+
+## 0.5.4
+
 - Fixed `pub.dev` found formatting issues
 
 ## 0.5.3
