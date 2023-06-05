@@ -2,7 +2,8 @@ export default {
   title: "TailwindCLI",
   description: "Just playing around.",
   base: "/tailwind-cli/",
-  cleanUrls: true,
+  cleanUrls: false,
+  srcDir: './src',
   markdown: {
     lineNumbers: true,
     defaultHighlightLang: "dart",
