@@ -395,9 +395,9 @@ extension TextExtensions on Text {
   /// with any widget without wrapping or with dot operator.
 
   @Deprecated('This method is deprecated and will be removed in the future please use [isText] instead.')
-  TwText get text => TwText.existing(data, style);
+  TwText get text => TwText.existing(data!, style);
   
-  TwText get isText => TwText.existing(data, style);
+  TwText get isText => TwText.existing(data!, style);
 }
 
 extension TextStringExtensions on String {
