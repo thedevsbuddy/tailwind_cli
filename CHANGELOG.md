@@ -1,4 +1,8 @@
-## 0.5.4
+## 0.5.6
+
+- Fixed `dcli` issue
+
+## 0.5.5
 
 - Fixed `TwText` Widget null value issue
 - Upgraded some deps
