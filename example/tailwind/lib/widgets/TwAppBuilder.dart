@@ -45,8 +45,13 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
     rebuild();
   }
 
-  void setThemeMode(String mode) async {
-    _storage.write('theme', mode);
+  void setThemeMode(ThemeMode mode) async {
+    String _themeMode = mode == ThemeMode.dark
+        ? 'dark'
+        : mode == ThemeMode.light
+            ? 'light'
+            : 'system';
+    _storage.write('theme', _themeMode);
 
     _loadTheme();
   }
@@ -63,4 +68,3 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
   /// Rebuilds the UI
   void rebuild() => setState(() {});
 }
-

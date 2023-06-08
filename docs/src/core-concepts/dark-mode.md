@@ -16,6 +16,7 @@ You may be having issues while using `onDark<Color>` method and extensions for c
 
 ```dart
 Container()
+.isContainer
 .white // On default mode // [!code focus]
 .onDarkCoolGray700 // When app is in dark theme mode // [!code focus]
 .render(),
@@ -25,6 +26,7 @@ Container()
 
 ```dart
 Container()
+.isContainer
 .gradientToBr
 .fromWhite // On default mode // [!code focus]
 .toCoolGray200 // On default mode // [!code focus]
@@ -46,6 +48,7 @@ TwText("Dark mode is better for eyes.")
 
 ```dart
 Container()
+.isContainer
 .border
 .borderWhite // On default mode // [!code focus]
 .onDarkBorderCoolGray700 // When app is in dark theme mode // [!code focus]
@@ -61,6 +64,7 @@ Container(
         .onDarkWhite // When app is in dark theme mode // [!code focus]
         .render(),
 )
+.isContainer
 .p4
 .rounded
 .white // On default mode // [!code focus]
@@ -75,6 +79,7 @@ Container(
         .onDarkWhite // When app is in dark theme mode // [!code focus]
         .render(),
 )
+.isContainer
 .p4
 .rounded
 .gradientToBr
@@ -88,6 +93,10 @@ Container(
 ## Toggling dark mode
 
 By default the dark variant for colors is disabled, If you want to use dark variant then you should enable it in the `tailwind.config.json` file.
+
+::: warning
+If you already used dark mode in your app and then changing this value to `false` and re-building tailwind styles will break your app as all the dark mode code will be removed but it is used in the app so it will make your app to crash.
+:::
 
 ```json
 {
