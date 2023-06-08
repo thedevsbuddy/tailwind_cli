@@ -1,4 +1,4 @@
-# Tailwind CLI v0.5.7
+# Tailwind CLI v0.6.1
 
 A simple yet awesome flutter package to generate and use TailwindCSS like styling in your flutter
 projects.
@@ -24,13 +24,11 @@ Know more about the package by visiting this
 ## Future Plans
 
 | Feature                                     | Status | Addition/Changes | From Version  |
-| ------------------------------------------- | :----: | :--------------: | :-----------: |
-| Dark Theme for border colors                |   ⏳   |        ➕        |  In Progress  |
-| `TwGrid` Widget                             |   ⏳   |        ➕        |  In Progress  |
-| `TwImage` Widget                            |   ⏳   |        ➕        |  In Progress  |
-| No use of `context` if using `TwAppBuilder` |   ⏳   |        ➕        | **_`0.6.*`_** |
-| Themes option (Experimental)                |   ⏳   |        ➕        |     ----      |
-| Responsiveness (Experimental)               |   ⏳   |        ➕        |     ----      |
+| ------------------------------------------- | :----: |:----------------:|:-------------:|
+| Dark Theme for border colors                |   ⏳   |        ✔️        | **_`0.6.1`_** |
+| `TwImage` Widget                            |   ⏳   |        ➕         |  In Progress  |
+| `TwGrid` Widget                             |   ⏳   |        ➕         |  In Progress  |
+| No use of `context` if using `TwAppBuilder` |   ⏳   |        ➕         | **_`0.6.*`_** |
 
 ---
 
@@ -80,7 +78,7 @@ So I thought why I can't make this feature with mainly focusing on the UI in our
     - `TwRow` Create rows with ease.
     - `TwStack` Manage stack widget with extension methods.
     - `TwText` now working with text widget is so simple with `TailwindCLI`.
-    - [See more](https://thedevsbuddy.github.io/tailwind_cli/widgets/)
+    - [See more](https://docs.devsbuddy.com/tailwind-cli)
 
 ### Methods
 
@@ -95,7 +93,7 @@ There are several methods which can be used to build the tailwind like styles fo
 - **background Colors**: Same color pallete can be used for background color for any widget with few characters of code.
     - For example `Container(height: 500, width: 500).container.red500.render()`.
     - See that we only need to call the color name to set the background color for the container widget.
-- [See more](https://thedevsbuddy.github.io/tailwind_cli/)
+- [See more](https://thedevsbuddy.github.io/tailwind_cli)
 
 ## Detailed documentation
 

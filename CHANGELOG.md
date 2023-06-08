@@ -1,3 +1,7 @@
+## 0.6.1
+
+- Fixed README Information
+
 ## 0.6.0
 
 - Fixed `TwBorderMixin` -> Added `onDark` variant for theme Colors
