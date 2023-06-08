@@ -18,13 +18,13 @@ import 'package:tailwind/tailwind.dart';
 mixin TwGradientMixin<T> {
   late T _child;
 
-  /// Checkes if app is in dark mode
-  /// And also checkes if [Widget] has [onDark<Color>] applied
+  /// Checks if app is in dark mode
+  /// And also Checks if [Widget] has [onDark<Color>] applied
   @protected
   bool _needsDarkVariant = false;
 
-  /// Checkes if app is in dark mode
-  /// And also checkes if [Widget] has [onDark<Color>] applied
+  /// Checks if app is in dark mode
+  /// And also Checks if [Widget] has [onDark<Color>] applied
   @protected
   Brightness _brightness = Theme.of(TwService.appKey.currentContext!).brightness;
 

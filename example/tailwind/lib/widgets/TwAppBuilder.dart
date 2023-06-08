@@ -52,7 +52,6 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
             ? 'light'
             : 'system';
     _storage.write('theme', _themeMode);
-
     _loadTheme();
   }
 
@@ -68,3 +67,4 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
   /// Rebuilds the UI
   void rebuild() => setState(() {});
 }
+

@@ -1,3 +1,9 @@
+## 0.6.0
+
+- Fixed `TwBorderMixin` -> Added `onDark` variant for theme Colors
+- Fixed Documentation
+- Some minor fixes
+
 ## 0.5.7
 
 - Fixed `TwText` null data issue

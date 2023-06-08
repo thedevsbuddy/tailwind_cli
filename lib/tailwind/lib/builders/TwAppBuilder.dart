@@ -59,7 +59,7 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
     rebuild();
   }
 
-  void setThemeMode(String mode) async {
+  void setThemeMode(ThemeMode mode) async {
     String _themeMode = mode == ThemeMode.dark
         ? 'dark'
         : mode == ThemeMode.light
