@@ -33,7 +33,7 @@ export default {
         link: "https://devsbuddy.com/blog",
       },
       {
-        text: "0.5.1",
+        text: "0.5.7",
         items: [
           {
             text: "Changelog",

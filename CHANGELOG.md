@@ -1,7 +1,7 @@
 ## 0.5.7
 
 - Fixed `TwText` null data issue
-- 
+
 ## 0.5.6
 
 - Fixed `dcli` issue

@@ -1,4 +1,4 @@
-# Tailwind CLI
+# Tailwind CLI v0.5.7
 
 A simple yet awesome flutter package to generate and use TailwindCSS like styling in your flutter
 projects.
@@ -23,13 +23,14 @@ Know more about the package by visiting this
 
 ## Future Plans
 
-| Feature                                          | Status | Addition/Changes | From Version  |
-| ------------------------------------------------ | :----: | :--------------: | :-----------: |
-| `TwGrid` Widget                                  |   ⏳   |        ➕        |  In Progress  |
-| `TwImage` Widget                                 |   ⏳   |        ➕        |  In Progress  |
-| No use of `context` if using `TwAppBuilder`      |   ⏳   |        ➕        | **_`0.6.*`_** |
-| Themes option (Experimental)                     |   ⏳   |        ➕        |     ----      |
-| Responsiveness (Experimental)                    |   ⏳   |        ➕        |     ----      |
+| Feature                                     | Status | Addition/Changes | From Version  |
+| ------------------------------------------- | :----: | :--------------: | :-----------: |
+| Dark Theme for border colors                |   ⏳   |        ➕        |  In Progress  |
+| `TwGrid` Widget                             |   ⏳   |        ➕        |  In Progress  |
+| `TwImage` Widget                            |   ⏳   |        ➕        |  In Progress  |
+| No use of `context` if using `TwAppBuilder` |   ⏳   |        ➕        | **_`0.6.*`_** |
+| Themes option (Experimental)                |   ⏳   |        ➕        |     ----      |
+| Responsiveness (Experimental)               |   ⏳   |        ➕        |     ----      |
 
 ---
 
@@ -45,74 +46,13 @@ If you found this package helpful you can show support by clicking on the follow
 
 ## Getting Started
 
-Install package
+Please check our Official Documentation for instruction on how to use this package in your Flutter apps.
 
-```powershell
-flutter pub add -d tailwind_cli
-```
-
-Now publish the `tailwind.config.json` file
-
-```powershell
-flutter pub run tailwind_cli:init
-```
-
-Publishing `tailwind.config.json` file will create a config file for Tailwind styles.
-
-Build / Generate tailwind styling
-
-```powershell
-flutter pub run tailwind_cli:build
-```
-
-Add tailwind in your project's `pubspec.yaml` file under `dependencies` section
-
-```yaml
-# Tailwind
-tailwind:
-  path: tailwind
-```
-
-Now install generated tailwind styles in your project
-
-```powershell
-flutter pub get
-```
-
-**_Now your project is ready to use Tailwind styling_**
-
-### Note
-
-**_Please re-build `tailwind` styles every time you make changes in `tailwind.config.json` file_**
-
-```powershell
-flutter pub run tailwind_cli:build
-```
+Go to: **[Official Documentation](https://docs.devsbuddy.com/tailwind-cli/)**
 
 ## Features
 
 As every flutter developer knows that each flutter application requires a lot of code to be written to achieve the best UI. I saw this issue and searching for the way which can help us reduce the number of lines of code but get the same result as expected. I was aware of the UI libraries for the web development. In which one of the best is `tailwindcss` but it is only available for the `html` and `css` which is really awesome and provides a great way to write clean and effective code for your application's UI. I searched for the same which can be used in flutter but found nothing which is similar to `tailwindcss`. I know there is one package called `VelocityX` which does same thing but there are some issues with that package. As i already mentioned my inspiration above in which I included `VelocityX`.
-
-#### Comparison Between `VelocityX` and `TailwindCLI`
-
-| VelocityX                        | TailwindCLI                                  |
-| -------------------------------- | -------------------------------------------- |
-| It focuses on mutiple solutions. | Mainly focus on UI Styling                   |
-| Can not customize anything.      | Customization is available for every feature |
-| Can not use multiple margins.    | You can add margins on individual sides      |
-| Can not use multiple paddings.   | You can add padding on individual sides      |
-
-#### VelocityX Pros
-
-- It is a great package for mutiple solutions.
-- Can be used to build awesome applications.
-- Can be used to manage states in your applications.
-
-#### VelocityX Cons
-
-- It focuses on mutiple solutions.
-- Can not customize styles.
-- Can not add your custom styles.
 
 So I thought why I can't make this feature with mainly focusing on the UI in our flutter projects? For this I created this project and thankfully it worked.
 

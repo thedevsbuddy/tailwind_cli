@@ -31,6 +31,7 @@ TextButton(
 ```dart [TwButton]
 TwButton(
     onPressed: () => print('Awesome'),
+    child: Text("I am a TwButton"),
 ).render(),
 ```
 
