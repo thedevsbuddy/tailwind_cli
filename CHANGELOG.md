@@ -1,3 +1,12 @@
+## 0.6.2
+
+- Fixed color conflict issue
+- Added missing theme colors
+- Sync all theme colors on
+  - Background and text colors
+  - Border colors
+  - Gradient Colors
+
 ## 0.6.1
 
 - Fixed README Information

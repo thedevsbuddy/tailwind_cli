@@ -23,7 +23,7 @@ class TwButtonExample extends StatelessWidget {
             child: "System".isText.buttonText(context).white.render(),
           ).primary.py3.px5.rounded.onTap(() => TwService.setThemeMode(ThemeMode.system)).render(),
         ]).alignStart.justifyStart.render(),
-      ).p4.mb4.white.rounded.width(double.maxFinite).shadow.border.border1.borderCoolGray600.onDarkBorderPrimaryColor(context).render(),
+      ).p4.mb4.white.rounded.width(double.maxFinite).shadow.hasBorder.border1.borderCoolGray600.onDarkBorderPrimaryColor(context).render(),
     ]).alignStart.justifyStart.min.render();
   }
 }

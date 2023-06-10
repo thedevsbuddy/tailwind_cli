@@ -93,10 +93,6 @@ mixin TwGradientMixin<T> {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryColor(context);
     return _child;
   }
-  T get fromThemePrimaryColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themePrimaryColor;
-    return _child;
-  }
   T onDarkFromPrimaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -104,19 +100,8 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemePrimaryColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themePrimaryColor;
-    }
-    return _child;
-  }
   T toPrimaryColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryColor(context);
-    return _child;
-  }
-  T get toThemePrimaryColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themePrimaryColor;
     return _child;
   }
   T onDarkToPrimaryColor(BuildContext context) {
@@ -126,21 +111,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkToThemePrimaryColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themePrimaryColor;
-    }
-    return _child;
-  }
  
    /// Primary Light Colors
   T fromPrimaryLightColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryLightColor(context);
-    return _child;
-  }
-  T get fromThemePrimaryLightColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themePrimaryLightColor;
     return _child;
   }
   T onDarkFromPrimaryLightColor(BuildContext context) {
@@ -150,19 +124,8 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemePrimaryLightColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themePrimaryLightColor;
-    }
-    return _child;
-  }
   T toPrimaryLightColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryLightColor(context);
-    return _child;
-  }
-  T get toThemePrimaryLightColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themePrimaryLightColor;
     return _child;
   }
   T onDarkToPrimaryLightColor(BuildContext context) {
@@ -172,21 +135,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkToThemePrimaryLightColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themePrimaryLightColor;
-    }
-    return _child;
-  }
   
   /// Primary Dark Colors
   T fromPrimaryDarkColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryDarkColor(context);
-    return _child;
-  }
-  T get fromThemePrimaryDarkColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themePrimaryDarkColor;
     return _child;
   }
   T onDarkFromPrimaryDarkColor(BuildContext context) {
@@ -196,19 +148,8 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemePrimaryDarkColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themePrimaryDarkColor;
-    }
-    return _child;
-  }
   T toPrimaryDarkColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryDarkColor(context);
-    return _child;
-  }
-  T get toThemePrimaryDarkColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themePrimaryDarkColor;
     return _child;
   }
   T onDarkToPrimaryDarkColor(BuildContext context) {
@@ -218,21 +159,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkToThemePrimaryDarkColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themePrimaryDarkColor;
-    }
-    return _child;
-  }
   
   /// Secondary Colors
   T fromSecondaryColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.secondaryColor(context);
-    return _child;
-  }
-  T get fromThemeSecondaryColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themeSecondaryColor;
     return _child;
   }
   T onDarkFromSecondaryColor(BuildContext context) {
@@ -242,19 +172,8 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemeSecondaryColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themeSecondaryColor;
-    }
-    return _child;
-  }
   T toSecondaryColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.secondaryColor(context);
-    return _child;
-  }
-  T get toThemeSecondaryColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themeSecondaryColor;
     return _child;
   }
   T onDarkToSecondaryColor(BuildContext context) {
@@ -264,21 +183,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkToThemeSecondaryColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themeSecondaryColor;
-    }
-    return _child;
-  }
 
   /// Background Colors
   T fromBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.backgroundColor(context);
-    return _child;
-  }
-  T get fromThemeBackgroundColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themeBackgroundColor;
     return _child;
   }
   T onDarkFromBackgroundColor(BuildContext context) {
@@ -288,19 +196,8 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemeBackgroundColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themeBackgroundColor;
-    }
-    return _child;
-  }
   T toBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.backgroundColor(context);
-    return _child;
-  }
-  T get toThemeBackgroundColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themeBackgroundColor;
     return _child;
   }
   T onDarkToBackgroundColor(BuildContext context) {
@@ -310,21 +207,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkToThemeBackgroundColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themeBackgroundColor;
-    }
-    return _child;
-  }
 
   /// Scaffold Background Colors
   T fromScaffoldBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.scaffoldBackgroundColor(context);
-    return _child;
-  }
-  T get fromThemeScaffoldBackgroundColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themeScaffoldBackgroundColor;
     return _child;
   }
   T onDarkFromScaffoldBackgroundColor(BuildContext context) {
@@ -334,19 +220,8 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemeScaffoldBackgroundColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themeScaffoldBackgroundColor;
-    }
-    return _child;
-  }
   T toScaffoldBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.scaffoldBackgroundColor(context);
-    return _child;
-  }
-  T get toThemeScaffoldBackgroundColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themeScaffoldBackgroundColor;
     return _child;
   }
   T onDarkToScaffoldBackgroundColor(BuildContext context) {
@@ -356,21 +231,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkToThemeScaffoldBackgroundColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themeScaffoldBackgroundColor;
-    }
-    return _child;
-  }
 
   /// Card Colors
   T fromCardColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.cardColor(context);
-    return _child;
-  }
-  T get fromThemeCardColor {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.themeCardColor;
     return _child;
   }
   T onDarkFromCardColor(BuildContext context) {
@@ -380,32 +244,14 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-  T get onDarkFromThemeCardColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.themeCardColor;
-    }
-    return _child;
-  }
   T toCardColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.cardColor(context);
-    return _child;
-  }
-  T get toThemeCardColor {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.themeCardColor;
     return _child;
   }
   T onDarkToCardColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       gradientColors[1] = TwColors.cardColor(context);
-    }
-    return _child;
-  }
-  T get onDarkToThemeCardColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.themeCardColor;
     }
     return _child;
   }

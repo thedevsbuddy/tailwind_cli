@@ -29,7 +29,7 @@ mixin TwBorderMixin<T> {
   Brightness _brightness = Theme.of(TwService.appKey.currentContext!).brightness;
 
   @protected
-  bool hasBorder = false;
+  bool _hasBorder = false;
   Color? twBorderColor = Colors.grey[500];
   BorderStyle? twBorderStyle = BorderStyle.solid;
   double twBorderWidth = 1;
@@ -39,8 +39,13 @@ mixin TwBorderMixin<T> {
     _child = child;
   }
 
+  @Deprecated('This extension is deprecated now and will no longer be available in future please consider using [hasBorder] instead')
   T get border {
-    hasBorder = true;
+    _hasBorder = true;
+    return _child;
+  }
+  T get hasBorder {
+    _hasBorder = true;
     return _child;
   }
 
@@ -50,7 +55,7 @@ mixin TwBorderMixin<T> {
   }
 
   T get borderNone {
-    hasBorder = false;
+    _hasBorder = false;
     twBorderStyle = BorderStyle.none;
     return _child;
   }
@@ -79,7 +84,7 @@ mixin TwBorderMixin<T> {
   //borderWidths
 
   Border getBorder() {
-    if (hasBorder) {
+    if (_hasBorder) {
       return Border.all(color: twBorderColor!, width: twBorderWidth);
     } else {
       return Border.all(color: Colors.transparent, width: 0);

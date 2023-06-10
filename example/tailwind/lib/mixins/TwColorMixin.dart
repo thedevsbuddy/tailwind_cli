@@ -29,21 +29,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.primaryColor(context);
     return _child;
   }
-  T get themePrimaryColor {
-    if (!_needsDarkVariant) twColor = TwColors.themePrimaryColor;
-    return _child;
-  }
   T onDarkPrimaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.primaryColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemePrimaryColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themePrimaryColor;
     }
     return _child;
   }
@@ -53,21 +42,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.primaryLightColor(context);
     return _child;
   }
-  T get themePrimaryLightColor {
-    if (!_needsDarkVariant) twColor = TwColors.themePrimaryLightColor;
-    return _child;
-  }
   T onDarkPrimaryLightColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.primaryLightColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemePrimaryLightColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themePrimaryLightColor;
     }
     return _child;
   }
@@ -77,21 +55,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.primaryDarkColor(context);
     return _child;
   }
-  T get themePrimaryDarkColor {
-    if (!_needsDarkVariant) twColor = TwColors.themePrimaryDarkColor;
-    return _child;
-  }
   T onDarkPrimaryDarkColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.primaryDarkColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemePrimaryDarkColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themePrimaryDarkColor;
     }
     return _child;
   }
@@ -101,21 +68,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.secondaryColor(context);
     return _child;
   }
-  T get themeSecondaryColor {
-    if (!_needsDarkVariant) twColor = TwColors.themeSecondaryColor;
-    return _child;
-  }
   T onDarkSecondaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.secondaryColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemeSecondaryColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themeSecondaryColor;
     }
     return _child;
   }
@@ -125,21 +81,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.backgroundColor(context);
     return _child;
   }
-  T get themeBackgroundColor {
-    if (!_needsDarkVariant) twColor = TwColors.themeBackgroundColor;
-    return _child;
-  }
   T onDarkBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.backgroundColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemeBackgroundColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themeBackgroundColor;
     }
     return _child;
   }
@@ -149,21 +94,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
-  T get themeScaffoldBackgroundColor {
-    if (!_needsDarkVariant) twColor = TwColors.themeScaffoldBackgroundColor;
-    return _child;
-  }
   T onDarkScaffoldBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.scaffoldBackgroundColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemeScaffoldBackgroundColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themeScaffoldBackgroundColor;
     }
     return _child;
   }
@@ -173,21 +107,10 @@ mixin TwColorMixin<T> {
     if (!_needsDarkVariant) twColor = TwColors.cardColor(context);
     return _child;
   }
-  T get themeCardColor {
-    if (!_needsDarkVariant) twColor = TwColors.themeCardColor;
-    return _child;
-  }
   T onDarkCardColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twColor = TwColors.cardColor(context);
-    }
-    return _child;
-  }
-  T get onDarkThemeCardColor {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.themeCardColor;
     }
     return _child;
   }

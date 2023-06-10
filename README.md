@@ -1,4 +1,4 @@
-# Tailwind CLI v0.6.1
+# Tailwind CLI v0.6.2
 
 A simple yet awesome flutter package to generate and use TailwindCSS like styling in your flutter
 projects.
@@ -25,10 +25,8 @@ Know more about the package by visiting this
 
 | Feature                                     | Status | Addition/Changes | From Version  |
 | ------------------------------------------- | :----: |:----------------:|:-------------:|
-| Dark Theme for border colors                |   ⏳   |        ✔️        | **_`0.6.1`_** |
 | `TwImage` Widget                            |   ⏳   |        ➕         |  In Progress  |
 | `TwGrid` Widget                             |   ⏳   |        ➕         |  In Progress  |
-| No use of `context` if using `TwAppBuilder` |   ⏳   |        ➕         | **_`0.6.*`_** |
 
 ---
 
