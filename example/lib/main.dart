@@ -52,6 +52,9 @@ class ExamplePage extends StatelessWidget {
             child: TwColumn(<Widget>[
               /// TwButton Example
               TwButtonExample(),
+              TwContainer(
+                child: Text("Theme Colors Without Context").isText.render(),
+              ).scaffoldBackgroundColor(context).render(),
             ]).alignStart.justifyCenter.min.render(),
           ).p3.render(),
         ),

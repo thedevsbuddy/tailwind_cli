@@ -23,11 +23,16 @@ mixin TwColorMixin<T> {
   }
   
   /// Flutter Theme Colors
+  /// ---------------------
+  /// Primary Colors
   T primaryColor(BuildContext context) {
     if (!_needsDarkVariant) twColor = TwColors.primaryColor(context);
     return _child;
   }
-  
+  T get themePrimaryColor {
+    if (!_needsDarkVariant) twColor = TwColors.themePrimaryColor;
+    return _child;
+  }
   T onDarkPrimaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -35,38 +40,71 @@ mixin TwColorMixin<T> {
     }
     return _child;
   }
-  
-  T primaryColorLight(BuildContext context) {
-    if (!_needsDarkVariant) twColor = TwColors.primaryColorLight(context);
-    return _child;
-  }
-  
-  T onDarkPrimaryColorLight(BuildContext context) {
+  T get onDarkThemePrimaryColor {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.primaryColorLight(context);
+      twColor = TwColors.themePrimaryColor;
     }
     return _child;
   }
-
-  T primaryColorDark(BuildContext context) {
-    if (!_needsDarkVariant) twColor = TwColors.primaryColorDark(context);
+  
+  /// Primary Light Colors
+  T primaryLightColor(BuildContext context) {
+    if (!_needsDarkVariant) twColor = TwColors.primaryLightColor(context);
     return _child;
   }
-
-  T onDarkPrimaryColorDark(BuildContext context) {
+  T get themePrimaryLightColor {
+    if (!_needsDarkVariant) twColor = TwColors.themePrimaryLightColor;
+    return _child;
+  }
+  T onDarkPrimaryLightColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.primaryColorDark(context);
+      twColor = TwColors.primaryLightColor(context);
     }
     return _child;
   }
-
+  T get onDarkThemePrimaryLightColor {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.themePrimaryLightColor;
+    }
+    return _child;
+  }
+  
+  /// Primary Dark Colors
+  T primaryDarkColor(BuildContext context) {
+    if (!_needsDarkVariant) twColor = TwColors.primaryDarkColor(context);
+    return _child;
+  }
+  T get themePrimaryDarkColor {
+    if (!_needsDarkVariant) twColor = TwColors.themePrimaryDarkColor;
+    return _child;
+  }
+  T onDarkPrimaryDarkColor(BuildContext context) {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.primaryDarkColor(context);
+    }
+    return _child;
+  }
+  T get onDarkThemePrimaryDarkColor {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.themePrimaryDarkColor;
+    }
+    return _child;
+  }
+  
+  /// Secondary Colors
   T secondaryColor(BuildContext context) {
-    if (!_needsDarkVariant) twColor = TwColors.secondary(context);
+    if (!_needsDarkVariant) twColor = TwColors.secondaryColor(context);
     return _child;
   }
-
+  T get themeSecondaryColor {
+    if (!_needsDarkVariant) twColor = TwColors.themeSecondaryColor;
+    return _child;
+  }
   T onDarkSecondaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -74,12 +112,23 @@ mixin TwColorMixin<T> {
     }
     return _child;
   }
-
+  T get onDarkThemeSecondaryColor {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.themeSecondaryColor;
+    }
+    return _child;
+  }
+  
+  /// Background Colors
   T backgroundColor(BuildContext context) {
     if (!_needsDarkVariant) twColor = TwColors.backgroundColor(context);
     return _child;
   }
-
+  T get themeBackgroundColor {
+    if (!_needsDarkVariant) twColor = TwColors.themeBackgroundColor;
+    return _child;
+  }
   T onDarkBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -87,12 +136,23 @@ mixin TwColorMixin<T> {
     }
     return _child;
   }
-
+  T get onDarkThemeBackgroundColor {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.themeBackgroundColor;
+    }
+    return _child;
+  }
+  
+  /// Scaffold Background Colors
   T scaffoldBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) twColor = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
-
+  T get themeScaffoldBackgroundColor {
+    if (!_needsDarkVariant) twColor = TwColors.themeScaffoldBackgroundColor;
+    return _child;
+  }
   T onDarkScaffoldBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -100,12 +160,23 @@ mixin TwColorMixin<T> {
     }
     return _child;
   }
-
+  T get onDarkThemeScaffoldBackgroundColor {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.themeScaffoldBackgroundColor;
+    }
+    return _child;
+  }
+  
+  /// Card Colors
   T cardColor(BuildContext context) {
     if (!_needsDarkVariant) twColor = TwColors.cardColor(context);
     return _child;
   }
-
+  T get themeCardColor {
+    if (!_needsDarkVariant) twColor = TwColors.themeCardColor;
+    return _child;
+  }
   T onDarkCardColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -113,7 +184,14 @@ mixin TwColorMixin<T> {
     }
     return _child;
   }
- 
+  T get onDarkThemeCardColor {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.themeCardColor;
+    }
+    return _child;
+  }
+  
   T get black {
       if(!_needsDarkVariant) twColor = TwColors.black;
       return _child;

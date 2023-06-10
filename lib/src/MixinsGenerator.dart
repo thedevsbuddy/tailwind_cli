@@ -544,7 +544,6 @@ String processBorderColors(Map<String, dynamic>? colors) {
       });
 
       /// Dark Variants
-      print(green("${Utils.configs.darkMode}"));
       if (Utils.configs.darkMode!) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {

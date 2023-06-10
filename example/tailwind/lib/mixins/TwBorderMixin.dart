@@ -5,7 +5,7 @@ mixin TwBorderMixin<T> {
   late T _child;
 
   /// Checks if app is in dark mode
-  /// And also checks if [Widget] has [onDark<Color>] applied
+  /// And also Checks if [Widget] has [onDark<Color>] applied
   @protected
   bool _needsDarkVariant = false;
 
@@ -183,18 +183,23 @@ mixin TwBorderMixin<T> {
       return Border.all(color: Colors.transparent, width: 0);
     }
   }
-
-  /// Flutter Theme Colors
+  
   T borderColor(Color color) {
     twBorderColor = color;
     return _child;
   }
   
+  /// Flutter Theme Colors
+  /// ---------------------
+  /// Primary Colors
   T borderPrimaryColor(BuildContext context) {
     if (!_needsDarkVariant) twBorderColor = TwColors.primaryColor(context);
     return _child;
   }
-  
+  T get borderThemePrimaryColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themePrimaryColor;
+    return _child;
+  }
   T onDarkBorderPrimaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -202,38 +207,95 @@ mixin TwBorderMixin<T> {
     }
     return _child;
   }
-
-  T borderPrimaryDarkColor(BuildContext context) {
-    if (!_needsDarkVariant) twBorderColor = TwColors.primaryColorDark(context);
+  T get onDarkBorderThemePrimaryColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themePrimaryColor;
+    }
     return _child;
   }
   
+  /// Primary Light Colors
+  T borderPrimaryLightColor(BuildContext context) {
+    if (!_needsDarkVariant) twBorderColor = TwColors.primaryLightColor(context);
+    return _child;
+  }
+  T get borderThemePrimaryLightColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themePrimaryLightColor;
+    return _child;
+  }
+  T onDarkBorderPrimaryLightColor(BuildContext context) {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.primaryLightColor(context);
+    }
+    return _child;
+  }
+  T get onDarkBorderThemePrimaryLightColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themePrimaryLightColor;
+    }
+    return _child;
+  }
+  
+  /// Primary Dark Colors
+  T borderPrimaryDarkColor(BuildContext context) {
+    if (!_needsDarkVariant) twBorderColor = TwColors.primaryDarkColor(context);
+    return _child;
+  }
+  T get borderThemePrimaryDarkColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themePrimaryDarkColor;
+    return _child;
+  }
   T onDarkBorderPrimaryDarkColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twBorderColor = TwColors.primaryColorDark(context);
+      twBorderColor = TwColors.primaryDarkColor(context);
+    }
+    return _child;
+  }
+  T get onDarkBorderThemePrimaryDarkColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themePrimaryDarkColor;
     }
     return _child;
   }
   
-  T borderAccentColor(BuildContext context) {
-    if (!_needsDarkVariant) twBorderColor = TwColors.secondary(context);
+  /// Secondary Colors
+  T borderSecondaryColor(BuildContext context) {
+    if (!_needsDarkVariant) twBorderColor = TwColors.secondaryColor(context);
     return _child;
   }
-  
-  T onDarkBorderAccentColor(BuildContext context) {
+  T get borderThemeSecondaryColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themeSecondaryColor;
+    return _child;
+  }
+  T onDarkBorderSecondaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twBorderColor = TwColors.secondary(context);
+      twBorderColor = TwColors.secondaryColor(context);
+    }
+    return _child;
+  }
+  T get onDarkBorderThemeSecondaryColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themeSecondaryColor;
     }
     return _child;
   }
   
+  /// Background Colors
   T borderBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) twBorderColor = TwColors.backgroundColor(context);
     return _child;
   }
-  
+  T get borderThemeBackgroundColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themeBackgroundColor;
+    return _child;
+  }
   T onDarkBorderBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -241,12 +303,23 @@ mixin TwBorderMixin<T> {
     }
     return _child;
   }
-
+  T get onDarkBorderThemeBackgroundColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themeBackgroundColor;
+    }
+    return _child;
+  }
+  
+  /// Scaffold Background Colors
   T borderScaffoldBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) twBorderColor = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
-  
+  T get borderThemeScaffoldBackgroundColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themeScaffoldBackgroundColor;
+    return _child;
+  }
   T onDarkBorderScaffoldBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -254,16 +327,34 @@ mixin TwBorderMixin<T> {
     }
     return _child;
   }
+  T get onDarkBorderThemeScaffoldBackgroundColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themeScaffoldBackgroundColor;
+    }
+    return _child;
+  }
   
+  /// Card Colors
   T borderCardColor(BuildContext context) {
     if (!_needsDarkVariant) twBorderColor = TwColors.cardColor(context);
     return _child;
   }
-  
+  T get borderThemeCardColor {
+    if (!_needsDarkVariant) twBorderColor = TwColors.themeCardColor;
+    return _child;
+  }
   T onDarkBorderCardColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       twBorderColor = TwColors.cardColor(context);
+    }
+    return _child;
+  }
+  T get onDarkBorderThemeCardColor {
+      if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twBorderColor = TwColors.themeCardColor;
     }
     return _child;
   }

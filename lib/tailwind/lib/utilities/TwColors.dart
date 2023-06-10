@@ -13,6 +13,7 @@ const String file = "tailwind/lib/utilities/TwColors.dart";
 /// [stub] This gives a boilerplate for the `TwColors` class
 const String stub = """
 import "package:flutter/material.dart";
+import "package:tailwind/tailwind.dart";
 
 /// [TwColors] Utility helper for [Tailwind] Colors
 class TwColors {
@@ -20,11 +21,10 @@ class TwColors {
 
   /// Theme Colors
   static Color primaryColor(BuildContext context) => Theme.of(context).primaryColor;
-  static Color primaryColorDark(BuildContext context) => Theme.of(context).primaryColorDark;
-  static Color primaryColorLight(BuildContext context) => Theme.of(context).primaryColorLight;
-  static Color secondary(BuildContext context) => Theme.of(context).colorScheme.secondary;
+  static Color primaryLightColor(BuildContext context) => Theme.of(context).primaryColorLight;
+  static Color primaryDarkColor(BuildContext context) => Theme.of(context).primaryColorDark;
   static Color secondaryColor(BuildContext context) => Theme.of(context).colorScheme.secondary;
-  static Color backgroundColor(BuildContext context) => Theme.of(context).backgroundColor;
+  static Color backgroundColor(BuildContext context) => Theme.of(context).colorScheme.background;
   static Color scaffoldBackgroundColor(BuildContext context) => Theme.of(context).scaffoldBackgroundColor;
   static Color cardColor(BuildContext context) => Theme.of(context).cardColor;
 

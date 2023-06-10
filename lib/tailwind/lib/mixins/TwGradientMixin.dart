@@ -95,13 +95,18 @@ mixin TwGradientMixin<T> {
     return _child;
   }
   
-  // Gradient Colors
+  ///---------------------
+  /// Gradient Colors
+  ///---------------------
+  
   /// Flutter Theme Colors
+  ///----------------------
+  
+  /// Primary Colors
   T fromPrimaryColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryColor(context);
     return _child;
   }
-
   T onDarkFromPrimaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -109,12 +114,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-
   T toPrimaryColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryColor(context);
     return _child;
   }
-
   T onDarkToPrimaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -122,64 +125,84 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-
-  T fromPrimaryColorDark(BuildContext context) {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryColorDark(context);
+ 
+   /// Primary Light Colors
+  T fromPrimaryLightColor(BuildContext context) {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryLightColor(context);
     return _child;
   }
-
-  T onDarkFromPrimaryColorDark(BuildContext context) {
+  T onDarkFromPrimaryLightColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.primaryColorDark(context);
+      gradientColors[0] = TwColors.primaryLightColor(context);
     }
     return _child;
   }
-
-  T toPrimaryColorDark(BuildContext context) {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryColorDark(context);
+  T toPrimaryLightColor(BuildContext context) {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryLightColor(context);
     return _child;
   }
-
-  T onDarkToPrimaryColorDark(BuildContext context) {
+  T onDarkToPrimaryLightColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.primaryColorDark(context);
+      gradientColors[1] = TwColors.primaryLightColor(context);
     }
     return _child;
   }
-
+  
+  /// Primary Dark Colors
+  T fromPrimaryDarkColor(BuildContext context) {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.primaryDarkColor(context);
+    return _child;
+  }
+  T onDarkFromPrimaryDarkColor(BuildContext context) {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.primaryDarkColor(context);
+    }
+    return _child;
+  }
+  T toPrimaryDarkColor(BuildContext context) {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.primaryDarkColor(context);
+    return _child;
+  }
+  T onDarkToPrimaryDarkColor(BuildContext context) {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.primaryDarkColor(context);
+    }
+    return _child;
+  }
+  
+  /// Secondary Colors
   T fromSecondaryColor(BuildContext context) {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.secondary(context);
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.secondaryColor(context);
     return _child;
   }
-
   T onDarkFromSecondaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.secondary(context);
+      gradientColors[0] = TwColors.secondaryColor(context);
     }
     return _child;
   }
-
   T toSecondaryColor(BuildContext context) {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.secondary(context);
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.secondaryColor(context);
     return _child;
   }
-
   T onDarkToSecondaryColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.secondary(context);
+      gradientColors[1] = TwColors.secondaryColor(context);
     }
     return _child;
   }
 
+  /// Background Colors
   T fromBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.backgroundColor(context);
     return _child;
   }
-
   T onDarkFromBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -187,12 +210,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-
   T toBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.backgroundColor(context);
     return _child;
   }
-
   T onDarkToBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -201,11 +222,11 @@ mixin TwGradientMixin<T> {
     return _child;
   }
 
+  /// Scaffold Background Colors
   T fromScaffoldBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
-
   T onDarkFromScaffoldBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -213,12 +234,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-
   T toScaffoldBackgroundColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.scaffoldBackgroundColor(context);
     return _child;
   }
-
   T onDarkToScaffoldBackgroundColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -227,11 +246,11 @@ mixin TwGradientMixin<T> {
     return _child;
   }
 
+  /// Card Colors
   T fromCardColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.cardColor(context);
     return _child;
   }
-
   T onDarkFromCardColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
@@ -239,12 +258,10 @@ mixin TwGradientMixin<T> {
     }
     return _child;
   }
-
   T toCardColor(BuildContext context) {
     if (!_needsDarkVariant) gradientColors[1] = TwColors.cardColor(context);
     return _child;
   }
-
   T onDarkToCardColor(BuildContext context) {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
