@@ -542,14 +542,14 @@ packages:
       path: tailwind
       relative: true
     source: path
-    version: "0.6.0"
+    version: "0.6.1"
   tailwind_cli:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.6.0"
+    version: "0.6.3"
   term_glyph:
     dependency: transitive
     description:

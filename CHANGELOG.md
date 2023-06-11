@@ -1,3 +1,8 @@
+## 0.6.3
+
+- Fixed `TwText` Widget
+  - Removed `text()` method as we dont need it
+
 ## 0.6.2
 
 - Fixed color conflict issue

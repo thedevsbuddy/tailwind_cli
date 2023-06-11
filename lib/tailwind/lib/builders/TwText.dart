@@ -42,14 +42,6 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TextBaseline? _textBaseline;
   bool? _softWrap;
 
-  /// The text to display.
-  ///
-  /// This will be null if a [textSpan] is provided instead.
-  TwText text(String text) {
-    _text = text;
-    return this;
-  }
-
   /// Set [color] of the text
   TwText color(Color color) {
     twColor = color;

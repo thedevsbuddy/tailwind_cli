@@ -8,7 +8,7 @@ class TwButtonExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return TwColumn(<Widget>[
       TwContainer(
-        child: TwColumn([
+        child: TwColumn(<Widget>[
           "TwButton constructor".isText.red600.render().isContainer.mb4.render(),
           TwButton(
             child: "TwButton with constructor".isText.buttonText(context).white.render(),
