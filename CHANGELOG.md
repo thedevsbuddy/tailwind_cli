@@ -1,3 +1,11 @@
+## 0.6.4
+
+- Fixed `TwStack` Widget
+- Added Extensions for `StackFit` property
+  - `.fitExpand` for `StackFit.expand`
+  - `.fitLoose` for `StackFit.loose`
+  - `.fitPassthrough` for `StackFit.passthrough`
+
 ## 0.6.3
 
 - Fixed `TwText` Widget

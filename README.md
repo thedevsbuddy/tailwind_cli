@@ -1,4 +1,4 @@
-# Tailwind CLI v0.6.3
+# Tailwind CLI v0.6.4
 
 A simple yet awesome flutter package to generate and use TailwindCSS like styling in your flutter
 projects.
@@ -28,6 +28,7 @@ Know more about the package by visiting this
 | `TwImage` Widget      |   ⏳   |        ➕        | In Progress  |
 | `TwGrid` Widget       |   ⏳   |        ➕        | In Progress  |
 | `TwPositioned` Widget |   ⏳   |        ➕        | In Progress  |
+| `TwPadding` Widget    |   ⏳   |        ➕        | In Progress  |
 
 ---
 
