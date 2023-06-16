@@ -16,12 +16,13 @@ Contribution to this repository is very simple you can just fork this repository
 
 ## Contribute to docs.
 
-You can contribute to the documentation as well for that you can switch to the docs branch and add or edit the documentation code.
+Please refer to this [TailwindCLI Docs](https://github.com/thedevsbuddy/tailwind-cli-docs) repository.
 
-- Fork the Repository if not already.
-- Switch to the `docs` branch.
-- Add or edit the documentation code.
-- Make a `PR`.
+Steps contribute:
+- Fork repository
+- Setup it in your machine
+- Make changes or add documentation
+- Create a `PR` to original repo.
 - Thats it.
 
-Now i will check if the documentation is matching project's requirements then will merge it and make it public.
+I am gonna check if it fits our documentation.
