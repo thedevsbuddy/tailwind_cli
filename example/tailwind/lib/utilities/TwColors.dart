@@ -304,7 +304,7 @@ static const MaterialColor rose = MaterialColor(0xFFF43F5E, <int, Color>{
 		900: Color(0xFF881337),
 		});
 
-static const MaterialColor primary = MaterialColor(0xFF20446A, <int, Color>{
+static const MaterialColor primary = MaterialColor(0xFFDC873C, <int, Color>{
 		});
 
 

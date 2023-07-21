@@ -2,8 +2,11 @@
   "darkMode": true,
   "colors": {
     "primary": {
-      "DEFAULT": "#20446A"
+      "DEFAULT": "#dc873c"
     }
   },
-  "spacers" : {}
+  "spacers": {},
+  "fontSizes": {},
+  "opacity": {}
 }
+
