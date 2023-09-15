@@ -13,7 +13,6 @@ const String file = "tailwind/lib/utilities/TwColors.dart";
 /// [stub] This gives a boilerplate for the `TwColors` class
 const String stub = """
 import "package:flutter/material.dart";
-import "package:tailwind/tailwind.dart";
 
 /// [TwColors] Utility helper for [Tailwind] Colors
 class TwColors {

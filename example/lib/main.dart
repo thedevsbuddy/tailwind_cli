@@ -1,3 +1,4 @@
+import 'package:example/Widgets/TwAboutSection.dart';
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 
@@ -50,10 +51,13 @@ class ExamplePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: TwPadding(
             child: TwColumn(<Widget>[
+              TwAbountSection(),
+              TwImage('https://picsum.photos/500').wFull.render(),
+
               /// TwButton Example
               TwButtonExample(),
             ]).alignStart.justifyCenter.min.render(),
-          ).p3.render(),
+          ).py4.px3.render(),
         ),
       ),
     );

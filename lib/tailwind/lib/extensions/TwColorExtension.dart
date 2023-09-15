@@ -17,6 +17,7 @@ import 'package:flutter/material.dart';
 /// Extension Methods for colors
 extension TwColorExtension on Color {
   Color o(double value) => this.withOpacity(value);
+  Color withOpacity(double value) => this.withOpacity(value);
   //opacity
 }
 """;

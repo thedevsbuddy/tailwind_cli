@@ -1,17 +1,3 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwImage` class
-const String target = "tailwind/lib/widgets/";
-
-/// Get the full file path for the `TwImage` Class
-///
-/// [file] This gives a boilerplate for the `TwImage` class
-const String file = "tailwind/lib/widgets/TwImage.dart";
-
-/// Get the stub content for the `TwImage` Class
-///
-/// [stub] This gives a boilerplate for the `TwImage` class
-const String stub = """
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -115,7 +101,65 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
     return this;
   }
 
-  %opacity%
+  TwImage get o0 => this.._opacity = AlwaysStoppedAnimation(0.0);
+  TwImage get opacity0 => this.._opacity = AlwaysStoppedAnimation(0.0);
+
+  TwImage get o10 => this.._opacity = AlwaysStoppedAnimation(0.1);
+  TwImage get opacity10 => this.._opacity = AlwaysStoppedAnimation(0.1);
+
+  TwImage get o15 => this.._opacity = AlwaysStoppedAnimation(0.15);
+  TwImage get opacity15 => this.._opacity = AlwaysStoppedAnimation(0.15);
+
+  TwImage get o20 => this.._opacity = AlwaysStoppedAnimation(0.2);
+  TwImage get opacity20 => this.._opacity = AlwaysStoppedAnimation(0.2);
+
+  TwImage get o25 => this.._opacity = AlwaysStoppedAnimation(0.25);
+  TwImage get opacity25 => this.._opacity = AlwaysStoppedAnimation(0.25);
+
+  TwImage get o30 => this.._opacity = AlwaysStoppedAnimation(0.3);
+  TwImage get opacity30 => this.._opacity = AlwaysStoppedAnimation(0.3);
+
+  TwImage get o35 => this.._opacity = AlwaysStoppedAnimation(0.35);
+  TwImage get opacity35 => this.._opacity = AlwaysStoppedAnimation(0.35);
+
+  TwImage get o40 => this.._opacity = AlwaysStoppedAnimation(0.4);
+  TwImage get opacity40 => this.._opacity = AlwaysStoppedAnimation(0.4);
+
+  TwImage get o45 => this.._opacity = AlwaysStoppedAnimation(0.45);
+  TwImage get opacity45 => this.._opacity = AlwaysStoppedAnimation(0.45);
+
+  TwImage get o50 => this.._opacity = AlwaysStoppedAnimation(0.5);
+  TwImage get opacity50 => this.._opacity = AlwaysStoppedAnimation(0.5);
+
+  TwImage get o55 => this.._opacity = AlwaysStoppedAnimation(0.55);
+  TwImage get opacity55 => this.._opacity = AlwaysStoppedAnimation(0.55);
+
+  TwImage get o60 => this.._opacity = AlwaysStoppedAnimation(0.6);
+  TwImage get opacity60 => this.._opacity = AlwaysStoppedAnimation(0.6);
+
+  TwImage get o65 => this.._opacity = AlwaysStoppedAnimation(0.65);
+  TwImage get opacity65 => this.._opacity = AlwaysStoppedAnimation(0.65);
+
+  TwImage get o70 => this.._opacity = AlwaysStoppedAnimation(0.7);
+  TwImage get opacity70 => this.._opacity = AlwaysStoppedAnimation(0.7);
+
+  TwImage get o75 => this.._opacity = AlwaysStoppedAnimation(0.75);
+  TwImage get opacity75 => this.._opacity = AlwaysStoppedAnimation(0.75);
+
+  TwImage get o80 => this.._opacity = AlwaysStoppedAnimation(0.8);
+  TwImage get opacity80 => this.._opacity = AlwaysStoppedAnimation(0.8);
+
+  TwImage get o85 => this.._opacity = AlwaysStoppedAnimation(0.85);
+  TwImage get opacity85 => this.._opacity = AlwaysStoppedAnimation(0.85);
+
+  TwImage get o90 => this.._opacity = AlwaysStoppedAnimation(0.9);
+  TwImage get opacity90 => this.._opacity = AlwaysStoppedAnimation(0.9);
+
+  TwImage get o95 => this.._opacity = AlwaysStoppedAnimation(0.95);
+  TwImage get opacity95 => this.._opacity = AlwaysStoppedAnimation(0.95);
+
+  TwImage get o100 => this.._opacity = AlwaysStoppedAnimation(1.0);
+  TwImage get opacity100 => this.._opacity = AlwaysStoppedAnimation(1.0);
 
   /// BoxFit
   TwImage get cover => this.._fit = BoxFit.cover;
@@ -184,5 +228,3 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
               );
   }
 }
-
-""";

@@ -23,5 +23,7 @@ class TwService {
   static void setThemeMode(ThemeMode mode) => TwAppBuilder.of(appKey.currentContext!)!.setThemeMode(mode);
 
   static Future<void> init() async => await GetStorage.init();
+
+  static BuildContext get context => appKey.currentContext!;
 }
 """;

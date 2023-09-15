@@ -25,7 +25,7 @@ Know more about the package by visiting this
 
 | Feature               | Status | Addition/Changes | From Version |
 | --------------------- | :----: | :--------------: | :----------: |
-| `TwImage` Widget      |   ⏳   |        ➕        | In Progress  |
+| `TwImage` Widget      |   ✔️   |        ➕        | In Progress  |
 | `TwGrid` Widget       |   ⏳   |        ➕        | In Progress  |
 | `TwPositioned` Widget |   ⏳   |        ➕        | In Progress  |
 | `TwPadding` Widget    |   ⏳   |        ➕        | In Progress  |

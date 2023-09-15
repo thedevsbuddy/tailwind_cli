@@ -384,6 +384,7 @@ const Map<String, dynamic> fontSizes = {
 };
 
 const Map<String, dynamic> opacity = {
+  "0": "0.0",
   "10": "0.1",
   "15": "0.15",
   "20": "0.2",
@@ -402,4 +403,5 @@ const Map<String, dynamic> opacity = {
   "85": "0.85",
   "90": "0.9",
   "95": "0.95",
+  "100": "1.0",
 };

@@ -1,12 +1,11 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart'
-    as twAppBuilder;
+import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart' as twAppBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
 import 'package:tailwind_cli/tailwind/lib/builders/TwColumn.dart' as twColumn;
-import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart'
-    as twContainer;
+import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart' as twContainer;
+import 'package:tailwind_cli/tailwind/lib/builders/TwImage.dart' as twImage;
 import 'package:tailwind_cli/tailwind/lib/builders/TwPadding.dart' as twPadding;
 import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
 import 'package:tailwind_cli/tailwind/lib/builders/TwStack.dart' as twStack;
@@ -26,6 +25,7 @@ Future<void> generate(List<String> args) async {
   await generateTwPadding();
   await generateTwStack();
   await generateTwInkWell();
+  await generateTwImage();
 }
 
 /// Generate [TwBuilder]
@@ -94,8 +94,7 @@ Future<void> generateTwText() async {
   var twTextFileData = twText.stub;
 
   /// Process stub Template / File
-  twTextFileData = twTextFileData.replaceAll(
-      "//fontSizes", processFontSizes(Utils.configs.fontSizes));
+  twTextFileData = twTextFileData.replaceAll("//fontSizes", processFontSizes(Utils.configs.fontSizes));
 
   /// Check and create
   Utils.makeDir(twText.target);
@@ -114,15 +113,12 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   var fontSize = "";
   fontSizes.forEach((key, value) {
     if (key == 'base') {
-      fontSize +=
-          """TwText get textBase => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
+      fontSize += """TwText get textBase => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
-      fontSize +=
-          """TwText get text${dot[0].toUpperCase()}${dot.substring(1)} => this.._fontSize = TwSizes.text${dot[0].toUpperCase()}${dot.substring(1)};\n\t""";
+      fontSize += """TwText get text${dot[0].toUpperCase()}${dot.substring(1)} => this.._fontSize = TwSizes.text${dot[0].toUpperCase()}${dot.substring(1)};\n\t""";
     } else {
-      fontSize +=
-          """TwText get text${key[0].toUpperCase()}${key.substring(1)} => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
+      fontSize += """TwText get text${key[0].toUpperCase()}${key.substring(1)} => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
     }
   });
 
@@ -191,3 +187,39 @@ Future<void> generateTwInkWell() async {
   /// Show Success message
   print(green("TwInkWell generated successfully!"));
 }
+
+/// Generate [TwImage]
+Future<void> generateTwImage() async {
+  /// Get Tw Utility stub Template / File
+  var twImageData = twImage.stub;
+
+  /// Process stub Template / File
+  twImageData = twImageData.replaceAll("%opacity%", processOpacity(Utils.configs.opacity));
+
+  /// Check and create
+  Utils.makeDir(twImage.target);
+
+  /// Write File
+  Utils.writeFile(twImage.file, twImageData);
+
+  /// Show Success message
+  print(green("TwImage generated successfully!"));
+}
+
+String processOpacity(Map<String, dynamic>? opacity) {
+  if (opacity == null) {
+    return "";
+  }
+  var op = "";
+  opacity.forEach((key, value) {
+    if (value != '' || key != '') {
+      op += "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t";
+      op += "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t\n\t";
+    }
+  });
+  return op;
+}
+
+
+  // TwImage get o20 => this.._opacity = AlwaysStoppedAnimation(.5);
+  // TwImage get opacity20 => this.._opacity = AlwaysStoppedAnimation(.5);

@@ -1,13 +1,9 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/extensions/TwColorExtension.dart'
-    as twColorExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwContextExtension.dart'
-    as twContextExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwNumbersExtension.dart'
-    as twNumbersExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwWidgetExtension.dart'
-    as twWidgetExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwColorExtension.dart' as twColorExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwContextExtension.dart' as twContextExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwNumbersExtension.dart' as twNumbersExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwWidgetExtension.dart' as twWidgetExtension;
 
 Future<void> generate(List<String> args) async {
   await generateTwColorExtension();
@@ -22,8 +18,7 @@ Future<void> generateTwColorExtension() async {
   var twColorExtensionData = twColorExtension.stub;
 
   /// Process stub Template / File
-  twColorExtensionData = twColorExtensionData.replaceAll(
-      "//opacity", processOpacity(Utils.configs.opacity));
+  twColorExtensionData = twColorExtensionData.replaceAll("//opacity", processOpacity(Utils.configs.opacity));
 
   /// Check and create
   Utils.makeDir(twColorExtension.target);
@@ -43,6 +38,7 @@ String processOpacity(Map<String, dynamic>? opacity) {
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
       op += "Color get o$key => this.withOpacity($value);\n\t";
+      op += "Color get opacity$key => this.withOpacity($value);\n\t\n\t";
     }
   });
   return op;

@@ -1,3 +1,12 @@
+## 0.7.0
+- Added `TwImage` Widget
+- Updated `TwColorExtenstion`
+  - Repair `opacity` extensions
+  - Added `withOpacity` method
+- Added `context` property to `TwService` class
+  - Now you can access context from anywhere in the app using `TwService.context`
+
+
 ## 0.6.4
 
 - Fixed `TwStack` Widget
