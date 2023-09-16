@@ -143,7 +143,7 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
 
     return _imageType == ImageType.ASSET
         ? ClipRRect(
-            borderRadius: radiusGeometry,
+            borderRadius: (roundness == null) ? BorderRadius.zero : (radiusGeometry ?? BorderRadius.circular(roundness!)),
             child: Image.asset(
               path,
               key: key,
@@ -160,7 +160,7 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
           )
         : (_imageType == ImageType.FILE)
             ? ClipRRect(
-                borderRadius: radiusGeometry,
+            borderRadius: (roundness == null) ? BorderRadius.zero : (radiusGeometry ?? BorderRadius.circular(roundness!)),
                 child: Image.file(
                   _filePath!,
                   key: key,
@@ -176,7 +176,7 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
                 ),
               )
             : ClipRRect(
-                borderRadius: radiusGeometry,
+            borderRadius: (roundness == null) ? BorderRadius.zero : (radiusGeometry ?? BorderRadius.circular(roundness!)),
                 child: Image.network(
                   path,
                   key: key,
