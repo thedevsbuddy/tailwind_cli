@@ -142,45 +142,54 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
     }
 
     return _imageType == ImageType.ASSET
-        ? Image.asset(
-            path,
-            key: key,
-            color: twColor,
-            width: _width,
-            height: _height,
-            opacity: _opacity,
-            colorBlendMode: _colorBlendMode,
-            fit: _fit,
-            alignment: _alignment,
-            repeat: _repeat,
-            filterQuality: _filterQuality,
+        ? ClipRRect(
+            borderRadius: radiusGeometry,
+            child: Image.asset(
+              path,
+              key: key,
+              color: twColor,
+              width: _width,
+              height: _height,
+              opacity: _opacity,
+              colorBlendMode: _colorBlendMode,
+              fit: _fit,
+              alignment: _alignment,
+              repeat: _repeat,
+              filterQuality: _filterQuality,
+            ),
           )
         : (_imageType == ImageType.FILE)
-            ? Image.file(
-                _filePath!,
-                key: key,
-                color: twColor,
-                width: _width,
-                height: _height,
-                opacity: _opacity,
-                colorBlendMode: _colorBlendMode,
-                fit: _fit,
-                alignment: _alignment,
-                repeat: _repeat,
-                filterQuality: _filterQuality,
+            ? ClipRRect(
+                borderRadius: radiusGeometry,
+                child: Image.file(
+                  _filePath!,
+                  key: key,
+                  color: twColor,
+                  width: _width,
+                  height: _height,
+                  opacity: _opacity,
+                  colorBlendMode: _colorBlendMode,
+                  fit: _fit,
+                  alignment: _alignment,
+                  repeat: _repeat,
+                  filterQuality: _filterQuality,
+                ),
               )
-            : Image.network(
-                path,
-                key: key,
-                color: twColor,
-                width: _width,
-                height: _height,
-                opacity: _opacity,
-                colorBlendMode: _colorBlendMode,
-                fit: _fit,
-                alignment: _alignment,
-                repeat: _repeat,
-                filterQuality: _filterQuality,
+            : ClipRRect(
+                borderRadius: radiusGeometry,
+                child: Image.network(
+                  path,
+                  key: key,
+                  color: twColor,
+                  width: _width,
+                  height: _height,
+                  opacity: _opacity,
+                  colorBlendMode: _colorBlendMode,
+                  fit: _fit,
+                  alignment: _alignment,
+                  repeat: _repeat,
+                  filterQuality: _filterQuality,
+                ),
               );
   }
 }
