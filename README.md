@@ -87,10 +87,10 @@ There are several methods that can be used to build tailwind-like styles for any
   - But with this library, you can add padding with just a few characters.
 - **Margins**: Same applies to the margins.
 - **Text Colors**: We have a great palette of colors that can be used for any text widget with few characters of code.
-  - For example `Text("Flutter is awesome").text.red500.render()`.
+  - For example `Text("Flutter is awesome").isText.red500.render()`.
   - See that we only need to call the color name to set the color for the text widget.
 - **Background Colors**: Same color palette can be used for a background color for any widget with few code characters.
-  - For example `Container(height: 500, width: 500).container.red500.render()`.
+  - For example `Container(height: 500, width: 500).isContainer.red500.render()`.
   - See that we only need to call the color name to set the background color for the container widget.
 - [See more](https://docs.devsbuddy.com/tailwind-cli/)
 
