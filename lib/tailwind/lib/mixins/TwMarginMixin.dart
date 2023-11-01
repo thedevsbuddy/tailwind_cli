@@ -79,6 +79,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
   
-  //marginGetters  
+  %marginGetters%  
 }
 """;

@@ -129,6 +129,6 @@ mixin TwColorMixin<T> {
     return _child;
   }
   
-  //colorGetters
+  %colorGetters%
 }
 """;

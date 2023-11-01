@@ -13,6 +13,7 @@ import 'package:tailwind_cli/tailwind/lib/mixins/TwPaddingMixin.dart' as twPaddi
 import 'package:tailwind_cli/tailwind/lib/mixins/TwRoundnessMixin.dart' as twRoundnessMixin;
 import 'package:tailwind_cli/tailwind/lib/mixins/TwShadowMixin.dart' as twShadowMixin;
 import 'package:tailwind_cli/tailwind/lib/mixins/TwGestureMixin.dart' as twGestureMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwSizeMixin.dart' as twSizeMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -23,6 +24,7 @@ Future<void> generate(List<String> args) async {
   await generateGradientMixin();
   await generateBorderMixin();
   await generateGestureMixin();
+  await generateSizeMixin();
 }
 
 /// Generate Color Mixin
@@ -48,7 +50,7 @@ Future<void> generateColorMixin() async {
   var twColorMixinFileData = twColorMixin.stub;
 
   /// Process stub Template / File
-  twColorMixinFileData = twColorMixinFileData.replaceAll("//colorGetters", processColors(configs['colors']));
+  twColorMixinFileData = twColorMixinFileData.replaceAll("%colorGetters%", processColors(configs['colors']));
 
   /// Check and create
   Utils.makeDir(twColorMixin.target);
@@ -138,8 +140,8 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("//paddingGetters", processPaddings(Utils.configs.spacers));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll("//marginGetters", processMargins(Utils.configs.spacers));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("%paddingGetters%", processPaddings(Utils.configs.spacers));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll("%marginGetters%", processMargins(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -392,7 +394,7 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData = twGradientMixinFileData.replaceAll("//gradientColors", processGradientColors(Utils.configs.colors));
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll("%gradientColors%", processGradientColors(Utils.configs.colors));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -627,4 +629,16 @@ Future<void> generateGestureMixin() async {
 
   /// Show Success message
   print(green("TwGesture Mixin generated successfully!"));
+}
+
+/// Generate [TwSizeMixin] Mixin
+Future<void> generateSizeMixin() async {
+  /// Check and create
+  Utils.makeDir(twSizeMixin.target);
+
+  /// Write File
+  Utils.writeFile(twSizeMixin.file, twSizeMixin.stub);
+
+  /// Show Success message
+  print(green("TwSize Mixin generated successfully!"));
 }

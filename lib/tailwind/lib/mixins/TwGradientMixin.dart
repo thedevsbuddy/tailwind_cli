@@ -270,6 +270,6 @@ mixin TwGradientMixin<T> {
     return _child;
   }
 
-  //gradientColors
+  %gradientColors%
 }
 """;

@@ -11,7 +11,8 @@ class TwContainer extends TwWidgetBuilder<Widget>
         TwGradientMixin<TwContainer>,
         TwRoundnessMixin<TwContainer>,
         TwBorderMixin<TwContainer>,
-        TwShadowMixin<TwContainer> {
+        TwShadowMixin<TwContainer>,
+        TwSizeMixin<TwContainer> {
   TwContainer({this.child}) {
     setChildForAlignment(this);
     setChildForColoring(this);
@@ -21,6 +22,7 @@ class TwContainer extends TwWidgetBuilder<Widget>
     setChildForRoundness(this);
     setChildForShadow(this);
     setChildForBorder(this);
+    setChildForSizing(this);
   }
 
   final Widget? child;

@@ -79,6 +79,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
   
-  //paddingGetters
+  %paddingGetters%
 }
 """;

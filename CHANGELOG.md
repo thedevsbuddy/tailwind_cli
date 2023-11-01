@@ -5,6 +5,9 @@
   - Added `withOpacity` method
 - Added `context` property to `TwService` class
   - Now you can access context from anywhere in the app using `TwService.context`
+- Added `TwSizeMixin`
+  - Now we are providing some predefined sizes in aspect of Screen Size 
+  - You can apply fraction sizes by using this new helper mixin
 
 
 ## 0.6.4
