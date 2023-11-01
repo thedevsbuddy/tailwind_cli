@@ -25,7 +25,7 @@ Know more about the package by visiting this
 
 | Feature               | Status | Addition/Changes | From Version |
 | --------------------- | :----: | :--------------: | :----------: |
-| `TwImage` Widget      |   ✔️   |        ➕        | In Progress  |
+| `TwImage` Widget      |   ✔️   |        ➕        |   `0.7.0`    |
 | `TwGrid` Widget       |   ⏳   |        ➕        | In Progress  |
 | `TwPositioned` Widget |   ⏳   |        ➕        | In Progress  |
 
@@ -57,9 +57,9 @@ same which can be used in Flutter but found nothing which is similar to `tailwin
 So I thought why I can't make this feature with mainly focusing on the UI in our flutter projects? For this, I created this project and thankfully it worked.
 
 ### What makes TailwindCLI better choice for Styling
+
 The main porpose of this package is to provide you a better experience while building your flutter apps and also allow you to customize the default styling that this package provides, so you can easily create your own design system according to your app's need.
 And as i mentioned above about the `VelocityX` package if it was there then why we needed a new package you may ask? So let me clear your concern. As you can check that `VelocityX` project is not only focusing on the UI styling they are also providing some other features like: `State Management`, `Routing` etc. And most of the people wont use all the features from this package as they can use `Block` or `Provider` or any other library for `State Management` and `GetX` for Routing. And also `TailwindCLI` is providing customization option which `VelocityX` don't have. I am not saying that `VelocityX` is not a good solution it is indeed a great library that i used a long time ago but it was lacking some features that lead me to create my own library.
-
 
 ### Highlights
 
