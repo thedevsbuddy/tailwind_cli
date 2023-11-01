@@ -81,7 +81,7 @@ mixin TwBorderMixin<T> {
     return _child;
   }
 
-  //borderWidths
+  %sizes%
 
   Border getBorder() {
     if (_hasBorder) {
@@ -189,7 +189,7 @@ mixin TwBorderMixin<T> {
     return _child;
   }
   
-  //borderColors
+  %colors%
 }
 
 """;

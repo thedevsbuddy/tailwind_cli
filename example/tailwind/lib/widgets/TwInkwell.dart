@@ -3,8 +3,8 @@ import 'package:tailwind/tailwind.dart';
 
 import 'TwBuilder.dart';
 
-/// Flutter Wrap Builder Widget
-/// to provide utilities in your Wrap Widget
+/// [TwInkwell] widget is wrapper around the actual [InkWell] Widget
+///
 @protected
 class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   TwInkWell({this.child}) {
@@ -58,7 +58,8 @@ class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
       this.._customBorder = customBorder;
   TwInkWell focusNode(FocusNode focusNode) => this.._focusNode = focusNode;
 
-  /// ============== RENDER INKWELL WIDGET ============== ///
+  /// It Renders [InkWell] Widget
+  ///
   @override
   Widget render({Key? key}) {
     return InkWell(

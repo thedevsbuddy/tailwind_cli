@@ -506,8 +506,8 @@ Future<void> generateBorderMixin() async {
   var twBorderMixinFileData = twBorderMixin.stub;
 
   /// Process stub Template / File
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderColors", processBorderColors(Utils.configs.colors));
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll("//borderWidths", processBorderWidths(Utils.configs.spacers));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("%colors%", processBorderColors(Utils.configs.colors));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("%sizes%", processBorderWidths(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twBorderMixin.target);
