@@ -1,3 +1,12 @@
+## 0.7.1
+- Fixed `TwImage` Widget
+- Fixed `TwButton` Widget
+- Fixed `TwContainer` Widget
+- Fixed `TwPadding` Widget
+- Fixed `TwSizeMixin` Mixin
+- Fixed `TwPaddingMixin` Mixin
+- Fixed `TwMarginMixin` Mixin
+
 ## 0.7.0
 - Added `TwImage` Widget
 - Updated `TwColorExtenstion`

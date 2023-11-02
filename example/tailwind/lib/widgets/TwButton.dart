@@ -38,7 +38,6 @@ class TwButton extends TwWidgetBuilder<Widget>
   double? _width;
   Clip? _clip;
   Matrix4? _transform;
-  EdgeInsetsGeometry? _padding, _margin;
   DecorationImage? _bgImage;
   BoxDecoration? _decoration, _foregroundDecoration;
   BoxConstraints? _constraints;
@@ -70,12 +69,6 @@ class TwButton extends TwWidgetBuilder<Widget>
   /// Provide a box constraint
   TwButton withConstraints(BoxConstraints constraints) =>
       this.._constraints = constraints;
-
-  /// Sets the padding property of the box.
-  TwButton padding(EdgeInsetsGeometry val) => this.._padding = val;
-
-  /// Sets the margin property of the box.
-  TwButton margin(EdgeInsetsGeometry val) => this.._margin = val;
 
   /// Sets the color property of the box.
   TwButton color(Color color) => this..twColor = color;
@@ -171,12 +164,8 @@ class TwButton extends TwWidgetBuilder<Widget>
             constraints: _constraints,
             clipBehavior: _clip ?? Clip.none,
             width: _width,
-            padding: _padding ??
-                EdgeInsets.fromLTRB(
-                    paddingLeft, paddingTop, paddingRight, paddingBottom),
-            margin: _margin ??
-                EdgeInsets.fromLTRB(
-                    marginLeft, marginTop, marginRight, marginBottom),
+            padding: twPadding,
+            margin: twMargin,
             alignment: twAlignment,
             transform: _transform,
             child: _isBusy ? _loadingWidget : child,

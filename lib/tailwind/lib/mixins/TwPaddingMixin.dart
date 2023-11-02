@@ -18,7 +18,8 @@ import 'package:tailwind/tailwind.dart';
 mixin TwPaddingMixin<T> {
   late T _child;
 
-  @protected
+  EdgeInsetsGeometry? _twPadding;
+
   double paddingLeft = 0;
   @protected
   double paddingTop = 0;
@@ -31,49 +32,70 @@ mixin TwPaddingMixin<T> {
   void setChildForPadding(T child) {
     _child = child;
   }
+ 
+  
+  /// Sets the padding property of the box.
+  T withPadding(EdgeInsetsGeometry val) {
+    _twPadding = val;
+    return _child;
+  }
+
+  EdgeInsetsGeometry get twPadding {
+    _twPadding = EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom);
+    return _twPadding!;
+  }
     
-  /// Custom All Side Padding
+  // Custom All Side Padding
+  T padding(dynamic val){
+    paddingLeft = val;
+    paddingTop = val;
+    paddingRight = val;
+    paddingBottom = val;
+    return _child;
+  }
+
   T p(dynamic val){
     paddingLeft = val;
     paddingTop = val;
     paddingRight = val;
     paddingBottom = val;
     return _child;
-  } 
-  
+  }
+
   /// Custom Horizontal Padding
-  T px(dynamic val){
+  T px(dynamic val) {
     paddingLeft = val;
     paddingRight = val;
-    return _child;
+   return _child;
   } 
 
-  /// Custom Vertical Padding
+  /// Custom Vertic al Padding
   T py(dynamic val){
     paddingTop = val;
-    paddingBottom = val;
+   paddingBottom = val;
     return _child;
   } 
-  
+   
   /// Custom Left Padding
   T pl(dynamic val){
-    paddingLeft = val;
+   paddingLeft = val;
     return _child;
   } 
-
+ 
   /// Custom Top Padding
   T pt(dynamic val){
     paddingTop = val;
-    return _child;
+  return _child;
   } 
-
+  
   /// Custom Right Padding
   T pr(dynamic val){
     paddingRight = val;
     return _child;
   } 
 
-  /// Custom Bottom Padding
+
+   /// Custom Bottom Padding
   T pb(dynamic val){
     paddingBottom = val;
     return _child;

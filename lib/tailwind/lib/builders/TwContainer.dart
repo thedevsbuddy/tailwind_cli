@@ -45,30 +45,11 @@ class TwContainer extends TwWidgetBuilder<Widget>
   List<BoxShadow>? _boxShadow;
   BoxBorder? _border;
   Gradient? _gradient;
-  double? _height;
-  double? _width;
   Clip? _clip;
   Matrix4? _transform;
-  EdgeInsetsGeometry? _padding, _margin;
   DecorationImage? _bgImage;
   BoxDecoration? _decoration, _foregroundDecoration;
   BoxConstraints? _constraints;
-
-  /// Sets the height property of the box.
-  TwContainer height(double val) => this.._height = val;
-
-  /// Sets the width property of the box.
-  TwContainer width(double val) => this.._width = val;
-
-  /// Sets the size (width & height) property of the box.
-  TwContainer size(double width, double height) => this
-    .._width = width
-    .._height = height;
-
-  /// Sets the height and width as square of the box.
-  TwContainer square(double val) => this
-    .._width = val
-    .._height = val;
 
   /// Provide a custom DecoratedBox
   TwContainer withDecoration(BoxDecoration decoration) => this.._decoration = decoration;
@@ -78,12 +59,6 @@ class TwContainer extends TwWidgetBuilder<Widget>
 
   /// Provide a box constraint
   TwContainer withConstraints(BoxConstraints constraints) => this.._constraints = constraints;
-
-  /// Sets the padding property of the box.
-  TwContainer padding(EdgeInsetsGeometry val) => this.._padding = val;
-
-  /// Sets the margin property of the box.
-  TwContainer margin(EdgeInsetsGeometry val) => this.._margin = val;
 
   /// Sets the color property of the box.
   TwContainer color(Color color) => this..twColor = color;
@@ -145,12 +120,12 @@ class TwContainer extends TwWidgetBuilder<Widget>
   Widget render({Key? key}) {
     return Container(
       key: key,
-      height: _height,
+      height: twHeight,
       constraints: _constraints,
       clipBehavior: _clip ?? Clip.none,
-      width: _width,
-      padding: _padding ?? EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
-      margin: _margin ?? EdgeInsets.fromLTRB(marginLeft, marginTop, marginRight, marginBottom),
+      width: twWidth,
+      padding: twPadding,
+      margin: twMargin,
       alignment: twAlignment,
       transform: _transform,
       child: child,

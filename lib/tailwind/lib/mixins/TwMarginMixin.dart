@@ -18,6 +18,8 @@ import 'package:tailwind/tailwind.dart';
 mixin TwMarginMixin<T> {
   late T _child;
 
+  EdgeInsetsGeometry? _twMargin;
+
   @protected
   double marginLeft = 0;
   @protected
@@ -32,7 +34,25 @@ mixin TwMarginMixin<T> {
     _child = child;
   }
   
+  /// Sets the margin property of the box.
+  T withMargin(EdgeInsetsGeometry val) {
+    _twMargin = val;
+    return _child;
+  }
+
+  EdgeInsetsGeometry get twMargin {
+    _twMargin = EdgeInsets.fromLTRB(marginLeft, marginTop, marginRight, marginBottom);
+    return _twMargin!;
+  }
+
   /// Custom All Side Margin
+  T margin(dynamic val){
+    marginLeft = val;
+    marginTop = val;
+    marginRight = val;
+    marginBottom = val;
+    return _child;
+  } 
   T m(dynamic val){
     marginLeft = val;
     marginTop = val;
@@ -40,6 +60,7 @@ mixin TwMarginMixin<T> {
     marginBottom = val;
     return _child;
   } 
+
   
   /// Custom Horizontal Margin
   T mx(dynamic val){

@@ -4,7 +4,8 @@ import 'package:tailwind/tailwind.dart';
 mixin TwPaddingMixin<T> {
   late T _child;
 
-  @protected
+  EdgeInsetsGeometry? _twPadding;
+
   double paddingLeft = 0;
   @protected
   double paddingTop = 0;
@@ -18,7 +19,27 @@ mixin TwPaddingMixin<T> {
     _child = child;
   }
 
-  /// Custom All Side Padding
+  /// Sets the padding property of the box.
+  T withPadding(EdgeInsetsGeometry val) {
+    _twPadding = val;
+    return _child;
+  }
+
+  EdgeInsetsGeometry get twPadding {
+    _twPadding = EdgeInsets.fromLTRB(
+        paddingLeft, paddingTop, paddingRight, paddingBottom);
+    return _twPadding!;
+  }
+
+  // Custom All Side Padding
+  T padding(dynamic val) {
+    paddingLeft = val;
+    paddingTop = val;
+    paddingRight = val;
+    paddingBottom = val;
+    return _child;
+  }
+
   T p(dynamic val) {
     paddingLeft = val;
     paddingTop = val;
@@ -34,7 +55,7 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Custom Vertical Padding
+  /// Custom Vertic al Padding
   T py(dynamic val) {
     paddingTop = val;
     paddingBottom = val;

@@ -5,16 +5,17 @@ mixin TwSizeMixin<T> {
   late T _child;
 
   @protected
-  double twWidth = 0;
+  double? twWidth;
+
   @protected
-  double twHeight = 0;
+  double? twHeight;
 
   @protected
   void setChildForSizing(T child) {
     _child = child;
   }
 
-  T sizeSquare(double value) {
+  T square(double value) {
     twHeight = value;
     twWidth = value;
     return _child;

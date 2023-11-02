@@ -7,24 +7,18 @@ class TwPadding extends TwWidgetBuilder<Widget> with TwPaddingMixin<TwPadding> {
   TwPadding({this.child}) {
     setChildForPadding(this);
   }
-  TwPadding.existing(Widget this.child, this._padding) {
+  TwPadding.existing(Widget this.child) {
     setChildForPadding(this);
   }
+
   final Widget? child;
-
-  EdgeInsetsGeometry? _padding;
-
-  /// Sets the padding property of the box.
-  TwPadding padding(EdgeInsetsGeometry val) => this.._padding = val;
 
   @override
   Widget render({Key? key}) {
     return Padding(
       key: key,
       child: child,
-      padding: _padding ??
-          EdgeInsets.fromLTRB(
-              paddingLeft, paddingTop, paddingRight, paddingBottom),
+      padding: twPadding,
     );
   }
 }
@@ -34,7 +28,11 @@ extension PaddingWidgetExtension on Padding {
   /// with any widget without wrapping or with dot operator.
   @Deprecated(
       'This method is deprecated and will be removed in the future please use [isPadding] instead.')
-  TwPadding get twPadding => TwPadding.existing(child!, padding);
+  TwPadding get twPadding => TwPadding.existing(child!);
 
-  TwPadding get isPadding => TwPadding.existing(child!, padding);
+  TwPadding get isPadding => TwPadding.existing(child!);
+}
+
+extension PaddingOnWidgetExtension on Widget {
+  TwPadding get hasPadding => TwPadding.existing(this);
 }

@@ -31,8 +31,6 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
 
   ImageType _imageType = ImageType.ASSET;
 
-  double? _height;
-  double? _width;
   Animation<double>? _opacity;
   BlendMode? _colorBlendMode;
   BoxFit? _fit;
@@ -85,8 +83,8 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
               path,
               key: key,
               color: twColor,
-              width: _width,
-              height: _height,
+              width: twWidth,
+              height: twHeight,
               opacity: _opacity,
               colorBlendMode: _colorBlendMode,
               fit: _fit,
@@ -102,8 +100,8 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
                   _filePath!,
                   key: key,
                   color: twColor,
-                  width: _width,
-                  height: _height,
+                  width: twWidth,
+                  height: twHeight,
                   opacity: _opacity,
                   colorBlendMode: _colorBlendMode,
                   fit: _fit,
@@ -118,8 +116,8 @@ class TwImage extends TwWidgetBuilder<Widget> with TwColorMixin<TwImage>, TwRoun
                   path,
                   key: key,
                   color: twColor,
-                  width: _width,
-                  height: _height,
+                  width: twWidth,
+                  height: twHeight,
                   opacity: _opacity,
                   colorBlendMode: _colorBlendMode,
                   fit: _fit,
