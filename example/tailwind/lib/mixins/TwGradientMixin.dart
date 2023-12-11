@@ -366,6 +366,292 @@ mixin TwGradientMixin<T> {
     return _child;
   }
 
+  T get fromSlate {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate;
+    return _child;
+  }
+
+  T get toSlate {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate;
+    return _child;
+  }
+
+  T get fromSlate50 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade50;
+    return _child;
+  }
+
+  T get toSlate50 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade50;
+    return _child;
+  }
+
+  T get fromSlate100 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade100;
+    return _child;
+  }
+
+  T get toSlate100 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade100;
+    return _child;
+  }
+
+  T get fromSlate200 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade200;
+    return _child;
+  }
+
+  T get toSlate200 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade200;
+    return _child;
+  }
+
+  T get fromSlate300 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade300;
+    return _child;
+  }
+
+  T get toSlate300 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade300;
+    return _child;
+  }
+
+  T get fromSlate400 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade400;
+    return _child;
+  }
+
+  T get toSlate400 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade400;
+    return _child;
+  }
+
+  T get fromSlate500 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade500;
+    return _child;
+  }
+
+  T get toSlate500 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade500;
+    return _child;
+  }
+
+  T get fromSlate600 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade600;
+    return _child;
+  }
+
+  T get toSlate600 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade600;
+    return _child;
+  }
+
+  T get fromSlate700 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade700;
+    return _child;
+  }
+
+  T get toSlate700 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade700;
+    return _child;
+  }
+
+  T get fromSlate800 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade800;
+    return _child;
+  }
+
+  T get toSlate800 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade800;
+    return _child;
+  }
+
+  T get fromSlate900 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.slate.shade900;
+    return _child;
+  }
+
+  T get toSlate900 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.slate.shade900;
+    return _child;
+  }
+
+  T get onDarkFromSlate {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate50 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade50;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate50 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade50;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate100 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade100;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate100 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade100;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate200 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade200;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate200 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade200;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate300 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade300;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate300 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade300;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate400 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade400;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate400 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade400;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate500 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade500;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate500 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade500;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate600 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade600;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate600 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade600;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate700 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade700;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate700 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade700;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate800 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade800;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate800 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade800;
+    }
+    return _child;
+  }
+
+  T get onDarkFromSlate900 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.slate.shade900;
+    }
+    return _child;
+  }
+
+  T get onDarkToSlate900 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.slate.shade900;
+    }
+    return _child;
+  }
+
   T get fromGray {
     if (!_needsDarkVariant) gradientColors[0] = TwColors.gray;
     return _child;
@@ -652,1146 +938,860 @@ mixin TwGradientMixin<T> {
     return _child;
   }
 
-  T get fromBlueGray {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray;
+  T get fromZinc {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc;
     return _child;
   }
 
-  T get toBlueGray {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray;
+  T get toZinc {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc;
     return _child;
   }
 
-  T get fromBlueGray50 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade50;
+  T get fromZinc50 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade50;
     return _child;
   }
 
-  T get toBlueGray50 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade50;
+  T get toZinc50 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade50;
     return _child;
   }
 
-  T get fromBlueGray100 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade100;
+  T get fromZinc100 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade100;
     return _child;
   }
 
-  T get toBlueGray100 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade100;
+  T get toZinc100 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade100;
     return _child;
   }
 
-  T get fromBlueGray200 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade200;
+  T get fromZinc200 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade200;
     return _child;
   }
 
-  T get toBlueGray200 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade200;
+  T get toZinc200 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade200;
     return _child;
   }
 
-  T get fromBlueGray300 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade300;
+  T get fromZinc300 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade300;
     return _child;
   }
 
-  T get toBlueGray300 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade300;
+  T get toZinc300 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade300;
     return _child;
   }
 
-  T get fromBlueGray400 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade400;
+  T get fromZinc400 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade400;
     return _child;
   }
 
-  T get toBlueGray400 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade400;
+  T get toZinc400 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade400;
     return _child;
   }
 
-  T get fromBlueGray500 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade500;
+  T get fromZinc500 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade500;
     return _child;
   }
 
-  T get toBlueGray500 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade500;
+  T get toZinc500 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade500;
     return _child;
   }
 
-  T get fromBlueGray600 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade600;
+  T get fromZinc600 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade600;
     return _child;
   }
 
-  T get toBlueGray600 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade600;
+  T get toZinc600 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade600;
     return _child;
   }
 
-  T get fromBlueGray700 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade700;
+  T get fromZinc700 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade700;
     return _child;
   }
 
-  T get toBlueGray700 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade700;
+  T get toZinc700 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade700;
     return _child;
   }
 
-  T get fromBlueGray800 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade800;
+  T get fromZinc800 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade800;
     return _child;
   }
 
-  T get toBlueGray800 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade800;
+  T get toZinc800 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade800;
     return _child;
   }
 
-  T get fromBlueGray900 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.blueGray.shade900;
+  T get fromZinc900 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.zinc.shade900;
     return _child;
   }
 
-  T get toBlueGray900 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.blueGray.shade900;
+  T get toZinc900 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.zinc.shade900;
     return _child;
   }
 
-  T get onDarkFromBlueGray {
+  T get onDarkFromZinc {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray;
+      gradientColors[0] = TwColors.zinc;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray {
+  T get onDarkToZinc {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray;
+      gradientColors[1] = TwColors.zinc;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray50 {
+  T get onDarkFromZinc50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade50;
+      gradientColors[0] = TwColors.zinc.shade50;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray50 {
+  T get onDarkToZinc50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade50;
+      gradientColors[1] = TwColors.zinc.shade50;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray100 {
+  T get onDarkFromZinc100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade100;
+      gradientColors[0] = TwColors.zinc.shade100;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray100 {
+  T get onDarkToZinc100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade100;
+      gradientColors[1] = TwColors.zinc.shade100;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray200 {
+  T get onDarkFromZinc200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade200;
+      gradientColors[0] = TwColors.zinc.shade200;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray200 {
+  T get onDarkToZinc200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade200;
+      gradientColors[1] = TwColors.zinc.shade200;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray300 {
+  T get onDarkFromZinc300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade300;
+      gradientColors[0] = TwColors.zinc.shade300;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray300 {
+  T get onDarkToZinc300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade300;
+      gradientColors[1] = TwColors.zinc.shade300;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray400 {
+  T get onDarkFromZinc400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade400;
+      gradientColors[0] = TwColors.zinc.shade400;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray400 {
+  T get onDarkToZinc400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade400;
+      gradientColors[1] = TwColors.zinc.shade400;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray500 {
+  T get onDarkFromZinc500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade500;
+      gradientColors[0] = TwColors.zinc.shade500;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray500 {
+  T get onDarkToZinc500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade500;
+      gradientColors[1] = TwColors.zinc.shade500;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray600 {
+  T get onDarkFromZinc600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade600;
+      gradientColors[0] = TwColors.zinc.shade600;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray600 {
+  T get onDarkToZinc600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade600;
+      gradientColors[1] = TwColors.zinc.shade600;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray700 {
+  T get onDarkFromZinc700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade700;
+      gradientColors[0] = TwColors.zinc.shade700;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray700 {
+  T get onDarkToZinc700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade700;
+      gradientColors[1] = TwColors.zinc.shade700;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray800 {
+  T get onDarkFromZinc800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade800;
+      gradientColors[0] = TwColors.zinc.shade800;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray800 {
+  T get onDarkToZinc800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade800;
+      gradientColors[1] = TwColors.zinc.shade800;
     }
     return _child;
   }
 
-  T get onDarkFromBlueGray900 {
+  T get onDarkFromZinc900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.blueGray.shade900;
+      gradientColors[0] = TwColors.zinc.shade900;
     }
     return _child;
   }
 
-  T get onDarkToBlueGray900 {
+  T get onDarkToZinc900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.blueGray.shade900;
+      gradientColors[1] = TwColors.zinc.shade900;
     }
     return _child;
   }
 
-  T get fromCoolGray {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray;
+  T get fromNeutral {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral;
     return _child;
   }
 
-  T get toCoolGray {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray;
+  T get toNeutral {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral;
     return _child;
   }
 
-  T get fromCoolGray50 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade50;
+  T get fromNeutral50 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade50;
     return _child;
   }
 
-  T get toCoolGray50 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade50;
+  T get toNeutral50 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade50;
     return _child;
   }
 
-  T get fromCoolGray100 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade100;
+  T get fromNeutral100 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade100;
     return _child;
   }
 
-  T get toCoolGray100 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade100;
+  T get toNeutral100 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade100;
     return _child;
   }
 
-  T get fromCoolGray200 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade200;
+  T get fromNeutral200 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade200;
     return _child;
   }
 
-  T get toCoolGray200 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade200;
+  T get toNeutral200 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade200;
     return _child;
   }
 
-  T get fromCoolGray300 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade300;
+  T get fromNeutral300 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade300;
     return _child;
   }
 
-  T get toCoolGray300 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade300;
+  T get toNeutral300 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade300;
     return _child;
   }
 
-  T get fromCoolGray400 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade400;
+  T get fromNeutral400 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade400;
     return _child;
   }
 
-  T get toCoolGray400 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade400;
+  T get toNeutral400 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade400;
     return _child;
   }
 
-  T get fromCoolGray500 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade500;
+  T get fromNeutral500 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade500;
     return _child;
   }
 
-  T get toCoolGray500 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade500;
+  T get toNeutral500 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade500;
     return _child;
   }
 
-  T get fromCoolGray600 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade600;
+  T get fromNeutral600 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade600;
     return _child;
   }
 
-  T get toCoolGray600 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade600;
+  T get toNeutral600 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade600;
     return _child;
   }
 
-  T get fromCoolGray700 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade700;
+  T get fromNeutral700 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade700;
     return _child;
   }
 
-  T get toCoolGray700 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade700;
+  T get toNeutral700 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade700;
     return _child;
   }
 
-  T get fromCoolGray800 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade800;
+  T get fromNeutral800 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade800;
     return _child;
   }
 
-  T get toCoolGray800 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade800;
+  T get toNeutral800 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade800;
     return _child;
   }
 
-  T get fromCoolGray900 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.coolGray.shade900;
+  T get fromNeutral900 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.neutral.shade900;
     return _child;
   }
 
-  T get toCoolGray900 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.coolGray.shade900;
+  T get toNeutral900 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.neutral.shade900;
     return _child;
   }
 
-  T get onDarkFromCoolGray {
+  T get onDarkFromNeutral {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray;
+      gradientColors[0] = TwColors.neutral;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray {
+  T get onDarkToNeutral {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray;
+      gradientColors[1] = TwColors.neutral;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray50 {
+  T get onDarkFromNeutral50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade50;
+      gradientColors[0] = TwColors.neutral.shade50;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray50 {
+  T get onDarkToNeutral50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade50;
+      gradientColors[1] = TwColors.neutral.shade50;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray100 {
+  T get onDarkFromNeutral100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade100;
+      gradientColors[0] = TwColors.neutral.shade100;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray100 {
+  T get onDarkToNeutral100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade100;
+      gradientColors[1] = TwColors.neutral.shade100;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray200 {
+  T get onDarkFromNeutral200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade200;
+      gradientColors[0] = TwColors.neutral.shade200;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray200 {
+  T get onDarkToNeutral200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade200;
+      gradientColors[1] = TwColors.neutral.shade200;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray300 {
+  T get onDarkFromNeutral300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade300;
+      gradientColors[0] = TwColors.neutral.shade300;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray300 {
+  T get onDarkToNeutral300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade300;
+      gradientColors[1] = TwColors.neutral.shade300;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray400 {
+  T get onDarkFromNeutral400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade400;
+      gradientColors[0] = TwColors.neutral.shade400;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray400 {
+  T get onDarkToNeutral400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade400;
+      gradientColors[1] = TwColors.neutral.shade400;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray500 {
+  T get onDarkFromNeutral500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade500;
+      gradientColors[0] = TwColors.neutral.shade500;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray500 {
+  T get onDarkToNeutral500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade500;
+      gradientColors[1] = TwColors.neutral.shade500;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray600 {
+  T get onDarkFromNeutral600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade600;
+      gradientColors[0] = TwColors.neutral.shade600;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray600 {
+  T get onDarkToNeutral600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade600;
+      gradientColors[1] = TwColors.neutral.shade600;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray700 {
+  T get onDarkFromNeutral700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade700;
+      gradientColors[0] = TwColors.neutral.shade700;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray700 {
+  T get onDarkToNeutral700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade700;
+      gradientColors[1] = TwColors.neutral.shade700;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray800 {
+  T get onDarkFromNeutral800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade800;
+      gradientColors[0] = TwColors.neutral.shade800;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray800 {
+  T get onDarkToNeutral800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade800;
+      gradientColors[1] = TwColors.neutral.shade800;
     }
     return _child;
   }
 
-  T get onDarkFromCoolGray900 {
+  T get onDarkFromNeutral900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.coolGray.shade900;
+      gradientColors[0] = TwColors.neutral.shade900;
     }
     return _child;
   }
 
-  T get onDarkToCoolGray900 {
+  T get onDarkToNeutral900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.coolGray.shade900;
+      gradientColors[1] = TwColors.neutral.shade900;
     }
     return _child;
   }
 
-  T get fromTrueGray {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray;
+  T get fromStone {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone;
     return _child;
   }
 
-  T get toTrueGray {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray;
+  T get toStone {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone;
     return _child;
   }
 
-  T get fromTrueGray50 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade50;
+  T get fromStone50 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade50;
     return _child;
   }
 
-  T get toTrueGray50 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade50;
+  T get toStone50 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade50;
     return _child;
   }
 
-  T get fromTrueGray100 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade100;
+  T get fromStone100 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade100;
     return _child;
   }
 
-  T get toTrueGray100 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade100;
+  T get toStone100 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade100;
     return _child;
   }
 
-  T get fromTrueGray200 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade200;
+  T get fromStone200 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade200;
     return _child;
   }
 
-  T get toTrueGray200 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade200;
+  T get toStone200 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade200;
     return _child;
   }
 
-  T get fromTrueGray300 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade300;
+  T get fromStone300 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade300;
     return _child;
   }
 
-  T get toTrueGray300 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade300;
+  T get toStone300 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade300;
     return _child;
   }
 
-  T get fromTrueGray400 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade400;
+  T get fromStone400 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade400;
     return _child;
   }
 
-  T get toTrueGray400 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade400;
+  T get toStone400 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade400;
     return _child;
   }
 
-  T get fromTrueGray500 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade500;
+  T get fromStone500 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade500;
     return _child;
   }
 
-  T get toTrueGray500 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade500;
+  T get toStone500 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade500;
     return _child;
   }
 
-  T get fromTrueGray600 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade600;
+  T get fromStone600 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade600;
     return _child;
   }
 
-  T get toTrueGray600 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade600;
+  T get toStone600 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade600;
     return _child;
   }
 
-  T get fromTrueGray700 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade700;
+  T get fromStone700 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade700;
     return _child;
   }
 
-  T get toTrueGray700 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade700;
+  T get toStone700 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade700;
     return _child;
   }
 
-  T get fromTrueGray800 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade800;
+  T get fromStone800 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade800;
     return _child;
   }
 
-  T get toTrueGray800 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade800;
+  T get toStone800 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade800;
     return _child;
   }
 
-  T get fromTrueGray900 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.trueGray.shade900;
+  T get fromStone900 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.stone.shade900;
     return _child;
   }
 
-  T get toTrueGray900 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.trueGray.shade900;
+  T get toStone900 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.stone.shade900;
     return _child;
   }
 
-  T get onDarkFromTrueGray {
+  T get onDarkFromStone {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray;
+      gradientColors[0] = TwColors.stone;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray {
+  T get onDarkToStone {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray;
+      gradientColors[1] = TwColors.stone;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray50 {
+  T get onDarkFromStone50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade50;
+      gradientColors[0] = TwColors.stone.shade50;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray50 {
+  T get onDarkToStone50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade50;
+      gradientColors[1] = TwColors.stone.shade50;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray100 {
+  T get onDarkFromStone100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade100;
+      gradientColors[0] = TwColors.stone.shade100;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray100 {
+  T get onDarkToStone100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade100;
+      gradientColors[1] = TwColors.stone.shade100;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray200 {
+  T get onDarkFromStone200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade200;
+      gradientColors[0] = TwColors.stone.shade200;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray200 {
+  T get onDarkToStone200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade200;
+      gradientColors[1] = TwColors.stone.shade200;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray300 {
+  T get onDarkFromStone300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade300;
+      gradientColors[0] = TwColors.stone.shade300;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray300 {
+  T get onDarkToStone300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade300;
+      gradientColors[1] = TwColors.stone.shade300;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray400 {
+  T get onDarkFromStone400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade400;
+      gradientColors[0] = TwColors.stone.shade400;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray400 {
+  T get onDarkToStone400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade400;
+      gradientColors[1] = TwColors.stone.shade400;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray500 {
+  T get onDarkFromStone500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade500;
+      gradientColors[0] = TwColors.stone.shade500;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray500 {
+  T get onDarkToStone500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade500;
+      gradientColors[1] = TwColors.stone.shade500;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray600 {
+  T get onDarkFromStone600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade600;
+      gradientColors[0] = TwColors.stone.shade600;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray600 {
+  T get onDarkToStone600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade600;
+      gradientColors[1] = TwColors.stone.shade600;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray700 {
+  T get onDarkFromStone700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade700;
+      gradientColors[0] = TwColors.stone.shade700;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray700 {
+  T get onDarkToStone700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade700;
+      gradientColors[1] = TwColors.stone.shade700;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray800 {
+  T get onDarkFromStone800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade800;
+      gradientColors[0] = TwColors.stone.shade800;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray800 {
+  T get onDarkToStone800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade800;
+      gradientColors[1] = TwColors.stone.shade800;
     }
     return _child;
   }
 
-  T get onDarkFromTrueGray900 {
+  T get onDarkFromStone900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.trueGray.shade900;
+      gradientColors[0] = TwColors.stone.shade900;
     }
     return _child;
   }
 
-  T get onDarkToTrueGray900 {
+  T get onDarkToStone900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.trueGray.shade900;
-    }
-    return _child;
-  }
-
-  T get fromWarmGray {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray;
-    return _child;
-  }
-
-  T get toWarmGray {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray;
-    return _child;
-  }
-
-  T get fromWarmGray50 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade50;
-    return _child;
-  }
-
-  T get toWarmGray50 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade50;
-    return _child;
-  }
-
-  T get fromWarmGray100 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade100;
-    return _child;
-  }
-
-  T get toWarmGray100 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade100;
-    return _child;
-  }
-
-  T get fromWarmGray200 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade200;
-    return _child;
-  }
-
-  T get toWarmGray200 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade200;
-    return _child;
-  }
-
-  T get fromWarmGray300 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade300;
-    return _child;
-  }
-
-  T get toWarmGray300 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade300;
-    return _child;
-  }
-
-  T get fromWarmGray400 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade400;
-    return _child;
-  }
-
-  T get toWarmGray400 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade400;
-    return _child;
-  }
-
-  T get fromWarmGray500 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade500;
-    return _child;
-  }
-
-  T get toWarmGray500 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade500;
-    return _child;
-  }
-
-  T get fromWarmGray600 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade600;
-    return _child;
-  }
-
-  T get toWarmGray600 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade600;
-    return _child;
-  }
-
-  T get fromWarmGray700 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade700;
-    return _child;
-  }
-
-  T get toWarmGray700 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade700;
-    return _child;
-  }
-
-  T get fromWarmGray800 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade800;
-    return _child;
-  }
-
-  T get toWarmGray800 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade800;
-    return _child;
-  }
-
-  T get fromWarmGray900 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.warmGray.shade900;
-    return _child;
-  }
-
-  T get toWarmGray900 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.warmGray.shade900;
-    return _child;
-  }
-
-  T get onDarkFromWarmGray {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray50 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade50;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray50 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade50;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray100 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade100;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray100 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade100;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray200 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade200;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray200 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade200;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray300 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade300;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray300 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade300;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray400 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade400;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray400 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade400;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray500 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade500;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray500 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade500;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray600 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade600;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray600 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade600;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray700 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade700;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray700 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade700;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray800 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade800;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray800 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade800;
-    }
-    return _child;
-  }
-
-  T get onDarkFromWarmGray900 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[0] = TwColors.warmGray.shade900;
-    }
-    return _child;
-  }
-
-  T get onDarkToWarmGray900 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      gradientColors[1] = TwColors.warmGray.shade900;
+      gradientColors[1] = TwColors.stone.shade900;
     }
     return _child;
   }
@@ -4370,288 +4370,288 @@ mixin TwGradientMixin<T> {
     return _child;
   }
 
-  T get fromLightBlue {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue;
+  T get fromSky {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky;
     return _child;
   }
 
-  T get toLightBlue {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue;
+  T get toSky {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky;
     return _child;
   }
 
-  T get fromLightBlue50 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade50;
+  T get fromSky50 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade50;
     return _child;
   }
 
-  T get toLightBlue50 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade50;
+  T get toSky50 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade50;
     return _child;
   }
 
-  T get fromLightBlue100 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade100;
+  T get fromSky100 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade100;
     return _child;
   }
 
-  T get toLightBlue100 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade100;
+  T get toSky100 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade100;
     return _child;
   }
 
-  T get fromLightBlue200 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade200;
+  T get fromSky200 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade200;
     return _child;
   }
 
-  T get toLightBlue200 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade200;
+  T get toSky200 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade200;
     return _child;
   }
 
-  T get fromLightBlue300 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade300;
+  T get fromSky300 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade300;
     return _child;
   }
 
-  T get toLightBlue300 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade300;
+  T get toSky300 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade300;
     return _child;
   }
 
-  T get fromLightBlue400 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade400;
+  T get fromSky400 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade400;
     return _child;
   }
 
-  T get toLightBlue400 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade400;
+  T get toSky400 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade400;
     return _child;
   }
 
-  T get fromLightBlue500 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade500;
+  T get fromSky500 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade500;
     return _child;
   }
 
-  T get toLightBlue500 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade500;
+  T get toSky500 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade500;
     return _child;
   }
 
-  T get fromLightBlue600 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade600;
+  T get fromSky600 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade600;
     return _child;
   }
 
-  T get toLightBlue600 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade600;
+  T get toSky600 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade600;
     return _child;
   }
 
-  T get fromLightBlue700 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade700;
+  T get fromSky700 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade700;
     return _child;
   }
 
-  T get toLightBlue700 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade700;
+  T get toSky700 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade700;
     return _child;
   }
 
-  T get fromLightBlue800 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade800;
+  T get fromSky800 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade800;
     return _child;
   }
 
-  T get toLightBlue800 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade800;
+  T get toSky800 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade800;
     return _child;
   }
 
-  T get fromLightBlue900 {
-    if (!_needsDarkVariant) gradientColors[0] = TwColors.lightBlue.shade900;
+  T get fromSky900 {
+    if (!_needsDarkVariant) gradientColors[0] = TwColors.sky.shade900;
     return _child;
   }
 
-  T get toLightBlue900 {
-    if (!_needsDarkVariant) gradientColors[1] = TwColors.lightBlue.shade900;
+  T get toSky900 {
+    if (!_needsDarkVariant) gradientColors[1] = TwColors.sky.shade900;
     return _child;
   }
 
-  T get onDarkFromLightBlue {
+  T get onDarkFromSky {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue;
+      gradientColors[0] = TwColors.sky;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue {
+  T get onDarkToSky {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue;
+      gradientColors[1] = TwColors.sky;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue50 {
+  T get onDarkFromSky50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade50;
+      gradientColors[0] = TwColors.sky.shade50;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue50 {
+  T get onDarkToSky50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade50;
+      gradientColors[1] = TwColors.sky.shade50;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue100 {
+  T get onDarkFromSky100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade100;
+      gradientColors[0] = TwColors.sky.shade100;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue100 {
+  T get onDarkToSky100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade100;
+      gradientColors[1] = TwColors.sky.shade100;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue200 {
+  T get onDarkFromSky200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade200;
+      gradientColors[0] = TwColors.sky.shade200;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue200 {
+  T get onDarkToSky200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade200;
+      gradientColors[1] = TwColors.sky.shade200;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue300 {
+  T get onDarkFromSky300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade300;
+      gradientColors[0] = TwColors.sky.shade300;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue300 {
+  T get onDarkToSky300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade300;
+      gradientColors[1] = TwColors.sky.shade300;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue400 {
+  T get onDarkFromSky400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade400;
+      gradientColors[0] = TwColors.sky.shade400;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue400 {
+  T get onDarkToSky400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade400;
+      gradientColors[1] = TwColors.sky.shade400;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue500 {
+  T get onDarkFromSky500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade500;
+      gradientColors[0] = TwColors.sky.shade500;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue500 {
+  T get onDarkToSky500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade500;
+      gradientColors[1] = TwColors.sky.shade500;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue600 {
+  T get onDarkFromSky600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade600;
+      gradientColors[0] = TwColors.sky.shade600;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue600 {
+  T get onDarkToSky600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade600;
+      gradientColors[1] = TwColors.sky.shade600;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue700 {
+  T get onDarkFromSky700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade700;
+      gradientColors[0] = TwColors.sky.shade700;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue700 {
+  T get onDarkToSky700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade700;
+      gradientColors[1] = TwColors.sky.shade700;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue800 {
+  T get onDarkFromSky800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade800;
+      gradientColors[0] = TwColors.sky.shade800;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue800 {
+  T get onDarkToSky800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade800;
+      gradientColors[1] = TwColors.sky.shade800;
     }
     return _child;
   }
 
-  T get onDarkFromLightBlue900 {
+  T get onDarkFromSky900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[0] = TwColors.lightBlue.shade900;
+      gradientColors[0] = TwColors.sky.shade900;
     }
     return _child;
   }
 
-  T get onDarkToLightBlue900 {
+  T get onDarkToSky900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      gradientColors[1] = TwColors.lightBlue.shade900;
+      gradientColors[1] = TwColors.sky.shade900;
     }
     return _child;
   }

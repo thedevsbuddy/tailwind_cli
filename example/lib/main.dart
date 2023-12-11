@@ -20,15 +20,27 @@ class MyApp extends StatelessWidget {
           themeMode: _themeMode,
           navigatorKey: TwService.appKey,
           theme: ThemeData(
-            primaryColor: TwColors.gray,
+            primaryColor: TwColors.gray.shade800,
+            textTheme: TextTheme(
+              displaySmall: TextStyle(
+                color: TwColors.slate.shade700,
+              ),
+            ),
             appBarTheme: AppBarTheme(
-              backgroundColor: TwColors.blueGray.shade800,
+              backgroundColor: TwColors.slate.shade800,
               elevation: 0,
               centerTitle: true,
             ),
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
+            scaffoldBackgroundColor: TwColors.gray.shade900,
+            textTheme: TextTheme(
+              displaySmall: TextStyle(
+                color: TwColors.white,
+                fontSize: 24,
+              ),
+            ),
           ),
           home: ExamplePage(),
         );
@@ -45,15 +57,13 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: "Tailwind UI style for flutter".isText.render(),
+        elevation: 0.0,
       ),
       backgroundColor: TwColors.scaffoldBackgroundColor(context),
       body: SafeArea(
         child: SingleChildScrollView(
           child: TwPadding(
             child: TwColumn(<Widget>[
-              TwAbountSection(),
-              TwImage('https://picsum.photos/500').wFull.render(),
-
               /// TwButton Example
               TwButtonExample(),
             ]).alignStart.justifyCenter.min.render(),

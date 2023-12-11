@@ -119,81 +119,173 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get visible => this.._overflow = TextOverflow.visible;
 
   /// ============== FONT THEME ============== ///
+
   /// Sets [TextTheme] headline 1
+  @Deprecated("Use displayLarge instead.")
   TwText headline1(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.headline1;
     return this;
   }
 
+  /// Sets [TextTheme] displayLarge
+  TwText displayLarge(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.displayLarge;
+    return this;
+  }
+
   /// Sets [TextTheme] headline 2
+  @Deprecated("Use displayMedium instead.")
   TwText headline2(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.headline2;
     return this;
   }
 
+  /// Sets [TextTheme] displayMedium
+  TwText displayMedium(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.displayMedium;
+    return this;
+  }
+
   /// Sets [TextTheme] headline 3
+  @Deprecated("Use displaySmall instead.")
   TwText headline3(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.headline3;
     return this;
   }
 
+  /// Sets [TextTheme] displaySmall
+  TwText displaySmall(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.displaySmall;
+    return this;
+  }
+
   /// Sets [TextTheme] headline 4
+  @Deprecated("Use `headlineMedium(context)` instead")
   TwText headline4(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.headline4;
     return this;
   }
 
+  /// Sets [TextTheme] headlineMedium
+  TwText headlineMedium(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headlineMedium;
+    return this;
+  }
+
   /// Sets [TextTheme] headline 5
+  @Deprecated("Use `headlineSmall(context)` instead")
   TwText headline5(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.headline5;
     return this;
   }
 
+  /// Sets [TextTheme] headlineSmall
+  TwText headlineSmall(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.headlineSmall;
+    return this;
+  }
+
   /// Sets [TextTheme] headline 6
+  @Deprecated("Use `titleLarge(context)` instead")
   TwText headline6(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.headline6;
     return this;
   }
 
+  /// Sets [TextTheme] titleLarge
+  TwText titleLarge(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.titleLarge;
+    return this;
+  }
+
   /// Sets [TextTheme] bodyText1
+  @Deprecated("Use `bodyLarge(context)` instead")
   TwText bodyText1(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.bodyText1;
     return this;
   }
 
+  /// Sets [TextTheme] bodyLarge
+  TwText bodyLarge(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.bodyLarge;
+    return this;
+  }
+
   /// Sets [TextTheme] bodyText2
+  @Deprecated("Use `bodyMedium(context)` instead")
   TwText bodyText2(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.bodyText2;
     return this;
   }
 
+  /// Sets [TextTheme] bodyMedium
+  TwText bodyMedium(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.bodyMedium;
+    return this;
+  }
+
   /// Sets [TextTheme] caption
+  @Deprecated("Use `bodySmall(context)` instead")
   TwText caption(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.caption;
     return this;
   }
 
+  /// Sets [TextTheme] bodySmall
+  TwText bodySmall(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.bodySmall;
+    return this;
+  }
+
   /// Sets [TextTheme] subtitle1
+  @Deprecated("Use `titleMedium(context)` instead")
   TwText subtitle1(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.subtitle1;
     return this;
   }
 
+  /// Sets [TextTheme] titleMedium
+  TwText titleMedium(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.titleMedium;
+    return this;
+  }
+
   /// Sets [TextTheme] subtitle2
+  @Deprecated("Use `titleSmall(context)` instead")
   TwText subtitle2(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.subtitle2;
     return this;
   }
 
+  /// Sets [TextTheme] titleSmall
+  TwText titleSmall(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.titleSmall;
+    return this;
+  }
+
   /// Sets [TextTheme] overline
+  @Deprecated("Use `labelSmall(context)` instead")
   TwText overlineText(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.overline;
     return this;
   }
 
+  /// Sets [TextTheme] labelSmall
+  TwText labelSmall(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.labelSmall;
+    return this;
+  }
+
   /// Sets [TextTheme] button
+  @Deprecated("Use `labelLarge(context)` instead")
   TwText buttonText(BuildContext context) {
     _themedStyle = Theme.of(context).textTheme.button;
+    return this;
+  }
+
+  /// Sets [TextTheme] labelLarge
+  TwText labelLarge(BuildContext context) {
+    _themedStyle = Theme.of(context).textTheme.labelLarge;
     return this;
   }
 
@@ -389,8 +481,7 @@ extension TextExtensions on Text {
   /// Extension method to directly access [TwText]
   /// with any widget without wrapping or with dot operator.
 
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isText] instead.')
+  @Deprecated('Please use [isText] instead.')
   TwText get text => TwText.existing(data!, style);
 
   TwText get isText => TwText.existing(data!, style);
@@ -399,8 +490,7 @@ extension TextExtensions on Text {
 extension TextStringExtensions on String {
   /// Extension method to directly access [TwText]
   /// with [String] itself
-  @Deprecated(
-      'This method is deprecated and will be removed in the future please use [isText] instead.')
+  @Deprecated('Please use [isText] instead.')
   TwText get text => TwText(this);
 
   TwText get isText => TwText(this);

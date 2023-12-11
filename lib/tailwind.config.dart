@@ -4,60 +4,59 @@ const Map<String, dynamic> colors = {
   "white": "#ffffff",
   "transparent": "0x00000000",
 
-  ///Gray Colors
-  "gray": {
-    "DEFAULT": "0xFF71717A",
-    "50": "0xFFFAFAFA",
-    "100": "0xFFF4F4F5",
-    "200": "0xFFE4E4E7",
-    "300": "0xFFD4D4D8",
-    "400": "0xFFA1A1AA",
-    "500": "0xFF71717A",
-    "600": "0xFF52525B",
-    "700": "0xFF3F3F46",
-    "800": "0xFF27272A",
-    "900": "0xFF18181B"
-  },
-
-  ///BlueGray Colors
-
-  "blueGray": {
-    "DEFAULT": "0xFF64748B",
-    "50": "0xFFF8FAFC",
-    "100": "0xFFF1F5F9",
-    "200": "0xFFE2E8F0",
-    "300": "0xFFCBD5E1",
-    "400": "0xFF94A3B8",
-    "500": "0xFF64748B",
+  /// Slate Colors
+  "slate": {
+    "DEFAULT": "#64748b",
+    "50": "0xFFf8fafc",
+    "100": "0xFFf1f5f9",
+    "200": "0xFFe2e8f0",
+    "300": "0xFFcbd5e1",
+    "400": "0xFF94a3b8",
+    "500": "0xFF64748b",
     "600": "0xFF475569",
     "700": "0xFF334155",
-    "800": "0xFF1E293B",
-    "900": "0xFF0F172A",
+    "800": "0xFF1e293b",
+    "900": "0xFF0f172a",
   },
 
-  /// Cool Gray Colors
-  "coolGray": {
-    "DEFAULT": "0xFF4B5563",
-    "50": "0xFFF9FAFB",
-    "100": "0xFFF3F4F6",
-    "200": "0xFFE5E7EB",
-    "300": "0xFFD1D5DB",
-    "400": "0xFF9CA3AF",
-    "500": "0xFF6B7280",
-    "600": "0xFF4B5563",
-    "700": "0xFF4B5563",
-    "800": "0xFF1F2937",
+  /// Gray Colors
+  "gray": {
+    "DEFAULT": "0xFF6b7280",
+    "50": "0xFFf9fafb",
+    "100": "0xFFf3f4f6",
+    "200": "0xFFe5e7eb",
+    "300": "0xFFd1d5db",
+    "400": "0xFF9ca3af",
+    "500": "0xFF6b7280",
+    "600": "0xFF4b5563",
+    "700": "0xFF374151",
+    "800": "0xFF1f2937",
     "900": "0xFF111827",
   },
 
-  ///  True Gray Colors
-  "trueGray": {
+  /// zinc Colors
+  "zinc": {
+    "DEFAULT": "0xFF71717a",
+    "50": "0xFFfafafa",
+    "100": "0xFFf4f4f5",
+    "200": "0xFFe4e4e7",
+    "300": "0xFFd4d4d8",
+    "400": "0xFFa1a1aa",
+    "500": "0xFF71717a",
+    "600": "0xFF52525b",
+    "700": "0xFF3f3f46",
+    "800": "0xFF27272a",
+    "900": "0xFF18181b",
+  },
+
+  /// Neutral Colors
+  "neutral": {
     "DEFAULT": "0xFF737373",
-    "50": "0xFFFAFAFA",
-    "100": "0xFFF5F5F5",
-    "200": "0xFFE5E5E5",
-    "300": "0xFFD4D4D4",
-    "400": "0xFFA3A3A3",
+    "50": "0xFFfafafa",
+    "100": "0xFFf5f5f5",
+    "200": "0xFFe5e5e5",
+    "300": "0xFFd4d4d4",
+    "400": "0xFFa3a3a3",
     "500": "0xFF737373",
     "600": "0xFF525252",
     "700": "0xFF404040",
@@ -65,19 +64,19 @@ const Map<String, dynamic> colors = {
     "900": "0xFF171717",
   },
 
-  ///  Warm Gray Colors
-  "warmGray": {
-    "DEFAULT": "0xFF78716C",
-    "50": "0xFFFAFAF9",
-    "100": "0xFFF5F5F4",
-    "200": "0xFFE7E5E4",
-    "300": "0xFFD6D3D1",
-    "400": "0xFFA8A29E",
-    "500": "0xFF78716C",
-    "600": "0xFF57534E",
-    "700": "0xFF44403C",
+  /// Stone Colors
+  "stone": {
+    "DEFAULT": "0xFF78716c",
+    "50": "0xFFfafaf9",
+    "100": "0xFFf5f5f4",
+    "200": "0xFFe7e5e4",
+    "300": "0xFFd6d3d1",
+    "400": "0xFFa8a29e",
+    "500": "0xFF78716c",
+    "600": "0xFF57534e",
+    "700": "0xFF44403c",
     "800": "0xFF292524",
-    "900": "0xFF1C1917",
+    "900": "0xFF1c1917",
   },
 
   ///Red Colors
@@ -215,8 +214,8 @@ const Map<String, dynamic> colors = {
     "900": "0xFF164E63",
   },
 
-  ///Light Blue Colors
-  "lightBlue": {
+  /// Sky Colors
+  "sky": {
     "DEFAULT": "0xFF0EA5E9",
     "50": "0xFFF0F9FF",
     "100": "0xFFE0F2FE",

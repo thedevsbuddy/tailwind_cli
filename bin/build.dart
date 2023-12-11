@@ -2,9 +2,9 @@
 
 import "dart:io";
 
-import "package:tailwind_cli/src/BuildersGenerator.dart" as builderGenerator;
-import "package:tailwind_cli/src/ExtensionsGenerator.dart"
-    as extensionGenerator;
+import "package:tailwind_cli/src/BuildersGenerator.dart" as buildersGenerator;
+import "package:tailwind_cli/src/WidgetsGenerator.dart" as widgetsGenerator;
+import "package:tailwind_cli/src/ExtensionsGenerator.dart" as extensionGenerator;
 import "package:tailwind_cli/src/MixinsGenerator.dart" as mixinsGenerator;
 import "package:tailwind_cli/src/TailwindGenerator.dart" as tailwindGenerator;
 import "package:tailwind_cli/src/UtilityGenerator.dart" as utilityGenerator;
@@ -15,7 +15,8 @@ void main(List<String> args) async {
   await utilityGenerator.generate(args);
   await tailwindGenerator.generate(args);
   await mixinsGenerator.generate(args);
-  await builderGenerator.generate(args);
+  await buildersGenerator.generate(args);
+  await widgetsGenerator.generate(args);
   await extensionGenerator.generate(args);
   formatGeneratedCode();
 }
@@ -27,8 +28,7 @@ void formatGeneratedCode() async {
     if (result.exitCode == 0) {
       print(result.stdout);
     } else {
-      print(
-          'Command failed with error code ${result.exitCode}: ${result.stderr}');
+      print('Command failed with error code ${result.exitCode}: ${result.stderr}');
     }
   } catch (e) {
     print('Error running command: $e');

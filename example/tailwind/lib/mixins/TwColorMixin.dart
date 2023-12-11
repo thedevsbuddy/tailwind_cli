@@ -162,6 +162,149 @@ mixin TwColorMixin<T> {
     return _child;
   }
 
+  T get slate {
+    if (!_needsDarkVariant) twColor = TwColors.slate;
+    return _child;
+  }
+
+  T get slate50 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade50;
+    return _child;
+  }
+
+  T get slate100 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade100;
+    return _child;
+  }
+
+  T get slate200 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade200;
+    return _child;
+  }
+
+  T get slate300 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade300;
+    return _child;
+  }
+
+  T get slate400 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade400;
+    return _child;
+  }
+
+  T get slate500 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade500;
+    return _child;
+  }
+
+  T get slate600 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade600;
+    return _child;
+  }
+
+  T get slate700 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade700;
+    return _child;
+  }
+
+  T get slate800 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade800;
+    return _child;
+  }
+
+  T get slate900 {
+    if (!_needsDarkVariant) twColor = TwColors.slate.shade900;
+    return _child;
+  }
+
+  T get onDarkSlate {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate50 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade50;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate100 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade100;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate200 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade200;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate300 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade300;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate400 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade400;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate500 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade500;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate600 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade600;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate700 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade700;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate800 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade800;
+    }
+    return _child;
+  }
+
+  T get onDarkSlate900 {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      twColor = TwColors.slate.shade900;
+    }
+    return _child;
+  }
+
   T get gray {
     if (!_needsDarkVariant) twColor = TwColors.gray;
     return _child;
@@ -305,574 +448,431 @@ mixin TwColorMixin<T> {
     return _child;
   }
 
-  T get blueGray {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray;
+  T get zinc {
+    if (!_needsDarkVariant) twColor = TwColors.zinc;
     return _child;
   }
 
-  T get blueGray50 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade50;
+  T get zinc50 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade50;
     return _child;
   }
 
-  T get blueGray100 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade100;
+  T get zinc100 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade100;
     return _child;
   }
 
-  T get blueGray200 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade200;
+  T get zinc200 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade200;
     return _child;
   }
 
-  T get blueGray300 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade300;
+  T get zinc300 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade300;
     return _child;
   }
 
-  T get blueGray400 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade400;
+  T get zinc400 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade400;
     return _child;
   }
 
-  T get blueGray500 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade500;
+  T get zinc500 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade500;
     return _child;
   }
 
-  T get blueGray600 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade600;
+  T get zinc600 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade600;
     return _child;
   }
 
-  T get blueGray700 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade700;
+  T get zinc700 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade700;
     return _child;
   }
 
-  T get blueGray800 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade800;
+  T get zinc800 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade800;
     return _child;
   }
 
-  T get blueGray900 {
-    if (!_needsDarkVariant) twColor = TwColors.blueGray.shade900;
+  T get zinc900 {
+    if (!_needsDarkVariant) twColor = TwColors.zinc.shade900;
     return _child;
   }
 
-  T get onDarkBlueGray {
+  T get onDarkZinc {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray;
+      twColor = TwColors.zinc;
     }
     return _child;
   }
 
-  T get onDarkBlueGray50 {
+  T get onDarkZinc50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade50;
+      twColor = TwColors.zinc.shade50;
     }
     return _child;
   }
 
-  T get onDarkBlueGray100 {
+  T get onDarkZinc100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade100;
+      twColor = TwColors.zinc.shade100;
     }
     return _child;
   }
 
-  T get onDarkBlueGray200 {
+  T get onDarkZinc200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade200;
+      twColor = TwColors.zinc.shade200;
     }
     return _child;
   }
 
-  T get onDarkBlueGray300 {
+  T get onDarkZinc300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade300;
+      twColor = TwColors.zinc.shade300;
     }
     return _child;
   }
 
-  T get onDarkBlueGray400 {
+  T get onDarkZinc400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade400;
+      twColor = TwColors.zinc.shade400;
     }
     return _child;
   }
 
-  T get onDarkBlueGray500 {
+  T get onDarkZinc500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade500;
+      twColor = TwColors.zinc.shade500;
     }
     return _child;
   }
 
-  T get onDarkBlueGray600 {
+  T get onDarkZinc600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade600;
+      twColor = TwColors.zinc.shade600;
     }
     return _child;
   }
 
-  T get onDarkBlueGray700 {
+  T get onDarkZinc700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade700;
+      twColor = TwColors.zinc.shade700;
     }
     return _child;
   }
 
-  T get onDarkBlueGray800 {
+  T get onDarkZinc800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade800;
+      twColor = TwColors.zinc.shade800;
     }
     return _child;
   }
 
-  T get onDarkBlueGray900 {
+  T get onDarkZinc900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.blueGray.shade900;
+      twColor = TwColors.zinc.shade900;
     }
     return _child;
   }
 
-  T get coolGray {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray;
+  T get neutral {
+    if (!_needsDarkVariant) twColor = TwColors.neutral;
     return _child;
   }
 
-  T get coolGray50 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade50;
+  T get neutral50 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade50;
     return _child;
   }
 
-  T get coolGray100 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade100;
+  T get neutral100 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade100;
     return _child;
   }
 
-  T get coolGray200 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade200;
+  T get neutral200 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade200;
     return _child;
   }
 
-  T get coolGray300 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade300;
+  T get neutral300 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade300;
     return _child;
   }
 
-  T get coolGray400 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade400;
+  T get neutral400 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade400;
     return _child;
   }
 
-  T get coolGray500 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade500;
+  T get neutral500 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade500;
     return _child;
   }
 
-  T get coolGray600 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade600;
+  T get neutral600 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade600;
     return _child;
   }
 
-  T get coolGray700 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade700;
+  T get neutral700 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade700;
     return _child;
   }
 
-  T get coolGray800 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade800;
+  T get neutral800 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade800;
     return _child;
   }
 
-  T get coolGray900 {
-    if (!_needsDarkVariant) twColor = TwColors.coolGray.shade900;
+  T get neutral900 {
+    if (!_needsDarkVariant) twColor = TwColors.neutral.shade900;
     return _child;
   }
 
-  T get onDarkCoolGray {
+  T get onDarkNeutral {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray;
+      twColor = TwColors.neutral;
     }
     return _child;
   }
 
-  T get onDarkCoolGray50 {
+  T get onDarkNeutral50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade50;
+      twColor = TwColors.neutral.shade50;
     }
     return _child;
   }
 
-  T get onDarkCoolGray100 {
+  T get onDarkNeutral100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade100;
+      twColor = TwColors.neutral.shade100;
     }
     return _child;
   }
 
-  T get onDarkCoolGray200 {
+  T get onDarkNeutral200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade200;
+      twColor = TwColors.neutral.shade200;
     }
     return _child;
   }
 
-  T get onDarkCoolGray300 {
+  T get onDarkNeutral300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade300;
+      twColor = TwColors.neutral.shade300;
     }
     return _child;
   }
 
-  T get onDarkCoolGray400 {
+  T get onDarkNeutral400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade400;
+      twColor = TwColors.neutral.shade400;
     }
     return _child;
   }
 
-  T get onDarkCoolGray500 {
+  T get onDarkNeutral500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade500;
+      twColor = TwColors.neutral.shade500;
     }
     return _child;
   }
 
-  T get onDarkCoolGray600 {
+  T get onDarkNeutral600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade600;
+      twColor = TwColors.neutral.shade600;
     }
     return _child;
   }
 
-  T get onDarkCoolGray700 {
+  T get onDarkNeutral700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade700;
+      twColor = TwColors.neutral.shade700;
     }
     return _child;
   }
 
-  T get onDarkCoolGray800 {
+  T get onDarkNeutral800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade800;
+      twColor = TwColors.neutral.shade800;
     }
     return _child;
   }
 
-  T get onDarkCoolGray900 {
+  T get onDarkNeutral900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.coolGray.shade900;
+      twColor = TwColors.neutral.shade900;
     }
     return _child;
   }
 
-  T get trueGray {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray;
+  T get stone {
+    if (!_needsDarkVariant) twColor = TwColors.stone;
     return _child;
   }
 
-  T get trueGray50 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade50;
+  T get stone50 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade50;
     return _child;
   }
 
-  T get trueGray100 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade100;
+  T get stone100 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade100;
     return _child;
   }
 
-  T get trueGray200 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade200;
+  T get stone200 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade200;
     return _child;
   }
 
-  T get trueGray300 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade300;
+  T get stone300 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade300;
     return _child;
   }
 
-  T get trueGray400 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade400;
+  T get stone400 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade400;
     return _child;
   }
 
-  T get trueGray500 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade500;
+  T get stone500 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade500;
     return _child;
   }
 
-  T get trueGray600 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade600;
+  T get stone600 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade600;
     return _child;
   }
 
-  T get trueGray700 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade700;
+  T get stone700 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade700;
     return _child;
   }
 
-  T get trueGray800 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade800;
+  T get stone800 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade800;
     return _child;
   }
 
-  T get trueGray900 {
-    if (!_needsDarkVariant) twColor = TwColors.trueGray.shade900;
+  T get stone900 {
+    if (!_needsDarkVariant) twColor = TwColors.stone.shade900;
     return _child;
   }
 
-  T get onDarkTrueGray {
+  T get onDarkStone {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray;
+      twColor = TwColors.stone;
     }
     return _child;
   }
 
-  T get onDarkTrueGray50 {
+  T get onDarkStone50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade50;
+      twColor = TwColors.stone.shade50;
     }
     return _child;
   }
 
-  T get onDarkTrueGray100 {
+  T get onDarkStone100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade100;
+      twColor = TwColors.stone.shade100;
     }
     return _child;
   }
 
-  T get onDarkTrueGray200 {
+  T get onDarkStone200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade200;
+      twColor = TwColors.stone.shade200;
     }
     return _child;
   }
 
-  T get onDarkTrueGray300 {
+  T get onDarkStone300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade300;
+      twColor = TwColors.stone.shade300;
     }
     return _child;
   }
 
-  T get onDarkTrueGray400 {
+  T get onDarkStone400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade400;
+      twColor = TwColors.stone.shade400;
     }
     return _child;
   }
 
-  T get onDarkTrueGray500 {
+  T get onDarkStone500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade500;
+      twColor = TwColors.stone.shade500;
     }
     return _child;
   }
 
-  T get onDarkTrueGray600 {
+  T get onDarkStone600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade600;
+      twColor = TwColors.stone.shade600;
     }
     return _child;
   }
 
-  T get onDarkTrueGray700 {
+  T get onDarkStone700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade700;
+      twColor = TwColors.stone.shade700;
     }
     return _child;
   }
 
-  T get onDarkTrueGray800 {
+  T get onDarkStone800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade800;
+      twColor = TwColors.stone.shade800;
     }
     return _child;
   }
 
-  T get onDarkTrueGray900 {
+  T get onDarkStone900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.trueGray.shade900;
-    }
-    return _child;
-  }
-
-  T get warmGray {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray;
-    return _child;
-  }
-
-  T get warmGray50 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade50;
-    return _child;
-  }
-
-  T get warmGray100 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade100;
-    return _child;
-  }
-
-  T get warmGray200 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade200;
-    return _child;
-  }
-
-  T get warmGray300 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade300;
-    return _child;
-  }
-
-  T get warmGray400 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade400;
-    return _child;
-  }
-
-  T get warmGray500 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade500;
-    return _child;
-  }
-
-  T get warmGray600 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade600;
-    return _child;
-  }
-
-  T get warmGray700 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade700;
-    return _child;
-  }
-
-  T get warmGray800 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade800;
-    return _child;
-  }
-
-  T get warmGray900 {
-    if (!_needsDarkVariant) twColor = TwColors.warmGray.shade900;
-    return _child;
-  }
-
-  T get onDarkWarmGray {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray50 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade50;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray100 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade100;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray200 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade200;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray300 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade300;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray400 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade400;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray500 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade500;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray600 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade600;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray700 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade700;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray800 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade800;
-    }
-    return _child;
-  }
-
-  T get onDarkWarmGray900 {
-    if (_brightness == Brightness.dark) {
-      _needsDarkVariant = true;
-      twColor = TwColors.warmGray.shade900;
+      twColor = TwColors.stone.shade900;
     }
     return _child;
   }
@@ -2164,145 +2164,145 @@ mixin TwColorMixin<T> {
     return _child;
   }
 
-  T get lightBlue {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue;
+  T get sky {
+    if (!_needsDarkVariant) twColor = TwColors.sky;
     return _child;
   }
 
-  T get lightBlue50 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade50;
+  T get sky50 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade50;
     return _child;
   }
 
-  T get lightBlue100 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade100;
+  T get sky100 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade100;
     return _child;
   }
 
-  T get lightBlue200 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade200;
+  T get sky200 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade200;
     return _child;
   }
 
-  T get lightBlue300 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade300;
+  T get sky300 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade300;
     return _child;
   }
 
-  T get lightBlue400 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade400;
+  T get sky400 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade400;
     return _child;
   }
 
-  T get lightBlue500 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade500;
+  T get sky500 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade500;
     return _child;
   }
 
-  T get lightBlue600 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade600;
+  T get sky600 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade600;
     return _child;
   }
 
-  T get lightBlue700 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade700;
+  T get sky700 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade700;
     return _child;
   }
 
-  T get lightBlue800 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade800;
+  T get sky800 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade800;
     return _child;
   }
 
-  T get lightBlue900 {
-    if (!_needsDarkVariant) twColor = TwColors.lightBlue.shade900;
+  T get sky900 {
+    if (!_needsDarkVariant) twColor = TwColors.sky.shade900;
     return _child;
   }
 
-  T get onDarkLightBlue {
+  T get onDarkSky {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue;
+      twColor = TwColors.sky;
     }
     return _child;
   }
 
-  T get onDarkLightBlue50 {
+  T get onDarkSky50 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade50;
+      twColor = TwColors.sky.shade50;
     }
     return _child;
   }
 
-  T get onDarkLightBlue100 {
+  T get onDarkSky100 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade100;
+      twColor = TwColors.sky.shade100;
     }
     return _child;
   }
 
-  T get onDarkLightBlue200 {
+  T get onDarkSky200 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade200;
+      twColor = TwColors.sky.shade200;
     }
     return _child;
   }
 
-  T get onDarkLightBlue300 {
+  T get onDarkSky300 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade300;
+      twColor = TwColors.sky.shade300;
     }
     return _child;
   }
 
-  T get onDarkLightBlue400 {
+  T get onDarkSky400 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade400;
+      twColor = TwColors.sky.shade400;
     }
     return _child;
   }
 
-  T get onDarkLightBlue500 {
+  T get onDarkSky500 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade500;
+      twColor = TwColors.sky.shade500;
     }
     return _child;
   }
 
-  T get onDarkLightBlue600 {
+  T get onDarkSky600 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade600;
+      twColor = TwColors.sky.shade600;
     }
     return _child;
   }
 
-  T get onDarkLightBlue700 {
+  T get onDarkSky700 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade700;
+      twColor = TwColors.sky.shade700;
     }
     return _child;
   }
 
-  T get onDarkLightBlue800 {
+  T get onDarkSky800 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade800;
+      twColor = TwColors.sky.shade800;
     }
     return _child;
   }
 
-  T get onDarkLightBlue900 {
+  T get onDarkSky900 {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
-      twColor = TwColors.lightBlue.shade900;
+      twColor = TwColors.sky.shade900;
     }
     return _child;
   }

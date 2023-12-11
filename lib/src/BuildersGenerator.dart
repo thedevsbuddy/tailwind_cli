@@ -1,24 +1,20 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart'
-    as twAppBuilder;
-import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
 import 'package:tailwind_cli/tailwind/lib/builders/TwColumn.dart' as twColumn;
-import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart'
-    as twContainer;
+import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart' as twContainer;
 import 'package:tailwind_cli/tailwind/lib/builders/TwImage.dart' as twImage;
 import 'package:tailwind_cli/tailwind/lib/builders/TwPadding.dart' as twPadding;
 import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
 import 'package:tailwind_cli/tailwind/lib/builders/TwStack.dart' as twStack;
-import 'package:tailwind_cli/tailwind/lib/builders/TwText.dart' as twText;
 import 'package:tailwind_cli/tailwind/lib/builders/TwWrap.dart' as twWrap;
 import 'package:tailwind_cli/tailwind/lib/builders/TwInkwell.dart' as twInkWell;
 
-Future<void> generate(List<String> args) async {
-  await generateTwBuilder();
-  await generateTwAppBuilder();
-  await generateTwText();
+// Builder Generators
+import "BuilderGenerators/TwBuilderGenerator.dart" as twBuilderGenerator;
+
+Future<void> generate(_) async {
+  await twBuilderGenerator.generate(_);
   await generateTwContainer();
   await generateTwButton();
   await generateTwRow();
@@ -28,30 +24,6 @@ Future<void> generate(List<String> args) async {
   await generateTwStack();
   await generateTwInkWell();
   await generateTwImage();
-}
-
-/// Generate [TwBuilder]
-Future<void> generateTwBuilder() async {
-  /// Check and create
-  Utils.makeDir(twBuilder.target);
-
-  /// Write File
-  Utils.writeFile(twBuilder.file, twBuilder.stub);
-
-  /// Show Success message
-  print(green("Tailwind builder generated successfully!"));
-}
-
-/// Generate [TwAppBuilder]
-Future<void> generateTwAppBuilder() async {
-  /// Check and create
-  Utils.makeDir(twAppBuilder.target);
-
-  /// Write File
-  Utils.writeFile(twAppBuilder.file, twAppBuilder.stub);
-
-  /// Show Success message
-  print(green("TwAppBuilder generated successfully!"));
 }
 
 /// Generate [TwRow]
@@ -88,47 +60,6 @@ Future<void> generateTwWrap() async {
 
   /// Show Success message
   print(green("Tailwind Wrap generated successfully!"));
-}
-
-/// Generate [TwText]
-Future<void> generateTwText() async {
-  /// Get Tw Utility stub Template / File
-  var twTextFileData = twText.stub;
-
-  /// Process stub Template / File
-  twTextFileData = twTextFileData.replaceAll(
-      "//fontSizes", processFontSizes(Utils.configs.fontSizes));
-
-  /// Check and create
-  Utils.makeDir(twText.target);
-
-  /// Write File
-  Utils.writeFile(twText.file, twTextFileData);
-
-  /// Show Success message
-  print(green("TwText Generated successfully!"));
-}
-
-String processFontSizes(Map<String, dynamic>? fontSizes) {
-  if (fontSizes == null) {
-    return "";
-  }
-  var fontSize = "";
-  fontSizes.forEach((key, value) {
-    if (key == 'base') {
-      fontSize +=
-          """TwText get textBase => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
-    } else if (key.contains('.')) {
-      var dot = key.replaceAll('.', 'Dot');
-      fontSize +=
-          """TwText get text${dot[0].toUpperCase()}${dot.substring(1)} => this.._fontSize = TwSizes.text${dot[0].toUpperCase()}${dot.substring(1)};\n\t""";
-    } else {
-      fontSize +=
-          """TwText get text${key[0].toUpperCase()}${key.substring(1)} => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
-    }
-  });
-
-  return fontSize;
 }
 
 /// Generate [TwContainer]
@@ -200,8 +131,7 @@ Future<void> generateTwImage() async {
   var twImageData = twImage.stub;
 
   /// Process stub Template / File
-  twImageData = twImageData.replaceAll(
-      "%opacity%", processOpacity(Utils.configs.opacity));
+  twImageData = twImageData.replaceAll("%opacity%", processOpacity(Utils.configs.opacity));
 
   /// Check and create
   Utils.makeDir(twImage.target);
@@ -220,10 +150,8 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op +=
-          "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t";
-      op +=
-          "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t\n\t";
+      op += "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t";
+      op += "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t\n\t";
     }
   });
   return op;

@@ -23,20 +23,7 @@ class TwColors {
   static const Color black = Color(0xFF010101);
   static const Color white = Color(0xFFFFFFFF);
   static const Color transparent = Color(0x00000000);
-  static const MaterialColor gray = MaterialColor(0xFF71717A, <int, Color>{
-    50: Color(0xFFFAFAFA),
-    100: Color(0xFFF4F4F5),
-    200: Color(0xFFE4E4E7),
-    300: Color(0xFFD4D4D8),
-    400: Color(0xFFA1A1AA),
-    500: Color(0xFF71717A),
-    600: Color(0xFF52525B),
-    700: Color(0xFF3F3F46),
-    800: Color(0xFF27272A),
-    900: Color(0xFF18181B),
-  });
-
-  static const MaterialColor blueGray = MaterialColor(0xFF64748B, <int, Color>{
+  static const MaterialColor slate = MaterialColor(0xFF64748B, <int, Color>{
     50: Color(0xFFF8FAFC),
     100: Color(0xFFF1F5F9),
     200: Color(0xFFE2E8F0),
@@ -49,7 +36,7 @@ class TwColors {
     900: Color(0xFF0F172A),
   });
 
-  static const MaterialColor coolGray = MaterialColor(0xFF4B5563, <int, Color>{
+  static const MaterialColor gray = MaterialColor(0xFF6B7280, <int, Color>{
     50: Color(0xFFF9FAFB),
     100: Color(0xFFF3F4F6),
     200: Color(0xFFE5E7EB),
@@ -57,12 +44,25 @@ class TwColors {
     400: Color(0xFF9CA3AF),
     500: Color(0xFF6B7280),
     600: Color(0xFF4B5563),
-    700: Color(0xFF4B5563),
+    700: Color(0xFF374151),
     800: Color(0xFF1F2937),
     900: Color(0xFF111827),
   });
 
-  static const MaterialColor trueGray = MaterialColor(0xFF737373, <int, Color>{
+  static const MaterialColor zinc = MaterialColor(0xFF71717A, <int, Color>{
+    50: Color(0xFFFAFAFA),
+    100: Color(0xFFF4F4F5),
+    200: Color(0xFFE4E4E7),
+    300: Color(0xFFD4D4D8),
+    400: Color(0xFFA1A1AA),
+    500: Color(0xFF71717A),
+    600: Color(0xFF52525B),
+    700: Color(0xFF3F3F46),
+    800: Color(0xFF27272A),
+    900: Color(0xFF18181B),
+  });
+
+  static const MaterialColor neutral = MaterialColor(0xFF737373, <int, Color>{
     50: Color(0xFFFAFAFA),
     100: Color(0xFFF5F5F5),
     200: Color(0xFFE5E5E5),
@@ -75,7 +75,7 @@ class TwColors {
     900: Color(0xFF171717),
   });
 
-  static const MaterialColor warmGray = MaterialColor(0xFF78716C, <int, Color>{
+  static const MaterialColor stone = MaterialColor(0xFF78716C, <int, Color>{
     50: Color(0xFFFAFAF9),
     100: Color(0xFFF5F5F4),
     200: Color(0xFFE7E5E4),
@@ -205,7 +205,7 @@ class TwColors {
     900: Color(0xFF164E63),
   });
 
-  static const MaterialColor lightBlue = MaterialColor(0xFF0EA5E9, <int, Color>{
+  static const MaterialColor sky = MaterialColor(0xFF0EA5E9, <int, Color>{
     50: Color(0xFFF0F9FF),
     100: Color(0xFFE0F2FE),
     200: Color(0xFFBAE6FD),
