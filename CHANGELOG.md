@@ -1,3 +1,7 @@
+## 0.7.2
+- Updated required packages to latest version
+- Fixed deprecated issues 
+
 ## 0.7.1
 - Fixed `TwImage` Widget
 - Fixed `TwButton` Widget
