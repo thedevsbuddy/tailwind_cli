@@ -6,16 +6,14 @@ mixin TwMarginMixin<T> {
 
   EdgeInsetsGeometry? _twMargin;
 
-  @protected
   double marginLeft = 0;
-  @protected
+
   double marginTop = 0;
-  @protected
+
   double marginRight = 0;
-  @protected
+
   double marginBottom = 0;
 
-  @protected
   void setChildForMargining(T child) {
     _child = child;
   }

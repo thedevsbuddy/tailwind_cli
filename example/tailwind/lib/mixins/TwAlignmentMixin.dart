@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 mixin TwAlignmentMixin<T> {
   late T _child;
 
-  @protected
   Alignment? twAlignment;
 
-  @protected
   void setChildForAlignment(T child) {
     _child = child;
   }

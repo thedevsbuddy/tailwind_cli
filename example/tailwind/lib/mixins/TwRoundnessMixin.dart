@@ -3,13 +3,10 @@ import 'package:flutter/material.dart';
 mixin TwRoundnessMixin<T> {
   late T _child;
 
-  @protected
   double? roundness;
 
-  @protected
   BorderRadiusGeometry? radiusGeometry;
 
-  @protected
   void setChildForRoundness(T child) {
     _child = child;
   }

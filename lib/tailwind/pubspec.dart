@@ -13,8 +13,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.17.0
-  get_storage: ^2.0.3
+  intl: ^0.18.0
+  get_storage: ^2.1.1
 
 dev_dependencies:
   flutter_test:

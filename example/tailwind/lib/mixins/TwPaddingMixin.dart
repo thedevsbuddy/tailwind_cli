@@ -7,14 +7,13 @@ mixin TwPaddingMixin<T> {
   EdgeInsetsGeometry? _twPadding;
 
   double paddingLeft = 0;
-  @protected
+
   double paddingTop = 0;
-  @protected
+
   double paddingRight = 0;
-  @protected
+
   double paddingBottom = 0;
 
-  @protected
   void setChildForPadding(T child) {
     _child = child;
   }

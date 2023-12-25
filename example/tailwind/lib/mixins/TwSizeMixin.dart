@@ -4,13 +4,10 @@ import 'package:tailwind/tailwind.dart';
 mixin TwSizeMixin<T> {
   late T _child;
 
-  @protected
   double? twWidth;
 
-  @protected
   double? twHeight;
 
-  @protected
   void setChildForSizing(T child) {
     _child = child;
   }

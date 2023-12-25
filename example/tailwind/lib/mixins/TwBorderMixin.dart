@@ -6,22 +6,18 @@ mixin TwBorderMixin<T> {
 
   /// Checks if app is in dark mode
   /// And also Checks if [Widget] has [onDark<Color>] applied
-  @protected
   bool _needsDarkVariant = false;
 
   /// Checks if app is in dark mode
   /// And also Checks if [Widget] has [onDark<Color>] applied
-  @protected
   Brightness _brightness =
       Theme.of(TwService.appKey.currentContext!).brightness;
 
-  @protected
   bool _hasBorder = false;
   Color? twBorderColor = Colors.grey[500];
   BorderStyle? twBorderStyle = BorderStyle.solid;
   double twBorderWidth = 1;
 
-  @protected
   void setChildForBorder(T child) {
     _child = child;
   }

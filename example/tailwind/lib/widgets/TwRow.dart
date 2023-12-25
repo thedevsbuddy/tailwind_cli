@@ -4,7 +4,7 @@ import 'TwBuilder.dart';
 
 /// Flutter Row Builder Widget
 /// to provide utilities in your Row Widget
-@protected
+
 class TwRow extends TwWidgetBuilder<Widget> {
   TwRow(List<Widget> this._children);
   TwRow.existing(

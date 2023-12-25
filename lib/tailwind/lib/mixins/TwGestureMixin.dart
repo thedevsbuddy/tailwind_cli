@@ -17,36 +17,36 @@ import 'package:flutter/material.dart';
 mixin TwGestureMixin<T> {
   late T _child;
 
-  @protected
+  
   void setChildForGestureDetection(T child) {
     _child = child;
   }
 
-  @protected
+  
   Function()? twOnTap;
 
-  @protected
+  
   Function()? twOnDoubleTap;
 
-  @protected
+  
   Function()? twOnLongPress;
 
-  @protected
+  
   Function(TapDownDetails)? twOnTapDown;
 
-  @protected
+  
   Function(TapUpDetails)? twOnTapUp;
 
-  @protected
+  
   Function(bool)? twOnFocusChange;
 
-  @protected
+  
   Function(bool)? twOnHighlightChanged;
 
-  @protected
+  
   Function()? twOnTapCancel;
 
-  @protected
+  
   Function(bool)? twOnHover;
 
   /// Handle Methods

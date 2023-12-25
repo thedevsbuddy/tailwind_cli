@@ -19,7 +19,7 @@ import 'TwBuilder.dart';
 
 /// [TwInkwell] widget is wrapper around the actual [InkWell] Widget
 ///
-@protected
+
 class TwInkWell extends TwWidgetBuilder<Widget> with TwGestureMixin<TwInkWell> {
   TwInkWell({this.child}) {
     setChildForGestureDetection(this);

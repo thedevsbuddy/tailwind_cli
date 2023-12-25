@@ -4,7 +4,7 @@ import 'TwBuilder.dart';
 
 /// Flutter Text Builder Widget
 /// to provide utilities in your Text Widget
-@protected
+
 class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText(this._text) {
     setChildForColoring(this);

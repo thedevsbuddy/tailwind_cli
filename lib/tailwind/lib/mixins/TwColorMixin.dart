@@ -20,18 +20,18 @@ mixin TwColorMixin<T> {
   
   /// Checks if app is in dark mode
   /// And also Checks if [Widget] has [onDark<Color>] applied
-  @protected
+  
   bool _needsDarkVariant = false;
 
   /// Checks if app is in dark mode
   /// And also Checks if [Widget] has [onDark<Color>] applied
-  @protected
+  
   Brightness _brightness = Theme.of(TwService.appKey.currentContext!).brightness;
 
-  @protected
+  
   Color? twColor;
 
-  @protected
+  
   void setChildForColoring(T child) {
     _child = child;
   }

@@ -18,7 +18,7 @@ import 'TwBuilder.dart';
 
 /// Flutter Column Builder Widget
 /// to provide utilities in your Column Widget
-@protected
+
 class TwColumn extends TwWidgetBuilder<Widget> {
   TwColumn(List<Widget> this._children);
   TwColumn.existing(

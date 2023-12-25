@@ -20,21 +20,21 @@ mixin TwGradientMixin<T> {
 
   /// Checks if app is in dark mode
   /// And also Checks if [Widget] has [onDark<Color>] applied
-  @protected
+  
   bool _needsDarkVariant = false;
 
   /// Checks if app is in dark mode
   /// And also Checks if [Widget] has [onDark<Color>] applied
-  @protected
+  
   Brightness _brightness = Theme.of(TwService.appKey.currentContext!).brightness;
 
-  @protected
+  
   bool hasGradient = false;
   Alignment begin = Alignment.topLeft, end = Alignment.bottomRight;
   List<Color> gradientColors = [Colors.transparent, Colors.transparent];
   List<double>? stops;
 
-  @protected
+  
   void setChildForGradient(T child) {
     _child = child;
   }

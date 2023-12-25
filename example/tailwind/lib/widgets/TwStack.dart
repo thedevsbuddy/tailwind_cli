@@ -3,7 +3,7 @@ import 'TwBuilder.dart';
 
 /// Flutter Stack Builder Widget
 /// to provide utilities in your Stack Widget
-@protected
+
 class TwStack extends TwWidgetBuilder<Widget> {
   TwStack(this._children);
 

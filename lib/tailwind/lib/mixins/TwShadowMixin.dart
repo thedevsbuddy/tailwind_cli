@@ -17,10 +17,10 @@ import 'package:flutter/material.dart';
 mixin TwShadowMixin<T> {
   late T _child;
 
-  @protected
+  
   List<BoxShadow>? twShadow;
 
-  @protected
+  
   void setChildForShadow(T child) {
     _child = child;
   }
