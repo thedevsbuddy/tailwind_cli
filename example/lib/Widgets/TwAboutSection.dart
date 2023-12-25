@@ -16,6 +16,9 @@ class TwAboutSection extends StatelessWidget {
             .isContainer
             .mb4
             .render(),
+        TwButton(child: "I am a Button".isText.render())
+        .withConstraints(BoxConstraints(maxWidth: 120))
+        .primaryColor(context).onTap(() => print("Button Clicked.")).render(),
       ]).render(),
     ).render();
   }
