@@ -28,7 +28,8 @@ class TwButton extends TwWidgetBuilder<Widget>
   }
 
   final Widget child;
-  Widget? _loadingWidget = SizedBox(height: 16, child: CircularProgressIndicator());
+  Widget? _loadingWidget =
+      SizedBox(height: 16, child: CircularProgressIndicator());
 
   bool _isBusy = false;
   BoxBorder? _border;
@@ -38,7 +39,8 @@ class TwButton extends TwWidgetBuilder<Widget>
   BoxConstraints? _constraints;
 
   /// Provide a box constraint
-  TwButton withConstraints(BoxConstraints constraints) => this.._constraints = constraints;
+  TwButton withConstraints(BoxConstraints constraints) =>
+      this.._constraints = constraints;
 
   /// Sets the color property of the box.
   TwButton color(Color color) => this..twColor = color;
@@ -74,13 +76,16 @@ class TwButton extends TwWidgetBuilder<Widget>
   }
 
   /// Sets the linear gradient to the decorated box.
-  TwButton linearGradient(LinearGradient linearGradient) => this.._gradient = linearGradient;
+  TwButton linearGradient(LinearGradient linearGradient) =>
+      this.._gradient = linearGradient;
 
   /// Sets the radial gradient to the decorated box.
-  TwButton radialGradient(RadialGradient radialGradient) => this.._gradient = radialGradient;
+  TwButton radialGradient(RadialGradient radialGradient) =>
+      this.._gradient = radialGradient;
 
   /// Sets the sweep gradient to the decorated box.
-  TwButton sweepGradient(SweepGradient sweepGradient) => this.._gradient = sweepGradient;
+  TwButton sweepGradient(SweepGradient sweepGradient) =>
+      this.._gradient = sweepGradient;
 
   @override
   Widget render({Key? key}) {
@@ -113,10 +118,18 @@ class TwButton extends TwWidgetBuilder<Widget>
             child: _isBusy ? _loadingWidget : child,
             decoration: BoxDecoration(
               color: !hasGradient ? twColor : null,
-              borderRadius: (roundness == null) ? null : (radiusGeometry ?? BorderRadius.circular(roundness!)),
+              borderRadius: (roundness == null)
+                  ? null
+                  : (radiusGeometry ?? BorderRadius.circular(roundness!)),
               boxShadow: twShadow ?? [],
               border: _border ?? getBorder(),
-              gradient: hasGradient ? LinearGradient(colors: gradientColors, stops: stops, begin: begin, end: end) : _gradient,
+              gradient: hasGradient
+                  ? LinearGradient(
+                      colors: gradientColors,
+                      stops: stops,
+                      begin: begin,
+                      end: end)
+                  : _gradient,
             ),
           ),
         ],
@@ -127,7 +140,8 @@ class TwButton extends TwWidgetBuilder<Widget>
 
 extension TwButtonWidgetExtension on Widget {
   /// Extension method to directly access material [TwButton] with any widget without wrapping or with dot operator.
-  @Deprecated('This method is deprecated and will be removed in the future please use [isContainer] instead.')
+  @Deprecated(
+      'This method is deprecated and will be removed in the future please use [isContainer] instead.')
   TwButton get button => TwButton(child: this);
 
   TwButton get isButton => TwButton(child: this);

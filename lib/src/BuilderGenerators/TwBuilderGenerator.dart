@@ -1,7 +1,8 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
-import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart' as twAppBuilder;
+import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart'
+    as twAppBuilder;
 
 Future<void> generate(_) async {
   await generateTwBuilder();

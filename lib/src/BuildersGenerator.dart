@@ -2,7 +2,8 @@ import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind/lib/builders/TwButton.dart' as twButton;
 import 'package:tailwind_cli/tailwind/lib/builders/TwColumn.dart' as twColumn;
-import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart' as twContainer;
+import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart'
+    as twContainer;
 import 'package:tailwind_cli/tailwind/lib/builders/TwImage.dart' as twImage;
 import 'package:tailwind_cli/tailwind/lib/builders/TwPadding.dart' as twPadding;
 import 'package:tailwind_cli/tailwind/lib/builders/TwRow.dart' as twRow;
@@ -131,7 +132,8 @@ Future<void> generateTwImage() async {
   var twImageData = twImage.stub;
 
   /// Process stub Template / File
-  twImageData = twImageData.replaceAll("%opacity%", processOpacity(Utils.configs.opacity));
+  twImageData = twImageData.replaceAll(
+      "%opacity%", processOpacity(Utils.configs.opacity));
 
   /// Check and create
   Utils.makeDir(twImage.target);
@@ -150,8 +152,10 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op += "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t";
-      op += "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t\n\t";
+      op +=
+          "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t";
+      op +=
+          "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);\n\t\n\t";
     }
   });
   return op;
