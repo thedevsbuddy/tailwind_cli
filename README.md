@@ -4,7 +4,7 @@ A simple yet awesome flutter package to generate and use TailwindCSS-like stylin
 projects.
 
 **Note:**
-> Please take a not that this project is in early stage and in future updates may include breaking changes.
+> Please take a not that this project is in early stage and in future updates it may include breaking changes.
 
 ![TailwindCLI](./screenshots/TailwindCLI.png)
 
