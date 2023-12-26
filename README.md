@@ -29,7 +29,6 @@ Know more about the package by visiting this
 
 | Feature               | Status | Addition/Changes | From Version |
 | --------------------- | :----: | :--------------: | :----------: |
-| `TwImage` Widget      |   ✔️   |        ➕        |   `0.7.0`    |
 | `TwGrid` Widget       |   ⏳   |        ➕        | In Progress  |
 | `TwPositioned` Widget |   ⏳   |        ➕        | In Progress  |
 
