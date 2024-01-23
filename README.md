@@ -107,7 +107,9 @@ You can check the official documentation by visiting this URL: [Visit Official D
 
 **_Note: This documentation is in the initial stage which will be fully available soon._**
 
-![Alt](https://repobeats.axiom.co/api/embed/a6ec0796ed5690605c959b6033c533173a351ff3.svg "Repobeats analytics image")
+## Repo Activity
+
+![TailwindCLI Activity](https://repobeats.axiom.co/api/embed/a6ec0796ed5690605c959b6033c533173a351ff3.svg "Repobeats analytics image")
 
 ## Contribution
 
