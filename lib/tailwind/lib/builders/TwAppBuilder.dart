@@ -35,12 +35,18 @@ class _TwAppBuilderState extends State<TwAppBuilder> {
   void initState() {
     super.initState();
 
-    /// Rebuild UI if anytime [Brightness] is changed
-    View.of(context).platformDispatcher.onPlatformBrightnessChanged = () => rebuild();
-
     /// Rebuild UI as soos as this [Widget] is in tree
     if (mounted) rebuild();
     _loadTheme();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    /// Rebuild UI if anytime [Brightness] is changed
+    View.of(context).platformDispatcher.onPlatformBrightnessChanged =
+        () => rebuild();
   }
 
   @override
