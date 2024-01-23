@@ -465,7 +465,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
       key: key,
       textAlign: _textAlign,
       maxLines: _maxLines,
-      textScaleFactor: _scaleFactor,
+      textScaler: TextScaler.linear(_scaleFactor ?? 1.0),
       style: _themedStyle?.merge(ts) ?? _textStyle?.merge(ts) ?? ts,
       softWrap: _softWrap ?? true,
       overflow: _overflow ?? TextOverflow.clip,
