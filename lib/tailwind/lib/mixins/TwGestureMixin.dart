@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwGestureMixin` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/mixins/";
 
-/// Get the full file path for the `TwGestureMixin` Class
-///
-/// [file] This gives a boilerplate for the `TwGestureMixin` class
+/// Get file's path with name
 const String file = "tailwind/lib/mixins/TwGestureMixin.dart";
 
-/// Get the stub content for the `TwGestureMixin` Class
-///
-/// [stub] This gives a boilerplate for the `TwGestureMixin` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 

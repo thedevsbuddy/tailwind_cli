@@ -1,16 +1,10 @@
-/// Get the target's directory
-///
-/// [target] Provides the target directory for the `tailwind.config.json` Config file
+/// Get Targeted Directory
 const String target = "";
 
-/// Get the full file path for the `tailwind.config.json` Config file
-///
-/// [file] This gives a boilerplate for the `tailwind.config.json` Config file
+/// Get file's path with name
 const String file = "tailwind.config.json";
 
-/// Get the stub content for the `tailwind.config.json` Config file
-///
-/// [stub] This gives a boilerplate for the `tailwind.config.json` Config file
+/// Get file's Raw Contents
 const String stub = """
 {
   "darkMode": true,

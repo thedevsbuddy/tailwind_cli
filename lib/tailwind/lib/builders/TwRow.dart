@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwRow` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/widgets/";
 
-/// Get the full file path for the `TwRow` Class
-///
-/// [file] This gives a boilerplate for the `TwRow` class
+/// Get file's path with name
 const String file = "tailwind/lib/widgets/TwRow.dart";
 
-/// Get the stub content for the `TwRow` Class
-///
-/// [stub] This gives a boilerplate for the `TwRow` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 
