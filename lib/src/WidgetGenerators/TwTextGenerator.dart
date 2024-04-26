@@ -8,7 +8,8 @@ Future<void> generate(_) async {
   var twTextFileData = twText.stub;
 
   /// Process stub Template / File
-  twTextFileData = twTextFileData.replaceAll("%fontSizes%", processFontSizes(Utils.configs.fontSizes));
+  twTextFileData = twTextFileData.replaceAll(
+      "%fontSizes%", processFontSizes(Utils.configs.fontSizes));
 
   /// Check and create
   Utils.makeDir(twText.target);
@@ -27,7 +28,8 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
   var fontSize = "";
   fontSizes.forEach((key, value) {
     if (key == 'base') {
-      fontSize += """TwText get textBase => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
+      fontSize +=
+          """TwText get textBase => this.._fontSize = TwSizes.text${key[0].toUpperCase()}${key.substring(1)};\n\t""";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
       fontSize +=

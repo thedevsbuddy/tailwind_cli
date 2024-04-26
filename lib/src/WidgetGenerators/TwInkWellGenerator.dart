@@ -1,6 +1,6 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/builders/TwInkWell.dart' as twInkWell;
+import 'package:tailwind_cli/tailwind/lib/builders/TwInkwell.dart' as twInkWell;
 
 /// Generate [TwInkWell]
 Future<void> generate(_) async {

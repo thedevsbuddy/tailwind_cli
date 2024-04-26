@@ -98,8 +98,6 @@ mixin TwMarginMixin<T> {
 }
 """;
 
-
-
 const String allSide = """
 T get m%spacerValue% {
     marginLeft = TwSizes.spacer%spacerValue%;

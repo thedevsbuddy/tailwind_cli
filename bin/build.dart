@@ -30,7 +30,8 @@ void formatGeneratedCode() async {
     if (result.exitCode == 0) {
       print(blue(result.stdout));
     } else {
-      print(red('Command failed with error code ${result.exitCode}: ${result.stderr}'));
+      print(red(
+          'Command failed with error code ${result.exitCode}: ${result.stderr}'));
     }
   } catch (e) {
     print(red('Error running command: $e'));

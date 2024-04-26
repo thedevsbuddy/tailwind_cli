@@ -1,3 +1,6 @@
+## 0.7.4
+- Fixed some pub issues and formatted files
+
 ## 0.7.3
 - Updated required packages to latest version
 - Fixed build command error issue 

@@ -4,16 +4,26 @@ import 'dart:io';
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwAlignmentMixin.dart' as twAlignmentMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwBorderMixin.dart' as twBorderMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwColorMixin.dart' as twColorMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwGestureMixin.dart' as twGestureMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwGradientMixin.dart' as twGradientMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwMarginMixin.dart' as twMarginMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwPaddingMixin.dart' as twPaddingMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwRoundnessMixin.dart' as twRoundnessMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwShadowMixin.dart' as twShadowMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwSizeMixin.dart' as twSizeMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwAlignmentMixin.dart'
+    as twAlignmentMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwBorderMixin.dart'
+    as twBorderMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwColorMixin.dart'
+    as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwGestureMixin.dart'
+    as twGestureMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwGradientMixin.dart'
+    as twGradientMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwMarginMixin.dart'
+    as twMarginMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwPaddingMixin.dart'
+    as twPaddingMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwRoundnessMixin.dart'
+    as twRoundnessMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwShadowMixin.dart'
+    as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwSizeMixin.dart'
+    as twSizeMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -50,7 +60,8 @@ Future<void> generateColorMixin() async {
   var twColorMixinFileData = twColorMixin.stub;
 
   /// Process stub
-  twColorMixinFileData = twColorMixinFileData.replaceAll("%colorGetters%", processColors(configs['colors']));
+  twColorMixinFileData = twColorMixinFileData.replaceAll(
+      "%colorGetters%", processColors(configs['colors']));
 
   /// Check and create
   Utils.makeDir(twColorMixin.target);
@@ -74,8 +85,9 @@ String processColors(Map<String, dynamic>? colors) {
         if (k == "DEFAULT") {
           color += twColorMixin.colorStub.replaceAll("%colorName%", key);
         } else {
-          String colorStubWithShade =
-              twColorMixin.colorStubWithShade.replaceAll("%colorName%", key).replaceAll("%colorShade%", k);
+          String colorStubWithShade = twColorMixin.colorStubWithShade
+              .replaceAll("%colorName%", key)
+              .replaceAll("%colorShade%", k);
           color += colorStubWithShade;
         }
       });
@@ -85,12 +97,14 @@ String processColors(Map<String, dynamic>? colors) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {
             color += twColorMixin.colorStubDark
-                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll(
+                    "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
                 .replaceAll("%colorName%", key);
           } else {
             color += twColorMixin.colorStubDarkWithShade
                 .replaceAll("%colorName%", key)
-                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll(
+                    "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
                 .replaceAll("%colorShade%", k);
           }
         });
@@ -99,11 +113,13 @@ String processColors(Map<String, dynamic>? colors) {
       color += twColorMixin.colorStub.replaceAll("%colorName%", key);
       if (Utils.configs.darkMode!) {
         color += twColorMixin.colorStubDark
-            .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+            .replaceAll(
+                "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
             .replaceAll("%colorName%", key);
       }
     } else {
-      throw new Exception('Invalid value for colors["$key"] in "tailwind.config.json" file');
+      throw new Exception(
+          'Invalid value for colors["$key"] in "tailwind.config.json" file');
     }
   });
   return color;
@@ -116,8 +132,10 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("%paddingGetters%", processPaddings(Utils.configs.spacers));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll("%marginGetters%", processMargins(Utils.configs.spacers));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll(
+      "%paddingGetters%", processPaddings(Utils.configs.spacers));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll(
+      "%marginGetters%", processMargins(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -292,7 +310,8 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData = twGradientMixinFileData.replaceAll("%gradientColors%", processGradientColors(Utils.configs.colors));
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll(
+      "%gradientColors%", processGradientColors(Utils.configs.colors));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -315,11 +334,13 @@ String processGradientColors(Map<String, dynamic>? colors) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           color += twGradientMixin.colorStub
-              .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+              .replaceAll(
+                  "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
               .replaceAll("%colorName%", key);
         } else {
           color += twGradientMixin.colorStubWithShade
-              .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+              .replaceAll(
+                  "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
               .replaceAll("%colorName%", key)
               .replaceAll("%colorShade%", k);
         }
@@ -329,11 +350,13 @@ String processGradientColors(Map<String, dynamic>? colors) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {
             color += twGradientMixin.colorStubDark
-                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll(
+                    "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
                 .replaceAll("%colorName%", key);
           } else {
             color += twGradientMixin.colorStubDarkWithShade
-                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll(
+                    "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
                 .replaceAll("%colorName%", key)
                 .replaceAll("%colorShade%", k);
           }
@@ -341,12 +364,14 @@ String processGradientColors(Map<String, dynamic>? colors) {
       }
     } else {
       color += twGradientMixin.colorStub
-          .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+          .replaceAll(
+              "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
           .replaceAll("%colorName%", key);
 
       if (Utils.configs.darkMode!) {
         color += twGradientMixin.colorStubDark
-            .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+            .replaceAll(
+                "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
             .replaceAll("%colorName%", key);
       }
     }
@@ -360,8 +385,10 @@ Future<void> generateBorderMixin() async {
   var twBorderMixinFileData = twBorderMixin.stub;
 
   /// Process stub Template / File
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll("%colors%", processBorderColors(Utils.configs.colors));
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll("%sizes%", processBorderWidths(Utils.configs.spacers));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
+      "%colors%", processBorderColors(Utils.configs.colors));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
+      "%sizes%", processBorderWidths(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twBorderMixin.target);
@@ -384,11 +411,13 @@ String processBorderColors(Map<String, dynamic>? colors) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
           color += twBorderMixin.borderColorStub
-              .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+              .replaceAll(
+                  "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
               .replaceAll("%colorName%", key);
         } else {
           color += twBorderMixin.borderColorWithShadeStub
-              .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+              .replaceAll(
+                  "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
               .replaceAll("%colorName%", key)
               .replaceAll("%colorShade%", k);
         }
@@ -399,11 +428,13 @@ String processBorderColors(Map<String, dynamic>? colors) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {
             color += twBorderMixin.borderColorDarkStub
-                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll(
+                    "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
                 .replaceAll("%colorName%", key);
           } else {
             color += twBorderMixin.borderColorDarkWithShadeStub
-                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll(
+                    "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
                 .replaceAll("%colorName%", key)
                 .replaceAll("%colorShade%", k);
           }
@@ -411,13 +442,15 @@ String processBorderColors(Map<String, dynamic>? colors) {
       }
     } else if (value is String) {
       color += twBorderMixin.borderColorStub
-          .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+          .replaceAll(
+              "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
           .replaceAll("%colorName%", key);
 
       /// Dark variants
       if (Utils.configs.darkMode!) {
         color += twBorderMixin.borderColorDarkStub
-            .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+            .replaceAll(
+                "%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
             .replaceAll("%colorName%", key);
       }
     } else {

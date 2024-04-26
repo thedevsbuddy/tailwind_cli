@@ -268,7 +268,6 @@ mixin TwGradientMixin<T> {
 }
 """;
 
-
 const String colorStub = """
 T get from%colorNameCamel% {
 if (!_needsDarkVariant) gradientColors[0] = TwColors.%colorName%;

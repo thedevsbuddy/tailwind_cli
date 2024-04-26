@@ -8,7 +8,8 @@ Future<void> generate(_) async {
   var twImageData = twImage.stub;
 
   /// Process stub Template / File
-  twImageData = twImageData.replaceAll("%opacity%", processOpacity(Utils.configs.opacity));
+  twImageData = twImageData.replaceAll(
+      "%opacity%", processOpacity(Utils.configs.opacity));
 
   /// Check and create
   Utils.makeDir(twImage.target);
@@ -27,8 +28,10 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op += "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);";
-      op += "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);";
+      op +=
+          "TwImage get o$key => this.._opacity = AlwaysStoppedAnimation($value);";
+      op +=
+          "TwImage get opacity$key => this.._opacity = AlwaysStoppedAnimation($value);";
     }
   });
   return op;

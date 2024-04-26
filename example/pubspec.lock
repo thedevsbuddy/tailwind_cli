@@ -93,10 +93,10 @@ packages:
     dependency: transitive
     description:
       name: csv
-      sha256: "63ed2871dd6471193dffc52c0e6c76fb86269c00244d244297abbb355c84a86e"
+      sha256: c6aa2679b2a18cb57652920f674488d89712efaf4d3fdf2e537215b35fc19d6c
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.1"
+    version: "6.0.0"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -105,30 +105,46 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
-  dart_console2:
+  dart_console:
     dependency: transitive
     description:
-      name: dart_console2
-      sha256: f7636b74f19910a20e3d03262190ad78546a33dfc972dba7bb9fe1530826269e
+      name: dart_console
+      sha256: "2f94b62ac492892bc5091b8f5d416937974405ececab7ad96e5f8aae9d9f1527"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.1"
+    version: "4.0.2"
   dcli:
     dependency: transitive
     description:
       name: dcli
-      sha256: eb797595afab6aec4ce7a98635dc2cfc0d79b2e8059c624be52052ed8f68ff7c
+      sha256: c076448cee6fe563e1964ade9d4653d855e69d204547791fff0d0fe96c7bd75a
       url: "https://pub.dev"
     source: hosted
-    version: "3.4.0"
+    version: "4.0.1-beta.4"
+  dcli_common:
+    dependency: transitive
+    description:
+      name: dcli_common
+      sha256: c8af0ed248e67b7293cc7ca24a11cc6f3762009ce2a4d0d03c1368e6b0f15fb9
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1-beta.4"
   dcli_core:
     dependency: transitive
     description:
       name: dcli_core
-      sha256: "5736e57897a2aa062afa05f8cda7a69c7473d65b2fa4e200576c25f357f4a5e8"
+      sha256: "915b6d7aa9cc039de4be263ecbdac0d372286059f5dba02a8b171748afb4883c"
       url: "https://pub.dev"
     source: hosted
-    version: "3.4.0"
+    version: "4.0.1-beta.4"
+  dcli_terminal:
+    dependency: transitive
+    description:
+      name: dcli_terminal
+      sha256: "5449d06b49966796237c5953abc8763dfbc3c29d180ba41f8e182d76c8379840"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1-beta.4"
   equatable:
     dependency: transitive
     description:
@@ -231,10 +247,10 @@ packages:
     dependency: transitive
     description:
       name: intl
-      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
       url: "https://pub.dev"
     source: hosted
-    version: "0.18.1"
+    version: "0.19.0"
   js:
     dependency: transitive
     description:
@@ -323,6 +339,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  native_synchronization:
+    dependency: transitive
+    description:
+      name: native_synchronization
+      sha256: ff200fe0a64d733ff7d4dde2005271c297db81007604c8cd21037959858133ab
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
   path:
     dependency: transitive
     description:
@@ -447,10 +471,10 @@ packages:
     dependency: transitive
     description:
       name: settings_yaml
-      sha256: c568c79a1a2e48235d7f6cb06a78b15867879cc1995796dd324b9bc125e6b077
+      sha256: abfd2a6a2c48883154ffe11ddd4f72ce43cc2d7f030ae060f7237fb3b2bddbf7
       url: "https://pub.dev"
     source: hosted
-    version: "8.0.1"
+    version: "8.1.0-alpha.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -526,14 +550,14 @@ packages:
       path: tailwind
       relative: true
     source: path
-    version: "0.6.1"
+    version: "0.7.2"
   tailwind_cli:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.7.2"
+    version: "0.7.3"
   term_glyph:
     dependency: transitive
     description:
@@ -623,5 +647,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.3.0-279.1.beta <4.0.0"
+  dart: ">=3.3.0 <4.0.0"
   flutter: ">=3.16.0"
