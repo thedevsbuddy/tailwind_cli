@@ -85,7 +85,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// All Side Padding
   T get p0 {
     paddingLeft = TwSizes.spacer0;
     paddingTop = TwSizes.spacer0;
@@ -302,7 +301,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Horizontal Padding
   T get px0 {
     paddingLeft = TwSizes.spacer0;
     paddingRight = TwSizes.spacer0;
@@ -465,7 +463,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Vertical Padding
   T get py0 {
     paddingTop = TwSizes.spacer0;
     paddingBottom = TwSizes.spacer0;
@@ -628,7 +625,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Left Padding
   T get pl0 {
     paddingLeft = TwSizes.spacer0;
     return _child;
@@ -764,7 +760,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Right Padding
   T get pt0 {
     paddingTop = TwSizes.spacer0;
     return _child;
@@ -900,7 +895,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Right Padding
   T get pr0 {
     paddingRight = TwSizes.spacer0;
     return _child;
@@ -1036,7 +1030,6 @@ mixin TwPaddingMixin<T> {
     return _child;
   }
 
-  /// Bottom Padding
   T get pb0 {
     paddingBottom = TwSizes.spacer0;
     return _child;

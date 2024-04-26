@@ -104,3 +104,54 @@ mixin TwPaddingMixin<T> {
   %paddingGetters%
 }
 """;
+
+const String allSide = """
+T get p%spacerValue% {
+    paddingLeft = TwSizes.spacer%spacerValue%;
+    paddingTop = TwSizes.spacer%spacerValue%;
+    paddingRight = TwSizes.spacer%spacerValue%;
+    paddingBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String horizontal = """
+T get px%spacerValue% {
+    paddingLeft = TwSizes.spacer%spacerValue%;
+    paddingRight = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String vertical = """
+T get py%spacerValue% {
+    paddingTop = TwSizes.spacer%spacerValue%;
+    paddingBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String left = """
+T get pl%spacerValue% {
+    paddingLeft = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String top = """
+T get pt%spacerValue% {
+    paddingTop = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String right = """
+T get pr%spacerValue% {
+    paddingRight = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String bottom = """
+T get pb%spacerValue% {
+    paddingBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";

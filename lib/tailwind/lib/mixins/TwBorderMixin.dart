@@ -189,3 +189,37 @@ mixin TwBorderMixin<T> {
 }
 
 """;
+
+const String borderColorStub = """
+T get border%colorNameCamel% {
+if(!_needsDarkVariant) twBorderColor = TwColors.%colorName%;
+return _child;
+}
+""";
+
+const String borderColorDarkStub = """
+T get onDarkBorder%colorNameCamel% {
+      if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        twBorderColor = TwColors.%colorName%;
+      }
+      return _child;
+  }
+""";
+
+const String borderColorWithShadeStub = """
+T get border%colorNameCamel%%colorShade% {
+      if(!_needsDarkVariant) twBorderColor = TwColors.%colorName%.shade%colorShade%;
+      return _child;
+  }
+""";
+
+const String borderColorDarkWithShadeStub = """
+T get onDarkBorder%colorNameCamel%%colorShade% {
+       if (_brightness == Brightness.dark) {
+        _needsDarkVariant = true;
+        twBorderColor = TwColors.%colorName%.shade%colorShade%;
+      }
+      return _child;
+  }
+""";

@@ -85,7 +85,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// All Side Margin
   T get m0 {
     marginLeft = TwSizes.spacer0;
     marginTop = TwSizes.spacer0;
@@ -302,7 +301,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// Horizontal Margin
   T get mx0 {
     marginLeft = TwSizes.spacer0;
     marginRight = TwSizes.spacer0;
@@ -465,7 +463,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// Vertical Margin
   T get my0 {
     marginTop = TwSizes.spacer0;
     marginBottom = TwSizes.spacer0;
@@ -628,7 +625,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// Left Margin
   T get ml0 {
     marginLeft = TwSizes.spacer0;
     return _child;
@@ -764,7 +760,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// Right Margin
   T get mt0 {
     marginTop = TwSizes.spacer0;
     return _child;
@@ -900,7 +895,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// Right Margin
   T get mr0 {
     marginRight = TwSizes.spacer0;
     return _child;
@@ -1036,7 +1030,6 @@ mixin TwMarginMixin<T> {
     return _child;
   }
 
-  /// Bottom Padding
   T get mb0 {
     marginBottom = TwSizes.spacer0;
     return _child;

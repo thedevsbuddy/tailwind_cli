@@ -273,3 +273,60 @@ mixin TwGradientMixin<T> {
   %gradientColors%
 }
 """;
+
+
+const String colorStub = """
+T get from%colorNameCamel% {
+if (!_needsDarkVariant) gradientColors[0] = TwColors.%colorName%;
+return _child;
+}
+T get to%colorNameCamel% {
+if (!_needsDarkVariant) gradientColors[1] = TwColors.%colorName%;
+return _child;
+}
+""";
+
+const String colorStubWithShade = """
+T get from%colorNameCamel%%colorShade% {
+if (!_needsDarkVariant) gradientColors[0] = TwColors.%colorName%.shade%colorShade%;
+return _child;
+}
+T get to%colorNameCamel% {
+if (!_needsDarkVariant) gradientColors[1] = TwColors.%colorName%.shade%colorShade%;
+return _child;
+}
+""";
+
+const String colorStubDark = """
+T get onDarkFrom%colorNameCamel% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.%colorName%;
+    }
+    return _child;
+}
+T get onDarkTo%colorNameCamel% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.%colorName%;
+    }
+    return _child;
+}
+""";
+
+const String colorStubDarkWithShade = """
+T get onDarkFrom%colorNameCamel%%colorShade% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.%colorName%.shade%colorShade%;
+    }
+    return _child;
+}
+T get onDarkTo%colorNameCamel% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.%colorName%.shade%colorShade%;
+    }
+    return _child;
+}
+""";
