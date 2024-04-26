@@ -291,7 +291,7 @@ T get from%colorNameCamel%%colorShade% {
 if (!_needsDarkVariant) gradientColors[0] = TwColors.%colorName%.shade%colorShade%;
 return _child;
 }
-T get to%colorNameCamel% {
+T get to%colorNameCamel%%colorShade% {
 if (!_needsDarkVariant) gradientColors[1] = TwColors.%colorName%.shade%colorShade%;
 return _child;
 }

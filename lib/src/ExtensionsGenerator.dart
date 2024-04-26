@@ -37,7 +37,7 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op += "Color get o$key => this.withOpacity($value);t";
+      op += "Color get o$key => this.withOpacity($value);";
       op += "Color get opacity$key => this.withOpacity($value);";
     }
   });
