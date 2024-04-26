@@ -322,7 +322,7 @@ T get onDarkFrom%colorNameCamel%%colorShade% {
     }
     return _child;
 }
-T get onDarkTo%colorNameCamel% {
+T get onDarkTo%colorNameCamel%%colorShade% {
     if (_brightness == Brightness.dark) {
       _needsDarkVariant = true;
       gradientColors[1] = TwColors.%colorName%.shade%colorShade%;

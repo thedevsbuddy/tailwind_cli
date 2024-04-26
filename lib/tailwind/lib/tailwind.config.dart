@@ -13,6 +13,7 @@ const String file = "tailwind.config.json";
 /// [stub] This gives a boilerplate for the `tailwind.config.json` Config file
 const String stub = """
 {
+  "darkMode": true,
   "colors": {},
   "spacers": {},
   "fontSizes": {},
