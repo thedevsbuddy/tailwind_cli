@@ -1,3 +1,7 @@
+## 0.7.3
+- Updated required packages to latest version
+- Fixed build command error issue 
+
 ## 0.7.2
 - Updated required packages to latest version
 - Fixed deprecated issues 

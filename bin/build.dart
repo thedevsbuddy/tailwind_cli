@@ -2,6 +2,7 @@
 
 import "dart:io";
 
+import "package:dcli/dcli.dart";
 import "package:tailwind_cli/src/BuildersGenerator.dart" as buildersGenerator;
 import "package:tailwind_cli/src/WidgetsGenerator.dart" as widgetsGenerator;
 import "package:tailwind_cli/src/ExtensionsGenerator.dart"
@@ -23,16 +24,15 @@ void main(List<String> args) async {
 }
 
 void formatGeneratedCode() async {
-  print('Formatting Code....');
+  print(blue('Formatting Code....'));
   try {
     final result = await Process.run('dart', ['format', 'tailwind']);
     if (result.exitCode == 0) {
-      print(result.stdout);
+      print(blue(result.stdout));
     } else {
-      print(
-          'Command failed with error code ${result.exitCode}: ${result.stderr}');
+      print(red('Command failed with error code ${result.exitCode}: ${result.stderr}'));
     }
   } catch (e) {
-    print('Error running command: $e');
+    print(red('Error running command: $e'));
   }
 }
