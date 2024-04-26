@@ -1,4 +1,4 @@
-/// Get the targetes directory
+/// Get the target's directory
 ///
 /// [target] Provides the target directory for the `tailwind.config.json` Config file
 const String target = "";

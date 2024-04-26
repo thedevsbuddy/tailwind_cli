@@ -17,3 +17,8 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
+
+# Binaries
+bin:
+  tailwind_cli_build: bin/build.dart
+  tailwind_cli_init: bin/init.dart

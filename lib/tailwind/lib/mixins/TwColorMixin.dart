@@ -134,15 +134,34 @@ mixin TwColorMixin<T> {
 """;
 
 const String colorStub = """
-T get %colorKey% {
-      if(!_needsDarkVariant) twColor = TwColors.%colorKey%;
+T get %colorName% {
+      if(!_needsDarkVariant) twColor = TwColors.%colorName%;
       return _child;
  }
 """;
+const String colorStubDark = """
+T get onDark%colorNameCamel% {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+         twColor = TwColors.%colorName%;
+      }
+      return _child;
+  }
+""";
 
 const String colorStubWithShade = """
-T get %colorKey%%colorShade% {
-      if(!_needsDarkVariant) twColor = TwColors.%colorKey%.shade%colorShade%;
+T get %colorName%%colorShade% {
+      if(!_needsDarkVariant) twColor = TwColors.%colorName%.shade%colorShade%;
+      return _child;
+  }
+""";
+
+const String colorStubDarkWithShade = """
+T get onDark%colorNameCamel%%colorShade% {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+        twColor = TwColors.%colorName%.shade%colorShade%;
+      }
       return _child;
   }
 """;

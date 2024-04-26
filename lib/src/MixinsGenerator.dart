@@ -72,9 +72,10 @@ String processColors(Map<String, dynamic>? colors) {
     if (value is Map) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
-          color += twColorMixin.colorStub.replaceAll("%colorKey%", key);
+          color += twColorMixin.colorStub.replaceAll("%colorName%", key);
         } else {
-          String colorStubWithShade = twColorMixin.colorStubWithShade.replaceAll("%colorKey%", key).replaceAll("%colorShade%", k);
+          String colorStubWithShade =
+              twColorMixin.colorStubWithShade.replaceAll("%colorName%", key).replaceAll("%colorShade%", k);
           color += colorStubWithShade;
         }
       });
@@ -83,23 +84,14 @@ String processColors(Map<String, dynamic>? colors) {
       if (Utils.configs.darkMode!) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {
-            val = Utils.hexToColor("$val");
-            color += """T get onDark${Utils.ucFirst(key, preserveAfter: true)} {
-      if(_brightness == Brightness.dark){
-        _needsDarkVariant = true;
-         twColor = TwColors.$key;
-      }
-      return _child;
-  }\n\t""";
+            color += twColorMixin.colorStubDark
+                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll("%colorName%", key);
           } else {
-            val = Utils.hexToColor("$val");
-            color += """T get onDark${Utils.ucFirst(key, preserveAfter: true)}$k {
-      if(_brightness == Brightness.dark){
-        _needsDarkVariant = true;
-        twColor = TwColors.$key.shade$k;
-      }
-      return _child;
-  }\n\t""";
+            color += twColorMixin.colorStubDarkWithShade
+                .replaceAll("%colorName%", key)
+                .replaceAll("%colorNameCamel%", Utils.ucFirst(key, preserveAfter: true))
+                .replaceAll("%colorShade%", k);
           }
         });
       }
