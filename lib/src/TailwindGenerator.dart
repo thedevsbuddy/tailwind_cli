@@ -16,7 +16,7 @@ Future<void> generateTailwind() async {
   Utils.writeFile(tailwindTw.file, tailwindTw.stub);
 
   /// Show Success message
-  print(green("Tailwind file generated successfully!"));
+  print(green("Tailwind file generated successfully."));
 }
 
 Future<void> generatePubspec() async {
@@ -27,5 +27,5 @@ Future<void> generatePubspec() async {
   Utils.writeFile(pubspecTw.file, pubspecTw.stub);
 
   /// Show Success message
-  print(green("Pubspec YAML file generated successfully!"));
+  print(green("Pubspec YAML file generated successfully."));
 }

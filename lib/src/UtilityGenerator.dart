@@ -1,13 +1,9 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/utilities/TwColors.dart'
-    as utilityTwColors;
-import 'package:tailwind_cli/tailwind/lib/utilities/TwSizes.dart'
-    as utilityTwSizes;
-import 'package:tailwind_cli/tailwind/lib/utilities/TwUtils.dart'
-    as utilityTwUtils;
-import 'package:tailwind_cli/tailwind/lib/utilities/TwService.dart'
-    as utilityTwService;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwColors.dart' as utilityTwColors;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwService.dart' as utilityTwService;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwSizes.dart' as utilityTwSizes;
+import 'package:tailwind_cli/tailwind/lib/utilities/TwUtils.dart' as utilityTwUtils;
 
 Future<void> generate(List<String> args) async {
   await generateTwServiceUtility();
@@ -27,7 +23,7 @@ Future<void> generateTwServiceUtility() async {
   Utils.writeFile(utilityTwService.file, utilityTwFile);
 
   /// Show Success message
-  print(green("TwService Generated successfully!"));
+  print(green("TwService Generated successfully."));
 }
 
 Future<void> generateTwUtilsUtility() async {
@@ -44,7 +40,7 @@ Future<void> generateTwUtilsUtility() async {
   Utils.writeFile(utilityTwUtils.file, utilityTwFile);
 
   /// Show Success message
-  print(green("Utilities Generated successfully!"));
+  print(green("Utilities Generated successfully."));
 }
 
 Future<void> generateTwColorsUtility() async {
@@ -52,8 +48,7 @@ Future<void> generateTwColorsUtility() async {
   var colorsUtilityTwFile = utilityTwColors.stub;
 
   /// Process stub Template / File
-  colorsUtilityTwFile =
-      processStub(stub: colorsUtilityTwFile, data: Utils.configs);
+  colorsUtilityTwFile = processStub(stub: colorsUtilityTwFile, data: Utils.configs);
 
   /// Check and create
   Utils.makeDir(utilityTwColors.target);
@@ -62,7 +57,7 @@ Future<void> generateTwColorsUtility() async {
   Utils.writeFile(utilityTwColors.file, colorsUtilityTwFile);
 
   /// Show Success message
-  print(green("Utilities Generated successfully!"));
+  print(green("Utilities Generated successfully."));
 }
 
 Future<void> generateTwSpacersUtility() async {
@@ -70,8 +65,7 @@ Future<void> generateTwSpacersUtility() async {
   var spacerUtilityTwFile = utilityTwSizes.stub;
 
   /// Process stub Template / File
-  spacerUtilityTwFile =
-      processStub(stub: spacerUtilityTwFile, data: Utils.configs);
+  spacerUtilityTwFile = processStub(stub: spacerUtilityTwFile, data: Utils.configs);
 
   /// Check and create
   Utils.makeDir(utilityTwSizes.target);
@@ -80,7 +74,7 @@ Future<void> generateTwSpacersUtility() async {
   Utils.writeFile(utilityTwSizes.file, spacerUtilityTwFile);
 
   /// Show Success message
-  print(green("Utilities Generated successfully!"));
+  print(green("Utilities Generated successfully."));
 }
 
 String processStub({required String stub, dynamic data}) {
@@ -167,11 +161,9 @@ String processFontSizes(Map<String, dynamic>? fontSizes) {
       fontSize += "static const double textBase = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
-      fontSize +=
-          "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
+      fontSize += "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
     } else {
-      fontSize +=
-          "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
+      fontSize += "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
     }
   });
   return fontSize;
@@ -187,11 +179,9 @@ String processFontSizeUtilities(Map<String, dynamic>? fontSizes) {
       fontSize += "static const double textBase = $value;\n\t";
     } else if (key.contains('.')) {
       var dot = key.replaceAll('.', 'Dot');
-      fontSize +=
-          "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
+      fontSize += "static const double text${dot[0].toUpperCase()}${dot.substring(1)}  = textBase * $value;\n\t";
     } else {
-      fontSize +=
-          "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
+      fontSize += "static const double text${key[0].toUpperCase()}${key.substring(1)} = textBase * $value;\n\t";
     }
     // if (key == 'DEFAULT') {
     //   spaces += "static const double spacer = $value;\n\t";

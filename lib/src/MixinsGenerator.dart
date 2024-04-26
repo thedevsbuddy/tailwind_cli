@@ -4,26 +4,16 @@ import 'dart:io';
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwAlignmentMixin.dart'
-    as twAlignmentMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwBorderMixin.dart'
-    as twBorderMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwColorMixin.dart'
-    as twColorMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwGradientMixin.dart'
-    as twGradientMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwMarginMixin.dart'
-    as twMarginMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwPaddingMixin.dart'
-    as twPaddingMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwRoundnessMixin.dart'
-    as twRoundnessMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwShadowMixin.dart'
-    as twShadowMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwGestureMixin.dart'
-    as twGestureMixin;
-import 'package:tailwind_cli/tailwind/lib/mixins/TwSizeMixin.dart'
-    as twSizeMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwAlignmentMixin.dart' as twAlignmentMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwBorderMixin.dart' as twBorderMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwColorMixin.dart' as twColorMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwGestureMixin.dart' as twGestureMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwGradientMixin.dart' as twGradientMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwMarginMixin.dart' as twMarginMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwPaddingMixin.dart' as twPaddingMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwRoundnessMixin.dart' as twRoundnessMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwShadowMixin.dart' as twShadowMixin;
+import 'package:tailwind_cli/tailwind/lib/mixins/TwSizeMixin.dart' as twSizeMixin;
 
 Future<void> generate(List<String> args) async {
   await generateColorMixin();
@@ -56,12 +46,11 @@ Future<void> generateColorMixin() async {
     configs['colors']!.addAll(userConfigs['colors']);
   }
 
-  /// Get Tw Utility stub Template / File
+  /// Get TwColorMixin stub
   var twColorMixinFileData = twColorMixin.stub;
 
-  /// Process stub Template / File
-  twColorMixinFileData = twColorMixinFileData.replaceAll(
-      "%colorGetters%", processColors(configs['colors']));
+  /// Process stub
+  twColorMixinFileData = twColorMixinFileData.replaceAll("%colorGetters%", processColors(configs['colors']));
 
   /// Check and create
   Utils.makeDir(twColorMixin.target);
@@ -70,7 +59,7 @@ Future<void> generateColorMixin() async {
   Utils.writeFile(twColorMixin.file, twColorMixinFileData);
 
   /// Show Success message
-  print(green("Color Mixin Generated successfully!"));
+  print(green("Color Mixin Generated successfully."));
 }
 
 /// Processes colors
@@ -83,17 +72,11 @@ String processColors(Map<String, dynamic>? colors) {
     if (value is Map) {
       value.forEach((k, val) {
         if (k == "DEFAULT") {
-          val = Utils.hexToColor("$val");
-          color += """T get $key {
-      if(!_needsDarkVariant) twColor = TwColors.$key;
-      return _child;
-  }\n\t""";
+          color += twColorMixin.colorStub.replaceAll("%colorKey%", key);
         } else {
-          val = Utils.hexToColor("$val");
-          color += """T get $key$k {
-      if(!_needsDarkVariant) twColor = TwColors.$key.shade$k;
-      return _child;
-  }\n\t""";
+          String colorStubWithShade = twColorMixin.colorStubWithShade.replaceAll("%colorKey%", key);
+          colorStubWithShade = colorStubWithShade.replaceAll("%colorShade%", k);
+          color += colorStubWithShade;
         }
       });
 
@@ -111,8 +94,7 @@ String processColors(Map<String, dynamic>? colors) {
   }\n\t""";
           } else {
             val = Utils.hexToColor("$val");
-            color +=
-                """T get onDark${Utils.ucFirst(key, preserveAfter: true)}$k {
+            color += """T get onDark${Utils.ucFirst(key, preserveAfter: true)}$k {
       if(_brightness == Brightness.dark){
         _needsDarkVariant = true;
         twColor = TwColors.$key.shade$k;
@@ -139,8 +121,7 @@ String processColors(Map<String, dynamic>? colors) {
   }\n\t""";
       }
     } else {
-      throw new Exception(
-          'Invalid value for colors["$key"] in "tailwind.config.json" file');
+      throw new Exception('Invalid value for colors["$key"] in "tailwind.config.json" file');
     }
   });
   return color;
@@ -153,10 +134,8 @@ Future<void> generateSpacingMixin() async {
   var twMarginMixinFileData = twMarginMixin.stub;
 
   /// Process stub Template / File
-  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll(
-      "%paddingGetters%", processPaddings(Utils.configs.spacers));
-  twMarginMixinFileData = twMarginMixinFileData.replaceAll(
-      "%marginGetters%", processMargins(Utils.configs.spacers));
+  twPaddingMixinFileData = twPaddingMixinFileData.replaceAll("%paddingGetters%", processPaddings(Utils.configs.spacers));
+  twMarginMixinFileData = twMarginMixinFileData.replaceAll("%marginGetters%", processMargins(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twPaddingMixin.target);
@@ -167,8 +146,8 @@ Future<void> generateSpacingMixin() async {
   Utils.writeFile(twMarginMixin.file, twMarginMixinFileData);
 
   /// Show Success message
-  print(green("Padding Mixin Generated successfully!"));
-  print(green("Margin Mixin Generated successfully!"));
+  print(green("Padding Mixin Generated successfully."));
+  print(green("Margin Mixin Generated successfully."));
 }
 
 /// Processes Paddings
@@ -376,7 +355,7 @@ Future<void> generateAlignmentMixin() async {
   Utils.writeFile(twAlignmentMixin.file, twAlignmentMixin.stub);
 
   /// Show Success message
-  print(green("Alignment Mixin generated successfully!"));
+  print(green("Alignment Mixin generated successfully."));
 }
 
 /// Generate Roundness Mixin
@@ -388,7 +367,7 @@ Future<void> generateRoundnessMixin() async {
   Utils.writeFile(twRoundnessMixin.file, twRoundnessMixin.stub);
 
   /// Show Success message
-  print(green("Roundness Mixin generated successfully!"));
+  print(green("Roundness Mixin generated successfully."));
 }
 
 /// Generate Roundness Mixin
@@ -400,7 +379,7 @@ Future<void> generateShadowMixin() async {
   Utils.writeFile(twShadowMixin.file, twShadowMixin.stub);
 
   /// Show Success message
-  print(green("Shadow Mixin generated successfully!"));
+  print(green("Shadow Mixin generated successfully."));
 }
 
 /// Generate Gradient Mixin
@@ -409,8 +388,7 @@ Future<void> generateGradientMixin() async {
   var twGradientMixinFileData = twGradientMixin.stub;
 
   /// Process stub Template / File
-  twGradientMixinFileData = twGradientMixinFileData.replaceAll(
-      "%gradientColors%", processGradientColors(Utils.configs.colors));
+  twGradientMixinFileData = twGradientMixinFileData.replaceAll("%gradientColors%", processGradientColors(Utils.configs.colors));
 
   /// Check and create directory
   Utils.makeDir(twGradientMixin.target);
@@ -419,7 +397,7 @@ Future<void> generateGradientMixin() async {
   Utils.writeFile(twGradientMixin.file, twGradientMixinFileData);
 
   /// Show Success message
-  print(green("Gradient Mixin Generated successfully!"));
+  print(green("Gradient Mixin Generated successfully."));
 }
 
 /// Processes colors
@@ -455,16 +433,14 @@ String processGradientColors(Map<String, dynamic>? colors) {
       if (Utils.configs.darkMode!) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {
-            color +=
-                """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)} {
+            color += """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)} {
       if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         gradientColors[0] = TwColors.$key;
       }
       return _child;
   }\n\t""";
-            color +=
-                """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)} {
+            color += """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)} {
       if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         gradientColors[1] = TwColors.$key;
@@ -472,16 +448,14 @@ String processGradientColors(Map<String, dynamic>? colors) {
       return _child;
   }\n\t""";
           } else {
-            color +=
-                """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)}$k {
+            color += """T get onDarkFrom${Utils.ucFirst(key, preserveAfter: true)}$k {
       if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         gradientColors[0] = TwColors.$key.shade$k;
       }
       return _child;
   }\n\t""";
-            color +=
-                """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)}$k {
+            color += """T get onDarkTo${Utils.ucFirst(key, preserveAfter: true)}$k {
       if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         gradientColors[1] = TwColors.$key.shade$k;
@@ -528,10 +502,8 @@ Future<void> generateBorderMixin() async {
   var twBorderMixinFileData = twBorderMixin.stub;
 
   /// Process stub Template / File
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
-      "%colors%", processBorderColors(Utils.configs.colors));
-  twBorderMixinFileData = twBorderMixinFileData.replaceAll(
-      "%sizes%", processBorderWidths(Utils.configs.spacers));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("%colors%", processBorderColors(Utils.configs.colors));
+  twBorderMixinFileData = twBorderMixinFileData.replaceAll("%sizes%", processBorderWidths(Utils.configs.spacers));
 
   /// Check and create
   Utils.makeDir(twBorderMixin.target);
@@ -540,7 +512,7 @@ Future<void> generateBorderMixin() async {
   Utils.writeFile(twBorderMixin.file, twBorderMixinFileData);
 
   /// Show Success message
-  print(green("Padding Mixin Generated successfully!"));
+  print(green("Padding Mixin Generated successfully."));
 }
 
 /// Processes borderColors
@@ -572,8 +544,7 @@ String processBorderColors(Map<String, dynamic>? colors) {
         value.forEach((k, val) {
           if (k == "DEFAULT") {
             val = Utils.hexToColor("$val");
-            color +=
-                """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)} {
+            color += """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)} {
       if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         twBorderColor = TwColors.$key;
@@ -582,8 +553,7 @@ String processBorderColors(Map<String, dynamic>? colors) {
   }\n\t""";
           } else {
             val = Utils.hexToColor("$val");
-            color +=
-                """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)}$k {
+            color += """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)}$k {
        if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         twBorderColor = TwColors.$key.shade$k;
@@ -603,8 +573,7 @@ String processBorderColors(Map<String, dynamic>? colors) {
       /// Dark variants
       if (Utils.configs.darkMode!) {
         value = Utils.hexToColor("$value");
-        color +=
-            """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)} {
+        color += """T get onDarkBorder${Utils.ucFirst(key, preserveAfter: true)} {
       if (_brightness == Brightness.dark) {
         _needsDarkVariant = true;
         twBorderColor = TwColors.$key;
@@ -653,7 +622,7 @@ Future<void> generateGestureMixin() async {
   Utils.writeFile(twGestureMixin.file, twGestureMixin.stub);
 
   /// Show Success message
-  print(green("TwGesture Mixin generated successfully!"));
+  print(green("TwGesture Mixin generated successfully."));
 }
 
 /// Generate [TwSizeMixin] Mixin
@@ -665,5 +634,5 @@ Future<void> generateSizeMixin() async {
   Utils.writeFile(twSizeMixin.file, twSizeMixin.stub);
 
   /// Show Success message
-  print(green("TwSize Mixin generated successfully!"));
+  print(green("TwSize Mixin generated successfully."));
 }

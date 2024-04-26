@@ -132,3 +132,17 @@ mixin TwColorMixin<T> {
   %colorGetters%
 }
 """;
+
+const String colorStub = """
+T get %colorKey% {
+      if(!_needsDarkVariant) twColor = TwColors.%colorKey%;
+      return _child;
+ }
+""";
+
+const String colorStubWithShade = """
+T get %colorKey%%colorShade% {
+      if(!_needsDarkVariant) twColor = TwColors.%colorKey%.shade%colorShade%;
+      return _child;
+  }
+""";
