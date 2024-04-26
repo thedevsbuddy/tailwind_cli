@@ -7,5 +7,5 @@ import 'package:tailwind_cli/tailwind/lib/tailwind.config.dart' as configFile;
 void main(List<String> args) {
   Utils.writeFile(configFile.file, configFile.stub);
 
-  print(green("Config file generated successfully!"));
+  print(green("Config file generated successfully."));
 }

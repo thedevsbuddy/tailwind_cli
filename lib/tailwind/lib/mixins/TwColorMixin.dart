@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwColorMixin` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/mixins/";
 
-/// Get the full file path for the `TwColorMixin` Class
-///
-/// [file] This gives a boilerplate for the `TwColorMixin` class
+/// Get file's path with name
 const String file = "tailwind/lib/mixins/TwColorMixin.dart";
 
-/// Get the stub content for the `TwColorMixin` Class
-///
-/// [stub] This gives a boilerplate for the `TwColorMixin` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
@@ -131,4 +125,37 @@ mixin TwColorMixin<T> {
   
   %colorGetters%
 }
+""";
+
+const String colorStub = """
+T get %colorName% {
+      if(!_needsDarkVariant) twColor = TwColors.%colorName%;
+      return _child;
+ }
+""";
+const String colorStubDark = """
+T get onDark%colorNameCamel% {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+         twColor = TwColors.%colorName%;
+      }
+      return _child;
+  }
+""";
+
+const String colorStubWithShade = """
+T get %colorName%%colorShade% {
+      if(!_needsDarkVariant) twColor = TwColors.%colorName%.shade%colorShade%;
+      return _child;
+  }
+""";
+
+const String colorStubDarkWithShade = """
+T get onDark%colorNameCamel%%colorShade% {
+      if(_brightness == Brightness.dark){
+        _needsDarkVariant = true;
+        twColor = TwColors.%colorName%.shade%colorShade%;
+      }
+      return _child;
+  }
 """;

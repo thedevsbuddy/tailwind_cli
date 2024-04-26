@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwImage` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/widgets/";
 
-/// Get the full file path for the `TwImage` Class
-///
-/// [file] This gives a boilerplate for the `TwImage` class
+/// Get file's path with name
 const String file = "tailwind/lib/widgets/TwImage.dart";
 
-/// Get the stub content for the `TwImage` Class
-///
-/// [stub] This gives a boilerplate for the `TwImage` class
+/// Get file's Raw Contents
 const String stub = """
 import 'dart:io';
 

@@ -1,4 +1,4 @@
-# Tailwind CLI v0.7.2
+# Tailwind CLI v0.7.3
 
 A simple yet awesome flutter package to generate and use TailwindCSS-like styling in your flutter
 projects.

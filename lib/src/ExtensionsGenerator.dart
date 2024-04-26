@@ -1,13 +1,9 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
-import 'package:tailwind_cli/tailwind/lib/extensions/TwColorExtension.dart'
-    as twColorExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwContextExtension.dart'
-    as twContextExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwNumbersExtension.dart'
-    as twNumbersExtension;
-import 'package:tailwind_cli/tailwind/lib/extensions/TwWidgetExtension.dart'
-    as twWidgetExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwColorExtension.dart' as twColorExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwContextExtension.dart' as twContextExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwNumbersExtension.dart' as twNumbersExtension;
+import 'package:tailwind_cli/tailwind/lib/extensions/TwWidgetExtension.dart' as twWidgetExtension;
 
 Future<void> generate(List<String> args) async {
   await generateTwColorExtension();
@@ -22,8 +18,7 @@ Future<void> generateTwColorExtension() async {
   var twColorExtensionData = twColorExtension.stub;
 
   /// Process stub Template / File
-  twColorExtensionData = twColorExtensionData.replaceAll(
-      "//opacity", processOpacity(Utils.configs.opacity));
+  twColorExtensionData = twColorExtensionData.replaceAll("%opacity%", processOpacity(Utils.configs.opacity));
 
   /// Check and create
   Utils.makeDir(twColorExtension.target);
@@ -32,7 +27,7 @@ Future<void> generateTwColorExtension() async {
   Utils.writeFile(twColorExtension.file, twColorExtensionData);
 
   /// Show Success message
-  print(green("Tailwind Color Extension generated successfully!"));
+  print(green("Tailwind Color Extension generated successfully."));
 }
 
 String processOpacity(Map<String, dynamic>? opacity) {
@@ -42,8 +37,8 @@ String processOpacity(Map<String, dynamic>? opacity) {
   var op = "";
   opacity.forEach((key, value) {
     if (value != '' || key != '') {
-      op += "Color get o$key => this.withOpacity($value);\n\t";
-      op += "Color get opacity$key => this.withOpacity($value);\n\t\n\t";
+      op += "Color get o$key => this.withOpacity($value);";
+      op += "Color get opacity$key => this.withOpacity($value);";
     }
   });
   return op;
@@ -58,7 +53,7 @@ Future<void> generateTwWidgetExtension() async {
   Utils.writeFile(twWidgetExtension.file, twWidgetExtension.stub);
 
   /// Show Success message
-  print(green("Tailwind Widget Extension generated successfully!"));
+  print(green("Tailwind Widget Extension generated successfully."));
 }
 
 /// Generate [TwNumbersExtension]
@@ -70,7 +65,7 @@ Future<void> generateTwNumbersExtension() async {
   Utils.writeFile(twNumbersExtension.file, twNumbersExtension.stub);
 
   /// Show Success message
-  print(green("Tailwind Widget Extension generated successfully!"));
+  print(green("Tailwind Widget Extension generated successfully."));
 }
 
 /// Generate [TwNumbersExtension]
@@ -82,5 +77,5 @@ Future<void> generateTwContextExtension() async {
   Utils.writeFile(twContextExtension.file, twContextExtension.stub);
 
   /// Show Success message
-  print(green("Tailwind Context Extension generated successfully!"));
+  print(green("Tailwind Context Extension generated successfully."));
 }

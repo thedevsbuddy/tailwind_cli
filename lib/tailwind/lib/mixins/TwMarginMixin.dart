@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwMarginMixin` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/mixins/";
 
-/// Get the full file path for the `TwMarginMixin` Class
-///
-/// [file] This gives a boilerplate for the `TwMarginMixin` class
+/// Get file's path with name
 const String file = "tailwind/lib/mixins/TwMarginMixin.dart";
 
-/// Get the stub content for the `TwMarginMixin` Class
-///
-/// [stub] This gives a boilerplate for the `TwMarginMixin` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
@@ -102,4 +96,57 @@ mixin TwMarginMixin<T> {
   
   %marginGetters%  
 }
+""";
+
+
+
+const String allSide = """
+T get m%spacerValue% {
+    marginLeft = TwSizes.spacer%spacerValue%;
+    marginTop = TwSizes.spacer%spacerValue%;
+    marginRight = TwSizes.spacer%spacerValue%;
+    marginBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String horizontal = """
+T get mx%spacerValue% {
+    marginLeft = TwSizes.spacer%spacerValue%;
+    marginRight = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String vertical = """
+T get my%spacerValue% {
+    marginTop = TwSizes.spacer%spacerValue%;
+    marginBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String left = """
+T get ml%spacerValue% {
+    marginLeft = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String top = """
+T get mt%spacerValue% {
+    marginTop = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String right = """
+T get mr%spacerValue% {
+    marginRight = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String bottom = """
+T get mb%spacerValue% {
+    marginBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
 """;

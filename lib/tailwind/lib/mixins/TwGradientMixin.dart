@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwGradientMixin` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/mixins/";
 
-/// Get the full file path for the `TwGradientMixin` Class
-///
-/// [file] This gives a boilerplate for the `TwGradientMixin` class
+/// Get file's path with name
 const String file = "tailwind/lib/mixins/TwGradientMixin.dart";
 
-/// Get the stub content for the `TwGradientMixin` Class
-///
-/// [stub] This gives a boilerplate for the `TwGradientMixin` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
@@ -271,5 +265,62 @@ mixin TwGradientMixin<T> {
   }
 
   %gradientColors%
+}
+""";
+
+
+const String colorStub = """
+T get from%colorNameCamel% {
+if (!_needsDarkVariant) gradientColors[0] = TwColors.%colorName%;
+return _child;
+}
+T get to%colorNameCamel% {
+if (!_needsDarkVariant) gradientColors[1] = TwColors.%colorName%;
+return _child;
+}
+""";
+
+const String colorStubWithShade = """
+T get from%colorNameCamel%%colorShade% {
+if (!_needsDarkVariant) gradientColors[0] = TwColors.%colorName%.shade%colorShade%;
+return _child;
+}
+T get to%colorNameCamel%%colorShade% {
+if (!_needsDarkVariant) gradientColors[1] = TwColors.%colorName%.shade%colorShade%;
+return _child;
+}
+""";
+
+const String colorStubDark = """
+T get onDarkFrom%colorNameCamel% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.%colorName%;
+    }
+    return _child;
+}
+T get onDarkTo%colorNameCamel% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.%colorName%;
+    }
+    return _child;
+}
+""";
+
+const String colorStubDarkWithShade = """
+T get onDarkFrom%colorNameCamel%%colorShade% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[0] = TwColors.%colorName%.shade%colorShade%;
+    }
+    return _child;
+}
+T get onDarkTo%colorNameCamel%%colorShade% {
+    if (_brightness == Brightness.dark) {
+      _needsDarkVariant = true;
+      gradientColors[1] = TwColors.%colorName%.shade%colorShade%;
+    }
+    return _child;
 }
 """;

@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwColors` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/utilities/";
 
-/// Get the full file path for the `TwColors` Class
-///
-/// [file] This gives a boilerplate for the `TwColors` class
+/// Get file's path with name
 const String file = "tailwind/lib/utilities/TwColors.dart";
 
-/// Get the stub content for the `TwColors` Class
-///
-/// [stub] This gives a boilerplate for the `TwColors` class
+/// Get file's Raw Contents
 const String stub = """
 import "package:flutter/material.dart";
 

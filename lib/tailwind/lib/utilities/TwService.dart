@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwService` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/utilities/";
 
-/// Get the full file path for the `TwService` Class
-///
-/// [file] This gives a boilerplate for the `TwService` class
+/// Get file's path with name
 const String file = "tailwind/lib/utilities/TwService.dart";
 
-/// Get the stub content for the `TwService` Class
-///
-/// [stub] This gives a boilerplate for the `TwService` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';

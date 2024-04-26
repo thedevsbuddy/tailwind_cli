@@ -1,16 +1,10 @@
-/// Get the targetes directory
-///
-/// [target] Provides the target directory for the `TwPaddingMixin` class
+/// Get Targeted Directory
 const String target = "tailwind/lib/mixins/";
 
-/// Get the full file path for the `TwPaddingMixin` Class
-///
-/// [file] This gives a boilerplate for the `TwPaddingMixin` class
+/// Get file's path with name
 const String file = "tailwind/lib/mixins/TwPaddingMixin.dart";
 
-/// Get the stub content for the `TwPaddingMixin` Class
-///
-/// [stub] This gives a boilerplate for the `TwPaddingMixin` class
+/// Get file's Raw Contents
 const String stub = """
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
@@ -103,4 +97,55 @@ mixin TwPaddingMixin<T> {
   
   %paddingGetters%
 }
+""";
+
+const String allSide = """
+T get p%spacerValue% {
+    paddingLeft = TwSizes.spacer%spacerValue%;
+    paddingTop = TwSizes.spacer%spacerValue%;
+    paddingRight = TwSizes.spacer%spacerValue%;
+    paddingBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String horizontal = """
+T get px%spacerValue% {
+    paddingLeft = TwSizes.spacer%spacerValue%;
+    paddingRight = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String vertical = """
+T get py%spacerValue% {
+    paddingTop = TwSizes.spacer%spacerValue%;
+    paddingBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+
+const String left = """
+T get pl%spacerValue% {
+    paddingLeft = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String top = """
+T get pt%spacerValue% {
+    paddingTop = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String right = """
+T get pr%spacerValue% {
+    paddingRight = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
+""";
+const String bottom = """
+T get pb%spacerValue% {
+    paddingBottom = TwSizes.spacer%spacerValue%;
+    return _child;
+  }
 """;

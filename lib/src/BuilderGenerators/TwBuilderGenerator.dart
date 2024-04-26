@@ -1,8 +1,7 @@
 import 'package:dcli/dcli.dart';
 import 'package:tailwind_cli/src/utilities/Utils.dart';
+import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart' as twAppBuilder;
 import 'package:tailwind_cli/tailwind/lib/builders/TwBuilder.dart' as twBuilder;
-import 'package:tailwind_cli/tailwind/lib/builders/TwAppBuilder.dart'
-    as twAppBuilder;
 
 Future<void> generate(_) async {
   await generateTwBuilder();
@@ -18,7 +17,7 @@ Future<void> generateTwBuilder() async {
   Utils.writeFile(twBuilder.file, twBuilder.stub);
 
   /// Show Success message
-  print(green("Tailwind builder generated successfully!"));
+  print(green("Tailwind builder generated successfully."));
 }
 
 /// Generate [TwAppBuilder]
@@ -30,5 +29,5 @@ Future<void> generateTwAppBuilder() async {
   Utils.writeFile(twAppBuilder.file, twAppBuilder.stub);
 
   /// Show Success message
-  print(green("TwAppBuilder generated successfully!"));
+  print(green("TwAppBuilder generated successfully."));
 }
