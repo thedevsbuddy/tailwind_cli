@@ -74,8 +74,7 @@ String processColors(Map<String, dynamic>? colors) {
         if (k == "DEFAULT") {
           color += twColorMixin.colorStub.replaceAll("%colorKey%", key);
         } else {
-          String colorStubWithShade = twColorMixin.colorStubWithShade.replaceAll("%colorKey%", key);
-          colorStubWithShade = colorStubWithShade.replaceAll("%colorShade%", k);
+          String colorStubWithShade = twColorMixin.colorStubWithShade.replaceAll("%colorKey%", key).replaceAll("%colorShade%", k);
           color += colorStubWithShade;
         }
       });
