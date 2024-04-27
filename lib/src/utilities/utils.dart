@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dcli/dcli.dart';
-import 'package:tailwind_cli/src/utilities/ConfigModel.dart';
+import 'package:tailwind_cli/src/utilities/config_model.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
 
 Map<String, dynamic>? baseConfigs = {

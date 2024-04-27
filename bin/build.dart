@@ -3,14 +3,14 @@
 import "dart:io";
 
 import "package:dcli/dcli.dart";
-import "package:tailwind_cli/src/BuildersGenerator.dart" as buildersGenerator;
-import "package:tailwind_cli/src/WidgetsGenerator.dart" as widgetsGenerator;
-import "package:tailwind_cli/src/ExtensionsGenerator.dart"
+import "package:tailwind_cli/src/builders_generator.dart" as buildersGenerator;
+import "package:tailwind_cli/src/widgets_generator.dart" as widgetsGenerator;
+import "package:tailwind_cli/src/extensions_generator.dart"
     as extensionGenerator;
-import "package:tailwind_cli/src/MixinsGenerator.dart" as mixinsGenerator;
-import "package:tailwind_cli/src/TailwindGenerator.dart" as tailwindGenerator;
-import "package:tailwind_cli/src/UtilityGenerator.dart" as utilityGenerator;
-import 'package:tailwind_cli/src/utilities/Utils.dart';
+import "package:tailwind_cli/src/mixins_generator.dart" as mixinsGenerator;
+import "package:tailwind_cli/src/tailwind_generator.dart" as tailwindGenerator;
+import "package:tailwind_cli/src/utility_generator.dart" as utilityGenerator;
+import 'package:tailwind_cli/src/utilities/utils.dart';
 
 void main(List<String> args) async {
   Utils.createConfig();

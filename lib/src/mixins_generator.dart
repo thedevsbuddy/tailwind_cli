@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dcli/dcli.dart';
-import 'package:tailwind_cli/src/utilities/Utils.dart';
+import 'package:tailwind_cli/src/utilities/utils.dart';
 import 'package:tailwind_cli/tailwind.config.dart' as defaultConfig;
 import 'package:tailwind_cli/tailwind/lib/mixins/TwAlignmentMixin.dart'
     as twAlignmentMixin;

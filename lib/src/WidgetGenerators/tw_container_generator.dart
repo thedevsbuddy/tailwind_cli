@@ -1,5 +1,5 @@
 import 'package:dcli/dcli.dart';
-import 'package:tailwind_cli/src/utilities/Utils.dart';
+import 'package:tailwind_cli/src/utilities/utils.dart';
 import 'package:tailwind_cli/tailwind/lib/builders/TwContainer.dart'
     as twContainer;
 

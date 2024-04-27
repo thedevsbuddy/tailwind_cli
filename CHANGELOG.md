@@ -1,3 +1,6 @@
+## 0.7.5
+- Fixed file names as per pub.dev requirements
+
 ## 0.7.4
 - Fixed some pub issues and formatted files
 
