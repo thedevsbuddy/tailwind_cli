@@ -1,0 +1,44 @@
+name: Create Release Tag
+
+on:
+  push:
+    branches:
+      - "major/*"
+      - "minor/*"
+      - "patch/*"
+
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Extract version from branch name
+        id: extract_version
+        run: |
+          BRANCH="${GITHUB_REF#refs/heads/}"
+
+          if [[ "$BRANCH" =~ ^(major|minor|patch)/v([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
+            NEW_VERSION="${BASH_REMATCH[2]}"
+            echo "Extracted version: $NEW_VERSION"
+            echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          else
+            echo "Branch name does not contain a valid version number"
+            exit 1
+          fi
+
+      - name: Update version in pubspec.yaml
+        run: |
+          NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
+          sed -i "s/^version: .*/version: $NEW_VERSION/" pubspec.yaml
+
+      - name: Create Git tag
+        run: |
+          NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add pubspec.yaml
+          git commit -m "Bump version to $NEW_VERSION"
+          git tag -a "v$NEW_VERSION" -m "Release version $NEW_VERSION"
+          git push origin "v$NEW_VERSION"

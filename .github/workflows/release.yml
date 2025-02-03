@@ -1,19 +1,15 @@
-name: 🧑‍💻 Flutter Package Release
+name: Publish to Pub.dev
 
 on:
   push:
-    branches:
-      - "major/*"
-      - "minor/*"
-      - "patch/*"
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
-  release_pub_dev:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Required for authentication using OIDC
-    outputs:
-      new_version: ${{ steps.extract_version.outputs.new_version }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -31,53 +27,14 @@ jobs:
       - name: Install dependencies
         run: dart pub get
 
-      - name: Extract version from branch name
-        id: extract_version
-        run: |
-          BRANCH="${GITHUB_REF#refs/heads/}"
-
-          if [[ "$BRANCH" =~ ^(major|minor|patch)/v([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
-            NEW_VERSION="${BASH_REMATCH[2]}"
-            echo "Extracted version: $NEW_VERSION"
-            echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
-          else
-            echo "Branch name does not contain a valid version number"
-            exit 1
-          fi
-
-      - name: Update version in pubspec.yaml
-        run: |
-          NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
-          sed -i "s/^version: .*/version: $NEW_VERSION/" pubspec.yaml
-          dart pub get
-
       - name: Publish package to pub.dev
         run: dart pub publish --force
 
-      - name: Create a Git tag
-        run: |
-          NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git tag -a "v$NEW_VERSION" -m "Release version $NEW_VERSION"
-          git push origin "v$NEW_VERSION"
-
-  release-github:
-    runs-on: ubuntu-latest
-    needs: release_pub_dev
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Create GitHub release
-        run: |
-          BRANCH="${GITHUB_REF#refs/heads/}"
-          NEW_VERSION="${{ needs.release_pub_dev.outputs.new_version }}"
-          gh release create "v$NEW_VERSION" \
-            --title "Release $NEW_VERSION" \
-            --notes "Release $NEW_VERSION\n\nFor full changelog, see [CHANGELOG.md](./CHANGELOG.md)" \
-            --target "$BRANCH"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/v}"
+          gh release create "v$VERSION" \
+            --title "Release $VERSION" \
+            --notes "Release $VERSION\n\nFor full changelog, see [CHANGELOG.md](./CHANGELOG.md)"

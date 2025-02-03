@@ -1,4 +1,8 @@
 ## 0.7.5
+- Updated dcli dependency to latest version
+- Added fvm support
+
+## 0.7.5
 - Fixed file names as per pub.dev requirements
 
 ## 0.7.4
