@@ -18,6 +18,8 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
 
       - name: Check tags in the repo
         run: git tag -l
