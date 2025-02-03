@@ -1,0 +1,50 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  debug-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "Full GitHub context:"
+          echo "$GITHUB_CONTEXT"
+          echo "GITHUB_REF: $GITHUB_REF"
+          echo "GITHUB_SHA: $GITHUB_SHA"
+          echo "GITHUB_EVENT_NAME: $GITHUB_EVENT_NAME"
+
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - name: Detailed Tag Debug
+        run: |
+          echo "Triggered by ref: $GITHUB_REF"
+          echo "Tag name: ${GITHUB_REF#refs/tags/}"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify tag exists
+        run: |
+          git fetch --tags
+          git tag -l
+
+      - name: Get the version
+        id: get_version
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/}"
+          VERSION="${VERSION#v}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted version: $VERSION"
+
+      # Rest of the workflow remains the same
