@@ -55,14 +55,3 @@ jobs:
 
       - name: Publish to pub.dev
         run: dart pub publish --force
-
-      - name: Create GitHub Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          VERSION="${{ steps.get_version.outputs.version }}"
-          gh release create "v$VERSION" \
-            --title "Release $VERSION" \
-            --notes "Release notes for version $VERSION
-
-              For full changelog, see [CHANGELOG.md](./CHANGELOG.md)"
