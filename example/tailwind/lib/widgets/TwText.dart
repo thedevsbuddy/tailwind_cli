@@ -123,7 +123,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] headline 1
   @Deprecated("Use displayLarge instead.")
   TwText headline1(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.headline1;
+    _themedStyle = Theme.of(context).textTheme.displayLarge;
     return this;
   }
 
@@ -136,7 +136,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] headline 2
   @Deprecated("Use displayMedium instead.")
   TwText headline2(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.headline2;
+    _themedStyle = Theme.of(context).textTheme.displayMedium;
     return this;
   }
 
@@ -149,7 +149,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] headline 3
   @Deprecated("Use displaySmall instead.")
   TwText headline3(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.headline3;
+    _themedStyle = Theme.of(context).textTheme.displaySmall;
     return this;
   }
 
@@ -162,7 +162,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] headline 4
   @Deprecated("Use `headlineMedium(context)` instead")
   TwText headline4(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.headline4;
+    _themedStyle = Theme.of(context).textTheme.headlineMedium;
     return this;
   }
 
@@ -175,7 +175,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] headline 5
   @Deprecated("Use `headlineSmall(context)` instead")
   TwText headline5(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.headline5;
+    _themedStyle = Theme.of(context).textTheme.headlineSmall;
     return this;
   }
 
@@ -188,7 +188,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] headline 6
   @Deprecated("Use `titleLarge(context)` instead")
   TwText headline6(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.headline6;
+    _themedStyle = Theme.of(context).textTheme.titleLarge;
     return this;
   }
 
@@ -201,7 +201,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] bodyText1
   @Deprecated("Use `bodyLarge(context)` instead")
   TwText bodyText1(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.bodyText1;
+    _themedStyle = Theme.of(context).textTheme.bodyLarge;
     return this;
   }
 
@@ -214,7 +214,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] bodyText2
   @Deprecated("Use `bodyMedium(context)` instead")
   TwText bodyText2(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.bodyText2;
+    _themedStyle = Theme.of(context).textTheme.bodyMedium;
     return this;
   }
 
@@ -227,7 +227,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] caption
   @Deprecated("Use `bodySmall(context)` instead")
   TwText caption(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.caption;
+    _themedStyle = Theme.of(context).textTheme.bodySmall;
     return this;
   }
 
@@ -240,7 +240,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] subtitle1
   @Deprecated("Use `titleMedium(context)` instead")
   TwText subtitle1(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.subtitle1;
+    _themedStyle = Theme.of(context).textTheme.titleMedium;
     return this;
   }
 
@@ -253,7 +253,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] subtitle2
   @Deprecated("Use `titleSmall(context)` instead")
   TwText subtitle2(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.subtitle2;
+    _themedStyle = Theme.of(context).textTheme.titleSmall;
     return this;
   }
 
@@ -266,7 +266,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] overline
   @Deprecated("Use `labelSmall(context)` instead")
   TwText overlineText(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.overline;
+    _themedStyle = Theme.of(context).textTheme.labelSmall;
     return this;
   }
 
@@ -279,7 +279,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// Sets [TextTheme] button
   @Deprecated("Use `labelLarge(context)` instead")
   TwText buttonText(BuildContext context) {
-    _themedStyle = Theme.of(context).textTheme.button;
+    _themedStyle = Theme.of(context).textTheme.labelLarge;
     return this;
   }
 
@@ -319,8 +319,7 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   /// ============== FONT WEIGHT ============== ///
 
   /// Sets [FontWeight] to [FontWeight.w100]
-  TwText get hairLine =>
-      _fontWeightedText(child: this, weight: FontWeight.w100);
+  TwText get hairLine => _fontWeightedText(child: this, weight: FontWeight.w100);
 
   /// Sets [FontWeight] to [FontWeight.w200]
   TwText get thin => _fontWeightedText(child: this, weight: FontWeight.w200);
@@ -335,22 +334,18 @@ class TwText extends TwWidgetBuilder<Widget> with TwColorMixin<TwText> {
   TwText get medium => _fontWeightedText(child: this, weight: FontWeight.w500);
 
   /// Sets [FontWeight] to [FontWeight.w600]
-  TwText get semiBold =>
-      _fontWeightedText(child: this, weight: FontWeight.w600);
+  TwText get semiBold => _fontWeightedText(child: this, weight: FontWeight.w600);
 
   /// Sets [FontWeight] to [FontWeight.w700]
   TwText get bold => _fontWeightedText(child: this, weight: FontWeight.w700);
 
   /// Sets [FontWeight] to [FontWeight.w800]
-  TwText get extraBold =>
-      _fontWeightedText(child: this, weight: FontWeight.w800);
+  TwText get extraBold => _fontWeightedText(child: this, weight: FontWeight.w800);
 
   /// Sets [FontWeight] to [FontWeight.w900]
-  TwText get extraBlack =>
-      _fontWeightedText(child: this, weight: FontWeight.w900);
+  TwText get extraBlack => _fontWeightedText(child: this, weight: FontWeight.w900);
 
-  TwText _fontWeightedText(
-      {required FontWeight weight, required TwText child}) {
+  TwText _fontWeightedText({required FontWeight weight, required TwText child}) {
     _fontWeight = weight;
     return this;
   }

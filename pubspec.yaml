@@ -8,7 +8,7 @@ environment:
   flutter: ">=3.0.0"
 
 dependencies:
-  dcli: ^4.0.1-beta.4
+  dcli: ^6.1.2
   flutter:
     sdk: flutter
 
@@ -16,8 +16,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter:
-
+# flutter:
+# assets:
 # Binaries
 bin:
   tailwind_cli_build: bin/build.dart
