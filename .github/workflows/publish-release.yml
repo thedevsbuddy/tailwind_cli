@@ -6,19 +6,6 @@ on:
       - "v*"
 
 jobs:
-  debug-info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: |
-          echo "Full GitHub context:"
-          echo "$GITHUB_CONTEXT"
-          echo "GITHUB_REF: $GITHUB_REF"
-          echo "GITHUB_SHA: $GITHUB_SHA"
-          echo "GITHUB_EVENT_NAME: $GITHUB_EVENT_NAME"
-
   publish:
     runs-on: ubuntu-latest
     permissions:
@@ -31,6 +18,7 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Check tags in the repo
         run: git tag -l
 
@@ -41,6 +29,12 @@ jobs:
           VERSION="${VERSION#v}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Extracted version: $VERSION"
+
+      - name: Update version in pubspec.yaml
+        run: |
+          VERSION="${{ steps.get_version.outputs.version }}"
+          echo "Updating version in pubspec.yaml to $VERSION"
+          sed -i "s/^version: .*/version: $VERSION/" pubspec.yaml
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2

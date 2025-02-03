@@ -37,7 +37,7 @@ jobs:
 
       - name: Create tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
           git config user.name github-actions
