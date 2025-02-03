@@ -40,6 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
+          git config user.name thedevsbuddy
+          git config user.email devsbuddy404@gmail.com
           git add pubspec.yaml
           git commit -m "Bump version to $NEW_VERSION"
           git tag "v$NEW_VERSION"
