@@ -4,7 +4,6 @@ on:
   push:
     tags:
       - "v*"
-  workflow_dispatch:
 
 jobs:
   debug-info:
@@ -26,18 +25,12 @@ jobs:
       id-token: write
       contents: write
     steps:
-      - name: Detailed Tag Debug
+      - name: Debug Tag
         run: |
-          echo "Triggered by ref: $GITHUB_REF"
-          echo "Tag name: ${GITHUB_REF#refs/tags/}"
+          echo "Triggered by tag: $GITHUB_REF"
 
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Verify tag exists
-        run: |
-          git fetch --tags
-          git tag -l
 
       - name: Get the version
         id: get_version
@@ -47,4 +40,29 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Extracted version: $VERSION"
 
-      # Rest of the workflow remains the same
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: "stable"
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Publish to pub.dev
+        run: dart pub publish --force
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.get_version.outputs.version }}"
+          gh release create "v$VERSION" \
+            --title "Release $VERSION" \
+            --notes "Release notes for version $VERSION
+
+              For full changelog, see [CHANGELOG.md](./CHANGELOG.md)"
