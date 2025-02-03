@@ -50,7 +50,7 @@ jobs:
 
       - name: Create GitHub Release
         env:
-          GH_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN  }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN  }}
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
           gh release create "v$NEW_VERSION" \
