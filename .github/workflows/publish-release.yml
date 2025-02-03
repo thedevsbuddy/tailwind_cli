@@ -3,7 +3,7 @@ name: Publish Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   debug-info:
@@ -31,6 +31,8 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Check tags in the repo
+        run: git tag -l
 
       - name: Get the version
         id: get_version
