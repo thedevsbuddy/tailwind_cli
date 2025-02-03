@@ -1,4 +1,3 @@
-import 'package:example/Widgets/TwAboutSection.dart';
 import 'package:flutter/material.dart';
 import 'package:tailwind/tailwind.dart';
 
