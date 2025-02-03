@@ -51,7 +51,6 @@ jobs:
           git commit -m "Bump version to $NEW_VERSION"
           git tag "v$NEW_VERSION"
           git push origin "v$NEW_VERSION"
-          sleep 10 # Add a short delay
 
       - name: Create GitHub Release
         env:
