@@ -62,3 +62,5 @@ jobs:
             --notes "Release notes for version $NEW_VERSION
               
             For full changelog, see [CHANGELOG.md](./CHANGELOG.md)"
+          # Explicitly run our release workflow for this new tag
+          gh workflow run publish-release.yml --ref "v$NEW_VERSION"
