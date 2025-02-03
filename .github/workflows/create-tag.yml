@@ -1,4 +1,4 @@
-name: Create Release Tag
+name: Prepare Release
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
       - "patch/*"
 
 jobs:
-  create-tag:
+  prepare-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -33,12 +33,14 @@ jobs:
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
           sed -i "s/^version: .*/version: $NEW_VERSION/" pubspec.yaml
 
-      - name: Create Git tag
+      - name: Create tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add pubspec.yaml
           git commit -m "Bump version to $NEW_VERSION"
-          git tag -a "v$NEW_VERSION" -m "Release version $NEW_VERSION"
+          git tag "v$NEW_VERSION"
           git push origin "v$NEW_VERSION"

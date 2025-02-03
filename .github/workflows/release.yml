@@ -1,4 +1,4 @@
-name: Publish to Pub.dev
+name: Publish Release
 
 on:
   push:
@@ -9,10 +9,19 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write # Required for authentication using OIDC
+      id-token: write
+      contents: write
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Get the version
+        id: get_version
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/v}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -27,14 +36,14 @@ jobs:
       - name: Install dependencies
         run: dart pub get
 
-      - name: Publish package to pub.dev
+      - name: Publish to pub.dev
         run: dart pub publish --force
 
-      - name: Create GitHub release
+      - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION="${GITHUB_REF#refs/tags/v}"
+          VERSION="${{ steps.get_version.outputs.version }}"
           gh release create "v$VERSION" \
             --title "Release $VERSION" \
-            --notes "Release $VERSION\n\nFor full changelog, see [CHANGELOG.md](./CHANGELOG.md)"
+            --notes "Release notes for version $VERSION\n\nFor full changelog, see [CHANGELOG.md](./CHANGELOG.md)"
