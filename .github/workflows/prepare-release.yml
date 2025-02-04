@@ -1,4 +1,4 @@
-name: Prepare Release
+name: ⚙️ Prepare Release
 
 on:
   push:
@@ -11,12 +11,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout code
+      - name: ⚓ Checkout code
         uses: actions/checkout@v4
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
 
-      - name: Extract version from branch name
+      - name: 🔨 Extract version from branch name
         id: extract_version
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
@@ -30,12 +30,12 @@ jobs:
             exit 1
           fi
 
-      - name: Update version in pubspec.yaml
+      - name: 🔨 Update version in pubspec.yaml
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
           sed -i "s/^version: .*/version: $NEW_VERSION/" pubspec.yaml
 
-      - name: Commit and push to branch and tag
+      - name: 🎉 Commit and push to branch and tag
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
         run: |
@@ -60,7 +60,7 @@ jobs:
           git tag "v$NEW_VERSION"
           git push origin "v$NEW_VERSION"
 
-      - name: Create GitHub Release
+      - name: 🚀 Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN  }}
         run: |

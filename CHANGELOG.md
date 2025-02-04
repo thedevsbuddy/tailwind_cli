@@ -1,22 +1,28 @@
-## 0.7.5
+## 0.7.7
+
 - Updated dcli dependency to latest version
 - Added fvm support
 
 ## 0.7.5
+
 - Fixed file names as per pub.dev requirements
 
 ## 0.7.4
+
 - Fixed some pub issues and formatted files
 
 ## 0.7.3
+
 - Updated required packages to latest version
-- Fixed build command error issue 
+- Fixed build command error issue
 
 ## 0.7.2
+
 - Updated required packages to latest version
-- Fixed deprecated issues 
+- Fixed deprecated issues
 
 ## 0.7.1
+
 - Fixed `TwImage` Widget
 - Fixed `TwButton` Widget
 - Fixed `TwContainer` Widget
@@ -26,6 +32,7 @@
 - Fixed `TwMarginMixin` Mixin
 
 ## 0.7.0
+
 - Added `TwImage` Widget
 - Updated `TwColorExtenstion`
   - Repair `opacity` extensions
@@ -33,9 +40,8 @@
 - Added `context` property to `TwService` class
   - Now you can access context from anywhere in the app using `TwService.context`
 - Added `TwSizeMixin`
-  - Now we are providing some predefined sizes in aspect of Screen Size 
+  - Now we are providing some predefined sizes in aspect of Screen Size
   - You can apply fraction sizes by using this new helper mixin
-
 
 ## 0.6.4
 

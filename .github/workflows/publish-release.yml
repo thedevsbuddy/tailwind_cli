@@ -1,4 +1,4 @@
-name: Publish Release
+name: 🚀 Publish Release
 
 on:
   workflow_dispatch:
@@ -13,19 +13,12 @@ jobs:
       id-token: write
       contents: write
     steps:
-      - name: Debug Tag
-        run: |
-          echo "Triggered by tag: $GITHUB_REF"
-
-      - name: Checkout code
+      - name: ⚓ Checkout code
         uses: actions/checkout@v4
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
 
-      - name: Check tags in the repo
-        run: git tag -l
-
-      - name: Get the version
+      - name: 📇 Get the version
         id: get_version
         run: |
           VERSION="${GITHUB_REF#refs/tags/}"
@@ -33,18 +26,18 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Extracted version: $VERSION"
 
-      - name: Set up Flutter
+      - name: 🐥 Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
 
-      - name: Set up Dart
+      - name: 🎯 Set up Dart
         uses: dart-lang/setup-dart@v1
         with:
           sdk: "stable"
 
-      - name: Install dependencies
+      - name: ⬇️ Install dependencies
         run: dart pub get
 
-      - name: Publish to pub.dev
+      - name: 🚀 Publish to pub.dev
         run: dart pub publish --force
