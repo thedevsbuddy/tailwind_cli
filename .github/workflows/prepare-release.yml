@@ -32,20 +32,28 @@ jobs:
             exit 1
           fi
 
-      - name: Update version in pubspec.yaml
-        run: |
-          NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
-          sed -i "s/^version: .*/version: $NEW_VERSION/" pubspec.yaml
-
-      - name: Create tag
+      - name: Commit and push to branch and tag
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_ACCESS_TOKEN }}
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
-           git config user.name github-actions
-          git config user.email github-actions@github.com
+          TARGET_BRANCH="${GITHUB_REF#refs/heads/}"
+
+          # Configure Git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Ensure we are on the correct branch
+          git checkout $TARGET_BRANCH
+
+          # Commit changes
           git add pubspec.yaml
           git commit -m "Bump version to $NEW_VERSION"
+
+          # Push changes to the branch
+          git push origin $TARGET_BRANCH
+
+          # Tag the commit and push the tag
           git tag "v$NEW_VERSION"
           git push origin "v$NEW_VERSION"
 
