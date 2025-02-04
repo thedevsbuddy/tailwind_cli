@@ -33,12 +33,6 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Extracted version: $VERSION"
 
-      # - name: Update version in pubspec.yaml
-      #   run: |
-      #     VERSION="${{ steps.get_version.outputs.version }}"
-      #     echo "Updating version in pubspec.yaml to $VERSION"
-      #     sed -i "s/^version: .*/version: $VERSION/" pubspec.yaml
-
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:

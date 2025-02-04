@@ -3,9 +3,7 @@ name: Prepare Release
 on:
   push:
     branches:
-      - "major/*"
-      - "minor/*"
-      - "patch/*"
+      - "release/*"
 
 jobs:
   prepare-release:
@@ -23,7 +21,7 @@ jobs:
         run: |
           BRANCH="${GITHUB_REF#refs/heads/}"
 
-          if [[ "$BRANCH" =~ ^(major|minor|patch)/v([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
+          if [[ "$BRANCH" =~ ^(release)/v([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
             NEW_VERSION="${BASH_REMATCH[2]}"
             echo "Extracted version: $NEW_VERSION"
             echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
@@ -31,7 +29,7 @@ jobs:
             echo "Branch name does not contain a valid version number"
             exit 1
           fi
-          
+
       - name: Update version in pubspec.yaml
         run: |
           NEW_VERSION="${{ steps.extract_version.outputs.new_version }}"
